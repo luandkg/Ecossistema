@@ -20,10 +20,6 @@ func main() {
 	capimgorgura := Produtor_Novo("Capim Gordura", 5)
 	capimverde := Produtor_Novo("Capim Verde", 10)
 
-
-
-
-
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)
 	var x int = r1.Intn(50)
@@ -31,11 +27,16 @@ func main() {
 
 	tb.mudar(x, y, 1)
 
+	//produtores := &produtor{}
+	//p1 := Produtor_Novo("Capim Gordura", 5)
+	//produtores.Append(&p1)
+
 	tb.mostrar()
 
 	var ciclo int = 0
 
 	for {
+
 		fmt.Println("---------------- Ciclo :  ", ciclo, " --------------------------------")
 		time.Sleep(time.Second)
 		fmt.Println("")
@@ -52,7 +53,8 @@ func main() {
 			capimverde.vivendo()
 		}
 
-		ciclo += 1
+		ciclo++
+
 		fmt.Println("")
 
 		if ciclo >= 15 {

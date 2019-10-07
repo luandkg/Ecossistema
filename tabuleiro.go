@@ -5,21 +5,18 @@ import (
 )
 
 type tabuleiro struct {
-
-  _nome string
-  dados [50][50]int
-
+	_nome string
+	dados [50][50]int
 }
 
 func Tabuleiro_novo(nome string) *tabuleiro {
 
-  p := tabuleiro{_nome: nome}
+	p := tabuleiro{_nome: nome}
 
 	return &p
 }
 
-
-func (p *tabuleiro) limpar()  {
+func (p *tabuleiro) limpar() {
 
 	// Zerando Tabuleiro
 	for i := 0; i < 50; i++ {
@@ -30,9 +27,15 @@ func (p *tabuleiro) limpar()  {
 
 }
 
-func (p *tabuleiro) mostrar()  {
+func (p *tabuleiro) mostrar() {
 
-  fmt.Println("----------------------------------------- TABULEIRO ------------------------------------------------")
+	fmt.Println("\n")
+	fmt.Println("\n")
+	fmt.Println("\n")
+
+	fmt.Println("----------------------------------------- TABULEIRO ------------------------------------------------")
+	fmt.Println("\n")
+	fmt.Println("\n")
 
 	for i := 0; i < 50; i++ {
 		for j := 0; j < 50; j++ {
@@ -42,9 +45,11 @@ func (p *tabuleiro) mostrar()  {
 		fmt.Print("\n")
 	}
 
-  fmt.Println("-----------------------------------------------------------------------------------------------------")
+	fmt.Println("\n")
+	fmt.Println("\n")
 
+	fmt.Println("-----------------------------------------------------------------------------------------------------")
 
 }
 
-func (p *tabuleiro) mudar(x int,y int, valor int)  { p.dados[x][y] = valor}
+func (p *tabuleiro) mudar(x int, y int, valor int) { p.dados[x][y] = valor }

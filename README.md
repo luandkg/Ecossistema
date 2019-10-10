@@ -1,7 +1,7 @@
 # README
 
-## Projeto Evolução
+## Projeto Evolução - Linguagens de Programação - 2019 / 02
 
 ### Gerando arquivo compilado
-
-Projeto Final - Linguagens de Programação - 2019 / 02
+    - go build
+    - ./evolucao

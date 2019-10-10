@@ -1,6 +1,7 @@
 package main
 
 import (
+	"container/list"
 	"fmt"
 	"math/rand"
 	"time"
@@ -17,8 +18,10 @@ func main() {
 
 	tb.limpar()
 
-	capimgorgura := Planta_novo("Capim Gordura", 5)
-	capimverde := Planta_novo("Capim Verde", 10)
+	lsplantas := list.New()
+
+	lsplantas.PushBack(Planta_novo("Capim Gordura", 5))
+	lsplantas.PushBack(Planta_novo("Capim Verde", 10))
 
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)
@@ -29,7 +32,7 @@ func main() {
 
 	//produtores := &produtor{}
 	//p1 := Produtor_Novo("Capim Gordura", 5)
-	//produtores.Append(&p1)
+	//produtores.Append(&p1)expression
 
 	tb.mostrar()
 
@@ -42,15 +45,20 @@ func main() {
 		fmt.Println("")
 
 		fmt.Println("PRODUTORES")
-		fmt.Println("      - ", capimgorgura.nome(), " [", capimgorgura.fase(), ",", capimgorgura.ciclos(), "]")
-		fmt.Println("      - ", capimverde.nome(), " [", capimverde.fase(), ",", capimverde.ciclos(), "]")
 
-		if capimgorgura.status() == "vivo" {
-			capimgorgura.vivendo()
-		}
+		for plantac := lsplantas.Front(); plantac != nil; plantac = plantac.Next() {
 
-		if capimverde.status() == "vivo" {
-			capimverde.vivendo()
+			p := plantac.Value
+			fmt.Println(p)
+
+			//fmt.Println("      - ", p.nome, " [", p.fase, ",", p.ciclos, "]")
+			//if capimgorgura.status() == "vivo" {
+			//			.nome()//	capimgorgura.vivendo()
+			//	}planta)
+
+			//if capimverde.status() == "vivo" {
+			//	capimverde.vivendo()
+			//}
 		}
 
 		ciclo++

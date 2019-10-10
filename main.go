@@ -17,8 +17,8 @@ func main() {
 
 	tb.limpar()
 
-	capimgorgura := Animal_novo("Capim Gordura", 5)
-	capimverde := Animal_novo("Capim Verde", 10)
+	capimgorgura := Planta_novo("Capim Gordura", 5)
+	capimverde := Planta_novo("Capim Verde", 10)
 
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)

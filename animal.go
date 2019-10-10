@@ -4,14 +4,14 @@ import (
 	"fmt"
 )
 
-type planta struct {
+type animal struct {
 	organismo
 	_adultociclo int
 }
 
-func Planta_novo(nome string, adulto int) *planta {
+func Animal_novo(nome string, adulto int) *animal {
 
-	p := planta{_adultociclo: adulto}
+	p := animal{_adultociclo: adulto}
 	p._nome = nome
 	p._idade = 0
 	p._status = "vivo"
@@ -21,7 +21,7 @@ func Planta_novo(nome string, adulto int) *planta {
 	return &p
 }
 
-func (p *planta) vivendo() {
+func (p *animal) vivendo() {
 
 	p.organismo.vivendo()
 
@@ -31,7 +31,7 @@ func (p *planta) vivendo() {
 			if p._idade >= p._adultociclo {
 				p._fase = "adulto"
 
-				fmt.Println("       --- Planta : ", p.nome(), " Evoluiu : Adulto !!!")
+				fmt.Println("       --- Produtor : ", p.nome(), " Evoluiu : Adulto !!!")
 
 			}
 		}

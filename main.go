@@ -54,7 +54,6 @@ func main() {
 
 			if p.status() == "vivo" {
 				p.vivendo()
-
 			}
 
 			//if capimverde.status() == "vivo" {

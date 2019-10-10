@@ -39,3 +39,7 @@ func (p *planta) vivendo() {
 	}
 
 }
+
+type IPlanta interface {
+	IP(p planta)
+}

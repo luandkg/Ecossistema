@@ -20,8 +20,8 @@ func main() {
 
 	lsplantas := list.New()
 
-	lsplantas.PushBack(Planta_novo("Capim Gordura", 5))
-	lsplantas.PushBack(Planta_novo("Capim Verde", 10))
+	lsplantas.PushBack(*Planta_novo("Capim Gordura", 5))
+	lsplantas.PushBack(*Planta_novo("Capim Verde", 10))
 
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)
@@ -48,13 +48,14 @@ func main() {
 
 		for plantac := lsplantas.Front(); plantac != nil; plantac = plantac.Next() {
 
-			p := plantac.Value
-			fmt.Println(p)
+			p := (plantac.Value).(planta)
 
-			//fmt.Println("      - ", p.nome, " [", p.fase, ",", p.ciclos, "]")
-			//if capimgorgura.status() == "vivo" {
-			//			.nome()//	capimgorgura.vivendo()
-			//	}planta)
+			fmt.Println("      - ", p.nome(), " [", p.fase(), ",", p.ciclos(), "]")
+
+			if p.status() == "vivo" {
+				p.vivendo()
+
+			}
 
 			//if capimverde.status() == "vivo" {
 			//	capimverde.vivendo()

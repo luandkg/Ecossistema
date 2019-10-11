@@ -1,0 +1,24 @@
+CASO 1
+    PLANTAS 
+        - Cenoura
+        - Tomate
+     CONSUMIDORES PRIMARIOS
+        - Coelho
+        - Lebre
+        
+
+CASO 2
+    PLANTAS]
+        - Capim Gordura
+        - Laranja
+        - Cenoura
+    CONSUMIDORES PRIMARIOS
+        - Coelho
+        - 
+
+CASO 3 
+    PLANTAS
+        - Capim Gordura
+        - Laranja
+        - Cenoura
+        - Tomate

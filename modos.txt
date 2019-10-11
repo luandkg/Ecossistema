@@ -4,7 +4,8 @@ CASO 1
         - Tomate
      CONSUMIDORES PRIMARIOS
         - Coelho
-        - Lebre
+        - Grilo
+    
         
 
 CASO 2
@@ -14,11 +15,17 @@ CASO 2
         - Cenoura
     CONSUMIDORES PRIMARIOS
         - Coelho
-        - 
+        - Grilo
+        - Camundongos
 
 CASO 3 
     PLANTAS
         - Capim Gordura
+        - Campim Verde
         - Laranja
         - Cenoura
         - Tomate
+    CONSUMIDORES PRIMARIOS
+        - Coelho
+        - Grilo
+        - Camundongos

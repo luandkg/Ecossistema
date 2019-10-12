@@ -40,6 +40,8 @@ func (p *planta) vivendo() {
 
 }
 
-type IPlanta interface {
-	IP(p planta)
+func (p *planta) toString() string {
+
+	return fmt.Sprintf("%s [%s, %d]", p.nome(), p.fase(), p.ciclos())
+
 }

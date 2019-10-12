@@ -48,3 +48,17 @@ func escreverTexto(linhas []string, caminhoDoArquivo string) error {
 	// Caso a funcao flush retorne um erro ele sera retornado aqui tambem
 	return escritor.Flush()
 }
+
+func log(arquivo string, linha string) {
+
+	// Faca um log unico no arquivo
+
+	var conteudo []string
+
+	conteudo = lerTexto(arquivo)
+
+	conteudo = append(conteudo, linha)
+
+	escreverTexto(conteudo, arquivo)
+
+}

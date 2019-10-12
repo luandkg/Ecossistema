@@ -1,14 +1,42 @@
 
  ------------------ SIMULACAO ------------------ 
-Dia - 1 [ Muito Nublado]
-Noite - 1 [ ]
-Dia - 2 [ Nublado]
-Noite - 2 [ ]
-Dia - 3 [ Normal]
-
- ------------------ SIMULACAO ------------------ 
-Dia - 1 [ Ensolado]
+Dia - 1 [ Normal]
 Noite - 1 [ ]
 Dia - 2 [ Ensolado]
 Noite - 2 [ ]
-Dia - 3 [ Muito Ensolado]
+Dia - 3 [ Muito Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Noite - 1 [ ]
+Dia - 2 [ Normal]
+Noite - 2 [ ]
+Dia - 3 [ Nublado]
+Noite - 3 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Noite - 1 [ ]
+Dia - 2 [ Normal]
+Noite - 2 [ ]
+Dia - 3 [ Ensolado]
+Noite - 3 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Noite - 1 [ ]
+Dia - 2 [ Muito Ensolado]
+Noite - 2 [ ]
+Dia - 3 [ Ensolado]
+Noite - 3 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Noite - 1 [ ]
+Dia - 2 [ Nublado]
+Noite - 2 [ ]
+Dia - 3 [ Muito Nublado]
+Noite - 3 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]

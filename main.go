@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"strconv"
 	"time"
+
+	"github.com/veandco/go-sdl2/sdl"
 )
 
 // Projeto para Linguagens de Progrmacao 2019.02
@@ -14,12 +15,30 @@ import (
 
 func main() {
 
-	var conteudo []string
+	if err := sdl.Init(sdl.INIT_EVERYTHING); err != nil {
+		panic(err)
+	}
+	defer sdl.Quit()
 
-	conteudo = lerTexto("logs.txt")
+	window, err := sdl.CreateWindow("Evolucao", sdl.WINDOWPOS_UNDEFINED, sdl.WINDOWPOS_UNDEFINED,
+		800, 600, sdl.WINDOW_SHOWN)
+	if err != nil {
+		panic(err)
+	}
+	defer window.Destroy()
 
-	conteudo = append(conteudo, "")
-	conteudo = append(conteudo, " ------------------ SIMULACAO ------------------ ")
+	surface, err := window.GetSurface()
+	if err != nil {
+		panic(err)
+	}
+	surface.FillRect(nil, 0)
+
+	rect := sdl.Rect{0, 0, 200, 200}
+	surface.FillRect(&rect, 0xffff0000)
+	window.UpdateSurface()
+
+	log("logs.txt", "")
+	log("logs.txt", " ------------------ SIMULACAO ------------------ ")
 
 	tb := Tabuleiro_novo("MATRIZ")
 
@@ -44,17 +63,16 @@ func main() {
 
 	var ciclo int = 0
 
-	// Variaveis contagem de CICLO
-	var fase string = ""
-	var faseciclo int = 10
-	var fasecontador int = 0
-	var dia int = 0
-
-	// Variaveis Qualificadores do Ambiente
-	var sol int = 0
-	var solmodo string = " - "
-
-	for {
+	running := true
+	for running {
+		for event := sdl.PollEvent(); event != nil; event = sdl.PollEvent() {
+			switch event.(type) {
+			case *sdl.QuitEvent:
+				println("Quit")
+				running = false
+				break
+			}
+		}
 
 		fmt.Println("---------------- Ciclo :  ", ciclo, " --------------------------------")
 		time.Sleep(time.Second)
@@ -94,48 +112,18 @@ func main() {
 
 		fmt.Println("")
 
-		if ciclo >= 50 {
+		if ciclo >= 60 {
 			break
 		}
 
-		// Implementacao FASE - DIA / NOITE
-
-		if fase == "" {
-			fasecontador = faseciclo * 2
-		}
-
-		if fasecontador >= faseciclo {
-			fasecontador = 0
-			if fase == "Dia" {
-				fase = "Noite"
-				sol = 0
-				solmodo = " - "
-				conteudo = append(conteudo, "Noite - "+strconv.Itoa(dia)+" [ ]")
-
-			} else {
-				fase = "Dia"
-				dia++
-				r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
-				sol = r1.Intn(100)
-
-				solmodo = luminosidade(sol)
-
-				conteudo = append(conteudo, "Dia - "+strconv.Itoa(dia)+" [ "+solmodo+"]")
-
-			}
-		} else {
-			fasecontador++
-		}
+		ambiente()
 
 		fmt.Println("Fase -> ", fase)
 		fmt.Println("Quantidade de Sol -> ", sol)
 		fmt.Println("Modo -> ", solmodo)
-
 	}
 
 	fmt.Println("Fim da Simulação !!!")
-
-	escreverTexto(conteudo, "logs.txt")
 
 }
 

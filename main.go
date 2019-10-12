@@ -104,25 +104,8 @@ func main() {
 				r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
 				sol = r1.Intn(100)
 
-				if sol >= 0 && sol < 30 {
-					solmodo = "Muito Nublado"
-				}
+				solmodo = luminosidade(sol)
 
-				if sol >= 30 && sol < 50 {
-					solmodo = "Nublado"
-				}
-
-				if sol >= 50 && sol < 70 {
-					solmodo = "Normal"
-				}
-
-				if sol >= 70 && sol < 90 {
-					solmodo = "Ensolado"
-				}
-
-				if sol >= 90 {
-					solmodo = "Muito Ensolado"
-				}
 			}
 		} else {
 			fasecontador++

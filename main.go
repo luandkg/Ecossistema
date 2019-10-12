@@ -22,7 +22,7 @@ func main() {
 	defer sdl.Quit()
 
 	window, err := sdl.CreateWindow("Evolucao", sdl.WINDOWPOS_UNDEFINED, sdl.WINDOWPOS_UNDEFINED,
-		500, 500, sdl.WINDOW_SHOWN)
+		500, 550, sdl.WINDOW_SHOWN)
 	if err != nil {
 		panic(err)
 	}
@@ -35,7 +35,7 @@ func main() {
 
 	surface.FillRect(nil, 0)
 
-	// ESCOPO PRINCIPAL0xFFA500
+	// ESCOPO PRINCIPAL
 	log("logs.txt", "")
 	log("logs.txt", " ------------------ SIMULACAO ------------------ ")
 
@@ -58,7 +58,7 @@ func main() {
 	//p1 := Produtor_Novo("Capim Gordura", 5)
 	//produtores.Append(&p1)expression
 
-	tb.mostrar()
+	//tb.mostrar()
 
 	var ciclo int = 0
 
@@ -120,10 +120,6 @@ func main() {
 
 		fmt.Println("")
 
-		//}if ciclo >= 60 {
-		//	break
-		//}
-
 		ambiente()
 
 		fmt.Println("Fase -> ", fase)
@@ -151,8 +147,8 @@ func mapear(tb *tabuleiro, lsplantas *[2]planta) {
 		var y int = r1.Intn(50)
 
 		p.mudarposicao(x, y)
-		tb.mudar(x, y, 1)
-		fmt.Println(" - ", x, " - ", y)
+		//tb.mudar(x, y, 1)
+
 	}
 
 }

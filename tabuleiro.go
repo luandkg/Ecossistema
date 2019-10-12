@@ -52,6 +52,17 @@ func (p *tabuleiro) atualizar(s *sdl.Surface) {
 	//	s.FillRect(&p.dados[0][49].rect, 0x00BFFF)
 	//0xFFA500s.FillRect(&p.dados[49][49].rect, 0x00BFFF)
 
+	var linhafinal = sdl.Rect{0, 500, 500, 10}
+	if fase == "Dia" {
+		s.FillRect(&linhafinal, 0xFFFF00)
+	} else {
+		s.FillRect(&linhafinal, 0x000080)
+	}
+
+	var st int = sol * 5
+	var solinha = sdl.Rect{0, 510, int32(st), 10}
+	s.FillRect(&solinha, 0xFF4500)
+
 }
 
 func (p *tabuleiro) mostrar() {

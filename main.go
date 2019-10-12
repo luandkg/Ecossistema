@@ -35,6 +35,9 @@ func main() {
 	tb.mostrar()
 
 	var ciclo int = 0
+	var fase string = "Dia"
+	var faseciclo int = 10
+	var fasecontador int = 0
 
 	for {
 
@@ -48,9 +51,9 @@ func main() {
 
 			p := &lsplantas[i]
 
-			fmt.Println("      - ", p.toString())
-
 			if p.status() == "vivo" {
+
+				fmt.Println("      - ", p.toString())
 				p.vivendo()
 			}
 
@@ -79,6 +82,53 @@ func main() {
 		if ciclo >= 50 {
 			break
 		}
+
+		// Implementacao FASE - DIA / NOITE
+		if fasecontador >= faseciclo {
+			fasecontador = 0
+			if fase == "Dia" {
+				fase = "Noite"
+			} else {
+				fase = "Dia"
+			}
+		} else {
+			fasecontador++
+		}
+
+		var sol int = 0
+		var solmodo string = " - "
+		if fase == "Dia" {
+			r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
+			sol = r1.Intn(100)
+
+			if sol >= 0 && sol < 30 {
+				solmodo = "Muito Nublado"
+			}
+
+			if sol >= 30 && sol < 50 {
+				solmodo = "Nublado"
+			}
+
+			if sol >= 50 && sol < 70 {
+				solmodo = "Normal"
+			}
+
+			if sol >= 70 && sol < 90 {
+				solmodo = "Ensolado"
+			}
+
+			if sol >= 90 {
+				solmodo = "Muito Ensolado"
+			}
+
+		} else {
+			sol = 0
+			solmodo = " - "
+		}
+
+		fmt.Println("Fase -> ", fase)
+		fmt.Println("Quantidade de Sol -> ", sol)
+		fmt.Println("Modo -> ", solmodo)
 
 	}
 

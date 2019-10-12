@@ -9,10 +9,12 @@ type planta struct {
 	_adultociclo        int
 	_reproduzirciclo    int
 	_reproduzircontador int
+
+	_vida int
 }
 
-// Plantanovo : Criar instancia
-func Plantanovo(nome string, adulto int, reproducao int) *planta {
+// Plantanovo : Criar instancia de planta
+func Plantanovo(nome string, adulto int, reproducao int, vida int) *planta {
 
 	p := planta{_adultociclo: adulto}
 	p._nome = nome
@@ -23,6 +25,8 @@ func Plantanovo(nome string, adulto int, reproducao int) *planta {
 
 	p._reproduzirciclo = reproducao
 	p._reproduzircontador = 0
+
+	p._vida = vida
 
 	return &p
 }
@@ -42,6 +46,7 @@ func (p *planta) vivendo() {
 			}
 		}
 
+		// Se o organismo for adulto inicia o ciclo de reproducao
 		if p._fase == "adulto" {
 
 			p._reproduzircontador += 1
@@ -51,6 +56,11 @@ func (p *planta) vivendo() {
 				fmt.Println("       --- Planta : ", p.nome(), " Reproduzindo !!!")
 			}
 
+		}
+
+		if p._idade >= p._vida {
+			p._status = "morto"
+			fmt.Println("       --- Planta : ", p.nome(), " Morreu !!!")
 		}
 
 	}

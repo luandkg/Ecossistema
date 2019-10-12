@@ -19,8 +19,8 @@ func main() {
 
 	//lsplantas := list.New()
 	var lsplantas [2]planta
-	lsplantas[0] = *Plantanovo("Capim Gordura", 5, 10)
-	lsplantas[1] = *Plantanovo("Capim Verde", 10, 20)
+	lsplantas[0] = *Plantanovo("Capim Gordura", 5, 10, 16)
+	lsplantas[1] = *Plantanovo("Capim Verde", 10, 20, 32)
 
 	mapear(*tb, lsplantas)
 

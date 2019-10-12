@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strconv"
 	"time"
 )
 
@@ -12,6 +13,13 @@ import (
 // AUTOR : MARUAN OLIVEIRA - 18/0057685
 
 func main() {
+
+	var conteudo []string
+
+	conteudo = lerTexto("logs.txt")
+
+	conteudo = append(conteudo, "")
+	conteudo = append(conteudo, " ------------------ SIMULACAO ------------------ ")
 
 	tb := Tabuleiro_novo("MATRIZ")
 
@@ -40,6 +48,7 @@ func main() {
 	var fase string = ""
 	var faseciclo int = 10
 	var fasecontador int = 0
+	var dia int = 0
 
 	// Variaveis Qualificadores do Ambiente
 	var sol int = 0
@@ -101,13 +110,17 @@ func main() {
 				fase = "Noite"
 				sol = 0
 				solmodo = " - "
+				conteudo = append(conteudo, "Noite - "+strconv.Itoa(dia)+" [ ]")
+
 			} else {
 				fase = "Dia"
-
+				dia++
 				r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
 				sol = r1.Intn(100)
 
 				solmodo = luminosidade(sol)
+
+				conteudo = append(conteudo, "Dia - "+strconv.Itoa(dia)+" [ "+solmodo+"]")
 
 			}
 		} else {
@@ -121,6 +134,8 @@ func main() {
 	}
 
 	fmt.Println("Fim da Simulação !!!")
+
+	escreverTexto(conteudo, "logs.txt")
 
 }
 

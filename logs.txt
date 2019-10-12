@@ -1,0 +1,14 @@
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Noite - 1 [ ]
+Dia - 2 [ Nublado]
+Noite - 2 [ ]
+Dia - 3 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Noite - 1 [ ]
+Dia - 2 [ Ensolado]
+Noite - 2 [ ]
+Dia - 3 [ Muito Ensolado]

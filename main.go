@@ -35,10 +35,13 @@ func main() {
 	tb.mostrar()
 
 	var ciclo int = 0
+
+	// Variaveis contagem de CICLO
 	var fase string = ""
 	var faseciclo int = 10
 	var fasecontador int = 0
 
+	// Variaveis Qualificadores do Ambiente
 	var sol int = 0
 	var solmodo string = " - "
 
@@ -109,12 +112,6 @@ func main() {
 			}
 		} else {
 			fasecontador++
-		}
-
-		if fase == "Dia" {
-
-		} else {
-
 		}
 
 		fmt.Println("Fase -> ", fase)

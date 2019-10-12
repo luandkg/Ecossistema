@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// Projeto para Linguagens de Progrmacao 2019.02
+// Projeto para Linguagens de Programacao 2019.02
 
 // AUTOR : LUAN ALVES - 17/0003191
 // AUTOR : MARUAN -
@@ -29,10 +29,6 @@ func main() {
 	var y int = r1.Intn(50)
 
 	tb.mudar(x, y, 1)
-
-	//produtores := &produtor{}
-	//p1 := Produtor_Novo("Capim Gordura", 5)
-	//produtores.Append(&p1)expression
 
 	tb.mostrar()
 
@@ -56,9 +52,6 @@ func main() {
 				p.vivendo()
 			}
 
-			//if capimverde.status() == "vivo" {
-			//	capimverde.vivendo()
-			//}
 		}
 
 		ciclo++

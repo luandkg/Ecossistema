@@ -19,8 +19,8 @@ func main() {
 
 	//lsplantas := list.New()
 	var lsplantas [2]planta
-	lsplantas[0] = *Planta_novo("Capim Gordura", 5)
-	lsplantas[1] = *Planta_novo("Capim Verde", 10)
+	lsplantas[0] = *Plantanovo("Capim Gordura", 5, 10)
+	lsplantas[1] = *Plantanovo("Capim Verde", 10, 20)
 
 	// TODO: Criar forma generica de adicionar plantas e extrair em uma funcao ou metodo
 	//lsplantas.PushBack(*Planta_novo("Capim Gordura", 5))
@@ -82,7 +82,7 @@ func main() {
 
 		fmt.Println("")
 
-		if ciclo >= 15 {
+		if ciclo >= 50 {
 			break
 		}
 

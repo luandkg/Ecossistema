@@ -15,13 +15,14 @@ import (
 
 func main() {
 
+	// SDL INIT - Criacao da Janela
 	if err := sdl.Init(sdl.INIT_EVERYTHING); err != nil {
 		panic(err)
 	}
 	defer sdl.Quit()
 
 	window, err := sdl.CreateWindow("Evolucao", sdl.WINDOWPOS_UNDEFINED, sdl.WINDOWPOS_UNDEFINED,
-		800, 600, sdl.WINDOW_SHOWN)
+		500, 500, sdl.WINDOW_SHOWN)
 	if err != nil {
 		panic(err)
 	}
@@ -31,12 +32,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
 	surface.FillRect(nil, 0)
 
-	rect := sdl.Rect{0, 0, 200, 200}
-	surface.FillRect(&rect, 0xffff0000)
-	window.UpdateSurface()
-
+	// ESCOPO PRINCIPAL0xFFA500
 	log("logs.txt", "")
 	log("logs.txt", " ------------------ SIMULACAO ------------------ ")
 
@@ -49,7 +48,7 @@ func main() {
 	lsplantas[0] = *Plantanovo("Capim Gordura", 5, 10, 16)
 	lsplantas[1] = *Plantanovo("Capim Verde", 10, 20, 32)
 
-	mapear(*tb, lsplantas)
+	mapear(tb, &lsplantas)
 
 	// TODO: Criar forma generica de adicionar plantas e extrair em uma funcao ou metodo
 	//lsplantas.PushBack(*Planta_novo("Capim Gordura", 5))
@@ -65,6 +64,8 @@ func main() {
 
 	running := true
 	for running {
+
+		// TRATAMENTO DE EVENTOS
 		for event := sdl.PollEvent(); event != nil; event = sdl.PollEvent() {
 			switch event.(type) {
 			case *sdl.QuitEvent:
@@ -80,6 +81,9 @@ func main() {
 
 		fmt.Println("PRODUTORES")
 
+		tb.atualizar(surface)
+		window.UpdateSurface()
+
 		for i := 0; i < 2; i++ {
 
 			p := &lsplantas[i]
@@ -88,6 +92,10 @@ func main() {
 
 				fmt.Println("      - ", p.toString())
 				p.vivendo()
+				p.movimento()
+				p.atualizar(surface)
+				window.UpdateSurface()
+
 			}
 
 		}
@@ -112,22 +120,23 @@ func main() {
 
 		fmt.Println("")
 
-		if ciclo >= 60 {
-			break
-		}
+		//}if ciclo >= 60 {
+		//	break
+		//}
 
 		ambiente()
 
 		fmt.Println("Fase -> ", fase)
 		fmt.Println("Quantidade de Sol -> ", sol)
 		fmt.Println("Modo -> ", solmodo)
+
 	}
 
 	fmt.Println("Fim da Simulação !!!")
 
 }
 
-func mapear(tb tabuleiro, lsplantas [2]planta) {
+func mapear(tb *tabuleiro, lsplantas *[2]planta) {
 
 	// Mapear plantas no Tabuleiro
 

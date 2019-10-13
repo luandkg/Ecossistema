@@ -1,6 +1,6 @@
 # README
 
-## Projeto Evolução - Linguagens de Programação - 2019 / 02
+## Projeto Ecossistema - Linguagens de Programação - 2019 / 02
 
 
  - TERMINAL : apt install libsdl2{,-image,-mixer,-ttf,-gfx}-dev

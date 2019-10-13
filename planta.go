@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"strconv"
-	"time"
 )
 
 type planta struct {
@@ -14,10 +12,6 @@ type planta struct {
 	_reproduzircontador int
 
 	_vida int
-
-	_direcao       string
-	_dirquantidade int
-	_dircontador   int
 }
 
 // Plantanovo : Criar instancia de planta
@@ -81,71 +75,4 @@ func (p *planta) toString() string {
 	var str = p.nome() + " [" + p.fase() + " " + strconv.Itoa(p.ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
 
 	return str
-}
-
-func (p *planta) movimento() {
-
-	p._dircontador += 1
-
-	if p._dircontador >= p._dirquantidade {
-		p._dircontador = 0
-		r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
-		p._dirquantidade = r1.Intn(15)
-
-		p._direcao = ""
-	}
-
-	if p._direcao == "" {
-		p._direcao = "l"
-
-		r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
-		escolha := r1.Intn(3)
-
-		if escolha == 0 {
-			p._direcao = "l"
-		}
-
-		if escolha == 1 {
-			p._direcao = "o"
-		}
-
-		if escolha == 2 {
-			p._direcao = "s"
-		}
-
-		if escolha == 3 {
-			p._direcao = "n"
-		}
-	}
-
-	if p._direcao == "l" {
-		p._posx += 1
-		if p._posx >= 50 {
-			p._direcao = "o"
-			p._posx = 48
-		}
-	} else if p._direcao == "o" {
-		p._posx -= 1
-
-		if p._posx < 0 {
-			p._direcao = "l"
-			p._posx = 1
-		}
-
-	} else if p._direcao == "n" {
-		p._posy -= 1
-
-		if p._posy < 0 {
-			p._direcao = "s"
-			p._posy = 1
-		}
-	} else if p._direcao == "s" {
-		p._posy += 1
-
-		if p._posy >= 50 {
-			p._direcao = "n"
-			p._posy = 48
-		}
-
-	}
 }

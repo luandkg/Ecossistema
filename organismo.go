@@ -1,6 +1,10 @@
 package main
 
 import (
+	"fmt"
+	"math/rand"
+	"time"
+
 	"github.com/veandco/go-sdl2/sdl"
 )
 
@@ -14,6 +18,10 @@ type organismo struct {
 	_posy int
 
 	rect sdl.Rect
+
+	_direcao       string
+	_dirquantidade int
+	_dircontador   int
 }
 
 func Organismonovo(nome string) *organismo {
@@ -67,4 +75,71 @@ func (p *organismo) atualizar(s *sdl.Surface) {
 
 	s.FillRect(&p.rect, 0xADFF2F)
 
+}
+
+func (p *organismo) movimento() {
+
+	p._dircontador++
+
+	if p._dircontador >= p._dirquantidade {
+		p._dircontador = 0
+		p._direcao = ""
+	}
+
+	if p._direcao == "" {
+		p._direcao = "l"
+
+		r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
+		escolha := r1.Intn(3)
+		p._dirquantidade = r1.Intn(15)
+
+		if escolha == 0 {
+			p._direcao = "l"
+		}
+
+		if escolha == 1 {
+			p._direcao = "o"
+		}
+
+		if escolha == 2 {
+			p._direcao = "s"
+		}
+
+		if escolha == 3 {
+			p._direcao = "n"
+		}
+
+		fmt.Println("Mudar direcao : ", p._direcao, "  com ", p._dirquantidade)
+	}
+
+	if p._direcao == "l" {
+		p._posx += 1
+		if p._posx >= 50 {
+			p._direcao = "o"
+			p._posx = 48
+		}
+	} else if p._direcao == "o" {
+		p._posx -= 1
+
+		if p._posx < 0 {
+			p._direcao = "l"
+			p._posx = 1
+		}
+
+	} else if p._direcao == "n" {
+		p._posy -= 1
+
+		if p._posy < 0 {
+			p._direcao = "s"
+			p._posy = 1
+		}
+	} else if p._direcao == "s" {
+		p._posy += 1
+
+		if p._posy >= 50 {
+			p._direcao = "n"
+			p._posy = 48
+		}
+
+	}
 }

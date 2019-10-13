@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 	"time"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -50,6 +49,12 @@ func main() {
 
 	mapear(tb, &lsplantas)
 
+	var lsanimais [2]animal
+	lsanimais[0] = *Animalnovo("Coelho", 5)
+	lsanimais[1] = *Animalnovo("Roedor", 10)
+
+	mapearanimais(tb, &lsanimais)
+
 	// TODO: Criar forma generica de adicionar plantas e extrair em uma funcao ou metodo
 	//lsplantas.PushBack(*Planta_novo("Capim Gordura", 5))
 	//lsplantas.PushBack(*Planta_novo("Capim Verde", 10))
@@ -76,7 +81,7 @@ func main() {
 		}
 
 		fmt.Println("---------------- Ciclo :  ", ciclo, " --------------------------------")
-		time.Sleep(time.Second)
+		time.Sleep(time.Second / 4)
 		fmt.Println("")
 
 		fmt.Println("PRODUTORES")
@@ -87,6 +92,22 @@ func main() {
 		for i := 0; i < 2; i++ {
 
 			p := &lsplantas[i]
+
+			if p.status() == "vivo" {
+
+				fmt.Println("      - ", p.toString())
+				p.vivendo()
+				//p.movimento()
+				p.atualizar(surface)
+				window.UpdateSurface()
+
+			}
+
+		}
+
+		for i := 0; i < 2; i++ {
+
+			p := &lsanimais[i]
 
 			if p.status() == "vivo" {
 
@@ -136,18 +157,31 @@ func mapear(tb *tabuleiro, lsplantas *[2]planta) {
 
 	// Mapear plantas no Tabuleiro
 
-	// TODO: Extrair para metodo ou funcao o rand
-	r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
-
 	for i := 0; i < 2; i++ {
 
 		p := &lsplantas[i]
 
-		var x int = r1.Intn(50)
-		var y int = r1.Intn(50)
+		var x int = aleatorionumero(50)
+		var y int = aleatorionumero(50)
 
 		p.mudarposicao(x, y)
-		//tb.mudar(x, y, 1)
+
+	}
+
+}
+
+func mapearanimais(tb *tabuleiro, ls *[2]animal) {
+
+	// Mapear plantas no Tabuleiro
+
+	for i := 0; i < 2; i++ {
+
+		p := &ls[i]
+
+		var x int = aleatorionumero(50)
+		var y int = aleatorionumero(50)
+
+		p.mudarposicao(x, y)
 
 	}
 

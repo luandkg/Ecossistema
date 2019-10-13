@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"strconv"
+
+	"github.com/veandco/go-sdl2/sdl"
 )
 
 type animal struct {
@@ -9,7 +12,7 @@ type animal struct {
 	_adultociclo int
 }
 
-func Animal_novo(nome string, adulto int) *animal {
+func Animalnovo(nome string, adulto int) *animal {
 
 	p := animal{_adultociclo: adulto}
 	p._nome = nome
@@ -37,5 +40,22 @@ func (p *animal) vivendo() {
 		}
 
 	}
+
+}
+
+func (p *animal) toString() string {
+
+	var str = p.nome() + " [" + p.fase() + " " + strconv.Itoa(p.ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
+
+	return str
+}
+
+func (p *animal) atualizar(s *sdl.Surface) {
+
+	var ni int32 = int32(p.x()) * 10
+	var nj int32 = int32(p.y()) * 10
+	p.rect = sdl.Rect{ni, nj, 10, 10}
+
+	s.FillRect(&p.rect, 0xFF6347)
 
 }

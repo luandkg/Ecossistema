@@ -1720,3 +1720,23 @@ Animais - 20
 Dia - 3 [ Muito Nublado]
 Plantas - 3650
 Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+Noite - 1 [ ]
+Plantas - 40
+Animais - 20
+Dia - 2 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+Noite - 2 [ ]
+Plantas - 50
+Animais - 20
+Dia - 3 [ Muito Ensolado]
+Plantas - 121
+Animais - 20
+Noite - 3 [ ]
+Plantas - 250
+Animais - 20

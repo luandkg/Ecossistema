@@ -77,7 +77,7 @@ func (p *planta) vivendo() {
 		}
 
 		if p._idade >= p._vida {
-			//p._status = "morto"
+			p._status = "morto"
 			fmt.Println("       --- Planta : ", p.nome(), " Morreu !!!")
 		}
 

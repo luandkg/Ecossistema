@@ -12,13 +12,16 @@ type planta struct {
 	_reproduzircontador int
 
 	_vida int
+
+	_plantas (map[string]*planta)
 }
 
 // Plantanovo : Criar instancia de planta
-func Plantanovo(nome string, adulto int, reproducao int, vida int) *planta {
+func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, plantas map[string]*planta) *planta {
 
 	p := planta{_adultociclo: adulto}
 
+	p.organismo = *Organismonovo(nome)
 	p._nome = nome
 	p._idade = 0
 	p._status = "vivo"
@@ -32,7 +35,9 @@ func Plantanovo(nome string, adulto int, reproducao int, vida int) *planta {
 	p._posx = 0
 	p._posy = 0
 
-	p._cor = 0xADFF2F
+	p._cor = cor
+	p._plantas = plantas
+
 	return &p
 }
 
@@ -59,6 +64,14 @@ func (p *planta) vivendo() {
 			if p._reproduzircontador >= p._reproduzirciclo {
 				p._reproduzircontador = 0
 				fmt.Println("       --- Planta : ", p.nome(), " Reproduzindo !!!")
+
+				var pg = Plantanovo("Capim Gordura", 5, 10, 16, 0xADFF2F, p._plantas)
+				var x int = aleatorionumero(50)
+				var y int = aleatorionumero(50)
+
+				pg.mudarposicao(x, y)
+
+				adicionarplanta(p._plantas, pg)
 			}
 
 		}

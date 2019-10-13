@@ -10,16 +10,19 @@ type animal struct {
 	_adultociclo int
 }
 
-func Animalnovo(nome string, adulto int) *animal {
+func Animalnovo(nome string, adulto int, cor uint32) *animal {
 
 	p := animal{_adultociclo: adulto}
+
+	p.organismo = *Organismonovo(nome)
+
 	p._nome = nome
 	p._idade = 0
 	p._status = "vivo"
 	p._fase = "nascido"
 	p._adultociclo = adulto
 
-	p._cor = 0xFF8C00
+	p._cor = cor
 
 	return &p
 }

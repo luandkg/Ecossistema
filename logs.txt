@@ -1662,3 +1662,61 @@ Noite - 1 [ ]
 
  ------------------ SIMULACAO ------------------ 
 Dia - 1 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Noite - 1 [ ]
+Dia - 2 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Noite - 1 [ ]
+Dia - 2 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+Noite - 1 [ ]
+Plantas - 40
+Animais - 20
+Dia - 2 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+Noite - 2 [ ]
+Plantas - 50
+Animais - 20
+Dia - 3 [ Muito Nublado]
+Plantas - 3650
+Animais - 20

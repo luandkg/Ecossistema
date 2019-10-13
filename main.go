@@ -60,28 +60,21 @@ func main() {
 
 	tb.limpar()
 
-	//lsplantas := list.New()
-	//var lsplantas [2]planta
-	//lsplantas[0] = *Plantanovo("Capim Gordura", 5, 10, 16)
-	//lsplantas[1] = *Plantanovo("Capim Verde", 10, 20, 32)
-	//	mapear(tb, &lsplantas)
-
-	//var lsanimais [2]animal
-	//lsanimais[0] = *Animalnovo("Coelho", 5)
-	//lsanimais[1] = *Animalnovo("Roedor", 10)
-
-	//mapearanimais(tb, &lsanimais)
-
 	// PLANTAS
 	plantas := make(map[string]*planta)
 
-	adicionarplanta(plantas, Plantanovo("Capim Gordura", 5, 10, 16))
-	adicionarplanta(plantas, Plantanovo("Capim Verde", 10, 20, 32))
-	adicionarplanta(plantas, Plantanovo("Laranjeira", 10, 20, 32))
-
-	plantas["0"]._cor = 0xADFF2F
-	plantas["1"]._cor = 0x808000
-	plantas["2"]._cor = 0xDAA520
+	for i := 0; i < 10; i++ {
+		adicionarplanta(plantas, Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, plantas))
+	}
+	for i := 0; i < 10; i++ {
+		adicionarplanta(plantas, Plantanovo("Capim Verde", 300, 150, 600, 0x808000, plantas))
+	}
+	for i := 0; i < 10; i++ {
+		adicionarplanta(plantas, Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, plantas))
+	}
+	for i := 0; i < 10; i++ {
+		adicionarplanta(plantas, Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, plantas))
+	}
 
 	for p := range plantas {
 
@@ -99,13 +92,17 @@ func main() {
 	// ANIMAIS
 	animais := make(map[string]*animal)
 
-	adicionaranimal(animais, Animalnovo("Coelho", 50))
-	adicionaranimal(animais, Animalnovo("Roeador", 30))
-	adicionaranimal(animais, Animalnovo("Rato", 15))
+	for i := 0; i < 10; i++ {
+		adicionaranimal(animais, Animalnovo("Rato", 15, 0xDDA0DD))
+	}
 
-	animais["0"]._cor = 0x7B68EE
-	animais["1"]._cor = 0xEE82EE
-	animais["2"]._cor = 0xDDA0DD
+	for i := 0; i < 4; i++ {
+		adicionaranimal(animais, Animalnovo("Roeador", 30, 0xEE82EE))
+	}
+
+	for i := 0; i < 6; i++ {
+		adicionaranimal(animais, Animalnovo("Coelho", 50, 0x7B68EE))
+	}
 
 	for p := range animais {
 
@@ -144,15 +141,15 @@ func main() {
 		for p := range plantas {
 			plantac := plantas[p]
 
-			//if plantac.status() == "vivo" {
+			if plantac.status() == "vivo" {
 
-			fmt.Println("      - ", plantac.toString())
-			plantac.vivendo()
-			//p.movimento()
-			plantac.atualizar(surface)
-			window.UpdateSurface()
+				fmt.Println("      - ", plantac.toString())
+				plantac.vivendo()
+				//p.movimento()
+				plantac.atualizar(surface)
+				window.UpdateSurface()
 
-			//	}
+			}
 
 		}
 
@@ -174,22 +171,6 @@ func main() {
 
 		}
 
-		//for plantac := lsplantas.Front(); plantac != nil; plantac = plantac.Next() {
-		//
-		//	p := plantac.Value.(planta)
-		//
-		//	// TODO: adicionar toString para a struct
-		//	fmt.Println("      - ", p.nome(), " [", p.fase(), ",", p.ciclos(), "]")
-		//
-		//	if p.status() == "vivo" {
-		//		p.vivendo()
-		//	}
-		//
-		//	//if capimverde.status() == "vivo" {
-		//	//	capimverde.vivendo()
-		//	//}
-		//}
-
 		ciclo++
 
 		fmt.Println("")
@@ -200,41 +181,14 @@ func main() {
 		fmt.Println("Quantidade de Sol -> ", sol)
 		fmt.Println("Ceu -> ", ceu())
 
+		if fasecontador == 0 {
+
+			log("logs.txt", "Plantas - "+strconv.Itoa(len(plantas)))
+			log("logs.txt", "Animais - "+strconv.Itoa(len(animais)))
+
+		}
 	}
 
 	fmt.Println("Fim da Simulação !!!")
-
-}
-
-func mapear(tb *tabuleiro, plantas map[string]planta) {
-
-	// Mapear plantas no Tabuleiro
-
-	for p := range plantas {
-
-		plantac := plantas[p]
-
-		var x int = aleatorionumero(50)
-		var y int = aleatorionumero(50)
-
-		plantac.mudarposicao(x, y)
-	}
-
-}
-
-func mapearanimais(tb *tabuleiro, ls *[2]animal) {
-
-	// Mapear plantas no Tabuleiro
-
-	for i := 0; i < 2; i++ {
-
-		p := &ls[i]
-
-		var x int = aleatorionumero(50)
-		var y int = aleatorionumero(50)
-
-		p.mudarposicao(x, y)
-
-	}
 
 }

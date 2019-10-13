@@ -46,7 +46,7 @@ func (p *tabuleiro) atualizar(s *sdl.Surface) {
 		}
 	}
 
-	s.FillRect(&p.dados[0][0].rect, 0x00BFFF)
+	//s.FillRect(&p.dados[0][0].rect, 0x00BFFF)
 	//s.FillRect(&p.dados[49][0].rect, 0x00BFFF)
 
 	//	s.FillRect(&p.dados[0][49].rect, 0x00BFFF)

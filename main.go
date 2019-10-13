@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"time"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -12,6 +13,23 @@ import (
 // AUTOR : LUAN ALVES - 17/0003191
 // AUTOR : MARUAN OLIVEIRA - 18/0057685
 
+var contadorplanta = 0
+var contadoranimal = 0
+
+func adicionarplanta(ls map[string]*planta, plantac *planta) {
+
+	ls[strconv.Itoa(contadorplanta)] = plantac
+
+	contadorplanta++
+}
+
+func adicionaranimal(ls map[string]*animal, animalc *animal) {
+
+	ls[strconv.Itoa(contadoranimal)] = animalc
+
+	contadoranimal++
+}
+
 func main() {
 
 	// SDL INIT - Criacao da Janela
@@ -20,7 +38,7 @@ func main() {
 	}
 	defer sdl.Quit()
 
-	window, err := sdl.CreateWindow("Evolucao", sdl.WINDOWPOS_UNDEFINED, sdl.WINDOWPOS_UNDEFINED,
+	window, err := sdl.CreateWindow("Ecossistema", sdl.WINDOWPOS_UNDEFINED, sdl.WINDOWPOS_UNDEFINED,
 		500, 550, sdl.WINDOW_SHOWN)
 	if err != nil {
 		panic(err)
@@ -43,27 +61,61 @@ func main() {
 	tb.limpar()
 
 	//lsplantas := list.New()
-	var lsplantas [2]planta
-	lsplantas[0] = *Plantanovo("Capim Gordura", 5, 10, 16)
-	lsplantas[1] = *Plantanovo("Capim Verde", 10, 20, 32)
+	//var lsplantas [2]planta
+	//lsplantas[0] = *Plantanovo("Capim Gordura", 5, 10, 16)
+	//lsplantas[1] = *Plantanovo("Capim Verde", 10, 20, 32)
+	//	mapear(tb, &lsplantas)
 
-	mapear(tb, &lsplantas)
+	//var lsanimais [2]animal
+	//lsanimais[0] = *Animalnovo("Coelho", 5)
+	//lsanimais[1] = *Animalnovo("Roedor", 10)
 
-	var lsanimais [2]animal
-	lsanimais[0] = *Animalnovo("Coelho", 5)
-	lsanimais[1] = *Animalnovo("Roedor", 10)
+	//mapearanimais(tb, &lsanimais)
 
-	mapearanimais(tb, &lsanimais)
+	// PLANTAS
+	plantas := make(map[string]*planta)
 
-	// TODO: Criar forma generica de adicionar plantas e extrair em uma funcao ou metodo
-	//lsplantas.PushBack(*Planta_novo("Capim Gordura", 5))
-	//lsplantas.PushBack(*Planta_novo("Capim Verde", 10))
+	adicionarplanta(plantas, Plantanovo("Capim Gordura", 5, 10, 16))
+	adicionarplanta(plantas, Plantanovo("Capim Verde", 10, 20, 32))
+	adicionarplanta(plantas, Plantanovo("Laranjeira", 10, 20, 32))
 
-	//produtores := &produtor{}
-	//p1 := Produtor_Novo("Capim Gordura", 5)
-	//produtores.Append(&p1)expression
+	plantas["0"]._cor = 0xADFF2F
+	plantas["1"]._cor = 0x808000
+	plantas["2"]._cor = 0xDAA520
 
-	//tb.mostrar()
+	for p := range plantas {
+
+		var plantac = plantas[p]
+
+		var x int = aleatorionumero(50)
+		var y int = aleatorionumero(50)
+
+		plantac.mudarposicao(x, y)
+	}
+
+	//var t = len(plantas)
+	//fmt.Println("Tamanho : ", t)
+
+	// ANIMAIS
+	animais := make(map[string]*animal)
+
+	adicionaranimal(animais, Animalnovo("Coelho", 50))
+	adicionaranimal(animais, Animalnovo("Roeador", 30))
+	adicionaranimal(animais, Animalnovo("Rato", 15))
+
+	animais["0"]._cor = 0x7B68EE
+	animais["1"]._cor = 0xEE82EE
+	animais["2"]._cor = 0xDDA0DD
+
+	for p := range animais {
+
+		var animalc = animais[p]
+
+		var x int = aleatorionumero(50)
+		var y int = aleatorionumero(50)
+
+		animalc.mudarposicao(x, y)
+	}
 
 	var ciclo int = 0
 
@@ -89,32 +141,33 @@ func main() {
 		tb.atualizar(surface)
 		window.UpdateSurface()
 
-		for i := 0; i < 2; i++ {
+		for p := range plantas {
+			plantac := plantas[p]
 
-			p := &lsplantas[i]
+			//if plantac.status() == "vivo" {
 
-			if p.status() == "vivo" {
+			fmt.Println("      - ", plantac.toString())
+			plantac.vivendo()
+			//p.movimento()
+			plantac.atualizar(surface)
+			window.UpdateSurface()
 
-				fmt.Println("      - ", p.toString())
-				p.vivendo()
-				//p.movimento()
-				p.atualizar(surface)
-				window.UpdateSurface()
-
-			}
+			//	}
 
 		}
 
-		for i := 0; i < 2; i++ {
+		fmt.Println("CONSUMIDORES")
 
-			p := &lsanimais[i]
+		for p := range animais {
 
-			if p.status() == "vivo" {
+			animalc := animais[p]
 
-				fmt.Println("      - ", p.toString())
-				p.vivendo()
-				p.movimento()
-				p.atualizar(surface)
+			if animalc.status() == "vivo" {
+
+				fmt.Println("      - ", animalc.toString())
+				animalc.vivendo()
+				animalc.movimento()
+				animalc.atualizar(surface)
 				window.UpdateSurface()
 
 			}
@@ -145,7 +198,7 @@ func main() {
 
 		fmt.Println("Fase -> ", fase)
 		fmt.Println("Quantidade de Sol -> ", sol)
-		fmt.Println("Modo -> ", solmodo)
+		fmt.Println("Ceu -> ", ceu())
 
 	}
 
@@ -153,19 +206,18 @@ func main() {
 
 }
 
-func mapear(tb *tabuleiro, lsplantas *[2]planta) {
+func mapear(tb *tabuleiro, plantas map[string]planta) {
 
 	// Mapear plantas no Tabuleiro
 
-	for i := 0; i < 2; i++ {
+	for p := range plantas {
 
-		p := &lsplantas[i]
+		plantac := plantas[p]
 
 		var x int = aleatorionumero(50)
 		var y int = aleatorionumero(50)
 
-		p.mudarposicao(x, y)
-
+		plantac.mudarposicao(x, y)
 	}
 
 }

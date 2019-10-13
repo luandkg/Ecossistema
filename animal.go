@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"strconv"
-
-	"github.com/veandco/go-sdl2/sdl"
 )
 
 type animal struct {
@@ -20,6 +18,8 @@ func Animalnovo(nome string, adulto int) *animal {
 	p._status = "vivo"
 	p._fase = "nascido"
 	p._adultociclo = adulto
+
+	p._cor = 0xFF8C00
 
 	return &p
 }
@@ -50,12 +50,12 @@ func (p *animal) toString() string {
 	return str
 }
 
-func (p *animal) atualizar(s *sdl.Surface) {
+//func (p *animal) atualizar(s *sdl.Surface) {
 
-	var ni int32 = int32(p.x()) * 10
-	var nj int32 = int32(p.y()) * 10
-	p.rect = sdl.Rect{ni, nj, 10, 10}
+//	var ni int32 = int32(p.x()) * 10
+//	var nj int32 = int32(p.y()) * 10
+//	p.rect = sdl.Rect{ni, nj, 10, 10}
 
-	s.FillRect(&p.rect, 0xFF6347)
+//	s.FillRect(&p.rect, 0xFF6347)
 
-}
+//}

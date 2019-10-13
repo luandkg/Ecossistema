@@ -18,6 +18,7 @@ type planta struct {
 func Plantanovo(nome string, adulto int, reproducao int, vida int) *planta {
 
 	p := planta{_adultociclo: adulto}
+
 	p._nome = nome
 	p._idade = 0
 	p._status = "vivo"
@@ -31,6 +32,7 @@ func Plantanovo(nome string, adulto int, reproducao int, vida int) *planta {
 	p._posx = 0
 	p._posy = 0
 
+	p._cor = 0xADFF2F
 	return &p
 }
 

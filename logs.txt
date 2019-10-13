@@ -1536,3 +1536,129 @@ Dia - 10 [ Nublado]
 Noite - 10 [ ]
 Dia - 11 [ Ensolado]
 Noite - 11 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Noite - 1 [ ]
+Dia - 2 [ Ensolado]
+Noite - 2 [ ]
+Dia - 3 [ Muito Nublado]
+Noite - 3 [ ]
+Dia - 4 [ Ensolado]
+Noite - 4 [ ]
+Dia - 5 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Noite - 1 [ ]
+Dia - 2 [ Normal]
+Noite - 2 [ ]
+Dia - 3 [ Ensolado]
+Noite - 3 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Noite - 1 [ ]
+Dia - 2 [ Nublado]
+Noite - 2 [ ]
+Dia - 3 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Noite - 1 [ ]
+Dia - 2 [ Normal]
+Noite - 2 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Noite - 1 [ ]
+Dia - 2 [ Muito Ensolado]
+Noite - 2 [ ]
+Dia - 3 [ Muito Ensolado]
+Noite - 3 [ ]
+Dia - 4 [ Nublado]
+Noite - 4 [ ]
+Dia - 5 [ Nublado]
+Noite - 5 [ ]
+Dia - 6 [ Normal]
+Noite - 6 [ ]
+Dia - 7 [ Normal]
+Noite - 7 [ ]
+Dia - 8 [ Ensolado]
+Noite - 8 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Noite - 1 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Noite - 1 [ ]
+Dia - 2 [ Muito Ensolado]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Noite - 1 [ ]
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]

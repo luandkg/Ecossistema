@@ -22,6 +22,8 @@ type organismo struct {
 	_direcao       string
 	_dirquantidade int
 	_dircontador   int
+
+	_cor uint32
 }
 
 func Organismonovo(nome string) *organismo {
@@ -33,6 +35,8 @@ func Organismonovo(nome string) *organismo {
 
 	p._posx = 0
 	p._posy = 0
+
+	p._cor = 0xADFF2F
 
 	p.rect = sdl.Rect{0, 0, 10, 10}
 
@@ -67,13 +71,17 @@ func (p *organismo) mudarposicao(x int, y int) {
 func (p *organismo) x() int { return p._posx }
 func (p *organismo) y() int { return p._posy }
 
+func (p *organismo) setCor(cor uint32) {
+	p._cor = cor
+}
+
 func (p *organismo) atualizar(s *sdl.Surface) {
 
 	var ni int32 = int32(p.x()) * 10
 	var nj int32 = int32(p.y()) * 10
 	p.rect = sdl.Rect{ni, nj, 10, 10}
 
-	s.FillRect(&p.rect, 0xADFF2F)
+	s.FillRect(&p.rect, p._cor)
 
 }
 

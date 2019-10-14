@@ -15,40 +15,23 @@ import (
 // AUTOR : LUAN ALVES - 17/0003191
 // AUTOR : MARUAN OLIVEIRA - 18/0057685
 
-var contadorplanta = 0
-var contadoranimal = 0
-
 var (
-	window          *sdl.Window
-	renderer        *sdl.Renderer
-	event           sdl.Event
-	err             error
-	solidTexture    *sdl.Texture
-	blendedTexture  *sdl.Texture
-	shadedTexture   *sdl.Texture
-	surface         *sdl.Surface
+	window         *sdl.Window
+	renderer       *sdl.Renderer
+	event          sdl.Event
+	err            error
+	solidTexture   *sdl.Texture
+	blendedTexture *sdl.Texture
+	shadedTexture  *sdl.Texture
+	surface        *sdl.Surface
 
-	running         bool
+	running bool
 )
 
 const (
 	screenWidth  = 500
 	screenHeight = 650
 )
-
-func adicionarplanta(ls map[string]*planta, plantac *planta) {
-
-	ls[strconv.Itoa(contadorplanta)] = plantac
-
-	contadorplanta++
-}
-
-func adicionaranimal(ls map[string]*consumidor, animalc *consumidor) {
-
-	ls[strconv.Itoa(contadoranimal)] = animalc
-
-	contadoranimal++
-}
 
 func Configuracao() (successful bool) {
 
@@ -161,82 +144,63 @@ func main() {
 	log("logs.txt", " ------------------ SIMULACAO ------------------ ")
 
 	tb := Tabuleiro_novo("MATRIZ")
+	ambienteC := AmbienteNovo()
+	ecossistemaC := EcossistemaNovo()
 
 	tb.limpar()
 
 	// PLANTAS
-	plantas := make(map[string]*planta)
 
 	for i := 0; i < 10; i++ {
-		adicionarplanta(plantas, Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, plantas))
+		ecossistemaC.adicionarPlanta(Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, ecossistemaC.plantas))
 	}
 	for i := 0; i < 10; i++ {
-		adicionarplanta(plantas, Plantanovo("Capim Verde", 300, 150, 600, 0x808000, plantas))
+		ecossistemaC.adicionarPlanta(Plantanovo("Capim Verde", 300, 150, 600, 0x808000, ecossistemaC.plantas))
 	}
 	for i := 0; i < 10; i++ {
-		adicionarplanta(plantas, Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, plantas))
+		ecossistemaC.adicionarPlanta(Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, ecossistemaC.plantas))
 	}
 	for i := 0; i < 10; i++ {
-		adicionarplanta(plantas, Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, plantas))
-	}
-
-	for p := range plantas {
-
-		var plantac = plantas[p]
-
-		var x int = aleatorionumero(50)
-		var y int = aleatorionumero(50)
-
-		plantac.mudarposicao(x, y)
+		ecossistemaC.adicionarPlanta(Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, ecossistemaC.plantas))
 	}
 
 	// ANIMAIS
-	animais := make(map[string]*consumidor)
 
 	for i := 0; i < 10; i++ {
-		adicionaranimal(animais, Consumidor("Rato", 15, 10, 30, 0xDDA0DD, animais))
+		ecossistemaC.adicionarConsumidor(Consumidor("Rato", 15, 10, 30, 0xDDA0DD, ecossistemaC.consumidores))
 	}
 
 	for i := 0; i < 4; i++ {
-		adicionaranimal(animais, Consumidor("Roeador", 30, 10, 30, 0xEE82EE, animais))
+		ecossistemaC.adicionarConsumidor(Consumidor("Roeador", 30, 10, 30, 0xEE82EE, ecossistemaC.consumidores))
 	}
 
 	for i := 0; i < 6; i++ {
-		adicionaranimal(animais, Consumidor("Coelho", 50, 10, 30,0x7B68EE, animais))
+		ecossistemaC.adicionarConsumidor(Consumidor("Coelho", 50, 10, 30, 0x7B68EE, ecossistemaC.consumidores))
 	}
 
-	for p := range animais {
-
-		var animalc = animais[p]
-
-		var x = aleatorionumero(50)
-		var y = aleatorionumero(50)
-
-		animalc.mudarposicao(x, y)
-	}
-
-	var ciclo int = 0
+	ecossistemaC.mapearPlantas()
+	ecossistemaC.mapearConsumidores()
 
 	running = true
 	for running {
 
 		HandleEvents()
 
-		fmt.Println("---------------- Ciclo :  ", ciclo, " --------------------------------")
+		fmt.Println("---------------- Ciclo :  ", ambienteC.ciclo, " --------------------------------")
 		time.Sleep(time.Second / 4)
 		fmt.Println("")
 
 		fmt.Println("PRODUTORES")
 
-		tb.atualizar(surface)
+		tb.atualizar(surface, ambienteC)
 
-		for p := range plantas {
-			plantac := plantas[p]
+		for p := range ecossistemaC.plantas {
+			plantac := ecossistemaC.plantas[p]
 
 			if plantac.status() == "vivo" {
 
 				fmt.Println("      - ", plantac.toString())
-				plantac.vivendo()
+				plantac.vivendo(ecossistemaC)
 				plantac.atualizar(surface)
 
 			}
@@ -245,14 +209,14 @@ func main() {
 
 		fmt.Println("CONSUMIDORES")
 
-		for p := range animais {
+		for p := range ecossistemaC.consumidores {
 
-			animalc := animais[p]
+			animalc := ecossistemaC.consumidores[p]
 
 			if animalc.status() == "vivo" {
 
 				fmt.Println("      - ", animalc.toString())
-				animalc.vivendo()
+				animalc.vivendo(ecossistemaC)
 				animalc.movimento()
 				animalc.atualizar(surface)
 
@@ -260,22 +224,22 @@ func main() {
 
 		}
 
-		ciclo++
+		ambienteC.ciclo++
 
 		AtualizarTela()
 
 		fmt.Println("")
 
-		ambiente()
+		ambienteC.ambiente()
 
-		fmt.Println("Fase -> ", fase)
-		fmt.Println("Quantidade de Sol -> ", sol)
-		fmt.Println("Ceu -> ", ceu())
+		fmt.Println("Fase -> ", ambienteC.fase)
+		fmt.Println("Quantidade de Sol -> ", ambienteC.sol)
+		fmt.Println("Ceu -> ", ambienteC.ceu())
 
-		if fasecontador == 0 {
+		if ambienteC.fasecontador == 0 {
 
-			log("logs.txt", "Plantas - "+strconv.Itoa(len(plantas)))
-			log("logs.txt", "Animais - "+strconv.Itoa(len(animais)))
+			log("logs.txt", "Plantas - "+strconv.Itoa(len(ecossistemaC.plantas)))
+			log("logs.txt", "Animais - "+strconv.Itoa(len(ecossistemaC.consumidores)))
 
 		}
 	}

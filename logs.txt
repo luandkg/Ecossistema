@@ -2251,3 +2251,23 @@ Animais - 81
 Dia - 1 [ Nublado]
 Plantas - 40
 Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20

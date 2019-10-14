@@ -41,7 +41,7 @@ func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, c
 
 }
 
-func (p *consumidor) vivendo() {
+func (p *consumidor) vivendo(ecossistemaC *ecossistema) {
 
 	p.organismo.vivendo()
 
@@ -55,7 +55,7 @@ func (p *consumidor) vivendo() {
 
 		if p._fase == "adulto" && p._idade < p._vida {
 
-			p.reproduzir()
+			p.reproduzir(ecossistemaC)
 
 		}
 
@@ -82,7 +82,7 @@ func (p *consumidor) mudarFase() {
 
 }
 
-func (p *consumidor) reproduzir() {
+func (p *consumidor) reproduzir(ecossistemaC *ecossistema) {
 
 	p._reproduzircontador += 1
 
@@ -96,7 +96,7 @@ func (p *consumidor) reproduzir() {
 
 		pg.mudarposicao(x, y)
 
-		adicionaranimal(p._consumidores, pg)
+		ecossistemaC.adicionarConsumidor(pg)
 	}
 
 }

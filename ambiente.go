@@ -4,26 +4,41 @@ import (
 	"strconv"
 )
 
-// Variaveis contagem de CICLO
-var fase string = ""
-var faseciclo int = 100
-var fasecontador int = 0
-var dia int = 0
+type ambiente struct {
+	fase         string
+	faseciclo    int
+	fasecontador int
+	dia          int
+	sol          int
 
-// Variaveis Qualificadores do Ambiente
-var sol int = 0
+	ciclo int
+}
 
-func ceu() string {
+func AmbienteNovo() *ambiente {
 
-	if fase == "Dia" {
-		return luminosidade(sol)
+	p := ambiente{}
+	p.faseciclo = 100
+	p.dia = 0
+	p.fase = ""
+	p.fasecontador = 0
+	p.sol = 0
+
+	p.ciclo = 0
+
+	return &p
+}
+
+func (a *ambiente) ceu() string {
+
+	if a.fase == "Dia" {
+		return a.luminosidade(a.sol)
 	} else {
 		return ""
 	}
 
 }
 
-func luminosidade(_sol int) string {
+func (a *ambiente) luminosidade(_sol int) string {
 
 	var _solmodo string = " - "
 	if _sol >= 0 && _sol < 20 {
@@ -50,43 +65,46 @@ func luminosidade(_sol int) string {
 
 }
 
-func ambiente() {
+func (a *ambiente) ambiente() {
 
 	// Implementacao FASE - DIA / NOITE
 
-	if fase == "" {
-		fasecontador = faseciclo * 2
+	if a.fase == "" {
+		a.fasecontador = a.faseciclo * 2
 	}
 
-	if fasecontador >= faseciclo {
-		fasecontador = 0
-		if fase == "Dia" {
-			fase = "Noite"
-			sol = 0
-			log("logs.txt", "Noite - "+strconv.Itoa(dia)+" [ ]")
+	if a.fasecontador >= a.faseciclo {
+		a.fasecontador = 0
+		if a.fase == "Dia" {
+			a.fase = "Noite"
+			a.sol = 0
+			log("logs.txt", "Noite - "+strconv.Itoa(a.dia)+" [ ]")
 
 		} else {
-			fase = "Dia"
-			dia++
-			sol = aleatorionumero(100)
+			a.fase = "Dia"
+			a.dia++
+			a.sol = aleatorionumero(100)
 
-			log("logs.txt", "Dia - "+strconv.Itoa(dia)+" [ "+ceu()+"]")
+			log("logs.txt", "Dia - "+strconv.Itoa(a.dia)+" [ "+a.ceu()+"]")
 
 		}
 	} else {
-		fasecontador++
+		a.fasecontador++
 
-		if fase == "Dia" {
+		if a.fase == "Dia" {
 			modo := aleatorionumero(100)
 			valor := aleatorionumero(5)
 
 			if modo <= 50 {
-				sol += valor
+				a.sol += valor
 			} else {
-				sol -= valor
+				a.sol -= valor
 			}
 
 		}
 	}
 
+	if a.sol < 0 {
+		a.sol = a.sol * (-1)
+	}
 }

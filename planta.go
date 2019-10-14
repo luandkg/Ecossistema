@@ -41,62 +41,46 @@ func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, p
 	return &p
 }
 
-func (p *planta) vivendo() {
+func (p *planta) vivendo(ecossistemaC *ecossistema) {
 
 	p.organismo.vivendo()
 
 	if p._status == "vivo" {
 
-		if p._idade == p._adultociclo || p._idade == p._vida {
+		if p._fase == "nascido" {
+			if p._idade >= p._adultociclo {
+				p._fase = "adulto"
 
-			p.mudarFase()
+				fmt.Println("       --- Planta : ", p.nome(), " Evoluiu : Adulto !!!")
+
+			}
+		}
+
+		// Se o organismo for adulto inicia o ciclo de reproducao
+		if p._fase == "adulto" {
+
+			p._reproduzircontador += 1
+
+			if p._reproduzircontador >= p._reproduzirciclo {
+				p._reproduzircontador = 0
+				fmt.Println("       --- Planta : ", p.nome(), " Reproduzindo !!!")
+
+				var pg = Plantanovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._plantas)
+				var x int = aleatorionumero(50)
+				var y int = aleatorionumero(50)
+
+				pg.mudarposicao(x, y)
+
+				ecossistemaC.adicionarPlanta(pg)
+			}
 
 		}
 
-		if p._fase == "adulto" && p._idade < p._vida {
-
-			p.reproduzir()
-
+		if p._idade >= p._vida {
+			p._status = "morto"
+			fmt.Println("       --- Planta : ", p.nome(), " Morreu !!!")
 		}
 
-	}
-
-}
-
-func (p *planta) mudarFase() {
-
-	switch p._fase {
-
-	case "nascido":
-		p._fase = "adulto"
-		fmt.Println("       --- Planta : ", p.nome(), " Evoluiu : Adulto !!!")
-		break
-
-	case "adulto":
-		p._status = "morto"
-		p._fase = "falescido"
-		fmt.Println("       --- Planta : ", p.nome(), " Morreu !!!")
-		break
-
-	}
-
-}
-
-func (p *planta) reproduzir() {
-
-	p._reproduzircontador += 1
-
-	if p._reproduzircontador >= p._reproduzirciclo {
-		p._reproduzircontador = 0
-		fmt.Println("       --- Planta : ", p.nome(), " Reproduzindo !!!")
-
-		var pg = Plantanovo("Capim Gordura", 5, 10, 16, 0xADFF2F, p._plantas)
-		var x int = aleatorionumero(50)
-		var y int = aleatorionumero(50)
-
-		pg.mudarposicao(x, y)
-
-		adicionarplanta(p._plantas, pg)
 	}
 
 }

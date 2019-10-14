@@ -152,16 +152,16 @@ func main() {
 	// PLANTAS
 
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarPlanta(Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, ecossistemaC.plantas))
+		ecossistemaC.adicionarProdutor(Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, ecossistemaC.produtores))
 	}
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarPlanta(Plantanovo("Capim Verde", 300, 150, 600, 0x808000, ecossistemaC.plantas))
+		ecossistemaC.adicionarProdutor(Plantanovo("Capim Verde", 300, 150, 600, 0x808000, ecossistemaC.produtores))
 	}
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarPlanta(Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, ecossistemaC.plantas))
+		ecossistemaC.adicionarProdutor(Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, ecossistemaC.produtores))
 	}
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarPlanta(Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, ecossistemaC.plantas))
+		ecossistemaC.adicionarProdutor(Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, ecossistemaC.produtores))
 	}
 
 	// ANIMAIS
@@ -178,7 +178,7 @@ func main() {
 		ecossistemaC.adicionarConsumidor(Consumidor("Coelho", 50, 10, 30, 0x7B68EE, ecossistemaC.consumidores))
 	}
 
-	ecossistemaC.mapearPlantas()
+	ecossistemaC.mapearProdutores()
 	ecossistemaC.mapearConsumidores()
 
 	running = true
@@ -194,8 +194,8 @@ func main() {
 
 		tb.atualizar(surface, ambienteC)
 
-		for p := range ecossistemaC.plantas {
-			plantac := ecossistemaC.plantas[p]
+		for p := range ecossistemaC.produtores {
+			plantac := ecossistemaC.produtores[p]
 
 			if plantac.status() == "vivo" {
 
@@ -238,9 +238,10 @@ func main() {
 
 		if ambienteC.fasecontador == 0 {
 
-			log("logs.txt", "Plantas - "+strconv.Itoa(len(ecossistemaC.plantas)))
-			log("logs.txt", "Animais - "+strconv.Itoa(len(ecossistemaC.consumidores)))
+			log("logs.txt", "Plantas - "+strconv.Itoa(len(ecossistemaC.produtores)))
+			log("logs.txt", "Consumidores - "+strconv.Itoa(len(ecossistemaC.consumidores)))
 
+			ecossistemaC.removerOrganimosMortos()
 		}
 	}
 

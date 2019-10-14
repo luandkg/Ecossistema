@@ -6,29 +6,29 @@ import (
 )
 
 type ecossistema struct {
-	contadorplanta int
-	contadoranimal int
-	plantas        (map[string]*planta)
-	consumidores   (map[string]*consumidor)
+	contadorprodutor int
+	contadoranimal   int
+	produtores       (map[string]*produtor)
+	consumidores     (map[string]*consumidor)
 }
 
 func EcossistemaNovo() *ecossistema {
 
 	p := ecossistema{}
 	p.contadoranimal = 0
-	p.contadorplanta = 0
+	p.contadorprodutor = 0
 
-	p.plantas = make(map[string]*planta)
+	p.produtores = make(map[string]*produtor)
 	p.consumidores = make(map[string]*consumidor)
 
 	return &p
 }
 
-func (a *ecossistema) adicionarPlanta(plantac *planta) {
+func (a *ecossistema) adicionarProdutor(produtor *produtor) {
 
-	a.plantas[strconv.Itoa(a.contadorplanta)] = plantac
+	a.produtores[strconv.Itoa(a.contadorprodutor)] = produtor
 
-	a.contadorplanta++
+	a.contadorprodutor++
 }
 
 func (a *ecossistema) adicionarConsumidor(animalc *consumidor) {
@@ -52,11 +52,11 @@ func (a *ecossistema) mapearConsumidores() {
 
 }
 
-func (a *ecossistema) mapearPlantas() {
+func (a *ecossistema) mapearProdutores() {
 
-	for p := range a.plantas {
+	for p := range a.produtores {
 
-		var plantac = a.plantas[p]
+		var plantac = a.produtores[p]
 
 		var x int = aleatorionumero(50)
 		var y int = aleatorionumero(50)
@@ -68,15 +68,15 @@ func (a *ecossistema) mapearPlantas() {
 
 func (a *ecossistema) removerOrganimosMortos() {
 
-	for p := range a.plantas {
+	for p := range a.produtores {
 
-		var plantac = a.plantas[p]
+		var plantac = a.produtores[p]
 
 		if plantac.status() == "morto" {
 
-			fmt.Println("      - Removendo Planta", p)
+			fmt.Println("      - Removendo Produtor", p)
 
-			delete(a.plantas, p)
+			delete(a.produtores, p)
 		}
 
 	}

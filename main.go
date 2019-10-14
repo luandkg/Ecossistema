@@ -167,15 +167,15 @@ func main() {
 	// ANIMAIS
 
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarConsumidor(Consumidor("Rato", 15, 10, 30, 0xDDA0DD, ecossistemaC))
+		ecossistemaC.adicionarConsumidor(Consumidor("Rato", 200, 200, 2000, 0xDDA0DD, ecossistemaC))
 	}
 
 	for i := 0; i < 4; i++ {
-		ecossistemaC.adicionarConsumidor(Consumidor("Roeador", 30, 10, 30, 0xEE82EE, ecossistemaC))
+		ecossistemaC.adicionarConsumidor(Consumidor("Roeador", 400, 200, 5000, 0xEE82EE, ecossistemaC))
 	}
 
 	for i := 0; i < 6; i++ {
-		ecossistemaC.adicionarConsumidor(Consumidor("Coelho", 50, 10, 30, 0x7B68EE, ecossistemaC))
+		ecossistemaC.adicionarConsumidor(Consumidor("Coelho", 500, 250, 8000, 0x7B68EE, ecossistemaC))
 	}
 
 	ecossistemaC.mapearOrganismos()

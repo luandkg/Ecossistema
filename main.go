@@ -152,34 +152,33 @@ func main() {
 	// PLANTAS
 
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarProdutor(Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, ecossistemaC.produtores))
+		ecossistemaC.adicionarProdutor(Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, ecossistemaC))
 	}
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarProdutor(Plantanovo("Capim Verde", 300, 150, 600, 0x808000, ecossistemaC.produtores))
+		ecossistemaC.adicionarProdutor(Plantanovo("Capim Verde", 300, 150, 600, 0x808000, ecossistemaC))
 	}
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarProdutor(Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, ecossistemaC.produtores))
+		ecossistemaC.adicionarProdutor(Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, ecossistemaC))
 	}
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarProdutor(Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, ecossistemaC.produtores))
+		ecossistemaC.adicionarProdutor(Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, ecossistemaC))
 	}
 
 	// ANIMAIS
 
 	for i := 0; i < 10; i++ {
-		ecossistemaC.adicionarConsumidor(Consumidor("Rato", 15, 10, 30, 0xDDA0DD, ecossistemaC.consumidores))
+		ecossistemaC.adicionarConsumidor(Consumidor("Rato", 15, 10, 30, 0xDDA0DD, ecossistemaC))
 	}
 
 	for i := 0; i < 4; i++ {
-		ecossistemaC.adicionarConsumidor(Consumidor("Roeador", 30, 10, 30, 0xEE82EE, ecossistemaC.consumidores))
+		ecossistemaC.adicionarConsumidor(Consumidor("Roeador", 30, 10, 30, 0xEE82EE, ecossistemaC))
 	}
 
 	for i := 0; i < 6; i++ {
-		ecossistemaC.adicionarConsumidor(Consumidor("Coelho", 50, 10, 30, 0x7B68EE, ecossistemaC.consumidores))
+		ecossistemaC.adicionarConsumidor(Consumidor("Coelho", 50, 10, 30, 0x7B68EE, ecossistemaC))
 	}
 
-	ecossistemaC.mapearProdutores()
-	ecossistemaC.mapearConsumidores()
+	ecossistemaC.mapearOrganismos()
 
 	running = true
 	for running {
@@ -200,7 +199,7 @@ func main() {
 			if plantac.status() == "vivo" {
 
 				fmt.Println("      - ", plantac.toString())
-				plantac.vivendo(ecossistemaC)
+				plantac.vivendo()
 				plantac.atualizar(surface)
 
 			}
@@ -216,7 +215,7 @@ func main() {
 			if animalc.status() == "vivo" {
 
 				fmt.Println("      - ", animalc.toString())
-				animalc.vivendo(ecossistemaC)
+				animalc.vivendo()
 				animalc.movimento()
 				animalc.atualizar(surface)
 

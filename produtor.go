@@ -13,11 +13,12 @@ type produtor struct {
 
 	_vida int
 
-	_produtores (map[string]*produtor)
+	_produtores   (map[string]*produtor)
+	_ecossistemaC *ecossistema
 }
 
 // Plantanovo : Criar instancia de planta
-func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, produtores map[string]*produtor) *produtor {
+func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *ecossistema) *produtor {
 
 	p := produtor{_adultociclo: adulto}
 
@@ -36,12 +37,12 @@ func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, p
 	p._posy = 0
 
 	p._cor = cor
-	p._produtores = produtores
+	p._ecossistemaC = ecossistemaC
 
 	return &p
 }
 
-func (p *produtor) vivendo(ecossistemaC *ecossistema) {
+func (p *produtor) vivendo() {
 
 	p.organismo.vivendo()
 
@@ -65,13 +66,13 @@ func (p *produtor) vivendo(ecossistemaC *ecossistema) {
 				p._reproduzircontador = 0
 				fmt.Println("       --- Produtor : ", p.nome(), " Reproduzindo !!!")
 
-				var pg = Plantanovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._produtores)
+				var pg = Plantanovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
 				var x int = aleatorionumero(50)
 				var y int = aleatorionumero(50)
 
 				pg.mudarposicao(x, y)
 
-				ecossistemaC.adicionarProdutor(pg)
+				p._ecossistemaC.adicionarProdutor(pg)
 			}
 
 		}

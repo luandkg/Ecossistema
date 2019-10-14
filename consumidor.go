@@ -13,10 +13,10 @@ type consumidor struct {
 
 	_vida int
 
-	_consumidores map[string]*consumidor
+	_ecossistemaC *ecossistema
 }
 
-func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, consumidores map[string]*consumidor) *consumidor {
+func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *ecossistema) *consumidor {
 
 	p := consumidor{_adultociclo: adulto}
 
@@ -35,13 +35,13 @@ func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, c
 	p._posy = 0
 
 	p._cor = cor
-	p._consumidores = consumidores
+	p._ecossistemaC = ecossistemaC
 
 	return &p
 
 }
 
-func (p *consumidor) vivendo(ecossistemaC *ecossistema) {
+func (p *consumidor) vivendo() {
 
 	p.organismo.vivendo()
 
@@ -55,7 +55,7 @@ func (p *consumidor) vivendo(ecossistemaC *ecossistema) {
 
 		if p._fase == "adulto" && p._idade < p._vida {
 
-			p.reproduzir(ecossistemaC)
+			p.reproduzir()
 
 		}
 
@@ -82,7 +82,7 @@ func (p *consumidor) mudarFase() {
 
 }
 
-func (p *consumidor) reproduzir(ecossistemaC *ecossistema) {
+func (p *consumidor) reproduzir() {
 
 	p._reproduzircontador += 1
 
@@ -90,13 +90,13 @@ func (p *consumidor) reproduzir(ecossistemaC *ecossistema) {
 		p._reproduzircontador = 0
 		fmt.Println("       --- Consumidor : ", p.nome(), " Reproduzindo !!!")
 
-		var pg = Consumidor("Coelho", 5, 10, 16, 0xADFF2F, p._consumidores)
+		var pg = Consumidor("Coelho", 5, 10, 16, 0xADFF2F, p._ecossistemaC)
 		var x int = aleatorionumero(50)
 		var y int = aleatorionumero(50)
 
 		pg.mudarposicao(x, y)
 
-		ecossistemaC.adicionarConsumidor(pg)
+		p._ecossistemaC.adicionarConsumidor(pg)
 	}
 
 }

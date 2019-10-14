@@ -38,6 +38,11 @@ func (a *ecossistema) adicionarConsumidor(animalc *consumidor) {
 	a.contadoranimal++
 }
 
+func (a *ecossistema) mapearOrganismos() {
+	a.mapearProdutores()
+	a.mapearConsumidores()
+}
+
 func (a *ecossistema) mapearConsumidores() {
 
 	for p := range a.consumidores {

@@ -7,6 +7,8 @@ import (
 
 type produtor struct {
 	organismo
+
+	_nomecompleto       string
 	_adultociclo        int
 	_reproduzirciclo    int
 	_reproduzircontador int
@@ -24,6 +26,7 @@ func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, e
 
 	p.organismo = *Organismonovo(nome)
 	p._nome = nome
+	p._nomecompleto = ""
 	p._idade = 0
 	p._status = "vivo"
 	p._fase = "nascido"
@@ -88,7 +91,7 @@ func (p *produtor) vivendo() {
 
 func (p *produtor) toString() string {
 
-	var str = p.nome() + " [" + p.fase() + " " + strconv.Itoa(p.ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
+	var str = p._nomecompleto + " [" + p.fase() + " " + strconv.Itoa(p.ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "] - Status : " + p._status
 
 	return str
 }

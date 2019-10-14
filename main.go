@@ -194,13 +194,14 @@ func main() {
 		tb.atualizar(surface, ambienteC)
 
 		for p := range ecossistemaC.produtores {
-			plantac := ecossistemaC.produtores[p]
+			produtorc := ecossistemaC.produtores[p]
 
-			if plantac.status() == "vivo" {
+			if produtorc.status() == "vivo" {
 
-				fmt.Println("      - ", plantac.toString())
-				plantac.vivendo()
-				plantac.atualizar(surface)
+				produtorc._nomecompleto = produtorc._nome + " " + p
+				fmt.Println("      - ", produtorc.toString())
+				produtorc.vivendo()
+				produtorc.atualizar(surface)
 
 			}
 
@@ -210,20 +211,18 @@ func main() {
 
 		for p := range ecossistemaC.consumidores {
 
-			animalc := ecossistemaC.consumidores[p]
+			consumidorc := ecossistemaC.consumidores[p]
 
-			if animalc.status() == "vivo" {
+			if consumidorc.status() == "vivo" {
 
-				fmt.Println("      - ", animalc.toString())
-				animalc.vivendo()
-				animalc.movimento()
-				animalc.atualizar(surface)
+				fmt.Println("      - ", consumidorc.toString())
+				consumidorc.vivendo()
+				consumidorc.movimento()
+				consumidorc.atualizar(surface)
 
 			}
 
 		}
-
-		ambienteC.ciclo++
 
 		AtualizarTela()
 

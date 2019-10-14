@@ -59,6 +59,10 @@ func (p *consumidor) vivendo() {
 
 		}
 
+		if p._idade >= p._vida {
+			p._status = "morto"
+			fmt.Println("       --- Consumidor : ", p.nome(), " Morreu !!!")
+		}
 	}
 
 }

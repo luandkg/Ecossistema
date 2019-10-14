@@ -54,11 +54,11 @@ func (a *ambiente) luminosidade(_sol int) string {
 	}
 
 	if _sol >= 60 && _sol < 80 {
-		_solmodo = "Ensolado"
+		_solmodo = "Ensolarado"
 	}
 
 	if _sol >= 80 {
-		_solmodo = "Muito Ensolado"
+		_solmodo = "Muito Ensolarado"
 	}
 
 	return _solmodo
@@ -68,6 +68,8 @@ func (a *ambiente) luminosidade(_sol int) string {
 func (a *ambiente) ambiente() {
 
 	// Implementacao FASE - DIA / NOITE
+
+	a.ciclo++
 
 	if a.fase == "" {
 		a.fasecontador = a.faseciclo * 2

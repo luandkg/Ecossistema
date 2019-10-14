@@ -1740,3 +1740,514 @@ Animais - 20
 Noite - 3 [ ]
 Plantas - 250
 Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+
+
+ ------------------ SIMULACAO ------------------ 
+
+ ------------------ SIMULACAO ------------------ 
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+Noite - 1 [ ]
+Plantas - 40
+Animais - 20
+Dia - 2 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+Noite - 2 [ ]
+Plantas - 50
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+Noite - 1 [ ]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Animais - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolado]
+Plantas - 40
+Animais - 20
+Noite - 1 [ ]
+Plantas - 40
+Animais - 81
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Animais - 20

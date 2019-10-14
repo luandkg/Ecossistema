@@ -77,8 +77,8 @@ func (p *organismo) setCor(cor uint32) {
 
 func (p *organismo) atualizar(s *sdl.Surface) {
 
-	var ni int32 = int32(p.x()) * 10
-	var nj int32 = int32(p.y()) * 10
+	var ni = int32(p.x()) * 10
+	var nj = int32(p.y()) * 10
 	p.rect = sdl.Rect{ni, nj, 10, 10}
 
 	s.FillRect(&p.rect, p._cor)
@@ -94,60 +94,67 @@ func (p *organismo) movimento() {
 		p._direcao = ""
 	}
 
-	if p._direcao == "" {
-		p._direcao = "l"
+	switch p._direcao {
 
+	case "":
 		r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
 		escolha := r1.Intn(3)
 		p._dirquantidade = r1.Intn(15)
 
-		if escolha == 0 {
+		switch escolha {
+
+		case 0:
 			p._direcao = "l"
-		}
+			break
 
-		if escolha == 1 {
+		case 1:
 			p._direcao = "o"
-		}
+			break
 
-		if escolha == 2 {
+		case 2:
 			p._direcao = "s"
-		}
+			break
 
-		if escolha == 3 {
+		case 3:
 			p._direcao = "n"
+			break
+
 		}
 
 		fmt.Println("Mudar direcao : ", p._direcao, "  com ", p._dirquantidade)
-	}
 
-	if p._direcao == "l" {
+	case "l":
 		p._posx += 1
 		if p._posx >= 50 {
 			p._direcao = "o"
 			p._posx = 48
 		}
-	} else if p._direcao == "o" {
-		p._posx -= 1
+		break
 
+	case "o":
+		p._posx -= 1
 		if p._posx < 0 {
 			p._direcao = "l"
 			p._posx = 1
 		}
+		break
 
-	} else if p._direcao == "n" {
+	case "n":
 		p._posy -= 1
-
 		if p._posy < 0 {
 			p._direcao = "s"
 			p._posy = 1
 		}
-	} else if p._direcao == "s" {
-		p._posy += 1
+		break
 
+	case "s":
+		p._posy += 1
 		if p._posy >= 50 {
 			p._direcao = "n"
 			p._posy = 48
 		}
+		break
 
 	}
+
 }

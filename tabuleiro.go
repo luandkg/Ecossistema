@@ -35,6 +35,7 @@ func (p *tabuleiro) limpar() {
 
 func (p *tabuleiro) atualizar(s *sdl.Surface) {
 
+	// Zera surface rects
 	s.FillRect(nil, 0)
 
 	// Zerando Tabuleiro
@@ -46,12 +47,6 @@ func (p *tabuleiro) atualizar(s *sdl.Surface) {
 		}
 	}
 
-	//s.FillRect(&p.dados[0][0].rect, 0x00BFFF)
-	//s.FillRect(&p.dados[49][0].rect, 0x00BFFF)
-
-	//	s.FillRect(&p.dados[0][49].rect, 0x00BFFF)
-	//0xFFA500s.FillRect(&p.dados[49][49].rect, 0x00BFFF)
-
 	var linhafinal = sdl.Rect{0, 500, 500, 10}
 	if fase == "Dia" {
 		s.FillRect(&linhafinal, 0xFFFF00)
@@ -59,7 +54,7 @@ func (p *tabuleiro) atualizar(s *sdl.Surface) {
 		s.FillRect(&linhafinal, 0x000080)
 	}
 
-	var st int = sol * 5
+	var st = sol * 5
 	var solinha = sdl.Rect{0, 510, int32(st), 10}
 	s.FillRect(&solinha, 0xFF4500)
 
@@ -88,8 +83,4 @@ func (p *tabuleiro) mostrar() {
 
 	fmt.Println("-----------------------------------------------------------------------------------------------------")
 
-}
-
-func (p *tabuleiro) mudar(x int, y int, valor int) {
-	//p.dados[x][y]._valor = valor
 }

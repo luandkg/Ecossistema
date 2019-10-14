@@ -1,0 +1,9 @@
+# Arquivos e pastas de IDE's
+.idea/
+
+# Arquivos gerados em builds
+Ecossistema
+Ecossistema.exe
+
+# Arquivos de logs
+logs.txt

@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-type planta struct {
+type consumidor struct {
 	organismo
 	_adultociclo        int
 	_reproduzirciclo    int
@@ -13,13 +13,12 @@ type planta struct {
 
 	_vida int
 
-	_plantas (map[string]*planta)
+	_consumidores map[string]*consumidor
 }
 
-// Plantanovo : Criar instancia de planta
-func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, plantas map[string]*planta) *planta {
+func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, consumidores map[string]*consumidor) *consumidor {
 
-	p := planta{_adultociclo: adulto}
+	p := consumidor{_adultociclo: adulto}
 
 	p.organismo = *Organismonovo(nome)
 	p._nome = nome
@@ -36,12 +35,13 @@ func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, p
 	p._posy = 0
 
 	p._cor = cor
-	p._plantas = plantas
+	p._consumidores = consumidores
 
 	return &p
+
 }
 
-func (p *planta) vivendo() {
+func (p *consumidor) vivendo() {
 
 	p.organismo.vivendo()
 
@@ -63,45 +63,45 @@ func (p *planta) vivendo() {
 
 }
 
-func (p *planta) mudarFase() {
+func (p *consumidor) mudarFase() {
 
 	switch p._fase {
 
 	case "nascido":
 		p._fase = "adulto"
-		fmt.Println("       --- Planta : ", p.nome(), " Evoluiu : Adulto !!!")
+		fmt.Println("       --- Consumidor : ", p.nome(), " Evoluiu : Adulto !!!")
 		break
 
 	case "adulto":
 		p._status = "morto"
 		p._fase = "falescido"
-		fmt.Println("       --- Planta : ", p.nome(), " Morreu !!!")
+		fmt.Println("       --- Consumidor : ", p.nome(), " Morreu !!!")
 		break
 
 	}
 
 }
 
-func (p *planta) reproduzir() {
+func (p *consumidor) reproduzir() {
 
 	p._reproduzircontador += 1
 
 	if p._reproduzircontador >= p._reproduzirciclo {
 		p._reproduzircontador = 0
-		fmt.Println("       --- Planta : ", p.nome(), " Reproduzindo !!!")
+		fmt.Println("       --- Consumidor : ", p.nome(), " Reproduzindo !!!")
 
-		var pg = Plantanovo("Capim Gordura", 5, 10, 16, 0xADFF2F, p._plantas)
+		var pg = Consumidor("Coelho", 5, 10, 16, 0xADFF2F, p._consumidores)
 		var x int = aleatorionumero(50)
 		var y int = aleatorionumero(50)
 
 		pg.mudarposicao(x, y)
 
-		adicionarplanta(p._plantas, pg)
+		adicionaranimal(p._consumidores, pg)
 	}
 
 }
 
-func (p *planta) toString() string {
+func (p *consumidor) toString() string {
 
 	var str = p.nome() + " [" + p.fase() + " " + strconv.Itoa(p.ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
 

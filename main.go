@@ -20,10 +20,12 @@ var (
 	renderer       *sdl.Renderer
 	event          sdl.Event
 	err            error
-	solidTexture   *sdl.Texture
+	//solidTexture   *sdl.Texture
 	blendedTexture *sdl.Texture
 	shadedTexture  *sdl.Texture
 	surface        *sdl.Surface
+	
+	arrayTexture   []Texto
 
 	running bool
 )
@@ -71,26 +73,50 @@ func Configuracao() (successful bool) {
 
 }
 
-func CriarTextos() (successful bool) {
+type Texto struct {
+	width int32
+	height int32
+	texture *sdl.Texture
+}
+
+func CriarTextos(arrayQualquer []string) (successful bool) {
+
 	var font *ttf.Font
 
-	if font, err = ttf.OpenFont("./assets/fonts/OpenSans-Regular.ttf", 40); err != nil {
+	if font, err = ttf.OpenFont("./assets/fonts/OpenSans-Regular.ttf", 20); err != nil {
 		fmt.Printf("Failed to open font: %s\n", err)
 		return false
 	}
 
-	var solidSurface *sdl.Surface
-	if solidSurface, err = font.RenderUTF8Solid("Deu certo!!", sdl.Color{255, 0, 0, 255}); err != nil {
-		fmt.Printf("Failed to render text: %s\n", err)
-		return false
-	}
+	for i := 0; i < len(arrayQualquer); i++ {
 
-	if solidTexture, err = renderer.CreateTextureFromSurface(solidSurface); err != nil {
-		fmt.Printf("Failed to create texture: %s\n", err)
-		return false
-	}
+		var solidSurface *sdl.Surface
+		if solidSurface, err = font.RenderUTF8Solid(arrayQualquer[i], sdl.Color{255, 0, 0, 255}); err != nil {
+			fmt.Printf("Failed to render text: %s\n", err)
+			return false
+		}
 
-	solidSurface.Free()
+		fontWidth, fontHeight, err := font.SizeUTF8("Deu certo!!")
+
+		fmt.Println("----------------- FONT -------------------------")
+		fmt.Println(fontWidth, fontHeight)
+
+		var testeTexture *sdl.Texture
+
+		if testeTexture, err = renderer.CreateTextureFromSurface(solidSurface); err != nil {
+			fmt.Printf("Failed to create texture: %s\n", err)
+			return false
+		}
+
+		testeDeTexto := Texto{int32(fontWidth), int32(fontHeight), testeTexture}
+
+		arrayTexture = append(arrayTexture, testeDeTexto)
+
+		fmt.Println("------------------------ tamnho do array texture", len(arrayTexture))
+
+		solidSurface.Free()
+
+	}
 
 	font.Close()
 
@@ -112,15 +138,21 @@ func HandleEvents() {
 
 func AtualizarTela() {
 
-	//X, Y, width, height
-	renderer.Copy(solidTexture, nil, &sdl.Rect{0, 550, 190, 53})
+	for i := 0; i < len(arrayTexture); i++ {
+
+		var soma = int32(i * 30)
+
+		//X, Y, width, height
+		renderer.Copy(arrayTexture[i].texture, nil, &sdl.Rect{0, (550 + soma), arrayTexture[i].width, arrayTexture[i].height})
+
+	}
 
 	renderer.Present()
 
 }
 
 func Encerrar() {
-	solidTexture.Destroy()
+	//solidTexture.Destroy()
 	shadedTexture.Destroy()
 	blendedTexture.Destroy()
 	renderer.Destroy()
@@ -135,7 +167,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	if !CriarTextos() {
+	var testando = []string{"texto 1", "texto 2", "texto 3"}
+
+	if !CriarTextos(testando) {
 		os.Exit(2)
 	}
 

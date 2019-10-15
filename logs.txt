@@ -2329,3 +2329,33 @@ Consumidores - 20
 Dia - 1 [ Nublado]
 Plantas - 40
 Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20

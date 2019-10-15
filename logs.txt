@@ -2359,3 +2359,112 @@ Consumidores - 20
 Dia - 1 [ Muito Ensolarado]
 Plantas - 40
 Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20
+Noite - 1 [ ]
+Plantas - 40
+Consumidores - 20
+Dia - 2 [ Muito Nublado]
+Plantas - 40
+Consumidores - 20
+Noite - 2 [ ]
+Plantas - 50
+Consumidores - 20
+Dia - 3 [ Normal]
+Plantas - 40
+Consumidores - 30
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Nublado]
+Plantas - 40
+Consumidores - 20
+Noite - 1 [ ]
+Plantas - 40
+Consumidores - 20
+Dia - 2 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20
+Noite - 2 [ ]
+Plantas - 50
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Muito Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Consumidores - 20
+Noite - 1 [ ]
+Plantas - 40
+Consumidores - 20
+Dia - 2 [ Ensolarado]
+Plantas - 40
+Consumidores - 20
+Noite - 2 [ ]
+Plantas - 50
+Consumidores - 20
+Dia - 3 [ Muito Nublado]
+Plantas - 40
+Consumidores - 30
+Noite - 3 [ ]
+Plantas - 50
+Consumidores - 103
+Dia - 4 [ Nublado]
+Plantas - 80
+Consumidores - 124

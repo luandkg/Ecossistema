@@ -18,68 +18,13 @@ import (
 var (
 	window          *sdl.Window
 	renderer        *sdl.Renderer
-	event           sdl.Event
-	err             error
 	surface         *sdl.Surface
+	event           sdl.Event
+	font 			*ttf.Font
+	err             error
 
 	running         bool
 )
-
-const (
-	screenWidth  = 500
-	screenHeight = 650
-)
-
-func Configuracao() (successful bool) {
-
-	err = sdl.Init(sdl.INIT_EVERYTHING)
-	if err != nil {
-		fmt.Printf("Failed to initialize sdl: %s\n", err)
-		return false
-	}
-
-	if err = ttf.Init(); err != nil {
-		fmt.Printf("Failed to initialize TTF: %s\n", err)
-		return false
-	}
-
-	window, err = sdl.CreateWindow("Ecossistema", sdl.WINDOWPOS_UNDEFINED,
-		sdl.WINDOWPOS_UNDEFINED, screenWidth, screenHeight, sdl.WINDOW_SHOWN)
-	if err != nil {
-		fmt.Printf("Failed to create renderer: %s\n", err)
-		return false
-	}
-
-	renderer, err = sdl.CreateRenderer(window, -1, sdl.RENDERER_SOFTWARE)
-	if err != nil {
-		fmt.Printf("Failed to create renderer: %s\n", err)
-		return false
-	}
-
-	surface, err = window.GetSurface()
-	if err != nil {
-		fmt.Printf("Failed to create surface: %s\n", err)
-		return false
-	}
-
-	sdl.SetHint(sdl.HINT_RENDER_SCALE_QUALITY, "0")
-
-	return true
-
-}
-
-func HandleEvents() {
-	for event = sdl.PollEvent(); event != nil; event = sdl.PollEvent() {
-		switch t := event.(type) {
-		case *sdl.QuitEvent:
-			running = false
-		case *sdl.KeyboardEvent:
-			if t.Keysym.Sym == sdl.K_ESCAPE {
-				running = false
-			}
-		}
-	}
-}
 
 func AtualizarTela(ecossistemaC *ecossistema) {
 
@@ -87,13 +32,6 @@ func AtualizarTela(ecossistemaC *ecossistema) {
 
 	renderer.Present()
 
-}
-
-func Encerrar() {
-	renderer.Destroy()
-	window.Destroy()
-	ttf.Quit()
-	sdl.Quit()
 }
 
 func main() {
@@ -146,7 +84,7 @@ func main() {
 	running = true
 	for running {
 
-		HandleEvents()
+		ManipularEventos()
 
 		fmt.Println("---------------- Ciclo :  ", ambienteC.ciclo, " --------------------------------")
 		time.Sleep(time.Second / 4)

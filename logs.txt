@@ -2468,3 +2468,23 @@ Consumidores - 103
 Dia - 4 [ Nublado]
 Plantas - 80
 Consumidores - 124
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Ensolarado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Nublado]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Consumidores - 20
+
+ ------------------ SIMULACAO ------------------ 
+Dia - 1 [ Normal]
+Plantas - 40
+Consumidores - 20

@@ -22,8 +22,6 @@ func CriarTextosTexturas(textos []string) (successful bool) {
 
 	textosTextures = nil
 
-	var font *ttf.Font
-
 	if font, err = ttf.OpenFont("./assets/fonts/OpenSans-Regular.ttf", 14); err != nil {
 		fmt.Printf("Failed to open font: %s\n", err)
 		return false
@@ -57,7 +55,7 @@ func CriarTextosTexturas(textos []string) (successful bool) {
 
 	}
 
-	font.Close()
+
 
 	return true
 

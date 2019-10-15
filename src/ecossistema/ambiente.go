@@ -1,7 +1,9 @@
-package main
+package ecossistema
 
 import (
 	"strconv"
+
+	"utils"
 )
 
 type ambiente struct {
@@ -80,22 +82,22 @@ func (a *ambiente) ambiente() {
 		if a.fase == "Dia" {
 			a.fase = "Noite"
 			a.sol = 0
-			log("logs.txt", "Noite - "+strconv.Itoa(a.dia)+" [ ]")
+			utils.Log("logs.txt", "Noite - "+strconv.Itoa(a.dia)+" [ ]")
 
 		} else {
 			a.fase = "Dia"
 			a.dia++
-			a.sol = aleatorionumero(100)
+			a.sol = utils.Aleatorionumero(100)
 
-			log("logs.txt", "Dia - "+strconv.Itoa(a.dia)+" [ "+a.ceu()+"]")
+			utils.Log("logs.txt", "Dia - "+strconv.Itoa(a.dia)+" [ "+a.ceu()+"]")
 
 		}
 	} else {
 		a.fasecontador++
 
 		if a.fase == "Dia" {
-			modo := aleatorionumero(100)
-			valor := aleatorionumero(5)
+			modo := utils.Aleatorionumero(100)
+			valor := utils.Aleatorionumero(5)
 
 			if modo <= 50 {
 				a.sol += valor
@@ -110,3 +112,7 @@ func (a *ambiente) ambiente() {
 		a.sol = a.sol * (-1)
 	}
 }
+
+func (a *ambiente) GetCiclo() int { return a.ciclo }
+
+func (p *organismo) nome() string   { return p._nome }

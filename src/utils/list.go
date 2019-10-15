@@ -9,7 +9,7 @@
 //		// do something with e.Value
 //	}
 //
-package main
+package utils
 
 // Element is an element of a linked list.
 type Element struct {

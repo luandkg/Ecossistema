@@ -2,8 +2,9 @@
 .idea/
 
 # Arquivos gerados em builds
-Ecossistema
+pkg/
 Ecossistema.exe
+main.exe
 
 # Arquivos de logs
 logs.txt

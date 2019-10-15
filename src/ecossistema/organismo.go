@@ -1,4 +1,4 @@
-package main
+package ecossistema
 
 import (
 	"fmt"
@@ -57,10 +57,10 @@ func (p *organismo) vivendo() {
 
 }
 
-func (p *organismo) nome() string   { return p._nome }
-func (p *organismo) fase() string   { return p._fase }
-func (p *organismo) status() string { return p._status }
-func (p *organismo) ciclos() int    { return p._idade }
+func (p *organismo) Nome() string   { return p._nome }
+func (p *organismo) Fase() string   { return p._fase }
+func (p *organismo) Status() string { return p._status }
+func (p *organismo) Ciclos() int    { return p._idade }
 
 func (p *organismo) mudarposicao(x int, y int) {
 	p._posx = x

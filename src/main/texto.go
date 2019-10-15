@@ -1,6 +1,7 @@
 package main
 
 import (
+	"ecossistema"
 	"fmt"
 	"os"
 
@@ -61,7 +62,7 @@ func CriarTextosTexturas(textos []string) (successful bool) {
 
 }
 
-func RenderizarTextos(ecossistemaC *ecossistema) {
+func RenderizarTextos(ecossistemaC *ecossistema.ecossistema) {
 
 	var produtoresTotal = fmt.Sprintf("Produtores: %d", len(ecossistemaC.produtores))
 	var consumidoresTotal = fmt.Sprintf("Consumidores: %d", len(ecossistemaC.consumidores))

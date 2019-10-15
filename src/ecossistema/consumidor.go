@@ -1,8 +1,10 @@
-package main
+package ecossistema
 
 import (
 	"fmt"
 	"strconv"
+
+	"utils"
 )
 
 type consumidor struct {
@@ -13,10 +15,10 @@ type consumidor struct {
 
 	_vida int
 
-	_ecossistemaC *ecossistema
+	_ecossistemaC *Ecossistema
 }
 
-func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *ecossistema) *consumidor {
+func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *consumidor {
 
 	p := consumidor{_adultociclo: adulto}
 
@@ -95,12 +97,12 @@ func (p *consumidor) reproduzir() {
 		fmt.Println("       --- Consumidor : ", p.nome(), " Reproduzindo !!!")
 
 		var pg = Consumidor("Coelho", 5, 10, 16, 0xADFF2F, p._ecossistemaC)
-		var x int = aleatorionumero(50)
-		var y int = aleatorionumero(50)
+		var x int = utils.Aleatorionumero(50)
+		var y int = utils.Aleatorionumero(50)
 
 		pg.mudarposicao(x, y)
 
-		p._ecossistemaC.adicionarConsumidor(pg)
+		p._ecossistemaC.AdicionarConsumidor(pg)
 	}
 
 }

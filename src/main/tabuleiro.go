@@ -1,6 +1,7 @@
 package main
 
 import (
+	"ecossistema"
 	"fmt"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -33,7 +34,7 @@ func (p *tabuleiro) limpar() {
 
 }
 
-func (p *tabuleiro) atualizar(s *sdl.Surface, ambienteC *ambiente) {
+func (p *tabuleiro) atualizar(s *sdl.Surface, ambienteC *ecossistema.ambiente) {
 
 	// Zera surface rects
 	s.FillRect(nil, 0)

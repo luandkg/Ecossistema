@@ -1,8 +1,10 @@
-package main
+package ecossistema
 
 import (
 	"fmt"
 	"strconv"
+
+	"utils"
 )
 
 type produtor struct {
@@ -16,11 +18,11 @@ type produtor struct {
 	_vida int
 
 	_produtores   (map[string]*produtor)
-	_ecossistemaC *ecossistema
+	_ecossistemaC *Ecossistema
 }
 
 // Plantanovo : Criar instancia de planta
-func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *ecossistema) *produtor {
+func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *produtor {
 
 	p := produtor{_adultociclo: adulto}
 
@@ -70,12 +72,12 @@ func (p *produtor) vivendo() {
 				fmt.Println("       --- Produtor : ", p.nome(), " Reproduzindo !!!")
 
 				var pg = Plantanovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
-				var x int = aleatorionumero(50)
-				var y int = aleatorionumero(50)
+				var x int = utils.Aleatorionumero(50)
+				var y int = utils.Aleatorionumero(50)
 
 				pg.mudarposicao(x, y)
 
-				p._ecossistemaC.adicionarProdutor(pg)
+				p._ecossistemaC.AdicionarProdutor(pg)
 			}
 
 		}

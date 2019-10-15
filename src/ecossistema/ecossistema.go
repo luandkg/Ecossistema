@@ -1,20 +1,21 @@
-package main
+package ecossistema
 
 import (
 	"fmt"
 	"strconv"
+	"utils"
 )
 
-type ecossistema struct {
+type Ecossistema struct {
 	contadorprodutor int
 	contadoranimal   int
 	produtores       (map[string]*produtor)
 	consumidores     (map[string]*consumidor)
 }
 
-func EcossistemaNovo() *ecossistema {
+func EcossistemaNovo() *Ecossistema {
 
-	p := ecossistema{}
+	p := Ecossistema{}
 	p.contadoranimal = 0
 	p.contadorprodutor = 0
 
@@ -24,54 +25,54 @@ func EcossistemaNovo() *ecossistema {
 	return &p
 }
 
-func (a *ecossistema) adicionarProdutor(produtor *produtor) {
+func (a *Ecossistema) AdicionarProdutor(produtor *produtor) {
 
 	a.produtores[strconv.Itoa(a.contadorprodutor)] = produtor
 
 	a.contadorprodutor++
 }
 
-func (a *ecossistema) adicionarConsumidor(animalc *consumidor) {
+func (a *Ecossistema) AdicionarConsumidor(animalc *consumidor) {
 
 	a.consumidores[strconv.Itoa(a.contadoranimal)] = animalc
 
 	a.contadoranimal++
 }
 
-func (a *ecossistema) mapearOrganismos() {
-	a.mapearProdutores()
-	a.mapearConsumidores()
+func (a *Ecossistema) MapearOrganismos() {
+	a.MapearProdutores()
+	a.MapearConsumidores()
 }
 
-func (a *ecossistema) mapearConsumidores() {
+func (a *Ecossistema) MapearConsumidores() {
 
 	for p := range a.consumidores {
 
 		var animalc = a.consumidores[p]
 
-		var x int = aleatorionumero(50)
-		var y int = aleatorionumero(50)
+		var x int = utils.Aleatorionumero(50)
+		var y int = utils.Aleatorionumero(50)
 
 		animalc.mudarposicao(x, y)
 	}
 
 }
 
-func (a *ecossistema) mapearProdutores() {
+func (a *Ecossistema) MapearProdutores() {
 
 	for p := range a.produtores {
 
 		var plantac = a.produtores[p]
 
-		var x int = aleatorionumero(50)
-		var y int = aleatorionumero(50)
+		var x int = utils.Aleatorionumero(50)
+		var y int = utils.Aleatorionumero(50)
 
 		plantac.mudarposicao(x, y)
 	}
 
 }
 
-func (a *ecossistema) removerOrganimosMortos() {
+func (a *Ecossistema) RemoverOrganimosMortos() {
 
 	for p := range a.produtores {
 

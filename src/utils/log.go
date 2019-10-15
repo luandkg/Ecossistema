@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"bufio"
@@ -49,7 +49,7 @@ func escreverTexto(linhas []string, caminhoDoArquivo string) error {
 	return escritor.Flush()
 }
 
-func log(arquivo string, linha string) {
+func Log(arquivo string, linha string) {
 
 	// Faca um log unico no arquivo
 

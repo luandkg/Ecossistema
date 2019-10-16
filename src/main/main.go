@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 	"time"
 
 	"ecossistema"
@@ -71,15 +70,15 @@ func main() {
 	// ANIMAIS
 
 	for i := 0; i < 10; i++ {
-		ecossistemaC.AdicionarConsumidor(ecossistema.Consumidor("Rato", 200, 200, 2000, 0xDDA0DD, ecossistemaC))
+		ecossistemaC.AdicionarConsumidor(ecossistema.ConsumidorNovo("Rato", 200, 200, 2000, 0xDDA0DD, ecossistemaC))
 	}
 
 	for i := 0; i < 4; i++ {
-		ecossistemaC.AdicionarConsumidor(ecossistema.Consumidor("Roeador", 400, 200, 5000, 0xEE82EE, ecossistemaC))
+		ecossistemaC.AdicionarConsumidor(ecossistema.ConsumidorNovo("Roeador", 400, 200, 5000, 0xEE82EE, ecossistemaC))
 	}
 
 	for i := 0; i < 6; i++ {
-		ecossistemaC.AdicionarConsumidor(ecossistema.Consumidor("Coelho", 500, 250, 8000, 0x7B68EE, ecossistemaC))
+		ecossistemaC.AdicionarConsumidor(ecossistema.ConsumidorNovo("Coelho", 500, 250, 8000, 0x7B68EE, ecossistemaC))
 	}
 
 	ecossistemaC.MapearOrganismos()
@@ -89,62 +88,26 @@ func main() {
 
 		ManipularEventos()
 
-		fmt.Println("---------------- Ciclo :  ", ambienteC.GetCiclo(), " --------------------------------")
+		fmt.Println("---------------- Ciclo :  ", ambienteC.Ciclo(), " --------------------------------")
 		time.Sleep(time.Second / 4)
 		fmt.Println("")
 
-		fmt.Println("PRODUTORES")
-
 		tb.atualizar(surface, ambienteC)
 
-		for p := range ecossistemaC.produtores {
-			produtorc := ecossistemaC.produtores[p]
+		if ambienteC.FaseContador() == 0 {
 
-			if produtorc.Status() == "vivo" {
+			ecossistemaC.RemoverOrganimosMortos()
 
-				produtorc._nomecompleto = produtorc._nome + " " + p
-				fmt.Println("      - ", produtorc.toString())
-				produtorc.vivendo()
-				produtorc.atualizar(surface)
-
-			}
+			ecossistemaC.LogEcossistema()
 
 		}
 
-		fmt.Println("CONSUMIDORES")
-
-		for p := range ecossistemaC.consumidores {
-
-			consumidorc := ecossistemaC.consumidores[p]
-
-			if consumidorc.status() == "vivo" {
-
-				fmt.Println("      - ", consumidorc.toString())
-				consumidorc.vivendo()
-				consumidorc.movimento()
-				consumidorc.atualizar(surface)
-
-			}
-
-		}
+		ecossistemaC.ExecutarCiclo(surface)
 
 		AtualizarTela(ecossistemaC)
 
-		fmt.Println("")
+		ambienteC.AmbienteFase()
 
-		ambienteC.ambiente()
-
-		fmt.Println("Fase -> ", ambienteC.fase)
-		fmt.Println("Quantidade de Sol -> ", ambienteC.sol)
-		fmt.Println("Ceu -> ", ambienteC.ceu())
-
-		if ambienteC.fasecontador == 0 {
-
-			utils.Log("logs.txt", "Plantas - "+strconv.Itoa(len(ecossistemaC.produtores)))
-			utils.Log("logs.txt", "Consumidores - "+strconv.Itoa(len(ecossistemaC.consumidores)))
-
-			ecossistemaC.RemoverOrganimosMortos()
-		}
 	}
 
 	Encerrar()

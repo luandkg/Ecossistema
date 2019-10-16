@@ -62,10 +62,10 @@ func CriarTextosTexturas(textos []string) (successful bool) {
 
 }
 
-func RenderizarTextos(ecossistemaC *ecossistema.ecossistema) {
+func RenderizarTextos(ecossistemaC *ecossistema.Ecossistema) {
 
-	var produtoresTotal = fmt.Sprintf("Produtores: %d", len(ecossistemaC.produtores))
-	var consumidoresTotal = fmt.Sprintf("Consumidores: %d", len(ecossistemaC.consumidores))
+	var produtoresTotal = fmt.Sprintf("Produtores: %d", ecossistemaC.TotalProdutores())
+	var consumidoresTotal = fmt.Sprintf("Consumidores: %d", ecossistemaC.TotalConsumidores())
 
 	var testando = []string{produtoresTotal, consumidoresTotal}
 

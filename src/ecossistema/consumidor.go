@@ -7,7 +7,7 @@ import (
 	"utils"
 )
 
-type consumidor struct {
+type Consumidor struct {
 	organismo
 	_adultociclo        int
 	_reproduzirciclo    int
@@ -18,9 +18,9 @@ type consumidor struct {
 	_ecossistemaC *Ecossistema
 }
 
-func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *consumidor {
+func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Consumidor {
 
-	p := consumidor{_adultociclo: adulto}
+	p := Consumidor{_adultociclo: adulto}
 
 	p.organismo = *Organismonovo(nome)
 	p._nome = nome
@@ -43,7 +43,7 @@ func Consumidor(nome string, adulto int, reproducao int, vida int, cor uint32, e
 
 }
 
-func (p *consumidor) vivendo() {
+func (p *Consumidor) vivendo() {
 
 	p.organismo.vivendo()
 
@@ -63,40 +63,40 @@ func (p *consumidor) vivendo() {
 
 		if p._idade >= p._vida {
 			p._status = "morto"
-			fmt.Println("       --- Consumidor : ", p.nome(), " Morreu !!!")
+			fmt.Println("       --- Consumidor : ", p.Nome(), " Morreu !!!")
 		}
 	}
 
 }
 
-func (p *consumidor) mudarFase() {
+func (p *Consumidor) mudarFase() {
 
 	switch p._fase {
 
 	case "nascido":
 		p._fase = "adulto"
-		fmt.Println("       --- Consumidor : ", p.nome(), " Evoluiu : Adulto !!!")
+		fmt.Println("       --- Consumidor : ", p.Nome(), " Evoluiu : Adulto !!!")
 		break
 
 	case "adulto":
 		p._status = "morto"
 		p._fase = "falescido"
-		fmt.Println("       --- Consumidor : ", p.nome(), " Morreu !!!")
+		fmt.Println("       --- Consumidor : ", p.Nome(), " Morreu !!!")
 		break
 
 	}
 
 }
 
-func (p *consumidor) reproduzir() {
+func (p *Consumidor) reproduzir() {
 
 	p._reproduzircontador += 1
 
 	if p._reproduzircontador >= p._reproduzirciclo {
 		p._reproduzircontador = 0
-		fmt.Println("       --- Consumidor : ", p.nome(), " Reproduzindo !!!")
+		fmt.Println("       --- Consumidor : ", p.Nome(), " Reproduzindo !!!")
 
-		var pg = Consumidor("Coelho", 5, 10, 16, 0xADFF2F, p._ecossistemaC)
+		var pg = ConsumidorNovo("Coelho", 5, 10, 16, 0xADFF2F, p._ecossistemaC)
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 
@@ -107,9 +107,9 @@ func (p *consumidor) reproduzir() {
 
 }
 
-func (p *consumidor) toString() string {
+func (p *Consumidor) toString() string {
 
-	var str = p.nome() + " [" + p.fase() + " " + strconv.Itoa(p.ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
+	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
 
 	return str
 }

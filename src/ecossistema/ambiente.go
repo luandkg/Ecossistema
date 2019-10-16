@@ -1,24 +1,25 @@
 package ecossistema
 
 import (
+	"fmt"
 	"strconv"
 
 	"utils"
 )
 
-type ambiente struct {
-	fase         string
-	faseciclo    int
-	fasecontador int
-	dia          int
-	sol          int
+type Ambiente struct {
+	fase          string
+	faseciclo     int
+	fasecontador  int
+	dia           int
+	sol           int
 
-	ciclo int
+	ciclo         int
 }
 
-func AmbienteNovo() *ambiente {
+func AmbienteNovo() *Ambiente {
 
-	p := ambiente{}
+	p := Ambiente{}
 	p.faseciclo = 100
 	p.dia = 0
 	p.fase = ""
@@ -30,7 +31,7 @@ func AmbienteNovo() *ambiente {
 	return &p
 }
 
-func (a *ambiente) ceu() string {
+func (a *Ambiente) ceu() string {
 
 	if a.fase == "Dia" {
 		return a.luminosidade(a.sol)
@@ -40,7 +41,7 @@ func (a *ambiente) ceu() string {
 
 }
 
-func (a *ambiente) luminosidade(_sol int) string {
+func (a *Ambiente) luminosidade(_sol int) string {
 
 	var _solmodo string = " - "
 	if _sol >= 0 && _sol < 20 {
@@ -67,7 +68,7 @@ func (a *ambiente) luminosidade(_sol int) string {
 
 }
 
-func (a *ambiente) ambiente() {
+func (a *Ambiente) AmbienteFase() {
 
 	// Implementacao FASE - DIA / NOITE
 
@@ -111,8 +112,15 @@ func (a *ambiente) ambiente() {
 	if a.sol < 0 {
 		a.sol = a.sol * (-1)
 	}
+
+	fmt.Println("")
+	fmt.Println("Fase -> ", a.fase)
+	fmt.Println("Quantidade de Sol -> ", a.sol)
+	fmt.Println("Ceu -> ", a.ceu())
+
 }
 
-func (a *ambiente) GetCiclo() int { return a.ciclo }
-
-func (p *organismo) nome() string   { return p._nome }
+func (a *Ambiente) Fase() string { return a.fase }
+func (a *Ambiente) FaseContador() int { return a.fasecontador }
+func (a *Ambiente) Ciclo() int { return a.ciclo }
+func (a *Ambiente) Sol() int { return a.sol }

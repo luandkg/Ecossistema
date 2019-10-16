@@ -1,22 +1,25 @@
-package main
+package ecossistema
 
 import (
+	"fmt"
 	"strconv"
+
+	"utils"
 )
 
-type ambiente struct {
-	fase         string
-	faseciclo    int
-	fasecontador int
-	dia          int
-	sol          int
+type Ambiente struct {
+	fase          string
+	faseciclo     int
+	fasecontador  int
+	dia           int
+	sol           int
 
-	ciclo int
+	ciclo         int
 }
 
-func AmbienteNovo() *ambiente {
+func AmbienteNovo() *Ambiente {
 
-	p := ambiente{}
+	p := Ambiente{}
 	p.faseciclo = 100
 	p.dia = 0
 	p.fase = ""
@@ -28,7 +31,7 @@ func AmbienteNovo() *ambiente {
 	return &p
 }
 
-func (a *ambiente) ceu() string {
+func (a *Ambiente) ceu() string {
 
 	if a.fase == "Dia" {
 		return a.luminosidade(a.sol)
@@ -38,7 +41,7 @@ func (a *ambiente) ceu() string {
 
 }
 
-func (a *ambiente) luminosidade(_sol int) string {
+func (a *Ambiente) luminosidade(_sol int) string {
 
 	var _solmodo string = " - "
 	if _sol >= 0 && _sol < 20 {
@@ -65,7 +68,7 @@ func (a *ambiente) luminosidade(_sol int) string {
 
 }
 
-func (a *ambiente) ambiente() {
+func (a *Ambiente) AmbienteFase() {
 
 	// Implementacao FASE - DIA / NOITE
 
@@ -80,22 +83,22 @@ func (a *ambiente) ambiente() {
 		if a.fase == "Dia" {
 			a.fase = "Noite"
 			a.sol = 0
-			log("logs.txt", "Noite - "+strconv.Itoa(a.dia)+" [ ]")
+			utils.Log("logs.txt", "Noite - "+strconv.Itoa(a.dia)+" [ ]")
 
 		} else {
 			a.fase = "Dia"
 			a.dia++
-			a.sol = aleatorionumero(100)
+			a.sol = utils.Aleatorionumero(100)
 
-			log("logs.txt", "Dia - "+strconv.Itoa(a.dia)+" [ "+a.ceu()+"]")
+			utils.Log("logs.txt", "Dia - "+strconv.Itoa(a.dia)+" [ "+a.ceu()+"]")
 
 		}
 	} else {
 		a.fasecontador++
 
 		if a.fase == "Dia" {
-			modo := aleatorionumero(100)
-			valor := aleatorionumero(5)
+			modo := utils.Aleatorionumero(100)
+			valor := utils.Aleatorionumero(5)
 
 			if modo <= 50 {
 				a.sol += valor
@@ -109,4 +112,15 @@ func (a *ambiente) ambiente() {
 	if a.sol < 0 {
 		a.sol = a.sol * (-1)
 	}
+
+	fmt.Println("")
+	fmt.Println("Fase -> ", a.fase)
+	fmt.Println("Quantidade de Sol -> ", a.sol)
+	fmt.Println("Ceu -> ", a.ceu())
+
 }
+
+func (a *Ambiente) Fase() string { return a.fase }
+func (a *Ambiente) FaseContador() int { return a.fasecontador }
+func (a *Ambiente) Ciclo() int { return a.ciclo }
+func (a *Ambiente) Sol() int { return a.sol }

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"ecossistema"
 	"fmt"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -33,7 +34,7 @@ func (p *tabuleiro) limpar() {
 
 }
 
-func (p *tabuleiro) atualizar(s *sdl.Surface, ambienteC *ambiente) {
+func (p *tabuleiro) atualizar(s *sdl.Surface, ambienteC *ecossistema.Ambiente) {
 
 	// Zera surface rects
 	s.FillRect(nil, 0)
@@ -48,13 +49,13 @@ func (p *tabuleiro) atualizar(s *sdl.Surface, ambienteC *ambiente) {
 	}
 
 	var linhafinal = sdl.Rect{0, 500, 500, 10}
-	if ambienteC.fase == "Dia" {
+	if ambienteC.Fase() == "Dia" {
 		s.FillRect(&linhafinal, 0xFFFF00)
 	} else {
 		s.FillRect(&linhafinal, 0x000080)
 	}
 
-	var st = ambienteC.sol * 5
+	var st = ambienteC.Sol() * 5
 	var solinha = sdl.Rect{0, 510, int32(st), 10}
 	s.FillRect(&solinha, 0xFF4500)
 

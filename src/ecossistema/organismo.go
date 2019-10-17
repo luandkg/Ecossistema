@@ -86,7 +86,7 @@ func (p *organismo) atualizar(s *sdl.Surface) {
 
 }
 
-func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
+func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 
 	p._dircontador++
 
@@ -165,7 +165,7 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 
 	if peca.VerificarPosicao() {
 
-		p.movimento(tb)
+		p.Movimento(tb)
 
 	} else {
 

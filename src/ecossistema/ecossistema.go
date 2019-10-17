@@ -181,7 +181,19 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 			fmt.Println("      - ", consumidorc.toString())
 			consumidorc.vivendo(tb)
-			consumidorc.movimento(tb)
+
+			if consumidorc.TemAlvo() {
+
+				consumidorc.CacarAlvo()
+
+			} else {
+
+				consumidorc.Movimento(tb)
+
+				consumidorc.VerificarAlvo(e.produtores)
+
+			}
+
 			consumidorc.atualizar(surface)
 
 		}

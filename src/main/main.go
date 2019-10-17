@@ -56,13 +56,13 @@ func main() {
 	tb.Limpar()
 
 	// GERAR PRODUTORES
-	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Gordura", 200, 100, 300, 0xADFF2F)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Verde", 300, 150, 600, 0x808000)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Laranjeira", 500, 200, 10000, 0xDAA520)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Ervacidreira", 300, 300, 1000, 0xFFFF00)
+	ecossistemaC.GerarOrganismos("produtor", 1, "Capim Gordura", 200, 100, 300, 0xADFF2F)
+	ecossistemaC.GerarOrganismos("produtor", 1, "Capim Verde", 300, 150, 600, 0x808000)
+	ecossistemaC.GerarOrganismos("produtor", 1, "Laranjeira", 500, 200, 10000, 0xDAA520)
+	ecossistemaC.GerarOrganismos("produtor", 1, "Ervacidreira", 300, 300, 1000, 0xFFFF00)
 
 	// GERAR CONSUMIDORES
-	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 20, 10, 80, 0xFF0000)
+	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 200, 100, 3000, 0xFF0000)
 	ecossistemaC.GerarOrganismos("consumidor", 4, "Roedor", 400, 200, 5000, 0xEE82EE)
 	ecossistemaC.GerarOrganismos("consumidor", 6, "Coelho", 500, 250, 8000, 0x7B68EE)
 

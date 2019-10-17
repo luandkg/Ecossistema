@@ -14,6 +14,10 @@ type Consumidor struct {
 	_reproduzirciclo    int
 	_reproduzircontador int
 
+	_temAlvo            bool
+	_alvoX              int
+	_alvoY              int
+
 	_vida int
 
 	_ecossistemaC *Ecossistema
@@ -33,6 +37,10 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 	p._reproduzirciclo = reproducao
 	p._reproduzircontador = 0
 
+	p._temAlvo = false
+	p._alvoX = 0
+	p._alvoY = 0
+
 	p._vida = vida
 	p._posx = 0
 	p._posy = 0
@@ -44,60 +52,60 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 
 }
 
-func (p *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
+func (c *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
 
-	p.organismo.vivendo()
+	c.organismo.vivendo()
 
-	if p._status == "vivo" {
+	if c._status == "vivo" {
 
-		if p._idade == p._adultociclo || p._idade == p._vida {
+		if c._idade == c._adultociclo || c._idade == c._vida {
 
-			p.mudarFase()
-
-		}
-
-		if p._fase == "adulto" && p._idade < p._vida {
-
-			p.reproduzir(tb)
+			c.mudarFase()
 
 		}
 
-		if p._idade >= p._vida {
-			p._status = "morto"
-			fmt.Println("       --- Consumidor : ", p.Nome(), " Morreu !!!")
+		if c._fase == "adulto" && c._idade < c._vida {
+
+			c.reproduzir(tb)
+
+		}
+
+		if c._idade >= c._vida {
+			c._status = "morto"
+			fmt.Println("       --- Consumidor : ", c.Nome(), " Morreu !!!")
 		}
 	}
 
 }
 
-func (p *Consumidor) mudarFase() {
+func (c *Consumidor) mudarFase() {
 
-	switch p._fase {
+	switch c._fase {
 
 	case "nascido":
-		p._fase = "adulto"
-		fmt.Println("       --- Consumidor : ", p.Nome(), " Evoluiu : Adulto !!!")
+		c._fase = "adulto"
+		fmt.Println("       --- Consumidor : ", c.Nome(), " Evoluiu : Adulto !!!")
 		break
 
 	case "adulto":
-		p._status = "morto"
-		p._fase = "falescido"
-		fmt.Println("       --- Consumidor : ", p.Nome(), " Morreu !!!")
+		c._status = "morto"
+		c._fase = "falescido"
+		fmt.Println("       --- Consumidor : ", c.Nome(), " Morreu !!!")
 		break
 
 	}
 
 }
 
-func (p *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
+func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
-	p._reproduzircontador += 1
+	c._reproduzircontador += 1
 
-	if p._reproduzircontador >= p._reproduzirciclo {
-		p._reproduzircontador = 0
-		fmt.Println("       --- Consumidor : ", p.Nome(), " Reproduzindo !!!")
+	if c._reproduzircontador >= c._reproduzirciclo {
+		c._reproduzircontador = 0
+		fmt.Println("       --- Consumidor : ", c.Nome(), " Reproduzindo !!!")
 
-		var pg = ConsumidorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
+		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC)
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 
@@ -110,14 +118,54 @@ func (p *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 			peca.OcuparPosicao()
 		}
 
-		p._ecossistemaC.AdicionarConsumidor(pg)
+		c._ecossistemaC.AdicionarConsumidor(pg)
 	}
 
 }
 
-func (p *Consumidor) toString() string {
+func (c *Consumidor) VerificarAlvo(p map[string]*Produtor) {
 
-	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
+	var tetoBusca = 2
+	var chaoBusca = -tetoBusca
+
+	for _, produtor := range p {
+
+		for i := tetoBusca; i >= chaoBusca; i-- {
+
+			for j := tetoBusca; j >= chaoBusca; j-- {
+				if produtor._posx == c._posx + i && produtor._posy == c._posy + j {
+					c._temAlvo = true
+					c._alvoX = c._posx + i
+					c._alvoY = c._posy + j
+					break
+				}
+			}
+
+			if c._temAlvo {
+				break
+			}
+
+		}
+
+		if c._temAlvo {
+			break
+		}
+
+	}
+
+}
+
+func (c *Consumidor) CacarAlvo() {
+
+
+
+}
+
+func (c *Consumidor) TemAlvo() bool { return c._temAlvo }
+
+func (c *Consumidor) toString() string {
+
+	var str = c.Nome() + " [" + c.Fase() + " " + strconv.Itoa(c.Ciclos()) + "]" + " POS[" + strconv.Itoa(c.x()) + " " + strconv.Itoa(c.y()) + "]"
 
 	return str
 }

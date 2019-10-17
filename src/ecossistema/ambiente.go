@@ -5,6 +5,8 @@ import (
 	"strconv"
 
 	"utils"
+
+	"github.com/veandco/go-sdl2/sdl"
 )
 
 type Ambiente struct {
@@ -117,6 +119,21 @@ func (a *Ambiente) AmbienteFase() {
 	fmt.Println("Fase -> ", a.fase)
 	fmt.Println("Quantidade de Sol -> ", a.sol)
 	fmt.Println("Ceu -> ", a.ceu())
+
+}
+
+func (a *Ambiente) AtualizarTela(s *sdl.Surface,) {
+
+	var linhafinal = sdl.Rect{0, 500, 500, 10}
+	if a.Fase() == "Dia" {
+		s.FillRect(&linhafinal, 0xFFFF00)
+	} else {
+		s.FillRect(&linhafinal, 0x000080)
+	}
+
+	var st = a.Sol() * 5
+	var solinha = sdl.Rect{0, 510, int32(st), 10}
+	s.FillRect(&solinha, 0xFF4500)
 
 }
 

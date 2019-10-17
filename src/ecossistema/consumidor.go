@@ -3,6 +3,7 @@ package ecossistema
 import (
 	"fmt"
 	"strconv"
+	"tabuleiro"
 
 	"utils"
 )
@@ -22,7 +23,7 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 
 	p := Consumidor{_adultociclo: adulto}
 
-	p.organismo = *Organismonovo(nome)
+	p.organismo = *OrganismoNovo(nome)
 	p._nome = nome
 	p._idade = 0
 	p._status = "vivo"
@@ -43,7 +44,7 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 
 }
 
-func (p *Consumidor) vivendo() {
+func (p *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
 
 	p.organismo.vivendo()
 
@@ -57,7 +58,7 @@ func (p *Consumidor) vivendo() {
 
 		if p._fase == "adulto" && p._idade < p._vida {
 
-			p.reproduzir()
+			p.reproduzir(tb)
 
 		}
 
@@ -88,7 +89,7 @@ func (p *Consumidor) mudarFase() {
 
 }
 
-func (p *Consumidor) reproduzir() {
+func (p *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 	p._reproduzircontador += 1
 
@@ -96,11 +97,18 @@ func (p *Consumidor) reproduzir() {
 		p._reproduzircontador = 0
 		fmt.Println("       --- Consumidor : ", p.Nome(), " Reproduzindo !!!")
 
-		var pg = ConsumidorNovo("Coelho", 5, 10, 16, 0xADFF2F, p._ecossistemaC)
+		var pg = ConsumidorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 
 		pg.mudarposicao(x, y)
+
+		peca := tb.RecuperarPeca(x, y)
+
+		if peca.VerificarPosicao() == false {
+			pg.mudarposicao(x, y)
+			peca.OcuparPosicao()
+		}
 
 		p._ecossistemaC.AdicionarConsumidor(pg)
 	}

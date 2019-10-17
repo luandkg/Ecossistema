@@ -5,6 +5,7 @@ import (
 	"os"
 	"time"
 
+	"tabuleiro"
 	"ecossistema"
 	"utils"
 
@@ -28,9 +29,11 @@ var (
 	running         bool
 )
 
-func AtualizarTela(ecossistemaC *ecossistema.Ecossistema) {
+func AtualizarTela(a *ecossistema.Ambiente, e *ecossistema.Ecossistema) {
 
-	RenderizarTextos(ecossistemaC)
+	a.AtualizarTela(surface)
+
+	RenderizarTextos(e)
 
 	renderer.Present()
 
@@ -46,42 +49,24 @@ func main() {
 	utils.Log("logs.txt", "")
 	utils.Log("logs.txt", " ------------------ SIMULACAO ------------------ ")
 
-	tb := Tabuleiro_novo("MATRIZ")
+	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
 	ecossistemaC := ecossistema.EcossistemaNovo()
 
-	tb.limpar()
+	tb.Limpar()
 
-	// PLANTAS
+	// GERAR PRODUTORES
+	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Gordura", 200, 100, 300, 0xADFF2F)
+	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Verde", 300, 150, 600, 0x808000)
+	ecossistemaC.GerarOrganismos("produtor", 10, "Laranjeira", 500, 200, 10000, 0xDAA520)
+	ecossistemaC.GerarOrganismos("produtor", 10, "Ervacidreira", 300, 300, 1000, 0xFFFF00)
 
-	for i := 0; i < 10; i++ {
-		ecossistemaC.AdicionarProdutor(ecossistema.Plantanovo("Capim Gordura", 200, 100, 300, 0xADFF2F, ecossistemaC))
-	}
-	for i := 0; i < 10; i++ {
-		ecossistemaC.AdicionarProdutor(ecossistema.Plantanovo("Capim Verde", 300, 150, 600, 0x808000, ecossistemaC))
-	}
-	for i := 0; i < 10; i++ {
-		ecossistemaC.AdicionarProdutor(ecossistema.Plantanovo("Laranjeira", 500, 200, 10000, 0xDAA520, ecossistemaC))
-	}
-	for i := 0; i < 10; i++ {
-		ecossistemaC.AdicionarProdutor(ecossistema.Plantanovo("Ervacidreira", 300, 300, 1000, 0xFFFF00, ecossistemaC))
-	}
+	// GERAR CONSUMIDORES
+	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 20, 10, 80, 0xFF0000)
+	ecossistemaC.GerarOrganismos("consumidor", 4, "Roedor", 400, 200, 5000, 0xEE82EE)
+	ecossistemaC.GerarOrganismos("consumidor", 6, "Coelho", 500, 250, 8000, 0x7B68EE)
 
-	// ANIMAIS
-
-	for i := 0; i < 10; i++ {
-		ecossistemaC.AdicionarConsumidor(ecossistema.ConsumidorNovo("Rato", 200, 200, 2000, 0xDDA0DD, ecossistemaC))
-	}
-
-	for i := 0; i < 4; i++ {
-		ecossistemaC.AdicionarConsumidor(ecossistema.ConsumidorNovo("Roeador", 400, 200, 5000, 0xEE82EE, ecossistemaC))
-	}
-
-	for i := 0; i < 6; i++ {
-		ecossistemaC.AdicionarConsumidor(ecossistema.ConsumidorNovo("Coelho", 500, 250, 8000, 0x7B68EE, ecossistemaC))
-	}
-
-	ecossistemaC.MapearOrganismos()
+	ecossistemaC.MapearOrganismos(tb)
 
 	running = true
 	for running {
@@ -92,7 +77,7 @@ func main() {
 		time.Sleep(time.Second / 4)
 		fmt.Println("")
 
-		tb.atualizar(surface, ambienteC)
+		tb.Atualizar(surface)
 
 		if ambienteC.FaseContador() == 0 {
 
@@ -102,9 +87,9 @@ func main() {
 
 		}
 
-		ecossistemaC.ExecutarCiclo(surface)
+		ecossistemaC.ExecutarCiclo(surface, tb)
 
-		AtualizarTela(ecossistemaC)
+		AtualizarTela(ambienteC, ecossistemaC)
 
 		ambienteC.AmbienteFase()
 

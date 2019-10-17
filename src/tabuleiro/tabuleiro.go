@@ -1,25 +1,24 @@
-package main
+package tabuleiro
 
 import (
-	"ecossistema"
 	"fmt"
 
 	"github.com/veandco/go-sdl2/sdl"
 )
 
-type tabuleiro struct {
+type Tabuleiro struct {
 	_nome string
 	dados [50][50]peca
 }
 
-func Tabuleiro_novo(nome string) *tabuleiro {
+func TabuleiroNovo(nome string) *Tabuleiro {
 
-	p := tabuleiro{_nome: nome}
+	p := Tabuleiro{_nome: nome}
 
 	return &p
 }
 
-func (p *tabuleiro) limpar() {
+func (p *Tabuleiro) Limpar() {
 
 	// Zerando Tabuleiro
 	for i := 0; i < 50; i++ {
@@ -34,12 +33,11 @@ func (p *tabuleiro) limpar() {
 
 }
 
-func (p *tabuleiro) atualizar(s *sdl.Surface, ambienteC *ecossistema.Ambiente) {
+func (p *Tabuleiro) Atualizar(s *sdl.Surface) {
 
 	// Zera surface rects
 	s.FillRect(nil, 0)
 
-	// Zerando Tabuleiro
 	for i := 0; i < 50; i++ {
 		for j := 0; j < 50; j++ {
 
@@ -48,20 +46,9 @@ func (p *tabuleiro) atualizar(s *sdl.Surface, ambienteC *ecossistema.Ambiente) {
 		}
 	}
 
-	var linhafinal = sdl.Rect{0, 500, 500, 10}
-	if ambienteC.Fase() == "Dia" {
-		s.FillRect(&linhafinal, 0xFFFF00)
-	} else {
-		s.FillRect(&linhafinal, 0x000080)
-	}
-
-	var st = ambienteC.Sol() * 5
-	var solinha = sdl.Rect{0, 510, int32(st), 10}
-	s.FillRect(&solinha, 0xFF4500)
-
 }
 
-func (p *tabuleiro) mostrar() {
+func (p *Tabuleiro) mostrar() {
 
 	fmt.Println("\n")
 	fmt.Println("\n")
@@ -83,5 +70,11 @@ func (p *tabuleiro) mostrar() {
 	fmt.Println("\n")
 
 	fmt.Println("-----------------------------------------------------------------------------------------------------")
+
+}
+
+func (p *Tabuleiro) RecuperarPeca(x int, y int) *peca {
+
+	return &p.dados[x][y]
 
 }

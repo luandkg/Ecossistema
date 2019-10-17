@@ -96,7 +96,7 @@ func (p *Consumidor) reproduzir() {
 		p._reproduzircontador = 0
 		fmt.Println("       --- Consumidor : ", p.Nome(), " Reproduzindo !!!")
 
-		var pg = ConsumidorNovo("Coelho", 5, 10, 16, 0xADFF2F, p._ecossistemaC)
+		var pg = ConsumidorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 

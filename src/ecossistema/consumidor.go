@@ -3,6 +3,7 @@ package ecossistema
 import (
 	"fmt"
 	"strconv"
+	"tabuleiro"
 
 	"utils"
 )
@@ -43,7 +44,7 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 
 }
 
-func (p *Consumidor) vivendo() {
+func (p *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
 
 	p.organismo.vivendo()
 
@@ -57,7 +58,7 @@ func (p *Consumidor) vivendo() {
 
 		if p._fase == "adulto" && p._idade < p._vida {
 
-			p.reproduzir()
+			p.reproduzir(tb)
 
 		}
 
@@ -88,7 +89,7 @@ func (p *Consumidor) mudarFase() {
 
 }
 
-func (p *Consumidor) reproduzir() {
+func (p *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 	p._reproduzircontador += 1
 
@@ -101,6 +102,13 @@ func (p *Consumidor) reproduzir() {
 		var y int = utils.Aleatorionumero(50)
 
 		pg.mudarposicao(x, y)
+
+		peca := tb.RecuperarPeca(x, y)
+
+		if peca.VerificarPosicao() == false {
+			pg.mudarposicao(x, y)
+			peca.OcuparPosicao()
+		}
 
 		p._ecossistemaC.AdicionarConsumidor(pg)
 	}

@@ -62,7 +62,7 @@ func main() {
 	ecossistemaC.GerarOrganismos("produtor", 10, "Ervacidreira", 300, 300, 1000, 0xFFFF00)
 
 	// GERAR CONSUMIDORES
-	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 200, 200, 2000, 0xDDA0DD)
+	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 20, 10, 80, 0xFF0000)
 	ecossistemaC.GerarOrganismos("consumidor", 4, "Roedor", 400, 200, 5000, 0xEE82EE)
 	ecossistemaC.GerarOrganismos("consumidor", 6, "Coelho", 500, 250, 8000, 0x7B68EE)
 

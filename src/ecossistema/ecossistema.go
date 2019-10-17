@@ -180,7 +180,7 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 		if consumidorc.Status() == "vivo" {
 
 			fmt.Println("      - ", consumidorc.toString())
-			consumidorc.vivendo()
+			consumidorc.vivendo(tb)
 			consumidorc.movimento(tb)
 			consumidorc.atualizar(surface)
 

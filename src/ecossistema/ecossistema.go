@@ -176,7 +176,7 @@ func (e *Ecossistema) TotalProdutoresFase() (int, int) {
 
 	for _, produtor := range e.produtores {
 
-		switch produtor.Status() {
+		switch produtor.Fase() {
 
 		case "nascido":
 			contadorJovem += 1
@@ -201,18 +201,18 @@ func (e *Ecossistema) TotalConsumidores() int {
 
 func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
-	var contadorJovem = 1
-	var contadorAdulto = 1
+	var contadorJovem = 0
+	var contadorAdulto = 0
 
 	for _, consumidor := range e.consumidores {
 
-		switch consumidor.Status() {
+		switch consumidor.Fase() {
 
 		case "nascido":
-			contadorJovem = contadorJovem + 1
+			contadorJovem += 1
 			break
 		case "adulto":
-			contadorAdulto = contadorAdulto + 1
+			contadorAdulto += 1
 			break
 
 		}

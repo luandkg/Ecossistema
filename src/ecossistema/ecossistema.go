@@ -3,6 +3,7 @@ package ecossistema
 import (
 	"fmt"
 	"strconv"
+	"tabuleiro"
 
 	"utils"
 
@@ -42,35 +43,69 @@ func (e *Ecossistema) AdicionarConsumidor(animalc *Consumidor) {
 	e.contadoranimal++
 }
 
-func (e *Ecossistema) MapearOrganismos() {
-	e.MapearProdutores()
-	e.MapearConsumidores()
+func (e *Ecossistema) MapearOrganismos(tb *tabuleiro.Tabuleiro) {
+	e.MapearProdutores(tb)
+	e.MapearConsumidores(tb)
 }
 
-func (e *Ecossistema) MapearConsumidores() {
+func (e *Ecossistema) MapearConsumidores(tb *tabuleiro.Tabuleiro) {
 
 	for p := range e.consumidores {
 
 		var animalc = e.consumidores[p]
 
-		var x int = utils.Aleatorionumero(50)
-		var y int = utils.Aleatorionumero(50)
+		var posicaoOcupada = true
 
-		animalc.mudarposicao(x, y)
+		var x = 0
+		var y = 0
+
+		for posicaoOcupada {
+
+			x = utils.Aleatorionumero(50)
+			y = utils.Aleatorionumero(50)
+
+			peca := tb.RecuperarPeca(x, y)
+
+			posicaoOcupada = peca.VerificarPosicao()
+
+			if posicaoOcupada == false {
+				animalc.mudarposicao(x, y)
+				peca.OcuparPosicao()
+			}
+
+		}
+
 	}
 
 }
 
-func (e *Ecossistema) MapearProdutores() {
+func (e *Ecossistema) MapearProdutores(tb *tabuleiro.Tabuleiro) {
 
 	for p := range e.produtores {
 
 		var plantac = e.produtores[p]
 
-		var x int = utils.Aleatorionumero(50)
-		var y int = utils.Aleatorionumero(50)
+		var posicaoOcupada = true
 
-		plantac.mudarposicao(x, y)
+		var x = 0
+		var y = 0
+
+		for posicaoOcupada {
+
+			x = utils.Aleatorionumero(50)
+			y = utils.Aleatorionumero(50)
+
+			peca := tb.RecuperarPeca(x, y)
+
+			posicaoOcupada = peca.VerificarPosicao()
+
+			if posicaoOcupada == false {
+				plantac.mudarposicao(x, y)
+				peca.OcuparPosicao()
+			}
+
+		}
+
 	}
 
 }
@@ -105,11 +140,11 @@ func (e *Ecossistema) RemoverOrganimosMortos() {
 
 }
 
-func (e *Ecossistema) ExecutarCiclo (surface *sdl.Surface) {
+func (e *Ecossistema) ExecutarCiclo (surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
 
 	e.executarCicloProdutores(surface)
 
-	e.executarCicloConsumidores(surface)
+	e.executarCicloConsumidores(surface, tb)
 
 }
 
@@ -134,7 +169,7 @@ func (e *Ecossistema) executarCicloProdutores (surface *sdl.Surface) {
 
 }
 
-func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface) {
+func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
 
 	fmt.Println("CONSUMIDORES")
 
@@ -146,7 +181,7 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface) {
 
 			fmt.Println("      - ", consumidorc.toString())
 			consumidorc.vivendo()
-			consumidorc.movimento()
+			consumidorc.movimento(tb)
 			consumidorc.atualizar(surface)
 
 		}
@@ -220,5 +255,25 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 	}
 
 	return contadorJovem, contadorAdulto
+
+}
+
+func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string, adulto int, reproducao int, vida int, cor uint32) {
+
+	switch tipo {
+
+	case "produtor":
+		for i := 0; i < quantidade; i++ {
+			e.AdicionarProdutor(PlantaNovo(nome, adulto, reproducao, vida, cor, e))
+		}
+		break
+
+	case "consumidor":
+		for i := 0; i < quantidade; i++ {
+			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e))
+		}
+		break
+
+	}
 
 }

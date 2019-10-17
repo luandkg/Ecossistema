@@ -3,6 +3,7 @@ package ecossistema
 import (
 	"fmt"
 	"math/rand"
+	"tabuleiro"
 	"time"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -26,7 +27,7 @@ type organismo struct {
 	_cor uint32
 }
 
-func Organismonovo(nome string) *organismo {
+func OrganismoNovo(nome string) *organismo {
 
 	p := organismo{_nome: nome}
 	p._idade = 0
@@ -85,9 +86,12 @@ func (p *organismo) atualizar(s *sdl.Surface) {
 
 }
 
-func (p *organismo) movimento() {
+func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 
 	p._dircontador++
+
+	var tempX = p._posx
+	var tempY = p._posy
 
 	if p._dircontador >= p._dirquantidade {
 		p._dircontador = 0
@@ -124,36 +128,49 @@ func (p *organismo) movimento() {
 		fmt.Println("Mudar direcao : ", p._direcao, "  com ", p._dirquantidade)
 
 	case "l":
-		p._posx += 1
-		if p._posx >= 50 {
+		tempX += 1
+		if tempX >= 50 {
 			p._direcao = "o"
-			p._posx = 48
+			tempX = 48
 		}
 		break
 
 	case "o":
-		p._posx -= 1
-		if p._posx < 0 {
+		tempX -= 1
+		if tempX < 0 {
 			p._direcao = "l"
-			p._posx = 1
+			tempX = 1
 		}
 		break
 
 	case "n":
-		p._posy -= 1
-		if p._posy < 0 {
+		tempY -= 1
+		if tempY < 0 {
 			p._direcao = "s"
-			p._posy = 1
+			tempY = 1
 		}
 		break
 
 	case "s":
-		p._posy += 1
-		if p._posy >= 50 {
+		tempY += 1
+		if tempY >= 50 {
 			p._direcao = "n"
-			p._posy = 48
+			tempY = 48
 		}
 		break
+
+	}
+
+	peca := tb.RecuperarPeca(tempX, tempY)
+
+	if peca.VerificarPosicao() {
+
+		p.movimento(tb)
+
+	} else {
+
+		p._posx = tempX
+		p._posy = tempY
 
 	}
 

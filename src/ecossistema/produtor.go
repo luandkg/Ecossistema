@@ -22,11 +22,11 @@ type Produtor struct {
 }
 
 // Plantanovo : Criar instancia de planta
-func Plantanovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Produtor {
+func PlantaNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Produtor {
 
 	p := Produtor{_adultociclo: adulto}
 
-	p.organismo = *Organismonovo(nome)
+	p.organismo = *OrganismoNovo(nome)
 	p._nome = nome
 	p._nomecompleto = ""
 	p._idade = 0
@@ -71,7 +71,7 @@ func (p *Produtor) vivendo() {
 				p._reproduzircontador = 0
 				fmt.Println("       --- Produtor : ", p.Nome(), " Reproduzindo !!!")
 
-				var pg = Plantanovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
+				var pg = PlantaNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
 				var x int = utils.Aleatorionumero(50)
 				var y int = utils.Aleatorionumero(50)
 

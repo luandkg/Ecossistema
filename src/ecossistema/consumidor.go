@@ -22,7 +22,7 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 
 	p := Consumidor{_adultociclo: adulto}
 
-	p.organismo = *Organismonovo(nome)
+	p.organismo = *OrganismoNovo(nome)
 	p._nome = nome
 	p._idade = 0
 	p._status = "vivo"

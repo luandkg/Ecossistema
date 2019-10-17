@@ -169,8 +169,56 @@ func (e *Ecossistema) TotalProdutores() int {
 
 }
 
+func (e *Ecossistema) TotalProdutoresFase() (int, int) {
+
+	var contadorJovem = 0
+	var contadorAdulto = 0
+
+	for _, produtor := range e.produtores {
+
+		switch produtor.Status() {
+
+		case "nascido":
+			contadorJovem += 1
+			break
+		case "adulto":
+			contadorAdulto += 1
+			break
+
+		}
+
+	}
+
+	return contadorJovem, contadorAdulto
+
+}
+
 func (e *Ecossistema) TotalConsumidores() int {
 
 	return len(e.consumidores)
+
+}
+
+func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
+
+	var contadorJovem = 1
+	var contadorAdulto = 1
+
+	for _, consumidor := range e.consumidores {
+
+		switch consumidor.Status() {
+
+		case "nascido":
+			contadorJovem = contadorJovem + 1
+			break
+		case "adulto":
+			contadorAdulto = contadorAdulto + 1
+			break
+
+		}
+
+	}
+
+	return contadorJovem, contadorAdulto
 
 }

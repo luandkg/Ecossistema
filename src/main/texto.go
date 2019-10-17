@@ -11,6 +11,8 @@ import (
 
 var (
 	textosTextures  []texto
+	textoLargura    int
+	textoAltura     int
 )
 
 type texto struct {
@@ -19,7 +21,7 @@ type texto struct {
 	textura *sdl.Texture
 }
 
-func CriarTextosTexturas(textos []string) (successful bool) {
+func criarTextosTexturas(textos []string) (successful bool) {
 
 	textosTextures = nil
 
@@ -31,20 +33,19 @@ func CriarTextosTexturas(textos []string) (successful bool) {
 	for i := 0; i < len(textos); i++ {
 
 		var solidSurface *sdl.Surface
-		if solidSurface, err = font.RenderUTF8Solid(textos[i], sdl.Color{255, 0, 0, 255}); err != nil {
+		if solidSurface, err = font.RenderUTF8Solid(textos[i], sdl.Color{255, 255, 255, 255}); err != nil {
 			fmt.Printf("Failed to render text: %s\n", err)
 			return false
 		}
 
-		textoLargura, textoAltura, err := font.SizeUTF8(textos[i])
-
-		fmt.Println("----------------- FONT -------------------------")
-		fmt.Println(textoLargura, textoAltura)
-
 		var novoTextoTextura *sdl.Texture
-
 		if novoTextoTextura, err = renderer.CreateTextureFromSurface(solidSurface); err != nil {
 			fmt.Printf("Failed to create texture: %s\n", err)
+			return false
+		}
+
+		if textoLargura, textoAltura, err = font.SizeUTF8(textos[i]); err != nil {
+			fmt.Printf("Failed to get width or height: %s\n", err)
 			return false
 		}
 
@@ -56,27 +57,60 @@ func CriarTextosTexturas(textos []string) (successful bool) {
 
 	}
 
-
-
 	return true
 
 }
 
-func RenderizarTextos(ecossistemaC *ecossistema.Ecossistema) {
+func carregarTextos(e *ecossistema.Ecossistema) []string {
 
-	var produtoresTotal = fmt.Sprintf("Produtores: %d", ecossistemaC.TotalProdutores())
-	var consumidoresTotal = fmt.Sprintf("Consumidores: %d", ecossistemaC.TotalConsumidores())
+	totalProdutoresJovens, totalProdutoresAdulto := e.TotalProdutoresFase()
+	var produtoresTotal = fmt.Sprintf("Produtores: %d", e.TotalProdutores())
+	var produtoresJovens = fmt.Sprintf("Prod. Jovens: %d", totalProdutoresJovens)
+	var produtoresAdultos = fmt.Sprintf("Prod. Adultos: %d", totalProdutoresAdulto)
 
-	var testando = []string{produtoresTotal, consumidoresTotal}
+	totalConsumidoresJovens, totalConsumidoresAdulto := e.TotalConsumidoresFase()
+	var consumidoresTotal = fmt.Sprintf("Consumidores: %d", e.TotalConsumidores())
+	var consumidoresJovens = fmt.Sprintf("Cons. Jovens: %d", totalConsumidoresJovens)
+	var consumidoresAdultos = fmt.Sprintf("Cons. Adultos: %d", totalConsumidoresAdulto)
 
-	if !CriarTextosTexturas(testando) {
+	return []string{produtoresTotal, produtoresJovens, produtoresAdultos, consumidoresTotal, consumidoresJovens, consumidoresAdultos}
+
+}
+
+func RenderizarTextos(e *ecossistema.Ecossistema) {
+
+	var textosParaRenderizar = carregarTextos(e)
+
+	if !criarTextosTexturas(textosParaRenderizar) {
 		os.Exit(2)
 	}
 
+	var maxColunas = 3
+	var inicioY = 560
+	var alturaMaximaY = 20
+	var espacoY = 20
+
+	var inicioX = 10
+	var espacoX = inicioX
+	var larguraMaximaX = 470 / maxColunas
+
+	var colunaAtual = 1
+
 	for i := 0; i < len(textosTextures); i++ {
 
-		var x = int32(0)
-		var y = int32(550 + i * 30)
+		if i % maxColunas == 0 && i != 0 {
+			espacoX = inicioX
+			espacoY += alturaMaximaY
+			colunaAtual = 1
+		} else {
+			if i != 0 {
+				espacoX = larguraMaximaX * colunaAtual
+				colunaAtual += colunaAtual
+			}
+		}
+
+		var x = int32(inicioX + espacoX)
+		var y = int32(inicioY + espacoY)
 		var largura = textosTextures[i].largura
 		var altura = textosTextures[i].altura
 

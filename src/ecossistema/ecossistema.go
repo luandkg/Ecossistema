@@ -227,10 +227,9 @@ func (e *Ecossistema) TotalProdutoresFase() (int, int) {
 
 		case "nascido":
 			contadorJovem += 1
-			break
+
 		case "adulto":
 			contadorAdulto += 1
-			break
 
 		}
 
@@ -257,10 +256,9 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 		case "nascido":
 			contadorJovem += 1
-			break
+
 		case "adulto":
 			contadorAdulto += 1
-			break
 
 		}
 
@@ -278,13 +276,11 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 		for i := 0; i < quantidade; i++ {
 			e.AdicionarProdutor(PlantaNovo(nome, adulto, reproducao, vida, cor, e))
 		}
-		break
 
 	case "consumidor":
 		for i := 0; i < quantidade; i++ {
 			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e))
 		}
-		break
 
 	}
 

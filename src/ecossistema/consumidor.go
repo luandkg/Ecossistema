@@ -85,13 +85,11 @@ func (c *Consumidor) mudarFase() {
 	case "nascido":
 		c._fase = "adulto"
 		fmt.Println("       --- Consumidor : ", c.Nome(), " Evoluiu : Adulto !!!")
-		break
 
 	case "adulto":
 		c._status = "morto"
 		c._fase = "falescido"
 		fmt.Println("       --- Consumidor : ", c.Nome(), " Morreu !!!")
-		break
 
 	}
 
@@ -157,7 +155,53 @@ func (c *Consumidor) VerificarAlvo(p map[string]*Produtor) {
 
 func (c *Consumidor) CacarAlvo() {
 
+	var distanciaX = c._posx - c._alvoX
+	var distanciaY = c._posy - c._alvoY
 
+	switch distanciaX {
+
+	case 1:
+		if distanciaY >= -1 && distanciaY <= 1 {
+			// matar planta
+			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
+		}
+
+	case -1:
+		if distanciaY >= -1 && distanciaY <= 1 {
+			// matar planta
+			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
+		}
+
+	case 0:
+		if distanciaY == 1 || distanciaY == -1 {
+			// matar planta
+			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
+		}
+
+	default:
+		var novoX = c._posx
+		var novoY = c._posy
+
+		if distanciaX <= -1 {
+			novoX += 1
+		}
+
+		if distanciaX >= 1 {
+			novoX -= 1
+		}
+
+		if distanciaY <= -1 {
+			novoY += 1
+		}
+
+		if distanciaY >= 1 {
+			novoY -= 1
+		}
+
+		c._posx = novoX
+		c._posy = novoY
+
+	}
 
 }
 

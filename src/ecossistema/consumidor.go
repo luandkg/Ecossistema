@@ -123,7 +123,7 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 func (c *Consumidor) VerificarAlvo(p map[string]*Produtor) {
 
-	var tetoBusca = 2
+	var tetoBusca = 5
 	var chaoBusca = -tetoBusca
 
 	for _, produtor := range p {
@@ -153,54 +153,57 @@ func (c *Consumidor) VerificarAlvo(p map[string]*Produtor) {
 
 }
 
+func (c *Consumidor) reduzirDistanciaAlvo() {
+
+	var distanciaX = c._posx - c._alvoX
+	var distanciaY = c._posy - c._alvoY
+
+	var novoX = c._posx
+	var novoY = c._posy
+
+	if distanciaX < -1 {
+		novoX += 1
+	} else if distanciaX > 1 {
+		novoX -= 1
+	}
+
+	if distanciaY < -1 {
+		novoY += 1
+	} else if distanciaY > 1 {
+		novoY -= 1
+	}
+
+	c._posx = novoX
+	c._posy = novoY
+
+	fmt.Println("Novo X: ", c._posx, " Novo Y: ", c._posy, " Alvo X: ", c._alvoX, " Alvo Y: ", c._alvoY)
+
+}
+
 func (c *Consumidor) CacarAlvo() {
 
 	var distanciaX = c._posx - c._alvoX
 	var distanciaY = c._posy - c._alvoY
 
-	switch distanciaX {
+	fmt.Println("X: ", c._posx, " Y: ", c._posy, " Alvo X: ", c._alvoX, " Alvo Y: ", c._alvoY)
+	fmt.Println("Distancia X: ", distanciaX, " Distancia Y: ", distanciaY)
 
-	case 1:
-		if distanciaY >= -1 && distanciaY <= 1 {
+	if distanciaX == 1 || distanciaY == -1 {
+		if distanciaY > -1 && distanciaY < 1 {
 			// matar planta
 			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
+		} else {
+			c.reduzirDistanciaAlvo()
 		}
-
-	case -1:
-		if distanciaY >= -1 && distanciaY <= 1 {
-			// matar planta
-			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
-		}
-
-	case 0:
+	} else if distanciaY == 0 {
 		if distanciaY == 1 || distanciaY == -1 {
 			// matar planta
 			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
+		} else {
+			c.reduzirDistanciaAlvo()
 		}
-
-	default:
-		var novoX = c._posx
-		var novoY = c._posy
-
-		if distanciaX <= -1 {
-			novoX += 1
-		}
-
-		if distanciaX >= 1 {
-			novoX -= 1
-		}
-
-		if distanciaY <= -1 {
-			novoY += 1
-		}
-
-		if distanciaY >= 1 {
-			novoY -= 1
-		}
-
-		c._posx = novoX
-		c._posy = novoY
-
+	} else {
+		c.reduzirDistanciaAlvo()
 	}
 
 }

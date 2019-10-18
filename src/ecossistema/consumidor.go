@@ -107,11 +107,11 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 
-		pg.mudarposicao(x, y)
+		//pg.mudarposicao(x, y)
 
 		peca := tb.RecuperarPeca(x, y)
 
-		if peca.VerificarPosicao() == false {
+		if !peca.VerificarPosicao() {
 			pg.mudarposicao(x, y)
 			peca.OcuparPosicao()
 		}
@@ -139,8 +139,6 @@ func (c *Consumidor) VerificarAlvo(p map[string]*Produtor, tb *tabuleiro.Tabulei
 			for i := tetoBusca; i > chaoBusca; i-- {
 
 				for j := tetoBusca; j > chaoBusca; j-- {
-
-					fmt.Println("Nome do produtor da busca: ", produtor.Nome())
 
 					if produtor._posx == c._posx+i && produtor._posy == c._posy+j {
 						alvo = true
@@ -170,57 +168,67 @@ func (c *Consumidor) VerificarAlvo(p map[string]*Produtor, tb *tabuleiro.Tabulei
 
 }
 
-func (c *Consumidor) reduzirDistanciaAlvo() {
+func (c *Consumidor) reduzirDistanciaAlvo(tb *tabuleiro.Tabuleiro) {
 
+	var novoEspacoEncontrado = false
+	var contadorEspacoTentado = 0
 	var distanciaX = c._posx - c._alvoX
 	var distanciaY = c._posy - c._alvoY
 
-	var novoX = c._posx
-	var novoY = c._posy
+	for !novoEspacoEncontrado {
 
-	if distanciaX < -1 {
-		novoX += 1
-	} else if distanciaX > 1 {
-		novoX -= 1
+		var novoX = c._posx
+		var novoY = c._posy
+
+		if distanciaX < -1 {
+			novoX += 1
+		} else if distanciaX > 1 {
+			novoX -= 1
+		}
+
+		if distanciaY < -1 {
+			novoY += 1
+		} else if distanciaY > 1 {
+			novoY -= 1
+		}
+
+		peca := tb.RecuperarPeca(novoX, novoY)
+
+		if !peca.VerificarPosicao() {
+			c.mudarposicao(novoX, novoY)
+			peca.OcuparPosicao()
+			novoEspacoEncontrado = true
+		}
+
 	}
 
-	if distanciaY < -1 {
-		novoY += 1
-	} else if distanciaY > 1 {
-		novoY -= 1
-	}
-
-	c._posx = novoX
-	c._posy = novoY
-
-	fmt.Println("Novo X: ", c._posx, " Novo Y: ", c._posy, " Alvo X: ", c._alvoX, " Alvo Y: ", c._alvoY)
+	//
+	//c._posx = novoX
+	//c._posy = novoY
 
 }
 
-func (c *Consumidor) CacarAlvo() {
+func (c *Consumidor) CacarAlvo(tb *tabuleiro.Tabuleiro) {
 
 	var distanciaX = c._posx - c._alvoX
 	var distanciaY = c._posy - c._alvoY
-
-	fmt.Println("X: ", c._posx, " Y: ", c._posy, " Alvo X: ", c._alvoX, " Alvo Y: ", c._alvoY)
-	fmt.Println("Distancia X: ", distanciaX, " Distancia Y: ", distanciaY)
 
 	if distanciaX == 1 || distanciaY == -1 {
 		if distanciaY > -1 && distanciaY < 1 {
 			// matar planta
 			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
 		} else {
-			c.reduzirDistanciaAlvo()
+			c.reduzirDistanciaAlvo(tb)
 		}
 	} else if distanciaY == 0 {
 		if distanciaY == 1 || distanciaY == -1 {
 			// matar planta
 			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
 		} else {
-			c.reduzirDistanciaAlvo()
+			c.reduzirDistanciaAlvo(tb)
 		}
 	} else {
-		c.reduzirDistanciaAlvo()
+		c.reduzirDistanciaAlvo(tb)
 	}
 
 }

@@ -184,7 +184,7 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 			if consumidorc.TemAlvo() {
 
-				consumidorc.CacarAlvo()
+				consumidorc.CacarAlvo(tb)
 
 			} else {
 

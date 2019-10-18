@@ -23,9 +23,15 @@ type texto struct {
 
 func criarTextosTexturas(textos []string) (successful bool) {
 
+	dir, err := os.Getwd()
+	if err != nil {
+		fmt.Printf("Failed to open get current directory: %s\n", err)
+		return false
+	}
+
 	textosTextures = nil
 
-	if font, err = ttf.OpenFont("./assets/fonts/OpenSans-Regular.ttf", 14); err != nil {
+	if font, err = ttf.OpenFont(dir + "/assets/fonts/OpenSans-Regular.ttf", 14); err != nil {
 		fmt.Printf("Failed to open font: %s\n", err)
 		return false
 	}

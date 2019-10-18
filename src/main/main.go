@@ -56,15 +56,15 @@ func main() {
 	tb.Limpar()
 
 	// GERAR PRODUTORES
-	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Gordura", 200, 100, 300, 0xADFF2F)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Verde", 300, 150, 600, 0x808000)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Laranjeira", 500, 200, 10000, 0xDAA520)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Ervacidreira", 300, 300, 1000, 0xFFFF00)
+	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Gordura", 200, 100, 300, 0x18B300)
+	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Verde", 300, 150, 600, 0x89FF77)
+	ecossistemaC.GerarOrganismos("produtor", 10, "Laranjeira", 500, 200, 10000, 0xC2FFDC)
+	ecossistemaC.GerarOrganismos("produtor", 10, "Ervacidreira", 300, 300, 1000, 0x0EB355)
 
 	// GERAR CONSUMIDORES
-	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 20, 10, 80, 0xFF0000)
-	ecossistemaC.GerarOrganismos("consumidor", 4, "Roedor", 400, 200, 5000, 0xEE82EE)
-	ecossistemaC.GerarOrganismos("consumidor", 6, "Coelho", 500, 250, 8000, 0x7B68EE)
+	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 300, 210, 3000, 0xCC2700)
+	ecossistemaC.GerarOrganismos("consumidor", 4, "Roedor", 400, 200, 5000, 0xFF845F)
+	ecossistemaC.GerarOrganismos("consumidor", 6, "Coelho", 500, 250, 8000, 0xFF4570)
 
 	ecossistemaC.MapearOrganismos(tb)
 

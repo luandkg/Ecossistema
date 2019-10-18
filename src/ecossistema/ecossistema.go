@@ -181,7 +181,19 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 			fmt.Println("      - ", consumidorc.toString())
 			consumidorc.vivendo(tb)
-			consumidorc.movimento(tb)
+
+			if consumidorc.TemAlvo() {
+
+				consumidorc.CacarAlvo()
+
+			} else {
+
+				consumidorc.Movimento(tb)
+
+				consumidorc.VerificarAlvo(e.produtores)
+
+			}
+
 			consumidorc.atualizar(surface)
 
 		}
@@ -215,10 +227,9 @@ func (e *Ecossistema) TotalProdutoresFase() (int, int) {
 
 		case "nascido":
 			contadorJovem += 1
-			break
+
 		case "adulto":
 			contadorAdulto += 1
-			break
 
 		}
 
@@ -245,10 +256,9 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 		case "nascido":
 			contadorJovem += 1
-			break
+
 		case "adulto":
 			contadorAdulto += 1
-			break
 
 		}
 
@@ -266,13 +276,11 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 		for i := 0; i < quantidade; i++ {
 			e.AdicionarProdutor(PlantaNovo(nome, adulto, reproducao, vida, cor, e))
 		}
-		break
 
 	case "consumidor":
 		for i := 0; i < quantidade; i++ {
 			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e))
 		}
-		break
 
 	}
 

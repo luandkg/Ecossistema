@@ -86,7 +86,7 @@ func (p *organismo) atualizar(s *sdl.Surface) {
 
 }
 
-func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
+func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 
 	p._dircontador++
 
@@ -109,15 +109,19 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 
 		case 0:
 			p._direcao = "l"
+			break
 
 		case 1:
 			p._direcao = "o"
+			break
 
 		case 2:
 			p._direcao = "s"
+			break
 
 		case 3:
 			p._direcao = "n"
+			break
 
 		}
 
@@ -129,6 +133,7 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "o"
 			tempX = 48
 		}
+		break
 
 	case "o":
 		tempX -= 1
@@ -136,6 +141,7 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "l"
 			tempX = 1
 		}
+		break
 
 	case "n":
 		tempY -= 1
@@ -143,6 +149,7 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "s"
 			tempY = 1
 		}
+		break
 
 	case "s":
 		tempY += 1
@@ -150,6 +157,7 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "n"
 			tempY = 48
 		}
+		break
 
 	}
 
@@ -157,7 +165,7 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 
 	if peca.VerificarPosicao() {
 
-		p.Movimento(tb)
+		p.movimento(tb)
 
 	} else {
 

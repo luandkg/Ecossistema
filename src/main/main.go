@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"tabuleiro"
 	"ecossistema"
+	"tabuleiro"
 	"utils"
 
 	"github.com/veandco/go-sdl2/sdl"

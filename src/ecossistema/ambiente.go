@@ -14,9 +14,14 @@ type Ambiente struct {
 	faseciclo     int
 	fasecontador  int
 	dia           int
-	sol           int
+
 
 	ciclo         int
+	logciclo		int
+	temperatura
+	luminosidade
+	ventos
+	nuvens
 }
 
 func AmbienteNovo() *Ambiente {
@@ -26,55 +31,36 @@ func AmbienteNovo() *Ambiente {
 	p.dia = 0
 	p.fase = ""
 	p.fasecontador = 0
-	p.sol = 0
+
+
+	p.temperatura = *temperaturaNovo(&p)
+	p.luminosidade = *luminosidadeNovo(&p)
+	p.ventos = *ventosNovo(&p)
+	p.nuvens = *nuvensNovo(&p)
 
 	p.ciclo = 0
-
+p.logciclo=0
 	return &p
 }
 
 func (a *Ambiente) ceu() string {
 
 	if a.fase == "Dia" {
-		return a.luminosidade(a.sol)
+		return a.luminosidadeCorrenteNome()
 	} else {
 		return ""
 	}
 
 }
 
-func (a *Ambiente) luminosidade(_sol int) string {
 
-	var _solmodo string = " - "
-	if _sol >= 0 && _sol < 20 {
-		_solmodo = "Muito Nublado"
-	}
-
-	if _sol >= 20 && _sol < 40 {
-		_solmodo = "Nublado"
-	}
-
-	if _sol >= 40 && _sol < 60 {
-		_solmodo = "Normal"
-	}
-
-	if _sol >= 60 && _sol < 80 {
-		_solmodo = "Ensolarado"
-	}
-
-	if _sol >= 80 {
-		_solmodo = "Muito Ensolarado"
-	}
-
-	return _solmodo
-
-}
 
 func (a *Ambiente) AmbienteFase() {
 
 	// Implementacao FASE - DIA / NOITE
 
 	a.ciclo++
+a.logciclo++
 
 	if a.fase == "" {
 		a.fasecontador = a.faseciclo * 2
@@ -84,13 +70,11 @@ func (a *Ambiente) AmbienteFase() {
 		a.fasecontador = 0
 		if a.fase == "Dia" {
 			a.fase = "Noite"
-			a.sol = 0
 			utils.Log("logs.txt", "Noite - "+strconv.Itoa(a.dia)+" [ ]")
 
 		} else {
 			a.fase = "Dia"
 			a.dia++
-			a.sol = utils.Aleatorionumero(100)
 
 			utils.Log("logs.txt", "Dia - "+strconv.Itoa(a.dia)+" [ "+a.ceu()+"]")
 
@@ -99,28 +83,65 @@ func (a *Ambiente) AmbienteFase() {
 		a.fasecontador++
 
 		if a.fase == "Dia" {
-			modo := utils.Aleatorionumero(100)
-			valor := utils.Aleatorionumero(5)
 
-			if modo <= 50 {
-				a.sol += valor
-			} else {
-				a.sol -= valor
-			}
 
 		}
 	}
 
-	if a.sol < 0 {
-		a.sol = a.sol * (-1)
-	}
+
+
+	a.temperaturaDia()
+	a.temperaturaNoite()
+
+	a.claridade()
+	a.ventar()
+	a.ceu()
 
 	fmt.Println("")
 	fmt.Println("Fase -> ", a.fase)
-	fmt.Println("Quantidade de Sol -> ", a.sol)
+	fmt.Println("Quantidade de Sol -> ", a.luz)
 	fmt.Println("Ceu -> ", a.ceu())
 
+	fmt.Printf("\n\t Temperatura :  %.2f NG", a.temperaturaCorrente)
+
+	if a.ventorodando == true {
+		fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ] - Rodando ", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino)
+	} else {
+		fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ]", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino)
+	}
+
+	fmt.Printf("\n\t Luz :  %.2f - %s", a.luz, a.luminosidadeCorrenteNome())
+	fmt.Printf("\n\t Nuvens :  %.2f - %s", a.nuvem, a.nuvemCorrente())
+
+	if a.logciclo>=10{
+a.logciclo=0
+		utils.Log("ambiente.txt", "------------------------------------------------")
+
+		utils.Log("ambiente.txt", "Dia  : " + strconv.Itoa(a.dia) + " FASE : " + a.fase + " CICLO : " + strconv.Itoa(a.ciclo) )
+
+
+		s1 := fmt.Sprintf("%f", a.temperaturaCorrente)
+
+		utils.Log("ambiente.txt", "Temperatura - " + s1)
+		utils.Log("ambiente.txt", "Luz - " + a.luminosidadeCorrenteNome())
+		utils.Log("ambiente.txt", "Nuvem - " + a.nuvemCorrente())
+
+		if a.ventorodando == true {
+			utils.Log("ambiente.txt", "Vento - " + a.ventoCorrenteNome() + " [ " + a.ventoorigem + " -> " + a.ventodestino + " ] - SIM ")
+		}else{
+			utils.Log("ambiente.txt", "Vento - " + a.ventoCorrenteNome() + " [ " + a.ventoorigem + " -> " + a.ventodestino + " ]")
+		}
+
+
+
+	}
+
+
+	fmt.Println()
+
+	fmt.Println()
 }
+
 
 func (a *Ambiente) AtualizarTela(s *sdl.Surface,) {
 
@@ -140,4 +161,4 @@ func (a *Ambiente) AtualizarTela(s *sdl.Surface,) {
 func (a *Ambiente) Fase() string { return a.fase }
 func (a *Ambiente) FaseContador() int { return a.fasecontador }
 func (a *Ambiente) Ciclo() int { return a.ciclo }
-func (a *Ambiente) Sol() int { return a.sol }
+func (a *Ambiente) Sol() int { return int(a.luz) }

@@ -190,9 +190,9 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 				consumidorc.Movimento(tb)
 
-				consumidorc.VerificarAlvo(e.produtores)
-
 			}
+
+			consumidorc.VerificarAlvo(e.produtores, tb)
 
 			consumidorc.atualizar(surface)
 

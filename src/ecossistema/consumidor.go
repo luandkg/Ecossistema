@@ -121,33 +121,50 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 }
 
-func (c *Consumidor) VerificarAlvo(p map[string]*Produtor) {
+func (c *Consumidor) VerificarAlvo(p map[string]*Produtor, tb *tabuleiro.Tabuleiro) {
 
-	var tetoBusca = 5
-	var chaoBusca = -tetoBusca
+	peca := tb.RecuperarPeca(c._alvoX, c._alvoY)
 
-	for _, produtor := range p {
+	if !peca.VerificarPosicao() {
 
-		for i := tetoBusca; i >= chaoBusca; i-- {
+		var alvo = false
+		var alvoX = 0
+		var alvoY = 0
 
-			for j := tetoBusca; j >= chaoBusca; j-- {
-				if produtor._posx == c._posx + i && produtor._posy == c._posy + j {
-					c._temAlvo = true
-					c._alvoX = c._posx + i
-					c._alvoY = c._posy + j
+		var tetoBusca = 10
+		var chaoBusca = -tetoBusca
+
+		for _, produtor := range p {
+
+			for i := tetoBusca; i > chaoBusca; i-- {
+
+				for j := tetoBusca; j > chaoBusca; j-- {
+
+					fmt.Println("Nome do produtor da busca: ", produtor.Nome())
+
+					if produtor._posx == c._posx+i && produtor._posy == c._posy+j {
+						alvo = true
+						alvoX = c._posx + i
+						alvoY = c._posy + j
+						break
+					}
+				}
+
+				if alvo {
 					break
 				}
+
 			}
 
-			if c._temAlvo {
+			if alvo {
 				break
 			}
 
 		}
 
-		if c._temAlvo {
-			break
-		}
+		c._temAlvo = alvo
+		c._alvoX = alvoX
+		c._alvoY = alvoY
 
 	}
 

@@ -51,7 +51,7 @@ func main() {
 
 	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
-	ecossistemaC := ecossistema.EcossistemaNovo()
+	ecossistemaC := ecossistema.EcossistemaNovo(ambienteC)
 
 	tb.Limpar()
 

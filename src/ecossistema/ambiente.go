@@ -18,6 +18,10 @@ type Ambiente struct {
 
 	ciclo         int
 	logciclo		int
+
+	gasOxigenio float32
+	gasCarbonico float32
+
 	temperatura
 	luminosidade
 	ventos
@@ -32,6 +36,8 @@ func AmbienteNovo() *Ambiente {
 	p.fase = ""
 	p.fasecontador = 0
 
+	p.gasCarbonico=0
+	p.gasOxigenio=0
 
 	p.temperatura = *temperaturaNovo(&p)
 	p.luminosidade = *luminosidadeNovo(&p)

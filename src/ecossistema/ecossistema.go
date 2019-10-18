@@ -15,9 +15,11 @@ type Ecossistema struct {
 	contadoranimal   int
 	produtores       (map[string]*Produtor)
 	consumidores     (map[string]*Consumidor)
+
+	ambienteC *Ambiente
 }
 
-func EcossistemaNovo() *Ecossistema {
+func EcossistemaNovo(ambienteC*Ambiente) *Ecossistema {
 
 	p := Ecossistema{}
 	p.contadoranimal = 0
@@ -25,6 +27,8 @@ func EcossistemaNovo() *Ecossistema {
 
 	p.produtores = make(map[string]*Produtor)
 	p.consumidores = make(map[string]*Consumidor)
+
+	p.ambienteC=ambienteC
 
 	return &p
 }
@@ -196,6 +200,13 @@ func (e *Ecossistema) LogEcossistema() {
 
 	utils.Log("logs.txt", "Consumidores - "+strconv.Itoa(len(e.consumidores)))
 
+	s1 :=fmt.Sprintf("%f",e.ambienteC.gasOxigenio)
+	s2:=fmt.Sprintf("%f",e.ambienteC.gasCarbonico)
+
+	utils.Log("logs.txt", "Gas Oxigenio - "+ s1)
+	utils.Log("logs.txt", "Gas Carbonico - "+ s2)
+
+
 }
 
 func (e *Ecossistema) TotalProdutores() int {
@@ -275,5 +286,17 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 		break
 
 	}
+
+}
+
+func(e*Ecossistema)produzirOxigenio(valor float32){
+
+e.ambienteC.gasOxigenio+=valor
+
+}
+
+func(e*Ecossistema)produzirCarbono(valor float32){
+
+	e.ambienteC.gasCarbonico+=valor
 
 }

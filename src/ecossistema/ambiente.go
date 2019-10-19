@@ -98,23 +98,7 @@ a.logciclo++
 	a.nublar()
 	a.umidificar()
 
-	fmt.Println("")
-	fmt.Println("Fase -> ", a.fase)
-	fmt.Println("Quantidade de Sol -> ", a.luz)
-	fmt.Println("Ceu -> ", a.ceu())
 
-	fmt.Printf("\n\t Temperatura :  %.2f NG", a.temperaturaCorrente)
-
-	if a.ventorodando == true {
-		fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ] - Rodando : %s", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino,a.ventomodo)
-	} else {
-		fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ]", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino)
-	}
-
-	fmt.Printf("\n\t Luz :  %.2f - %s", a.luz, a.luminosidadeNomeCorrente())
-	fmt.Printf("\n\t Nuvens :  %.2f - %s", a.nuvem, a.nuvemNomeCorrente())
-
-	fmt.Printf("\n\t Chuva :  %.2f ", a.chuva())
 
 
 	if a.logciclo>=10{
@@ -131,6 +115,7 @@ a.logciclo=0
 		utils.Log("ambiente.txt", "Temperatura - " + s1)
 		utils.Log("ambiente.txt", "Luz - " + a.luminosidadeNomeCorrente())
 		utils.Log("ambiente.txt", "Nuvem - " + a.nuvemNomeCorrente())
+		utils.Log("ambiente.txt", "Sol - " +  strconv.Itoa(a.Sol()))
 		utils.Log("ambiente.txt", "Umidade - " + a.umidadeNomeCorrente())
 
 		if a.ventorodando == true {
@@ -140,6 +125,27 @@ a.logciclo=0
 		}
 
 		utils.Log("ambiente.txt", "Chuva - " + a.chuvaNomeCorrente())
+
+
+		fmt.Println("")
+		fmt.Println("Fase -> ", a.fase)
+		fmt.Println("Quantidade de Sol -> ", a.luz)
+		fmt.Println("Ceu -> ", a.ceu())
+
+		fmt.Printf("\n\t Temperatura :  %.2f ºC", a.temperaturaCorrente)
+		fmt.Printf("\n\t Luz :  %.2f - %s", a.luz, a.luminosidadeNomeCorrente())
+		fmt.Printf("\n\t Nuvens :  %.2f - %s", a.nuvem, a.nuvemNomeCorrente())
+		fmt.Printf("\n\t Sol :  %.2f", a.Sol())
+		fmt.Printf("\n\t Umidade :  %.2f - %s", a.umidade, a.umidadeNomeCorrente())
+
+		if a.ventorodando == true {
+			fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ] - Rodando : %s", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino,a.ventomodo)
+		} else {
+			fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ]", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino)
+		}
+
+
+		fmt.Printf("\n\t Chuva :  %.2f ", a.chuva())
 
 
 	}
@@ -169,7 +175,7 @@ func (a *Ambiente) AtualizarTela(s *sdl.Surface,) {
 func (a *Ambiente) Fase() string { return a.fase }
 func (a *Ambiente) FaseContador() int { return a.fasecontador }
 func (a *Ambiente) Ciclo() int { return a.ciclo }
-func (a *Ambiente) Sol() int { return int(a.luz) }
+func (a *Ambiente) Sol() int { return int(a.luz - (a.nuvem/3))  }
 
 func (a *Ambiente) chuva() float32 {
 	var valor float32=0

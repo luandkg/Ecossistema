@@ -28,7 +28,7 @@ func criarTextosTexturas(textos []string) (successful bool) {
 	//dir=filepath.Dir(dir)
 
 
-	fmt.Println("Local da Fonte : " + dir +"/assets/fonts/OpenSans-Regular.ttf")
+	//fmt.Println("Local da Fonte : " + dir +"/assets/fonts/OpenSans-Regular.ttf")
 	if err != nil {
 		fmt.Printf("Failed to open get current directory: %s\n", err)
 		return false

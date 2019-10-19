@@ -1,7 +1,6 @@
 package ecossistema
 
 import (
-	"fmt"
 	"math/rand"
 	"tabuleiro"
 	"time"
@@ -128,7 +127,7 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 
 		}
 
-		fmt.Println("Mudar direcao : ", p._direcao, "  com ", p._dirquantidade)
+		//fmt.Println("Mudar direcao : ", p._direcao, "  com ", p._dirquantidade)
 
 	case "l":
 		tempX += 1

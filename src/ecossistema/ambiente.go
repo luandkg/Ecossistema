@@ -26,6 +26,8 @@ type Ambiente struct {
 	luminosidade
 	ventos
 	nuvens
+	umidificador
+
 }
 
 func AmbienteNovo() *Ambiente {
@@ -43,6 +45,7 @@ func AmbienteNovo() *Ambiente {
 	p.luminosidade = *luminosidadeNovo(&p)
 	p.ventos = *ventosNovo(&p)
 	p.nuvens = *nuvensNovo(&p)
+	p.umidificador = *umidificadorNovo(&p)
 
 	p.ciclo = 0
 p.logciclo=0
@@ -102,6 +105,7 @@ a.logciclo++
 	a.claridade()
 	a.ventar()
 	a.ceu()
+a.umidificar()
 
 	fmt.Println("")
 	fmt.Println("Fase -> ", a.fase)
@@ -127,10 +131,13 @@ a.logciclo=0
 
 
 		s1 := fmt.Sprintf("%f", a.temperaturaCorrente)
+		s2 := fmt.Sprintf("%f", a.chuva())
 
 		utils.Log("ambiente.txt", "Temperatura - " + s1)
 		utils.Log("ambiente.txt", "Luz - " + a.luminosidadeCorrenteNome())
 		utils.Log("ambiente.txt", "Nuvem - " + a.nuvemCorrente())
+		utils.Log("ambiente.txt", "Umidade - " + a.umidadeNomeCorrente())
+		utils.Log("ambiente.txt", "Chuva - " + s2)
 
 		if a.ventorodando == true {
 			utils.Log("ambiente.txt", "Vento - " + a.ventoCorrenteNome() + " [ " + a.ventoorigem + " -> " + a.ventodestino + " ] - SIM ")
@@ -168,3 +175,33 @@ func (a *Ambiente) Fase() string { return a.fase }
 func (a *Ambiente) FaseContador() int { return a.fasecontador }
 func (a *Ambiente) Ciclo() int { return a.ciclo }
 func (a *Ambiente) Sol() int { return int(a.luz) }
+
+func (a *Ambiente) chuva() float32 {
+	var valor float32=0
+
+	if a.vento>=50 && a.vento<80{
+		valor+=15
+	}
+
+	if a.vento>=80 && a.vento<100{
+		valor+=30
+	}
+
+	if a.umidade>=50 && a.umidade<80{
+		valor+=15
+	}
+
+	if a.umidade>=80 && a.umidade<100{
+		valor+=30
+	}
+
+	if a.temperaturaCorrente<=33{
+		valor+=15
+	}
+
+	if a.nuvem>=50{
+		valor+=15
+	}
+
+return valor
+}

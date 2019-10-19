@@ -292,3 +292,72 @@ Temperatura - 25.247467
 Luz - Muito Claro !
 Nuvem - Sem Nuvem
 Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.247467
+Luz - Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Baixa
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.247467
+Luz - Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Alta
+Vento - Vento Muito Forte [ Nordeste -> Leste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.247467
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Alta
+Vento - Vento Muito Forte [ Nordeste -> Leste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.247467
+Luz - Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Baixa
+Chuva - 45.000000
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.247467
+Luz - Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Baixa
+Chuva - 45.000000
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.247467
+Luz - Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Alta
+Chuva - 75.000000
+Vento - Vento Muito Forte [ Nordeste -> Leste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.247467
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Alta
+Chuva - 75.000000
+Vento - Vento Muito Forte [ Nordeste -> Leste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 21.549669
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Alta
+Chuva - 60.000000
+Vento - Vento Fortes [ Sudoeste -> Sudeste ]
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 21.549669
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Alta
+Chuva - 75.000000
+Vento - Vento Muito Forte [ Noroeste -> Sudoeste ]

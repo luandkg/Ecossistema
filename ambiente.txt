@@ -102,3 +102,355 @@ Nuvem - Stratus
 Umidade - Muito Baixa
 Vento - Ventania [ Noroeste -> Nordeste ]
 Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 140
+Temperatura - 26.084818
+Luz - Escuro !
+Nuvem - Stratus
+Umidade - Muito Baixa
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 150
+Temperatura - 26.084818
+Luz - Muito Escuro !
+Nuvem - Altostratus
+Umidade - Alta
+Vento - Vento Leve [ Nordeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 160
+Temperatura - 26.084818
+Luz - Muito Escuro !
+Nuvem - Altostratus
+Umidade - Alta
+Vento - Vento Leve [ Nordeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 170
+Temperatura - 26.589102
+Luz - Muito Escuro !
+Nuvem - Stratocumulus
+Umidade - Baixa
+Vento - Ventania [ Sudeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 180
+Temperatura - 26.589102
+Luz - Escuro !
+Nuvem - Stratocumulus
+Umidade - Muito Baixa
+Vento - Ventania [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 190
+Temperatura - 26.589102
+Luz - Escuro !
+Nuvem - Altocumulus
+Umidade - Baixa
+Vento - Ventania [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 200
+Temperatura - 26.377291
+Luz - Escuro !
+Nuvem - Altocumulus
+Umidade - Muito Baixa
+Vento - Vento Muito Forte [ Leste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 210
+Temperatura - 24.749817
+Luz - Claro !
+Nuvem - Stratocumulus
+Umidade - Muito Baixa
+Vento - Vento Muito Forte [ Sudoeste -> Sudoeste ] - Furacão
+Chuva - Neblina
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 220
+Temperatura - 24.749817
+Luz - Muito Claro !
+Nuvem - Stratocumulus
+Umidade - Muito Baixa
+Vento - Vento Muito Forte [ Sudoeste -> Sudoeste ] - Furacão
+Chuva - Neblina
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 230
+Temperatura - 24.749817
+Luz - Claro !
+Nuvem - Stratocumulus
+Umidade - Muito Baixa
+Vento - Sem Vento [ Oeste -> Leste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 240
+Temperatura - 28.484238
+Luz - Claro !
+Nuvem - Stratocumulus
+Umidade - Muito Baixa
+Vento - Sem Vento [ Oeste -> Leste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 250
+Temperatura - 28.484238
+Luz - Claro !
+Nuvem - Cirrostratus
+Umidade - Muito Alta
+Vento - Vento Fortes [ Leste -> Oeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 260
+Temperatura - 28.484238
+Luz - Claro !
+Nuvem - Cirrostratus
+Umidade - Muito Baixa
+Vento - Sem Vento [ Oeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 270
+Temperatura - 32.698116
+Luz - Muito Muito Claro !
+Nuvem - Stratocumulus
+Umidade - Muito Baixa
+Vento - Vento Leve [ Oeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 280
+Temperatura - 32.698116
+Luz - Claro !
+Nuvem - Stratocumulus
+Umidade - Baixa
+Vento - Ventania [ Norte -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 290
+Temperatura - 32.698116
+Luz - Claro !
+Nuvem - Cirrostratus
+Umidade - Baixa
+Vento - Vento Fortes [ Noroeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Dia CICLO : 300
+Temperatura - 36.759258
+Luz - Claro !
+Nuvem - Cirrostratus
+Umidade - Baixa
+Vento - Vento Fortes [ Noroeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 310
+Temperatura - 21.494387
+Luz - Muito Escuro !
+Nuvem - Stratocumulus
+Umidade - Muito Alta
+Vento - Vento Fortes [ Leste -> Norte ]
+Chuva - Chuvisco
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 320
+Temperatura - 21.494387
+Luz - Escuro !
+Nuvem - Stratocumulus
+Umidade - Muito Alta
+Vento - Vento Fortes [ Leste -> Norte ]
+Chuva - Chuvisco
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 330
+Temperatura - 21.494387
+Luz - Escuro !
+Nuvem - Stratocumulus
+Umidade - Baixa
+Vento - Sem Vento [ Oeste -> Oeste ] - Brisa
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 340
+Temperatura - 22.174442
+Luz - Muito Escuro !
+Nuvem - Stratocumulus
+Umidade - Baixa
+Vento - Vento Fortes [ Nordeste -> Leste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 350
+Temperatura - 22.174442
+Luz - Escuro !
+Nuvem - Stratocumulus
+Umidade - Baixa
+Vento - Vento Fortes [ Nordeste -> Leste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 360
+Temperatura - 22.174442
+Luz - Muito Escuro !
+Nuvem - Stratocumulus
+Umidade - Alta
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Chuvisco
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 370
+Temperatura - 26.346224
+Luz - Escuro !
+Nuvem - Stratocumulus
+Umidade - Normal
+Vento - Vento Fortes [ Sudoeste -> Oeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 2 FASE : Noite CICLO : 380
+Temperatura - 26.346224
+Luz - Muito Escuro !
+Nuvem - Stratocumulus
+Umidade - Normal
+Vento - Vento Fortes [ Sudoeste -> Oeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 90
+Temperatura - 29.34 ºC
+Luz - Muito Claro !
+Nuvem - Altostratus
+Umidade - Alta
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 100
+Temperatura - 29.59 ºC
+Luz - Claro !
+Nuvem - Altostratus
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 110
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 120
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Umidade - Baixa
+Vento - Vento Leve [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 130
+Temperatura - 23.46 ºC
+Luz - Muito Escuro !
+Nuvem - Stratus
+Umidade - Muito Baixa
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 140
+Temperatura - 26.08 ºC
+Luz - Escuro !
+Nuvem - Stratus
+Umidade - Muito Baixa
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 150
+Temperatura - 26.08 ºC
+Luz - Muito Escuro !
+Nuvem - Altostratus
+Umidade - Alta
+Vento - Vento Leve [ Nordeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 160
+Temperatura - 26.08 ºC
+Luz - Muito Escuro !
+Nuvem - Altostratus
+Umidade - Alta
+Vento - Vento Leve [ Nordeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 170
+Temperatura - 26.59 ºC
+Luz - Muito Escuro !
+Nuvem - Stratocumulus
+Umidade - Baixa
+Vento - Ventania [ Sudeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 180
+Temperatura - 26.59 ºC
+Luz - Escuro !
+Nuvem - Stratocumulus
+Umidade - Muito Baixa
+Vento - Ventania [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 190
+Temperatura - 26.59 ºC
+Luz - Escuro !
+Nuvem - Altocumulus
+Umidade - Baixa
+Vento - Ventania [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva

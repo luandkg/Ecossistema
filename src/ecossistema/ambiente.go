@@ -52,15 +52,6 @@ p.logciclo=0
 	return &p
 }
 
-func (a *Ambiente) ceu() string {
-
-	if a.fase == "Dia" {
-		return a.luminosidadeNomeCorrente()
-	} else {
-		return ""
-	}
-
-}
 
 
 
@@ -133,7 +124,7 @@ a.logciclo=0
 		utils.Log("ambiente.txt", "Dia  : " + strconv.Itoa(a.dia) + " FASE : " + a.fase + " CICLO : " + strconv.Itoa(a.ciclo) )
 
 
-		s1 := fmt.Sprintf("%f", a.temperaturaCorrente)
+		s1 := fmt.Sprintf("%.2f ºC", a.temperaturaCorrente)
 		//s2 := fmt.Sprintf("%f", a.chuva())
 		//s3:= fmt.Sprintf("%f", a.nuvem)
 
@@ -231,4 +222,8 @@ func (a *Ambiente) chuvaNome(_chuva float32) string {
 	}
 
 	return ret
+}
+
+func (a *Ambiente) ceu() string {
+	return a.luminosidadeNomeCorrente()
 }

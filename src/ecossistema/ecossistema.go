@@ -275,7 +275,7 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 
 	case "produtor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarProdutor(PlantaNovo(nome, adulto, reproducao, vida, cor, e))
+			e.AdicionarProdutor(ProdutorNovo(nome, adulto, reproducao, vida, cor, e))
 		}
 		break
 

@@ -20,6 +20,7 @@ type organismo struct {
 
 	rect sdl.Rect
 
+	_energia float32
 	_direcao       string
 	_dirquantidade int
 	_dircontador   int
@@ -38,6 +39,8 @@ func OrganismoNovo(nome string) *organismo {
 	p._posy = 0
 
 	p._cor = 0xADFF2F
+
+	p._energia =0
 
 	p.rect = sdl.Rect{0, 0, 10, 10}
 
@@ -173,5 +176,10 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 		p._posy = tempY
 
 	}
+
+}
+
+func (p *organismo) energizar(x float32) {
+	p._energia+=x
 
 }

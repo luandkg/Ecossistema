@@ -20,8 +20,8 @@ type Produtor struct {
 	_ecossistemaC *Ecossistema
 }
 
-// Plantanovo : Criar instancia de planta
-func PlantaNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Produtor {
+// ProdutorNovo : Criar instancia de Produtor
+func ProdutorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Produtor {
 
 	p := Produtor{_adultociclo: adulto}
 
@@ -40,6 +40,8 @@ func PlantaNovo(nome string, adulto int, reproducao int, vida int, cor uint32, e
 	p._posx = 0
 	p._posy = 0
 
+	p.energizar(float32(adulto)*12)
+
 	p._cor = cor
 	p._ecossistemaC = ecossistemaC
 
@@ -52,8 +54,12 @@ func (p *Produtor) vivendo() {
 
 	if p._status == "vivo" {
 
+		p.energizar(-p._ecossistemaC.ambienteC.luz/150)
+
 		p._ecossistemaC.produzirOxigenio(0.0005)
 		p._ecossistemaC.produzirCarbono(-0.00075)
+
+		p.energizar(p._ecossistemaC.ambienteC.luz/100)
 
 		if p._fase == "nascido" {
 			p.jovem()
@@ -100,7 +106,7 @@ func (p *Produtor) reproduzir() {
 		p._reproduzircontador = 0
 		fmt.Println("       --- Produtor : ", p.Nome(), " Reproduzindo !!!")
 
-		var pg = PlantaNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
+		var pg = ProdutorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 
@@ -113,7 +119,9 @@ func (p *Produtor) reproduzir() {
 
 func (p *Produtor) toString() string {
 
-	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "] - Status : " + p._status
+	s1:=fmt.Sprintf("%f", p._energia)
+
+	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "] - Status : " + p._status + "   -> { ENERGIA : " + s1  + "}"
 
 	return str
 }

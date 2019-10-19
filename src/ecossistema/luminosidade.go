@@ -49,7 +49,7 @@ func (a *luminosidade) claridade() {
 
 }
 
-func (a *luminosidade) luminosidadeCorrenteNome() string {
+func (a *luminosidade) luminosidadeNomeCorrente() string {
 	return a.luminosidadeNome(a.luz)
 }
 

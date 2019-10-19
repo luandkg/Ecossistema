@@ -1,363 +1,104 @@
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 10
 Temperatura - 25.247467
-Luz - Muito Claro !
+Luz - Muito Muito Claro !
 Nuvem - Sem Nuvem
+Umidade - Alta
 Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 20
 Temperatura - 25.247467
 Luz - Muito Claro !
 Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 30
 Temperatura - 25.247467
 Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
+Nuvem - Cirrocumulus
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 40
-Temperatura - 22.232933
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Leste -> Leste ] - SIM 
+Temperatura - 28.888332
+Luz - Claro !
+Nuvem - Cirrocumulus
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 50
-Temperatura - 22.232933
-Luz - Muito Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Nordeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 30
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 40
-Temperatura - 22.232933
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Leste -> Leste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 50
-Temperatura - 22.232933
-Luz - Muito Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Nordeste ]
+Temperatura - 28.888332
+Luz - Claro !
+Nuvem - Cirrus
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 60
-Temperatura - 22.232933
-Luz - Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Nordeste ]
+Temperatura - 28.888332
+Luz - Muito Claro !
+Nuvem - Cirrus
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 70
-Temperatura - 26.195557
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Fortes [ Sudeste -> Oeste ]
+Temperatura - 29.340536
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 80
-Temperatura - 26.195557
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Fortes [ Sudeste -> Oeste ]
+Temperatura - 29.340536
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 90
-Temperatura - 26.195557
+Temperatura - 29.340536
 Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Leste -> Nordeste ]
+Nuvem - Altostratus
+Umidade - Alta
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 100
-Temperatura - 27.422066
+Temperatura - 29.594742
 Luz - Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
+Nuvem - Altostratus
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Neblina
 ------------------------------------------------
 Dia  : 1 FASE : Noite CICLO : 110
-Temperatura - 28.577469
-Luz - Muito Escuro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
+Temperatura - 23.464130
+Luz - Escuro !
+Nuvem - Cirrostratus
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Noite CICLO : 120
-Temperatura - 28.577469
-Luz - Muito Escuro !
-Nuvem - Sem Nuvem
-Vento - Vento Leve [ Noroeste -> Nordeste ]
+Temperatura - 23.464130
+Luz - Escuro !
+Nuvem - Cirrostratus
+Umidade - Baixa
+Vento - Vento Leve [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
 ------------------------------------------------
 Dia  : 1 FASE : Noite CICLO : 130
-Temperatura - 28.577469
+Temperatura - 23.464130
 Luz - Muito Escuro !
-Nuvem - Sem Nuvem
-Vento - Sem Vento [ Nordeste -> Noroeste ]
-------------------------------------------------
-Dia  : 1 FASE : Noite CICLO : 140
-Temperatura - 27.661640
-Luz - Muito Escuro !
-Nuvem - Sem Nuvem
-Vento - Sem Vento [ Nordeste -> Noroeste ]
-------------------------------------------------
-Dia  : 1 FASE : Noite CICLO : 150
-Temperatura - 27.661640
-Luz - Escuro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Leste ]
-------------------------------------------------
-Dia  : 1 FASE : Noite CICLO : 160
-Temperatura - 27.661640
-Luz - Muito Escuro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Leste ]
-------------------------------------------------
-Dia  : 1 FASE : Noite CICLO : 170
-Temperatura - 23.945219
-Luz - Muito Escuro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Norte -> Norte ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Noite CICLO : 180
-Temperatura - 23.945219
-Luz - Escuro !
-Nuvem - Sem Nuvem
-Vento - Vento Fortes [ Nordeste -> Norte ]
-------------------------------------------------
-Dia  : 1 FASE : Noite CICLO : 190
-Temperatura - 23.945219
-Luz - Muito Escuro !
-Nuvem - Sem Nuvem
-Vento - Vento Fortes [ Nordeste -> Norte ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 30
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 40
-Temperatura - 22.232933
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Leste -> Leste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 50
-Temperatura - 22.232933
-Luz - Muito Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Nordeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 60
-Temperatura - 22.232933
-Luz - Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Nordeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 30
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 30
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Oeste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 40
-Temperatura - 22.232933
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Leste -> Leste ] - SIM 
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 50
-Temperatura - 22.232933
-Luz - Muito Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Nordeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 60
-Temperatura - 22.232933
-Luz - Claro !
-Nuvem - Sem Nuvem
-Vento - Ventania [ Oeste -> Nordeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Claro !
-Nuvem - Sem Nuvem
+Nuvem - Stratus
 Umidade - Muito Baixa
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Alta
-Vento - Vento Muito Forte [ Nordeste -> Leste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 30
-Temperatura - 25.247467
-Luz - Muito Muito Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Alta
-Vento - Vento Muito Forte [ Nordeste -> Leste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Baixa
-Chuva - 45.000000
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 10
-Temperatura - 25.247467
-Luz - Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Baixa
-Chuva - 45.000000
-Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 20
-Temperatura - 25.247467
-Luz - Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Alta
-Chuva - 75.000000
-Vento - Vento Muito Forte [ Nordeste -> Leste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 30
-Temperatura - 25.247467
-Luz - Muito Muito Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Alta
-Chuva - 75.000000
-Vento - Vento Muito Forte [ Nordeste -> Leste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 40
-Temperatura - 21.549669
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Alta
-Chuva - 60.000000
-Vento - Vento Fortes [ Sudoeste -> Sudeste ]
-------------------------------------------------
-Dia  : 1 FASE : Dia CICLO : 50
-Temperatura - 21.549669
-Luz - Muito Claro !
-Nuvem - Sem Nuvem
-Umidade - Muito Alta
-Chuva - 75.000000
-Vento - Vento Muito Forte [ Noroeste -> Sudoeste ]
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva

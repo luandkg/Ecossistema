@@ -55,7 +55,7 @@ p.logciclo=0
 func (a *Ambiente) ceu() string {
 
 	if a.fase == "Dia" {
-		return a.luminosidadeCorrenteNome()
+		return a.luminosidadeNomeCorrente()
 	} else {
 		return ""
 	}
@@ -104,8 +104,8 @@ a.logciclo++
 
 	a.claridade()
 	a.ventar()
-	a.ceu()
-a.umidificar()
+	a.nublar()
+	a.umidificar()
 
 	fmt.Println("")
 	fmt.Println("Fase -> ", a.fase)
@@ -115,13 +115,16 @@ a.umidificar()
 	fmt.Printf("\n\t Temperatura :  %.2f NG", a.temperaturaCorrente)
 
 	if a.ventorodando == true {
-		fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ] - Rodando ", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino)
+		fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ] - Rodando : %s", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino,a.ventomodo)
 	} else {
 		fmt.Printf("\n\t VENTO %.2f %s [ %s : %s ]", a.vento, a.ventoCorrenteNome(), a.ventoorigem, a.ventodestino)
 	}
 
-	fmt.Printf("\n\t Luz :  %.2f - %s", a.luz, a.luminosidadeCorrenteNome())
-	fmt.Printf("\n\t Nuvens :  %.2f - %s", a.nuvem, a.nuvemCorrente())
+	fmt.Printf("\n\t Luz :  %.2f - %s", a.luz, a.luminosidadeNomeCorrente())
+	fmt.Printf("\n\t Nuvens :  %.2f - %s", a.nuvem, a.nuvemNomeCorrente())
+
+	fmt.Printf("\n\t Chuva :  %.2f ", a.chuva())
+
 
 	if a.logciclo>=10{
 a.logciclo=0
@@ -131,20 +134,21 @@ a.logciclo=0
 
 
 		s1 := fmt.Sprintf("%f", a.temperaturaCorrente)
-		s2 := fmt.Sprintf("%f", a.chuva())
+		//s2 := fmt.Sprintf("%f", a.chuva())
+		//s3:= fmt.Sprintf("%f", a.nuvem)
 
 		utils.Log("ambiente.txt", "Temperatura - " + s1)
-		utils.Log("ambiente.txt", "Luz - " + a.luminosidadeCorrenteNome())
-		utils.Log("ambiente.txt", "Nuvem - " + a.nuvemCorrente())
+		utils.Log("ambiente.txt", "Luz - " + a.luminosidadeNomeCorrente())
+		utils.Log("ambiente.txt", "Nuvem - " + a.nuvemNomeCorrente())
 		utils.Log("ambiente.txt", "Umidade - " + a.umidadeNomeCorrente())
-		utils.Log("ambiente.txt", "Chuva - " + s2)
 
 		if a.ventorodando == true {
-			utils.Log("ambiente.txt", "Vento - " + a.ventoCorrenteNome() + " [ " + a.ventoorigem + " -> " + a.ventodestino + " ] - SIM ")
+			utils.Log("ambiente.txt", "Vento - " + a.ventoCorrenteNome() + " [ " + a.ventoorigem + " -> " + a.ventodestino + " ] - " + a.ventomodo )
 		}else{
 			utils.Log("ambiente.txt", "Vento - " + a.ventoCorrenteNome() + " [ " + a.ventoorigem + " -> " + a.ventodestino + " ]")
 		}
 
+		utils.Log("ambiente.txt", "Chuva - " + a.chuvaNomeCorrente())
 
 
 	}
@@ -179,29 +183,52 @@ func (a *Ambiente) Sol() int { return int(a.luz) }
 func (a *Ambiente) chuva() float32 {
 	var valor float32=0
 
-	if a.vento>=50 && a.vento<80{
-		valor+=15
+	var fator1 float32 = a.vento/5
+	var fator2 float32 = a.umidade/5
+	var fator3 float32 = a.temperaturaCorrente
+	var fator4 float32 = a.nuvem/5
+
+
+	if a.temperaturaCorrente<=0 {
+		fator3 = 25
+	}else if a.temperaturaCorrente >=0 && a.temperaturaCorrente <20 {
+			fator3=20
+	}else if a.temperaturaCorrente >=20 && a.temperaturaCorrente <30 {
+		fator3=10
+	}else{
+		fator3=0
 	}
 
-	if a.vento>=80 && a.vento<100{
-		valor+=30
-	}
-
-	if a.umidade>=50 && a.umidade<80{
-		valor+=15
-	}
-
-	if a.umidade>=80 && a.umidade<100{
-		valor+=30
-	}
-
-	if a.temperaturaCorrente<=33{
-		valor+=15
-	}
-
-	if a.nuvem>=50{
-		valor+=15
-	}
+	valor = fator1+fator2+fator3+fator4
 
 return valor
+}
+
+func (a *Ambiente) chuvaNomeCorrente() string {
+	return a.chuvaNome(a.chuva())
+}
+func (a *Ambiente) chuvaNome(_chuva float32) string {
+	var ret string = ""
+
+	if _chuva >= 0 && _chuva < 40 {
+		ret = "Sem Chuva"
+	}
+
+	if _chuva >= 40 && _chuva < 50 {
+		ret = "Neblina"
+	}
+
+	if _chuva >= 50 && _chuva < 60 {
+		ret = "Chuvisco"
+	}
+
+	if _chuva >= 60 && _chuva < 70 {
+		ret = "Chuva"
+	}
+
+	if _chuva >= 80 {
+		ret = "Chuva Forte"
+	}
+
+	return ret
 }

@@ -21,28 +21,22 @@ func nuvensNovo(a *Ambiente) *nuvens {
 	return &ret
 }
 
-func (a *nuvens) ceu() {
+func (a *nuvens) nublar() {
 
-	if a.ambienteC.fase == "Dia" && a.ambienteC.fasecontador == 0 {
-		a.nuvemcontador = 0
-	}
 
-	if a.ambienteC.fase == "Noite" && a.ambienteC.fasecontador == 0 {
-		a.nuvemcontador = 0
-	}
+	a.nuvemcontador++
 
 	if a.nuvemcontador >= a.nuvemlimite {
 
-		a.nuvem = float32(rand.Intn(100)) + rand.Float32()
+		a.nuvem = float32(rand.Intn(99)) + rand.Float32()
 
 		a.nuvemcontador = 0
 
-	} else {
-		a.nuvemcontador++
+
 	}
 }
 
-func (a *nuvens) nuvemCorrente() string {
+func (a *nuvens) nuvemNomeCorrente() string {
 	return a.nuvemNome(a.nuvem)
 }
 

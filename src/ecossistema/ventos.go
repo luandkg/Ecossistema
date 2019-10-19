@@ -11,6 +11,8 @@ type ventos struct {
 	ventoorigem   string
 	ventodestino  string
 	ventorodando  bool
+
+	ventomodo string
 }
 
 func ventosNovo(a *Ambiente) *ventos {
@@ -21,6 +23,7 @@ func ventosNovo(a *Ambiente) *ventos {
 	ret.ventocontador = 16
 	ret.ventolimite = 15
 	ret.ventorodando = false
+ret.ventomodo=""
 
 	return &ret
 }
@@ -60,6 +63,7 @@ func (a *ventos) ventar() {
 	if a.ventocontador >= a.ventolimite {
 		a.ventorodando = false
 		a.ventocontador = 0
+		a.ventomodo=""
 		a.vento = float32(rand.Intn(int(100))) + rand.Float32()
 
 		var mudardirecao = rand.Intn(70)
@@ -102,6 +106,33 @@ func (a *ventos) ventar() {
 
 		if a.ventoorigem == a.ventodestino {
 			a.ventorodando = true
+			a.ventomodo = ""
+
+			if a.vento >= 0 && a.vento < 10 {
+				a.ventomodo = "Brisa"
+			}
+
+			if a.vento >= 10 && a.vento < 20 {
+				a.ventomodo = "Redimoinho"
+			}
+
+			if a.vento >= 20 && a.vento < 60 {
+				a.ventomodo = "Ciclone"
+			}
+
+			if a.vento >= 60 && a.vento < 80 {
+				a.ventomodo = "Tornado"
+			}
+
+			if a.vento >= 80 {
+				a.ventomodo = "Furacão"
+			}
+
+
+		}else{
+			a.ventorodando = false
+			a.ventomodo = ""
+
 		}
 
 	} else {
@@ -111,6 +142,39 @@ func (a *ventos) ventar() {
 
 		} else {
 			a.vento -= rand.Float32()
+
+		}
+
+
+
+		if a.ventoorigem == a.ventodestino {
+			a.ventorodando = true
+			a.ventomodo = ""
+
+			if a.vento >= 0 && a.vento < 10 {
+				a.ventomodo = "Brisa"
+			}
+
+			if a.vento >= 10 && a.vento < 20 {
+				a.ventomodo = "Redimoinho"
+			}
+
+			if a.vento >= 20 && a.vento < 60 {
+				a.ventomodo = "Ciclone"
+			}
+
+			if a.vento >= 60 && a.vento < 80 {
+				a.ventomodo = "Tornado"
+			}
+
+			if a.vento >= 80 {
+				a.ventomodo = "Furacão"
+			}
+
+
+		}else{
+			a.ventorodando = false
+			a.ventomodo = ""
 
 		}
 

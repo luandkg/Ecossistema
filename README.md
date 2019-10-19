@@ -12,7 +12,7 @@
  - Aplicação do Conceito de Map para criar estruturas associativas
 
 
-![alt tag](http://url/to/img.png)
+![alt tag](https://github.com/luandkg/Ecossistema/blob/master/assets/prints/EcossistemaP1.png)
 
 
 

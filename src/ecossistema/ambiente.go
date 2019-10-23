@@ -15,12 +15,11 @@ type Ambiente struct {
 	fasecontador  int
 	dia           int
 
-
 	ciclo         int
-	logciclo		int
+	logciclo	  int
 
-	gasOxigenio float32
-	gasCarbonico float32
+	gasOxigenio   float32
+	gasCarbonico  float32
 
 	temperatura
 	luminosidade
@@ -48,19 +47,16 @@ func AmbienteNovo() *Ambiente {
 	p.umidificador = *umidificadorNovo(&p)
 
 	p.ciclo = 0
-p.logciclo=0
+	p.logciclo=0
 	return &p
 }
-
-
-
 
 func (a *Ambiente) AmbienteFase() {
 
 	// Implementacao FASE - DIA / NOITE
 
 	a.ciclo++
-a.logciclo++
+	a.logciclo++
 
 	if a.fase == "" {
 		a.fasecontador = a.faseciclo * 2
@@ -102,7 +98,7 @@ a.logciclo++
 
 
 	if a.logciclo>=10{
-a.logciclo=0
+		a.logciclo=0
 		utils.Log("ambiente.txt", "------------------------------------------------")
 
 		utils.Log("ambiente.txt", "Dia  : " + strconv.Itoa(a.dia) + " FASE : " + a.fase + " CICLO : " + strconv.Itoa(a.ciclo) )

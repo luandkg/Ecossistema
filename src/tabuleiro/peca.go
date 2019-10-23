@@ -25,16 +25,16 @@ func (p *peca) atualizar(s *sdl.Surface) {
 
 }
 
-func (p *peca) VerificarPosicao() bool {
-
-	if p._valor == 0 {
-		return false
-	} else {
-		return true
-	}
-
-}
+func (p *peca) VerificarPosicao() bool { return p._valor != 0 }
 
 func (p *peca) OcuparPosicao() {
 	p._valor = 1
 }
+
+func (p *peca) LiberarPosicao() {
+	p._valor = 0
+}
+
+func (p *peca) Valor() int { return p._valor }
+func (p *peca) X() int { return p._x }
+func (p *peca) Y() int { return p._y }

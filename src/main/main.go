@@ -79,13 +79,15 @@ func main() {
 
 		tb.Atualizar(surface)
 
-		if ambienteC.FaseContador() == 0 {
+		//if ambienteC.FaseContador() == 0 {
 
-			ecossistemaC.RemoverOrganimosMortos()
+		//tb.Mostrar()
+
+			ecossistemaC.RemoverOrganimosMortos(tb)
 
 			ecossistemaC.LogEcossistema()
 
-		}
+		//}
 
 		ecossistemaC.ExecutarCiclo(surface, tb)
 

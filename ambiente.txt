@@ -2056,3 +2056,1974 @@ Sol - 80
 Umidade - Alta
 Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
 Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 90
+Temperatura - 29.34 ºC
+Luz - Muito Claro !
+Nuvem - Altostratus
+Sol - 50
+Umidade - Alta
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 100
+Temperatura - 29.59 ºC
+Luz - Claro !
+Nuvem - Altostratus
+Sol - 35
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 110
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Sol - 3
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 90
+Temperatura - 29.34 ºC
+Luz - Muito Claro !
+Nuvem - Altostratus
+Sol - 50
+Umidade - Alta
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 100
+Temperatura - 29.59 ºC
+Luz - Claro !
+Nuvem - Altostratus
+Sol - 35
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 110
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Sol - 3
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 90
+Temperatura - 29.34 ºC
+Luz - Muito Claro !
+Nuvem - Altostratus
+Sol - 50
+Umidade - Alta
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 27.01 ºC
+Luz - Muito Claro !
+Nuvem - Stratocumulus
+Sol - 47
+Umidade - Baixa
+Vento - Vento Muito Forte [ Noroeste -> Norte ]
+Chuva - Chuvisco
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 90
+Temperatura - 29.34 ºC
+Luz - Muito Claro !
+Nuvem - Altostratus
+Sol - 50
+Umidade - Alta
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 100
+Temperatura - 29.59 ºC
+Luz - Claro !
+Nuvem - Altostratus
+Sol - 35
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 110
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Sol - 3
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 120
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Sol - 1
+Umidade - Baixa
+Vento - Vento Leve [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 130
+Temperatura - 23.46 ºC
+Luz - Muito Escuro !
+Nuvem - Stratus
+Sol - -12
+Umidade - Muito Baixa
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 24.24 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 44
+Umidade - Normal
+Vento - Sem Vento [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 24.24 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 81
+Umidade - Alta
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 24.24 ºC
+Luz - Muito Claro !
+Nuvem - Stratocumulus
+Sol - 50
+Umidade - Alta
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Chuvisco
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 26.50 ºC
+Luz - Claro !
+Nuvem - Stratocumulus
+Sol - 32
+Umidade - Baixa
+Vento - Ventania [ Leste -> Oeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 26.50 ºC
+Luz - Muito Muito Claro !
+Nuvem - Stratocumulus
+Sol - 70
+Umidade - Normal
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 26.50 ºC
+Luz - Claro !
+Nuvem - Stratocumulus
+Sol - 21
+Umidade - Normal
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 31.33 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 71
+Umidade - Baixa
+Vento - Ventania [ Nordeste -> Nordeste ] - Ciclone
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 31.33 ºC
+Luz - Claro !
+Nuvem - Sem Nuvem
+Sol - 52
+Umidade - Baixa
+Vento - Ventania [ Nordeste -> Nordeste ] - Ciclone
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 90
+Temperatura - 31.33 ºC
+Luz - Claro !
+Nuvem - Stratocumulus
+Sol - 27
+Umidade - Normal
+Vento - Vento Fortes [ Leste -> Oeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 100
+Temperatura - 34.38 ºC
+Luz - Claro !
+Nuvem - Stratocumulus
+Sol - 22
+Umidade - Baixa
+Vento - Vento Fortes [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 110
+Temperatura - 26.33 ºC
+Luz - Muito Escuro !
+Nuvem - Cirrus
+Sol - 4
+Umidade - Baixa
+Vento - Vento Fortes [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 120
+Temperatura - 26.33 ºC
+Luz - Muito Escuro !
+Nuvem - Cirrus
+Sol - -1
+Umidade - Alta
+Vento - Ventania [ Norte -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+Temperatura - 25.25 ºC
+Luz - Muito Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 80
+Umidade - Alta
+Vento - Vento Muito Forte [ Oeste -> Sudoeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Sem Nuvem
+Sol - 74
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 30
+Temperatura - 25.25 ºC
+Luz - Muito Claro !
+Nuvem - Cirrocumulus
+Sol - 68
+Umidade - Muito Alta
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 40
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 45
+Umidade - Muito Baixa
+Vento - Sem Vento [ Sudoeste -> Oeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 50
+Temperatura - 28.89 ºC
+Luz - Claro !
+Nuvem - Cirrus
+Sol - 40
+Umidade - Muito Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 60
+Temperatura - 28.89 ºC
+Luz - Muito Claro !
+Nuvem - Cirrus
+Sol - 70
+Umidade - Baixa
+Vento - Vento Fortes [ Leste -> Sudoeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 70
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 74
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 80
+Temperatura - 29.34 ºC
+Luz - Muito Muito Claro !
+Nuvem - Cirrostratus
+Sol - 89
+Umidade - Alta
+Vento - Ventania [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 90
+Temperatura - 29.34 ºC
+Luz - Muito Claro !
+Nuvem - Altostratus
+Sol - 50
+Umidade - Alta
+Vento - Ventania [ Nordeste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 100
+Temperatura - 29.59 ºC
+Luz - Claro !
+Nuvem - Altostratus
+Sol - 35
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Neblina
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 110
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Sol - 3
+Umidade - Normal
+Vento - Ventania [ Leste -> Sudeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 120
+Temperatura - 23.46 ºC
+Luz - Escuro !
+Nuvem - Cirrostratus
+Sol - 1
+Umidade - Baixa
+Vento - Vento Leve [ Oeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 130
+Temperatura - 23.46 ºC
+Luz - Muito Escuro !
+Nuvem - Stratus
+Sol - -12
+Umidade - Muito Baixa
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva
+------------------------------------------------
+Dia  : 1 FASE : Noite CICLO : 140
+Temperatura - 26.08 ºC
+Luz - Escuro !
+Nuvem - Stratus
+Sol - -6
+Umidade - Muito Baixa
+Vento - Ventania [ Noroeste -> Nordeste ]
+Chuva - Sem Chuva

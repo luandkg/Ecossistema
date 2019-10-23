@@ -1,6 +1,7 @@
 package ecossistema
 
 import (
+	"fmt"
 	"math/rand"
 	"tabuleiro"
 	"time"
@@ -9,22 +10,23 @@ import (
 )
 
 type organismo struct {
-	_nome   string
-	_idade  int
-	_status string
-	_fase   string
+	_nome            string
+	_idade           int
+	_status          string
+	_fase            string
 
-	_posx int
-	_posy int
+	_posx            int
+	_posy            int
 
-	rect sdl.Rect
+	rect             sdl.Rect
 
-	_energia float32
-	_direcao       string
-	_dirquantidade int
-	_dircontador   int
+	_energia         float32
+	_direcao         string
+	_dirquantidade   int
+	_dircontador     int
+	_pararMovimento  int
 
-	_cor uint32
+	_cor             uint32
 }
 
 func OrganismoNovo(nome string) *organismo {
@@ -39,9 +41,11 @@ func OrganismoNovo(nome string) *organismo {
 
 	p._cor = 0xADFF2F
 
-	p._energia =0
+	p._energia = 0
 
 	p.rect = sdl.Rect{0, 0, 10, 10}
+
+	p._pararMovimento = 5
 
 	return &p
 }
@@ -88,7 +92,7 @@ func (p *organismo) atualizar(s *sdl.Surface) {
 
 }
 
-func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
+func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 
 	p._dircontador++
 
@@ -127,7 +131,7 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 
 		}
 
-		//fmt.Println("Mudar direcao : ", p._direcao, "  com ", p._dirquantidade)
+		fmt.Println("Mudar direcao : ", p._direcao, "  com ", p._dirquantidade)
 
 	case "l":
 		tempX += 1
@@ -135,7 +139,6 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "o"
 			tempX = 48
 		}
-		break
 
 	case "o":
 		tempX -= 1
@@ -143,7 +146,6 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "l"
 			tempX = 1
 		}
-		break
 
 	case "n":
 		tempY -= 1
@@ -151,7 +153,6 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "s"
 			tempY = 1
 		}
-		break
 
 	case "s":
 		tempY += 1
@@ -159,7 +160,6 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 			p._direcao = "n"
 			tempY = 48
 		}
-		break
 
 	}
 
@@ -167,7 +167,18 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 
 	if peca.VerificarPosicao() {
 
-		p.movimento(tb)
+		p._pararMovimento--
+
+		if p._pararMovimento > 0 {
+
+			p.Movimento(tb)
+
+		} else {
+
+			p._pararMovimento = 5
+
+		}
+
 
 	} else {
 
@@ -179,6 +190,6 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 }
 
 func (p *organismo) energizar(x float32) {
-	p._energia+=x
+	p._energia += x
 
 }

@@ -14,6 +14,10 @@ type Consumidor struct {
 	_reproduzirciclo    int
 	_reproduzircontador int
 
+	_temAlvo            bool
+	_alvoX              int
+	_alvoY              int
+
 	_vida int
 
 	_ecossistemaC *Ecossistema
@@ -33,6 +37,10 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 	p._reproduzirciclo = reproducao
 	p._reproduzircontador = 0
 
+	p._temAlvo = false
+	p._alvoX = 0
+	p._alvoY = 0
+
 	p._vida = vida
 	p._posx = 0
 	p._posy = 0
@@ -44,86 +52,223 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 
 }
 
-func (p *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
+func (c *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
 
-	p.organismo.vivendo()
+	c.organismo.vivendo()
 
-	if p._status == "vivo" {
+	if c._status == "vivo" {
 
+		c._ecossistemaC.produzirOxigenio(-0.00075)
+		c._ecossistemaC.produzirCarbono(+0.0005)
 
-		p._ecossistemaC.produzirOxigenio(-0.00075)
-		p._ecossistemaC.produzirCarbono(+0.0005)
+		if c._idade == c._adultociclo || c._idade == c._vida {
 
-
-
-		if p._idade == p._adultociclo || p._idade == p._vida {
-
-			p.mudarFase()
+			c.mudarFase()
 
 		}
 
-		if p._fase == "adulto" && p._idade < p._vida {
+		if c._fase == "adulto" && c._idade < c._vida {
 
-			p.reproduzir(tb)
+			c.reproduzir(tb)
 
 		}
 
-		if p._idade >= p._vida {
-			p._status = "morto"
-			fmt.Println("       --- Consumidor : ", p.Nome(), " Morreu !!!")
+		if c._idade >= c._vida {
+			c._status = "morto"
+			fmt.Println("       --- Consumidor : ", c.Nome(), " Morreu !!!")
 		}
 	}
 
 }
 
-func (p *Consumidor) mudarFase() {
+func (c *Consumidor) mudarFase() {
 
-	switch p._fase {
+	switch c._fase {
 
 	case "nascido":
-		p._fase = "adulto"
-		fmt.Println("       --- Consumidor : ", p.Nome(), " Evoluiu : Adulto !!!")
-		break
+		c._fase = "adulto"
+		fmt.Println("       --- Consumidor : ", c.Nome(), " Evoluiu : Adulto !!!")
 
 	case "adulto":
-		p._status = "morto"
-		p._fase = "falescido"
-		fmt.Println("       --- Consumidor : ", p.Nome(), " Morreu !!!")
-		break
+		c._status = "morto"
+		c._fase = "falescido"
+		fmt.Println("       --- Consumidor : ", c.Nome(), " Morreu !!!")
 
 	}
 
 }
 
-func (p *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
+func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
-	p._reproduzircontador += 1
+	c._reproduzircontador += 1
 
-	if p._reproduzircontador >= p._reproduzirciclo {
-		p._reproduzircontador = 0
-		fmt.Println("       --- Consumidor : ", p.Nome(), " Reproduzindo !!!")
+	if c._reproduzircontador >= c._reproduzirciclo {
+		c._reproduzircontador = 0
+		fmt.Println("       --- Consumidor : ", c.Nome(), " Reproduzindo !!!")
 
-		var pg = ConsumidorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
-		var x int = utils.Aleatorionumero(50)
-		var y int = utils.Aleatorionumero(50)
-
-		pg.mudarposicao(x, y)
+		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC)
+		var x = utils.Aleatorionumero(50)
+		var y = utils.Aleatorionumero(50)
 
 		peca := tb.RecuperarPeca(x, y)
 
-		if peca.VerificarPosicao() == false {
+		if !peca.VerificarPosicao() {
 			pg.mudarposicao(x, y)
 			peca.OcuparPosicao()
 		}
 
-		p._ecossistemaC.AdicionarConsumidor(pg)
+		c._ecossistemaC.AdicionarConsumidor(pg)
 	}
 
 }
 
-func (p *Consumidor) toString() string {
+func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
 
-	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
+	if !c._temAlvo {
+
+		peca := tb.RecuperarPeca(c._alvoX, c._alvoY)
+
+		if !peca.VerificarPosicao() {
+
+			var alvo = false
+			var alvoX = 0
+			var alvoY = 0
+
+			var tetoBusca = 10
+			var chaoBusca = -tetoBusca
+
+			// TODO: Refatorar com posicoes absolutas no tabuleiro
+			for _, produtor := range c._ecossistemaC.produtores {
+
+				for i := tetoBusca; i > chaoBusca; i-- {
+
+					for j := tetoBusca; j > chaoBusca; j-- {
+
+						if produtor._posx == c._posx+i && produtor._posy == c._posy+j {
+							alvo = true
+							alvoX = c._posx + i
+							alvoY = c._posy + j
+							break
+						}
+					}
+
+					if alvo {
+						break
+					}
+
+				}
+
+				if alvo {
+					break
+				}
+
+			}
+
+			c._temAlvo = alvo
+			c._alvoX = alvoX
+			c._alvoY = alvoY
+
+		}
+
+	}
+
+}
+
+func (c *Consumidor) reduzirDistanciaAlvo(tb *tabuleiro.Tabuleiro) {
+
+	var novoEspacoEncontrado = false
+	var contadorEspacoTentado = 0
+	var distanciaX = c._posx - c._alvoX
+	var distanciaY = c._posy - c._alvoY
+
+	for !novoEspacoEncontrado {
+
+		var novoX = c._posx
+		var novoY = c._posy
+
+		if distanciaX < -1 {
+			novoX += 1
+		} else if distanciaX > 1 {
+			novoX -= 1
+		}
+
+		if distanciaY < -1 {
+			novoY += 1
+		} else if distanciaY > 1 {
+			novoY -= 1
+		}
+
+		peca := tb.RecuperarPeca(novoX, novoY)
+
+		if !peca.VerificarPosicao() {
+			c.mudarposicao(novoX, novoY)
+			peca.OcuparPosicao()
+			novoEspacoEncontrado = true
+		}
+
+		if contadorEspacoTentado >= 3 {
+			c.apagarAlvo()
+			break
+		} else {
+			contadorEspacoTentado++
+		}
+
+	}
+
+}
+
+func (c *Consumidor) CacarAlvo(tb *tabuleiro.Tabuleiro) {
+
+	var distanciaX = c._posx - c._alvoX
+	var distanciaY = c._posy - c._alvoY
+
+	if distanciaX == 1 || distanciaX == -1 {
+		if distanciaY >= -1 && distanciaY <= 1 {
+			c.matarAlvo()
+			c.apagarAlvo()
+		} else {
+			c.reduzirDistanciaAlvo(tb)
+		}
+	} else if distanciaX == 0 {
+		if distanciaY == 1 || distanciaY == -1 {
+			c.matarAlvo()
+			c.apagarAlvo()
+		} else {
+			c.reduzirDistanciaAlvo(tb)
+		}
+	} else {
+		c.reduzirDistanciaAlvo(tb)
+	}
+
+}
+
+func (c *Consumidor) matarAlvo() {
+
+	// TODO: Refatorar com posicoes absolutas no tabuleiro
+	for _, produtor := range c._ecossistemaC.produtores {
+
+		if produtor._posx == c._alvoX && produtor._posy == c._alvoY {
+			produtor.morrer()
+			break
+		}
+
+	}
+
+}
+
+func (c *Consumidor) apagarAlvo() {
+
+	c._temAlvo = false
+	c._alvoX = 0
+	c._alvoY = 0
+
+}
+
+func (c *Consumidor) TemAlvo() bool { return c._temAlvo }
+
+func (c *Consumidor) toString() string {
+
+	var str = c.Nome() + " [" + c.Fase() + " " + strconv.Itoa(c.Ciclos()) + "]" + " POS[" + strconv.Itoa(c.x()) + " " + strconv.Itoa(c.y()) + "]"
 
 	return str
 }

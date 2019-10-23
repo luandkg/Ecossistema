@@ -28,7 +28,7 @@ func EcossistemaNovo(ambienteC*Ambiente) *Ecossistema {
 	p.produtores = make(map[string]*Produtor)
 	p.consumidores = make(map[string]*Consumidor)
 
-	p.ambienteC=ambienteC
+	p.ambienteC = ambienteC
 
 	return &p
 }
@@ -114,17 +114,19 @@ func (e *Ecossistema) MapearProdutores(tb *tabuleiro.Tabuleiro) {
 
 }
 
-func (e *Ecossistema) RemoverOrganimosMortos() {
+func (e *Ecossistema) RemoverOrganimosMortos(tb *tabuleiro.Tabuleiro) {
 
-	for p := range e.produtores {
-
-		var plantac = e.produtores[p]
+	for index, plantac := range e.produtores {
 
 		if plantac.Status() == "morto" {
 
-			fmt.Println("      - Removendo Produtor", p)
+			fmt.Println("      - Removendo Produtor", index)
 
-			delete(e.produtores, p)
+			peca := tb.RecuperarPeca(plantac.x(), plantac.y())
+
+			peca.LiberarPosicao()
+
+			delete(e.produtores, index)
 		}
 
 	}
@@ -185,7 +187,19 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 			fmt.Println("      - ", consumidorc.toString())
 			consumidorc.vivendo(tb)
-			consumidorc.movimento(tb)
+
+			if consumidorc.TemAlvo() {
+
+				consumidorc.CacarAlvo(tb)
+
+			} else {
+
+				consumidorc.Movimento(tb)
+
+			}
+
+			consumidorc.VerificarAlvo(tb)
+
 			consumidorc.atualizar(surface)
 
 		}
@@ -206,7 +220,6 @@ func (e *Ecossistema) LogEcossistema() {
 	utils.Log("logs.txt", "Gas Oxigenio - "+ s1)
 	utils.Log("logs.txt", "Gas Carbonico - "+ s2)
 
-
 }
 
 func (e *Ecossistema) TotalProdutores() int {
@@ -226,10 +239,9 @@ func (e *Ecossistema) TotalProdutoresFase() (int, int) {
 
 		case "nascido":
 			contadorJovem += 1
-			break
+
 		case "adulto":
 			contadorAdulto += 1
-			break
 
 		}
 
@@ -256,10 +268,9 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 		case "nascido":
 			contadorJovem += 1
-			break
+
 		case "adulto":
 			contadorAdulto += 1
-			break
 
 		}
 
@@ -277,25 +288,23 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 		for i := 0; i < quantidade; i++ {
 			e.AdicionarProdutor(ProdutorNovo(nome, adulto, reproducao, vida, cor, e))
 		}
-		break
 
 	case "consumidor":
 		for i := 0; i < quantidade; i++ {
 			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e))
 		}
-		break
 
 	}
 
 }
 
-func(e*Ecossistema)produzirOxigenio(valor float32){
+func (e*Ecossistema) produzirOxigenio (valor float32) {
 
-e.ambienteC.gasOxigenio+=valor
+	e.ambienteC.gasOxigenio+=valor
 
 }
 
-func(e*Ecossistema)produzirCarbono(valor float32){
+func (e*Ecossistema) produzirCarbono (valor float32) {
 
 	e.ambienteC.gasCarbonico+=valor
 

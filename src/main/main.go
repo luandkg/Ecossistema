@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"tabuleiro"
 	"ecossistema"
+	"tabuleiro"
 	"utils"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -51,7 +51,7 @@ func main() {
 
 	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
-	ecossistemaC := ecossistema.EcossistemaNovo()
+	ecossistemaC := ecossistema.EcossistemaNovo(ambienteC)
 
 	tb.Limpar()
 
@@ -79,13 +79,15 @@ func main() {
 
 		tb.Atualizar(surface)
 
-		if ambienteC.FaseContador() == 0 {
+		//if ambienteC.FaseContador() == 0 {
 
-			ecossistemaC.RemoverOrganimosMortos()
+		//tb.Mostrar()
+
+			ecossistemaC.RemoverOrganimosMortos(tb)
 
 			ecossistemaC.LogEcossistema()
 
-		}
+		//}
 
 		ecossistemaC.ExecutarCiclo(surface, tb)
 

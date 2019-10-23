@@ -3,10 +3,9 @@ package main
 import (
 	"ecossistema"
 	"fmt"
-	"os"
-
 	"github.com/veandco/go-sdl2/sdl"
 	"github.com/veandco/go-sdl2/ttf"
+	"os"
 )
 
 var (
@@ -24,6 +23,12 @@ type texto struct {
 func criarTextosTexturas(textos []string) (successful bool) {
 
 	dir, err := os.Getwd()
+
+	//dir=filepath.Dir(dir)
+	//dir=filepath.Dir(dir)
+
+
+	//fmt.Println("Local da Fonte : " + dir +"/assets/fonts/OpenSans-Regular.ttf")
 	if err != nil {
 		fmt.Printf("Failed to open get current directory: %s\n", err)
 		return false
@@ -31,7 +36,7 @@ func criarTextosTexturas(textos []string) (successful bool) {
 
 	textosTextures = nil
 
-	if font, err = ttf.OpenFont(dir + "/assets/fonts/OpenSans-Regular.ttf", 14); err != nil {
+	if font, err = ttf.OpenFont( dir +"/assets/fonts/OpenSans-Regular.ttf", 14); err != nil {
 		fmt.Printf("Failed to open font: %s\n", err)
 		return false
 	}

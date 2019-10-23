@@ -58,6 +58,9 @@ func (c *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
 
 	if c._status == "vivo" {
 
+		c._ecossistemaC.produzirOxigenio(-0.00075)
+		c._ecossistemaC.produzirCarbono(+0.0005)
+
 		if c._idade == c._adultociclo || c._idade == c._vida {
 
 			c.mudarFase()
@@ -104,10 +107,8 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 		fmt.Println("       --- Consumidor : ", c.Nome(), " Reproduzindo !!!")
 
 		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC)
-		var x int = utils.Aleatorionumero(50)
-		var y int = utils.Aleatorionumero(50)
-
-		//pg.mudarposicao(x, y)
+		var x = utils.Aleatorionumero(50)
+		var y = utils.Aleatorionumero(50)
 
 		peca := tb.RecuperarPeca(x, y)
 
@@ -121,31 +122,40 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 }
 
-func (c *Consumidor) VerificarAlvo(p map[string]*Produtor, tb *tabuleiro.Tabuleiro) {
+func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
 
-	peca := tb.RecuperarPeca(c._alvoX, c._alvoY)
+	if !c._temAlvo {
 
-	if !peca.VerificarPosicao() {
+		peca := tb.RecuperarPeca(c._alvoX, c._alvoY)
 
-		var alvo = false
-		var alvoX = 0
-		var alvoY = 0
+		if !peca.VerificarPosicao() {
 
-		var tetoBusca = 10
-		var chaoBusca = -tetoBusca
+			var alvo = false
+			var alvoX = 0
+			var alvoY = 0
 
-		for _, produtor := range p {
+			var tetoBusca = 10
+			var chaoBusca = -tetoBusca
 
-			for i := tetoBusca; i > chaoBusca; i-- {
+			// TODO: Refatorar com posicoes absolutas no tabuleiro
+			for _, produtor := range c._ecossistemaC.produtores {
 
-				for j := tetoBusca; j > chaoBusca; j-- {
+				for i := tetoBusca; i > chaoBusca; i-- {
 
-					if produtor._posx == c._posx+i && produtor._posy == c._posy+j {
-						alvo = true
-						alvoX = c._posx + i
-						alvoY = c._posy + j
+					for j := tetoBusca; j > chaoBusca; j-- {
+
+						if produtor._posx == c._posx+i && produtor._posy == c._posy+j {
+							alvo = true
+							alvoX = c._posx + i
+							alvoY = c._posy + j
+							break
+						}
+					}
+
+					if alvo {
 						break
 					}
+
 				}
 
 				if alvo {
@@ -154,15 +164,11 @@ func (c *Consumidor) VerificarAlvo(p map[string]*Produtor, tb *tabuleiro.Tabulei
 
 			}
 
-			if alvo {
-				break
-			}
+			c._temAlvo = alvo
+			c._alvoX = alvoX
+			c._alvoY = alvoY
 
 		}
-
-		c._temAlvo = alvo
-		c._alvoX = alvoX
-		c._alvoY = alvoY
 
 	}
 
@@ -200,11 +206,14 @@ func (c *Consumidor) reduzirDistanciaAlvo(tb *tabuleiro.Tabuleiro) {
 			novoEspacoEncontrado = true
 		}
 
-	}
+		if contadorEspacoTentado >= 3 {
+			c.apagarAlvo()
+			break
+		} else {
+			contadorEspacoTentado++
+		}
 
-	//
-	//c._posx = novoX
-	//c._posy = novoY
+	}
 
 }
 
@@ -213,23 +222,45 @@ func (c *Consumidor) CacarAlvo(tb *tabuleiro.Tabuleiro) {
 	var distanciaX = c._posx - c._alvoX
 	var distanciaY = c._posy - c._alvoY
 
-	if distanciaX == 1 || distanciaY == -1 {
-		if distanciaY > -1 && distanciaY < 1 {
-			// matar planta
-			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
+	if distanciaX == 1 || distanciaX == -1 {
+		if distanciaY >= -1 && distanciaY <= 1 {
+			c.matarAlvo()
+			c.apagarAlvo()
 		} else {
 			c.reduzirDistanciaAlvo(tb)
 		}
-	} else if distanciaY == 0 {
+	} else if distanciaX == 0 {
 		if distanciaY == 1 || distanciaY == -1 {
-			// matar planta
-			fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Atacar alvo")
+			c.matarAlvo()
+			c.apagarAlvo()
 		} else {
 			c.reduzirDistanciaAlvo(tb)
 		}
 	} else {
 		c.reduzirDistanciaAlvo(tb)
 	}
+
+}
+
+func (c *Consumidor) matarAlvo() {
+
+	// TODO: Refatorar com posicoes absolutas no tabuleiro
+	for _, produtor := range c._ecossistemaC.produtores {
+
+		if produtor._posx == c._alvoX && produtor._posy == c._alvoY {
+			produtor.morrer()
+			break
+		}
+
+	}
+
+}
+
+func (c *Consumidor) apagarAlvo() {
+
+	c._temAlvo = false
+	c._alvoX = 0
+	c._alvoY = 0
 
 }
 

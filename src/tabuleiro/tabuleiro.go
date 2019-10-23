@@ -15,6 +15,19 @@ func TabuleiroNovo(nome string) *Tabuleiro {
 
 	p := Tabuleiro{_nome: nome}
 
+	var tamanhoTabuleiro = 50
+
+	for i := 0; i < tamanhoTabuleiro; i++ {
+
+		for j := 0; j < tamanhoTabuleiro; j ++ {
+
+			p.dados[i][j]._x = i
+			p.dados[i][j]._y = j
+
+		}
+
+	}
+
 	return &p
 }
 
@@ -48,7 +61,7 @@ func (p *Tabuleiro) Atualizar(s *sdl.Surface) {
 
 }
 
-func (p *Tabuleiro) mostrar() {
+func (p *Tabuleiro) Mostrar() {
 
 	fmt.Println("\n")
 	fmt.Println("\n")

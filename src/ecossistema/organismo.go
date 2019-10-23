@@ -10,21 +10,23 @@ import (
 )
 
 type organismo struct {
-	_nome   string
-	_idade  int
-	_status string
-	_fase   string
+	_nome            string
+	_idade           int
+	_status          string
+	_fase            string
 
-	_posx int
-	_posy int
+	_posx            int
+	_posy            int
 
-	rect sdl.Rect
+	rect             sdl.Rect
 
-	_direcao       string
-	_dirquantidade int
-	_dircontador   int
+	_energia         float32
+	_direcao         string
+	_dirquantidade   int
+	_dircontador     int
+	_pararMovimento  int
 
-	_cor uint32
+	_cor             uint32
 }
 
 func OrganismoNovo(nome string) *organismo {
@@ -39,7 +41,11 @@ func OrganismoNovo(nome string) *organismo {
 
 	p._cor = 0xADFF2F
 
+	p._energia = 0
+
 	p.rect = sdl.Rect{0, 0, 10, 10}
+
+	p._pararMovimento = 5
 
 	return &p
 }
@@ -109,15 +115,19 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 
 		case 0:
 			p._direcao = "l"
+			break
 
 		case 1:
 			p._direcao = "o"
+			break
 
 		case 2:
 			p._direcao = "s"
+			break
 
 		case 3:
 			p._direcao = "n"
+			break
 
 		}
 
@@ -157,7 +167,18 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 
 	if peca.VerificarPosicao() {
 
-		p.Movimento(tb)
+		p._pararMovimento--
+
+		if p._pararMovimento > 0 {
+
+			p.Movimento(tb)
+
+		} else {
+
+			p._pararMovimento = 5
+
+		}
+
 
 	} else {
 
@@ -165,5 +186,10 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 		p._posy = tempY
 
 	}
+
+}
+
+func (p *organismo) energizar(x float32) {
+	p._energia += x
 
 }

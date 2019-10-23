@@ -15,9 +15,11 @@ type Ecossistema struct {
 	contadoranimal   int
 	produtores       (map[string]*Produtor)
 	consumidores     (map[string]*Consumidor)
+
+	ambienteC *Ambiente
 }
 
-func EcossistemaNovo() *Ecossistema {
+func EcossistemaNovo(ambienteC*Ambiente) *Ecossistema {
 
 	p := Ecossistema{}
 	p.contadoranimal = 0
@@ -25,6 +27,8 @@ func EcossistemaNovo() *Ecossistema {
 
 	p.produtores = make(map[string]*Produtor)
 	p.consumidores = make(map[string]*Consumidor)
+
+	p.ambienteC = ambienteC
 
 	return &p
 }
@@ -110,17 +114,19 @@ func (e *Ecossistema) MapearProdutores(tb *tabuleiro.Tabuleiro) {
 
 }
 
-func (e *Ecossistema) RemoverOrganimosMortos() {
+func (e *Ecossistema) RemoverOrganimosMortos(tb *tabuleiro.Tabuleiro) {
 
-	for p := range e.produtores {
-
-		var plantac = e.produtores[p]
+	for index, plantac := range e.produtores {
 
 		if plantac.Status() == "morto" {
 
-			fmt.Println("      - Removendo Produtor", p)
+			fmt.Println("      - Removendo Produtor", index)
 
-			delete(e.produtores, p)
+			peca := tb.RecuperarPeca(plantac.x(), plantac.y())
+
+			peca.LiberarPosicao()
+
+			delete(e.produtores, index)
 		}
 
 	}
@@ -192,7 +198,7 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 			}
 
-			consumidorc.VerificarAlvo(e.produtores, tb)
+			consumidorc.VerificarAlvo(tb)
 
 			consumidorc.atualizar(surface)
 
@@ -207,6 +213,12 @@ func (e *Ecossistema) LogEcossistema() {
 	utils.Log("logs.txt", "Plantas - "+strconv.Itoa(len(e.produtores)))
 
 	utils.Log("logs.txt", "Consumidores - "+strconv.Itoa(len(e.consumidores)))
+
+	s1 :=fmt.Sprintf("%f",e.ambienteC.gasOxigenio)
+	s2:=fmt.Sprintf("%f",e.ambienteC.gasCarbonico)
+
+	utils.Log("logs.txt", "Gas Oxigenio - "+ s1)
+	utils.Log("logs.txt", "Gas Carbonico - "+ s2)
 
 }
 
@@ -274,7 +286,7 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 
 	case "produtor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarProdutor(PlantaNovo(nome, adulto, reproducao, vida, cor, e))
+			e.AdicionarProdutor(ProdutorNovo(nome, adulto, reproducao, vida, cor, e))
 		}
 
 	case "consumidor":
@@ -283,5 +295,17 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 		}
 
 	}
+
+}
+
+func (e*Ecossistema) produzirOxigenio (valor float32) {
+
+	e.ambienteC.gasOxigenio+=valor
+
+}
+
+func (e*Ecossistema) produzirCarbono (valor float32) {
+
+	e.ambienteC.gasCarbonico+=valor
 
 }

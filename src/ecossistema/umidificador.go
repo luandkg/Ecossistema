@@ -1,6 +1,10 @@
 package ecossistema
 
-import "math/rand"
+import (
+	"math/rand"
+	"strconv"
+	"utils"
+)
 
 type umidificador struct {
 	ambienteC *Ambiente
@@ -8,6 +12,7 @@ type umidificador struct {
 	umidade         float32
 	umidadecontador int
 	umidadelimite   int
+	umidadefinalizador int
 
 
 }
@@ -19,7 +24,7 @@ func umidificadorNovo(a *Ambiente) *umidificador {
 	ret.umidade = 0
 	ret.umidadecontador = 16
 	ret.umidadelimite = 15
-
+ret.umidadefinalizador=ret.umidadelimite
 	return &ret
 }
 
@@ -55,10 +60,13 @@ func (a *umidificador) umidadeNome(_umidade float32) string {
 
 func (a *umidificador) umidificar() {
 
-	if a.umidadecontador >= a.umidadelimite {
+	if a.umidadecontador >= a.umidadefinalizador {
 		a.umidadecontador = 0
 		a.umidade = float32(rand.Intn(int(99))) + rand.Float32()
 
+		a.umidadefinalizador=a.umidadelimite + rand.Intn(30)
+
+		utils.Log("ambientelimitador.txt", "Umidade - "+strconv.Itoa(a.umidadefinalizador) + "   " + a.umidadeNomeCorrente())
 
 
 	} else {

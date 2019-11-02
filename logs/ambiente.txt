@@ -1,0 +1,63 @@
+Temperatura - 25.25 ºC
+Luz - Claro !
+Nuvem - Altostratus
+Sol - 29
+Umidade - Muito Alta
+Vento - Vento Muito Forte [ Sudoeste -> Sudeste ]
+Chuva - Chuvisco
+Temperatura - 25.25 ºC
+Luz - Claro !
+Nuvem - Altostratus
+Sol - 29
+Umidade - Muito Alta
+Vento - Vento Muito Forte [ Sudoeste -> Sudeste ]
+Chuva - Chuvisco
+Temperatura - 23.66 ºC
+Luz - Muito Claro !
+Nuvem - Altostratus
+Sol - 46
+Umidade - Muito Baixa
+Vento - Vento Leve [ Sudeste -> Sudoeste ]
+Chuva - Sem Chuva
+Temperatura - 24.57 ºC
+Luz - Claro !
+Nuvem - Cirrocumulus
+Sol - 33
+Umidade - Baixa
+Vento - Ventania [ Noroeste -> Noroeste ] - Ciclone
+Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 29
+Umidade - Muito Baixa
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 21
+Umidade - Muito Baixa
+Vento - Ventania [ Leste -> Norte ]
+Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 29
+Umidade - Muito Baixa
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 29
+Umidade - Muito Baixa
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 29
+Umidade - Muito Baixa
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Sem Chuva

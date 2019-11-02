@@ -1,6 +1,10 @@
 package ecossistema
 
-import "math/rand"
+import (
+	"math/rand"
+	"strconv"
+	"utils"
+)
 
 type ventos struct {
 	ambienteC *Ambiente
@@ -8,6 +12,8 @@ type ventos struct {
 	vento         float32
 	ventocontador int
 	ventolimite   int
+	ventofinalizador int
+
 	ventoorigem   string
 	ventodestino  string
 	ventorodando  bool
@@ -24,6 +30,8 @@ func ventosNovo(a *Ambiente) *ventos {
 	ret.ventolimite = 15
 	ret.ventorodando = false
 ret.ventomodo=""
+
+ret.ventofinalizador=ret.ventolimite
 
 	return &ret
 }
@@ -60,11 +68,16 @@ func (a *ventos) ventosNome(_vento float32) string {
 
 func (a *ventos) ventar() {
 
-	if a.ventocontador >= a.ventolimite {
+	if a.ventocontador >= a.ventofinalizador {
 		a.ventorodando = false
 		a.ventocontador = 0
 		a.ventomodo=""
 		a.vento = float32(rand.Intn(int(100))) + rand.Float32()
+
+		a.ventofinalizador=a.ventolimite + rand.Intn(30)
+
+		utils.Log("ambientelimitador.txt", "Vento - "+strconv.Itoa(a.ventofinalizador) + "   " + a.ventoCorrenteNome())
+
 
 		var mudardirecao = rand.Intn(70)
 		if mudardirecao >= 0 && mudardirecao < 10 {

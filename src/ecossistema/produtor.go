@@ -121,7 +121,7 @@ func (p *Produtor) toString() string {
 
 	s1:=fmt.Sprintf("%f", p._energia)
 
-	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "] - Status : " + p._status + "   -> { ENERGIA : " + s1  + "}"
+	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "] - Status : " + p._status + "   -> { ENERGIA : " + s1  + "}" //+ strconv.FormatUint(p._cor, 10)
 
 	return str
 }

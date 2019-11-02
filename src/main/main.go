@@ -58,7 +58,7 @@ func main() {
 	tb.Limpar()
 
 	var caminho string = "assets/organismos/"
- 	var bioxmlC =* BioxmlNovo()
+ 	var bioxmlC =* OrganismosXMLNovo()
 
 	for _, arquivo := range  bioxmlC.listar(caminho) {
 

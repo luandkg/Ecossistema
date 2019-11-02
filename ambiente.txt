@@ -17,6 +17,7 @@ Dia  : 1 FASE : Dia CICLO : 10
 ------------------------------------------------
 Dia  : 1 FASE : Dia CICLO : 10
 <<<<<<< HEAD
+<<<<<<< HEAD
 Temperatura - 25.25 ºC
 Luz - Muito Muito Claro !
 Nuvem - Sem Nuvem
@@ -1996,4 +1997,12 @@ Umidade - Muito Baixa
 Vento - Ventania [ Noroeste -> Nordeste ]
 Chuva - Sem Chuva
 =======
+>>>>>>> Organismos XML
+=======
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 20
+------------------------------------------------
+Dia  : 1 FASE : Dia CICLO : 10
 >>>>>>> Organismos XML

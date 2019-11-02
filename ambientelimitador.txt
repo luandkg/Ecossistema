@@ -201,3 +201,16 @@ Umidade - 33   Muito Baixa
 Vento - 18   Ventania
 Nuvem - 30   Stratus
 Umidade - 33   Muito Baixa
+Vento - 18   Ventania
+Nuvem - 30   Stratus
+Umidade - 33   Muito Baixa
+Vento - 18   Ventania
+Nuvem - 30   Stratus
+Umidade - 33   Muito Baixa
+Vento - 21   Ventania
+Vento - 18   Ventania
+Nuvem - 30   Stratus
+Umidade - 33   Muito Baixa
+Vento - 18   Ventania
+Nuvem - 30   Stratus
+Umidade - 33   Muito Baixa

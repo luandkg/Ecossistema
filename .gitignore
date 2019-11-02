@@ -1,10 +1,13 @@
 # Arquivos e pastas de IDE's
 .idea/
+bin/
 
 # Arquivos gerados em builds
 pkg/
 Ecossistema.exe
 main.exe
+main
+src/github.com/
 
 # Arquivos de logs
 logs.txt

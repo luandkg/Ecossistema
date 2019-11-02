@@ -1,7 +1,9 @@
 package main
 
 import (
+	"encoding/xml"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"time"
 
@@ -19,14 +21,14 @@ import (
 // AUTOR : MARUAN OLIVEIRA - 18/0057685
 
 var (
-	window          *sdl.Window
-	renderer        *sdl.Renderer
-	surface         *sdl.Surface
-	event           sdl.Event
-	font 			*ttf.Font
-	err             error
+	window   *sdl.Window
+	renderer *sdl.Renderer
+	surface  *sdl.Surface
+	event    sdl.Event
+	font     *ttf.Font
+	err      error
 
-	running         bool
+	running bool
 )
 
 func AtualizarTela(a *ecossistema.Ambiente, e *ecossistema.Ecossistema) {
@@ -46,8 +48,8 @@ func main() {
 	}
 
 	// ESCOPO PRINCIPAL
-	utils.Log("logs.txt", "")
-	utils.Log("logs.txt", " ------------------ SIMULACAO ------------------ ")
+	utils.Log("logs/logs.txt", "")
+	utils.Log("logs/logs.txt", " ------------------ SIMULACAO ------------------ ")
 
 	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
@@ -55,16 +57,39 @@ func main() {
 
 	tb.Limpar()
 
+	var caminho string = "assets/organismos/"
+ 	var bioxmlC =* BioxmlNovo()
+
+	for _, arquivo := range  bioxmlC.listar(caminho) {
+
+		data, _ := ioutil.ReadFile(caminho + arquivo + ".organismo")
+		organismoC := &Organismo{}
+		_ = xml.Unmarshal([]byte(data), &organismoC)
+
+		if organismoC.Base.Tipo == "Produtor"{
+			var cor uint32 = organismoC.Base.Cor
+			ecossistemaC.GerarOrganismos("produtor", 10, arquivo, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Base.Adulto, cor)
+		}
+		if organismoC.Base.Tipo == "Consumidor"{
+			var cor uint32 = organismoC.Base.Cor
+
+			ecossistemaC.GerarOrganismos("consumidor", 10, arquivo, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Base.Adulto, cor)
+		}
+	}
+
+
+
+
 	// GERAR PRODUTORES
-	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Gordura", 200, 100, 300, 0x18B300)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Capim Verde", 300, 150, 600, 0x89FF77)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Laranjeira", 500, 200, 10000, 0xC2FFDC)
-	ecossistemaC.GerarOrganismos("produtor", 10, "Ervacidreira", 300, 300, 1000, 0x0EB355)
+	//ecossistemaC.GerarOrganismos("produtor", 10, "Capim Gordura", 200, 100, 300, 0x18B300)
+	//ecossistemaC.GerarOrganismos("produtor", 10, "Capim Verde", 300, 150, 600, 0x89FF77)
+	//ecossistemaC.GerarOrganismos("produtor", 10, "Laranjeira", 500, 200, 10000, 0xC2FFDC)
+	//ecossistemaC.GerarOrganismos("produtor", 10, "Ervacidreira", 300, 300, 1000, 0x0EB355)
 
 	// GERAR CONSUMIDORES
-	ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 300, 200, 3000, 0xCC2700)
-	ecossistemaC.GerarOrganismos("consumidor", 4, "Roedor", 400, 200, 5000, 0xFF845F)
-	ecossistemaC.GerarOrganismos("consumidor", 6, "Coelho", 500, 250, 8000, 0xFF4570)
+	//ecossistemaC.GerarOrganismos("consumidor", 10, "Rato", 300, 200, 3000, 0xCC2700)
+	//ecossistemaC.GerarOrganismos("consumidor", 4, "Roedor", 400, 200, 5000, 0xFF845F)
+	//ecossistemaC.GerarOrganismos("consumidor", 6, "Coelho", 500, 250, 8000, 0xFF4570)
 
 	ecossistemaC.MapearOrganismos(tb)
 

@@ -1,6 +1,10 @@
 package ecossistema
 
-import "math/rand"
+import (
+	"math/rand"
+	"strconv"
+	"utils"
+)
 
 type nuvens struct {
 	ambienteC *Ambiente
@@ -8,6 +12,7 @@ type nuvens struct {
 	nuvem         float32
 	nuvemcontador int
 	nuvemlimite   int
+	nuvemfinalizador int
 }
 
 func nuvensNovo(a *Ambiente) *nuvens {
@@ -17,6 +22,7 @@ func nuvensNovo(a *Ambiente) *nuvens {
 	ret.nuvem = 0
 	ret.nuvemcontador = 21
 	ret.nuvemlimite = 20
+ret.nuvemfinalizador=ret.nuvemlimite
 
 	return &ret
 }
@@ -26,11 +32,14 @@ func (a *nuvens) nublar() {
 
 	a.nuvemcontador++
 
-	if a.nuvemcontador >= a.nuvemlimite {
+	if a.nuvemcontador >= a.nuvemfinalizador {
 
 		a.nuvem = float32(rand.Intn(99)) + rand.Float32()
 
 		a.nuvemcontador = 0
+		a.nuvemfinalizador=a.nuvemlimite + rand.Intn(30)
+
+		utils.Log("ambientelimitador.txt", "Nuvem - "+strconv.Itoa(a.nuvemfinalizador) + "   " + a.nuvemNomeCorrente())
 
 
 	}

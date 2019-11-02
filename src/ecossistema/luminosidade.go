@@ -78,3 +78,29 @@ func (a *luminosidade) luminosidadeNome(_luz float32) string {
 
 	return ret
 }
+
+func (a *luminosidade) ceuLuminosidadeNome(_luz int) string {
+	var ret string = ""
+
+	if _luz >= 0 && _luz < 10 {
+		ret = "Muito Escuro !"
+	}
+
+	if _luz >= 10 && _luz < 20 {
+		ret = "Escuro !"
+	}
+
+	if _luz >= 20 && _luz < 60 {
+		ret = "Claro !"
+	}
+
+	if _luz >= 60 && _luz < 80 {
+		ret = "Muito Claro !"
+	}
+
+	if _luz >= 80 {
+		ret = "Muito Muito Claro !"
+	}
+
+	return ret
+}

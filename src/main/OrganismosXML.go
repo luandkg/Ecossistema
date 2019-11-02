@@ -5,18 +5,16 @@ import (
 "strings"
 )
 
-type bio struct {
+type OrganismosXML struct {
 
 }
 
-func BioxmlNovo() *bio {
-	ret := bio{}
+func OrganismosXMLNovo() *OrganismosXML {
+	ret := OrganismosXML{}
 	return &ret
 }
 
-func (a*bio) pular(){}
-
-func (a*bio) listar(local string) []string {
+func (a*OrganismosXML) listar(local string) []string {
 
 	var conteudo []string
 

@@ -61,3 +61,24 @@ Sol - 29
 Umidade - Muito Baixa
 Vento - Ventania [ Oeste -> Oeste ] - Ciclone
 Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 29
+Umidade - Muito Baixa
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 21
+Umidade - Muito Baixa
+Vento - Ventania [ Leste -> Norte ]
+Chuva - Sem Chuva
+Temperatura - 22.42 ºC
+Luz - Claro !
+Nuvem - Stratus
+Sol - 29
+Umidade - Muito Baixa
+Vento - Ventania [ Oeste -> Oeste ] - Ciclone
+Chuva - Sem Chuva

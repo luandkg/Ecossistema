@@ -15,6 +15,19 @@ func TabuleiroNovo(nome string) *Tabuleiro {
 
 	p := Tabuleiro{_nome: nome}
 
+	for i := 0; i < 50; i++ {
+		for j := 0; j < 50; j++ {
+
+			var ni int32 = (int32(i) * 10)
+			var nj int32 = int32(j) * 10
+			p.dados[i][j].rect = sdl.Rect{ni, nj, 10, 10}
+			p.dados[i][j]._valor = 0
+
+		}
+	}
+
+	p.Limpar()
+
 	return &p
 }
 
@@ -24,7 +37,7 @@ func (p *Tabuleiro) Limpar() {
 	for i := 0; i < 50; i++ {
 		for j := 0; j < 50; j++ {
 
-			var ni int32 = int32(i) * 10
+			var ni int32 = (int32(i) * 10)
 			var nj int32 = int32(j) * 10
 			p.dados[i][j].rect = sdl.Rect{ni, nj, 10, 10}
 			p.dados[i][j]._valor = 0

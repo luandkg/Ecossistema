@@ -9,14 +9,14 @@ import (
 )
 
 var (
-	textosTextures  []texto
-	textoLargura    int
-	textoAltura     int
+	textosTextures []texto
+	textoLargura   int
+	textoAltura    int
 )
 
 type texto struct {
 	largura int32
-	altura int32
+	altura  int32
 	textura *sdl.Texture
 }
 
@@ -27,7 +27,6 @@ func criarTextosTexturas(textos []string) (successful bool) {
 	//dir=filepath.Dir(dir)
 	//dir=filepath.Dir(dir)
 
-
 	//fmt.Println("Local da Fonte : " + dir +"/assets/fonts/OpenSans-Regular.ttf")
 	if err != nil {
 		fmt.Printf("Failed to open get current directory: %s\n", err)
@@ -36,7 +35,7 @@ func criarTextosTexturas(textos []string) (successful bool) {
 
 	textosTextures = nil
 
-	if font, err = ttf.OpenFont( dir +"/assets/fonts/OpenSans-Regular.ttf", 14); err != nil {
+	if font, err = ttf.OpenFont(dir+"/assets/fonts/OpenSans-Regular.ttf", 14); err != nil {
 		fmt.Printf("Failed to open font: %s\n", err)
 		return false
 	}
@@ -74,6 +73,8 @@ func criarTextosTexturas(textos []string) (successful bool) {
 
 func carregarTextos(e *ecossistema.Ecossistema) []string {
 
+	var fase string = "Fase : " + e.AmbienteC.Fase()
+
 	totalProdutoresJovens, totalProdutoresAdulto := e.TotalProdutoresFase()
 	var produtoresTotal = fmt.Sprintf("Produtores: %d", e.TotalProdutores())
 	var produtoresJovens = fmt.Sprintf("Prod. Jovens: %d", totalProdutoresJovens)
@@ -84,7 +85,30 @@ func carregarTextos(e *ecossistema.Ecossistema) []string {
 	var consumidoresJovens = fmt.Sprintf("Cons. Jovens: %d", totalConsumidoresJovens)
 	var consumidoresAdultos = fmt.Sprintf("Cons. Adultos: %d", totalConsumidoresAdulto)
 
-	return []string{produtoresTotal, produtoresJovens, produtoresAdultos, consumidoresTotal, consumidoresJovens, consumidoresAdultos}
+	var temperatura = fmt.Sprintf("Temp: %.2f ºC", e.AmbienteC.TemperaturaCorrente())
+	var umidade = fmt.Sprintf("Umidade: %s", e.AmbienteC.UmidadeCorrente())
+	var nuvens = fmt.Sprintf("Nuvens: %s", e.AmbienteC.NuvemCorrente())
+
+	var vento = fmt.Sprintf("Vento: %s", e.AmbienteC.VentoCorrente())
+	var ventoOrigem = fmt.Sprintf("Vento Ori: %s", e.AmbienteC.VentoOrigem())
+	var ventoDestino = fmt.Sprintf("Vento Des: %s", e.AmbienteC.VentoDestino())
+	var ventoModo = fmt.Sprintf("Vento M: %s", e.AmbienteC.VentoModo())
+	var luz = fmt.Sprintf("Luz : %s", e.AmbienteC.LuzCorrente())
+	var chuva = fmt.Sprintf("Chuva : %s", e.AmbienteC.ChuvaCorrente())
+	var sensacao = e.AmbienteC.SensacaoInfo()
+	var dia = fmt.Sprintf("%d", e.AmbienteC.Dia())
+
+	return []string{fase, " ", dia,
+		" ", " ", " ",
+		produtoresTotal, produtoresJovens, produtoresAdultos,
+		consumidoresTotal, consumidoresJovens, consumidoresAdultos,
+		" ", " ", " ",
+		temperatura, umidade, nuvens,
+		vento, ventoOrigem, ventoDestino,
+		ventoModo, luz, chuva,
+		" ", " ", " ",
+
+		sensacao}
 
 }
 
@@ -109,7 +133,7 @@ func RenderizarTextos(e *ecossistema.Ecossistema) {
 
 	for i := 0; i < len(textosTextures); i++ {
 
-		if i % maxColunas == 0 && i != 0 {
+		if i%maxColunas == 0 && i != 0 {
 			espacoX = inicioX
 			espacoY += alturaMaximaY
 			colunaAtual = 1

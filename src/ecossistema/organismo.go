@@ -9,7 +9,9 @@ import (
 )
 
 type organismo struct {
-	_nome   string
+	_nome         string
+	_nomecompleto string
+
 	_idade  int
 	_status string
 	_fase   string
@@ -19,7 +21,7 @@ type organismo struct {
 
 	rect sdl.Rect
 
-	_energia float32
+	_energia       float32
 	_direcao       string
 	_dirquantidade int
 	_dircontador   int
@@ -39,7 +41,7 @@ func OrganismoNovo(nome string) *organismo {
 
 	p._cor = 0xADFF2F
 
-	p._energia =0
+	p._energia = 0
 
 	p.rect = sdl.Rect{0, 0, 10, 10}
 
@@ -179,6 +181,10 @@ func (p *organismo) movimento(tb *tabuleiro.Tabuleiro) {
 }
 
 func (p *organismo) energizar(x float32) {
-	p._energia+=x
+	p._energia += x
 
+}
+
+func (p *organismo) NomeCompleto() string {
+	return p._nomecompleto
 }

@@ -5,46 +5,63 @@ import (
 	"strconv"
 	"tabuleiro"
 
-	"utils"
-
+	"bioxml"
 	"github.com/veandco/go-sdl2/sdl"
+	"utils"
 )
 
 type Ecossistema struct {
-	contadorprodutor int
-	contadoranimal   int
-	produtores       (map[string]*Produtor)
-	consumidores     (map[string]*Consumidor)
+	contadorProdutor   int
+	contadorConsumidor int
+	produtores         (map[string]*Produtor)
+	consumidores       (map[string]*Consumidor)
 
-	ambienteC *Ambiente
+	AmbienteC *Ambiente
+
+	produtores_contagem   int
+	consumidores_contagem int
+	produtores_mortos     int
+	consumidores_mortos   int
 }
 
-func EcossistemaNovo(ambienteC*Ambiente) *Ecossistema {
+func EcossistemaNovo(ambienteC *Ambiente) *Ecossistema {
 
 	p := Ecossistema{}
-	p.contadoranimal = 0
-	p.contadorprodutor = 0
+	p.contadorConsumidor = 0
+	p.contadorProdutor = 0
 
 	p.produtores = make(map[string]*Produtor)
 	p.consumidores = make(map[string]*Consumidor)
 
-	p.ambienteC=ambienteC
+	p.AmbienteC = ambienteC
 
 	return &p
 }
 
-func (e *Ecossistema) AdicionarProdutor(produtor *Produtor) {
+func (e *Ecossistema) AdicionarProdutor(produtorC *Produtor) {
 
-	e.produtores[strconv.Itoa(e.contadorprodutor)] = produtor
+	produtorC._nomecompleto = produtorC._nome + "::" + strconv.Itoa(e.contadorProdutor)
 
-	e.contadorprodutor++
+	e.produtores[strconv.Itoa(e.contadorProdutor)] = produtorC
+
+	fmt.Println("       --- Produtor : ", produtorC.NomeCompleto(), " Nasceu !!!")
+
+	e.contadorProdutor++
+	e.produtores_contagem++
+
 }
 
-func (e *Ecossistema) AdicionarConsumidor(animalc *Consumidor) {
+func (e *Ecossistema) AdicionarConsumidor(consumidorC *Consumidor) {
 
-	e.consumidores[strconv.Itoa(e.contadoranimal)] = animalc
+	consumidorC._nomecompleto = consumidorC._nome + "::" + strconv.Itoa(e.contadorConsumidor)
 
-	e.contadoranimal++
+	e.consumidores[strconv.Itoa(e.contadorConsumidor)] = consumidorC
+
+	fmt.Println("       --- Consumidor : ", consumidorC.NomeCompleto(), " Nasceu !!!")
+
+	e.contadorConsumidor++
+	e.consumidores_contagem++
+
 }
 
 func (e *Ecossistema) MapearOrganismos(tb *tabuleiro.Tabuleiro) {
@@ -118,33 +135,36 @@ func (e *Ecossistema) RemoverOrganimosMortos() {
 
 	for p := range e.produtores {
 
-		var plantac = e.produtores[p]
+		var produtorCorrente = e.produtores[p]
 
-		if plantac.Status() == "morto" {
+		if produtorCorrente.Status() == "morto" {
 
-			fmt.Println("      - Removendo Produtor", p)
+			fmt.Println("      - Removendo Produtor : ", produtorCorrente.NomeCompleto())
 
 			delete(e.produtores, p)
+			e.produtores_mortos++
 		}
 
 	}
 
 	for p := range e.consumidores {
 
-		var animalc = e.consumidores[p]
+		var consumidorCorrente = e.consumidores[p]
 
-		if animalc.Status() == "morto" {
+		if consumidorCorrente.Status() == "morto" {
 
-			fmt.Println("      - Removendo consumidor", p)
+			fmt.Println("      - Removendo consumidor : ", consumidorCorrente.NomeCompleto())
 
 			delete(e.consumidores, p)
+			e.consumidores_mortos++
+
 		}
 
 	}
 
 }
 
-func (e *Ecossistema) ExecutarCiclo (surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
+func (e *Ecossistema) ExecutarCiclo(surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
 
 	e.executarCicloProdutores(surface)
 
@@ -152,7 +172,7 @@ func (e *Ecossistema) ExecutarCiclo (surface *sdl.Surface, tb *tabuleiro.Tabulei
 
 }
 
-func (e *Ecossistema) executarCicloProdutores (surface *sdl.Surface) {
+func (e *Ecossistema) executarCicloProdutores(surface *sdl.Surface) {
 
 	fmt.Println("PRODUTORES")
 
@@ -162,8 +182,7 @@ func (e *Ecossistema) executarCicloProdutores (surface *sdl.Surface) {
 
 		if produtorc.Status() == "vivo" {
 
-			produtorc._nomecompleto = produtorc._nome + " " + p
-			fmt.Println("      - ", produtorc.toString())
+			//	fmt.Println("      - ", produtorc.toString())
 			produtorc.vivendo()
 			produtorc.atualizar(surface)
 
@@ -173,7 +192,7 @@ func (e *Ecossistema) executarCicloProdutores (surface *sdl.Surface) {
 
 }
 
-func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
+func (e *Ecossistema) executarCicloConsumidores(surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
 
 	fmt.Println("CONSUMIDORES")
 
@@ -183,7 +202,7 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 		if consumidorc.Status() == "vivo" {
 
-			fmt.Println("      - ", consumidorc.toString())
+			//fmt.Println("      - ", consumidorc.toString())
 			consumidorc.vivendo(tb)
 			consumidorc.movimento(tb)
 			consumidorc.atualizar(surface)
@@ -196,17 +215,44 @@ func (e *Ecossistema) executarCicloConsumidores (surface *sdl.Surface, tb *tabul
 
 func (e *Ecossistema) LogEcossistema() {
 
-	utils.Log("logs.txt", "Plantas - "+strconv.Itoa(len(e.produtores)))
+	utils.Log("logs/logs.txt", "-------------------------------------------------------------------------")
 
-	utils.Log("logs.txt", "Consumidores - "+strconv.Itoa(len(e.consumidores)))
+	utils.Log("logs/logs.txt", "Plantas - "+strconv.Itoa(len(e.produtores)))
 
-	s1 :=fmt.Sprintf("%f",e.ambienteC.gasOxigenio)
-	s2:=fmt.Sprintf("%f",e.ambienteC.gasCarbonico)
+	utils.Log("logs/logs.txt", "Consumidores - "+strconv.Itoa(len(e.consumidores)))
 
-	utils.Log("logs.txt", "Gas Oxigenio - "+ s1)
-	utils.Log("logs.txt", "Gas Carbonico - "+ s2)
+	utils.Log("logs/logs.txt", "Gas Oxigenio - "+fmt.Sprintf("%f", e.AmbienteC.gasOxigenio))
+	utils.Log("logs/logs.txt", "Gas Carbonico - "+fmt.Sprintf("%f", e.AmbienteC.gasCarbonico))
 
+	utils.Log("logs/logs.txt", "Energia - "+fmt.Sprintf("%f", e.EnergiaTotal()))
 
+	utils.Log("logs/logs.txt", "CONTAGEM")
+	utils.Log("logs/logs.txt", "    - Produtores Contagem - "+strconv.Itoa((e.produtores_contagem)))
+	utils.Log("logs/logs.txt", "    - Produtores Vivos - "+strconv.Itoa((e.Produtores_Vivos())))
+	utils.Log("logs/logs.txt", "    - Produtores Mortos - "+strconv.Itoa((e.produtores_mortos)))
+
+	utils.Log("logs/logs.txt", "    - Consumidores Contagem - "+strconv.Itoa((e.consumidores_contagem)))
+	utils.Log("logs/logs.txt", "    - Consumidores Vivos - "+strconv.Itoa((e.Consumidores_Vivos())))
+	utils.Log("logs/logs.txt", "    - Consumidores Mortos - "+strconv.Itoa((e.consumidores_mortos)))
+
+}
+
+func (e *Ecossistema) EnergiaTotal() float32 {
+
+	var energia float32 = 0
+
+	for p := range e.produtores {
+
+		var pcorrente = e.produtores[p]
+
+		if pcorrente.Status() == "vivo" {
+
+			energia += pcorrente._energia
+		}
+
+	}
+
+	return energia
 }
 
 func (e *Ecossistema) TotalProdutores() int {
@@ -269,13 +315,13 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 }
 
-func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string, adulto int, reproducao int, vida int, cor uint32) {
+func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32) {
 
 	switch tipo {
 
 	case "produtor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarProdutor(ProdutorNovo(nome, adulto, reproducao, vida, cor, e))
+			e.AdicionarProdutor(ProdutorNovo(nome, adulto, reproducao, gestacao, vida, cor, e))
 		}
 		break
 
@@ -289,14 +335,38 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 
 }
 
-func(e*Ecossistema)produzirOxigenio(valor float32){
+func (e *Ecossistema) ProduzirOxigenio(valor float64) {
+	e.AmbienteC.gasOxigenio += valor
+}
 
-e.ambienteC.gasOxigenio+=valor
+func (e *Ecossistema) ProduzirCarbono(valor float64) {
+	e.AmbienteC.gasCarbonico += valor
+}
+
+func (e *Ecossistema) CarregarOrganismos(caminho string) {
+
+	for _, OrganismoNome := range bioxml.ListarOrganismos(caminho) {
+
+		var organismoC *bioxml.Organismo = bioxml.CarregarOrganismo(caminho + OrganismoNome + ".organismo")
+
+		if organismoC.Base.Tipo == "Produtor" {
+			var cor uint32 = organismoC.Base.Cor
+
+			e.GerarOrganismos("produtor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor)
+		}
+		if organismoC.Base.Tipo == "Consumidor" {
+			var cor uint32 = organismoC.Base.Cor
+
+			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor)
+		}
+	}
 
 }
 
-func(e*Ecossistema)produzirCarbono(valor float32){
+func (e *Ecossistema) Produtores_Contagem() int   { return e.produtores_contagem }
+func (e *Ecossistema) Produtores_Mortos() int   { return  e.produtores_mortos }
+func (e *Ecossistema) Produtores_Vivos() int   { return e.produtores_contagem - e.produtores_mortos }
 
-	e.ambienteC.gasCarbonico+=valor
-
-}
+func (e *Ecossistema) Consumidores_Contagem() int { return e.consumidores_contagem  }
+func (e *Ecossistema) Consumidores_Mortos() int { return  e.consumidores_mortos }
+func (e *Ecossistema) Consumidores_Vivos() int { return e.consumidores_contagem - e.consumidores_mortos }

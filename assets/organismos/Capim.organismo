@@ -1,4 +1,4 @@
 <Organismo>
-  <Base Tipo="Produtor" Jovem="200" Adulto="2000" Cor="1618688"></Base>
-  <Reproducao Frequencia="250"></Reproducao>
+  <Base Tipo="Produtor" Adulto="50" Vida="300" Cor="2688638"></Base>
+  <Reproducao Frequencia="50" Gestacao="20"></Reproducao>
 </Organismo>

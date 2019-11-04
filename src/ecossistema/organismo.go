@@ -10,20 +10,22 @@ import (
 )
 
 type organismo struct {
-	_nome            string
-	_idade           int
-	_status          string
-	_fase            string
+	_nome         string
+	_nomecompleto string
+
+	_idade  int
+	_status string
+	_fase   string
 
 	_posx            int
 	_posy            int
 
 	rect             sdl.Rect
 
-	_energia         float32
-	_direcao         string
-	_dirquantidade   int
-	_dircontador     int
+	_energia       float32
+	_direcao       string
+	_dirquantidade int
+	_dircontador   int
 	_pararMovimento  int
 
 	_cor             uint32
@@ -191,5 +193,8 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 
 func (p *organismo) energizar(x float32) {
 	p._energia += x
+}
 
+func (p *organismo) NomeCompleto() string {
+	return p._nomecompleto
 }

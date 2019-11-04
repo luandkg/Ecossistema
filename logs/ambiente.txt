@@ -1,84 +1,1130 @@
-Temperatura - 25.25 ºC
-Luz - Claro !
-Nuvem - Altostratus
-Sol - 29
-Umidade - Muito Alta
-Vento - Vento Muito Forte [ Sudoeste -> Sudeste ]
-Chuva - Chuvisco
-Temperatura - 25.25 ºC
-Luz - Claro !
-Nuvem - Altostratus
-Sol - 29
-Umidade - Muito Alta
-Vento - Vento Muito Forte [ Sudoeste -> Sudeste ]
-Chuva - Chuvisco
-Temperatura - 23.66 ºC
-Luz - Muito Claro !
-Nuvem - Altostratus
-Sol - 46
-Umidade - Muito Baixa
-Vento - Vento Leve [ Sudeste -> Sudoeste ]
-Chuva - Sem Chuva
-Temperatura - 24.57 ºC
-Luz - Claro !
-Nuvem - Cirrocumulus
-Sol - 33
-Umidade - Baixa
-Vento - Ventania [ Noroeste -> Noroeste ] - Ciclone
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 29
-Umidade - Muito Baixa
-Vento - Ventania [ Oeste -> Oeste ] - Ciclone
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 21
-Umidade - Muito Baixa
-Vento - Ventania [ Leste -> Norte ]
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 29
-Umidade - Muito Baixa
-Vento - Ventania [ Oeste -> Oeste ] - Ciclone
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 29
-Umidade - Muito Baixa
-Vento - Ventania [ Oeste -> Oeste ] - Ciclone
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 29
-Umidade - Muito Baixa
-Vento - Ventania [ Oeste -> Oeste ] - Ciclone
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 29
-Umidade - Muito Baixa
-Vento - Ventania [ Oeste -> Oeste ] - Ciclone
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 21
-Umidade - Muito Baixa
-Vento - Ventania [ Leste -> Norte ]
-Chuva - Sem Chuva
-Temperatura - 22.42 ºC
-Luz - Claro !
-Nuvem - Stratus
-Sol - 29
-Umidade - Muito Baixa
-Vento - Ventania [ Oeste -> Oeste ] - Ciclone
-Chuva - Sem Chuva
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 10 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  51.59 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  39 - Claro !
+     - Umidade :  36.67 - Baixa
+     - Vento -  1.40 - Sem Vento
+     - Chuva :  28.58 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 20 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  47.95 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  35 - Claro !
+     - Umidade :  37.77 - Baixa
+     - Vento -  0.79 - Sem Vento
+     - Chuva :  28.70 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 30 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  76.79 - Muito Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  64 - Muito Claro !
+     - Umidade :  68.26 - Alta
+     - Vento -  0.16 - Sem Vento
+     - Chuva :  36.16 - Sem Chuva
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 40 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  49.67 - Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  21 - Claro !
+     - Umidade :  67.88 - Alta
+     - Vento -  65.61  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  54.52 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 50 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  65.36 - Muito Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  37 - Claro !
+     - Umidade :  16.82 - Muito Baixa
+     - Vento -  65.45  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  41.72 - Neblina
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 60 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  79.29 - Muito Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  51 - Claro !
+     - Umidade :  15.62 - Muito Baixa
+     - Vento -  66.97  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  41.80 - Neblina
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 70 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  41.12 - Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  21 - Claro !
+     - Umidade :  17.48 - Muito Baixa
+     - Vento -  50.09  : Ventania [ Nordeste -> Nordeste ] - Ciclone
+     - Chuva :  31.92 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 80 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  90.94 - Muitissimo Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  70 - Muito Claro !
+     - Umidade :  17.95 - Muito Baixa
+     - Vento -  49.71  : Ventania [ Nordeste -> Nordeste ] - Ciclone
+     - Chuva :  31.94 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 90 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  41.77 - Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  21 - Claro !
+     - Umidade :  88.41 - Muito Alta
+     - Vento -  60.37  : Forte [ Sudoeste -> Sudeste ]
+     - Chuva :  52.22 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 100 ] 
+     - Temperatura - 34.08 ºC : Muito Quente !
+     - Luz :  68.42 - Muito Claro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  46 - Claro !
+     - Umidade :  90.79 - Muito Alta
+     - Vento -  59.09  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  53.82 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 110 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  12.81 - Escuro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  -8 - Muito Escuro !
+     - Umidade :  26.71 - Baixa
+     - Vento -  58.80  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  47.73 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 120 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  3.73 - Muito Escuro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  -18 - Muito Escuro !
+     - Umidade :  29.25 - Baixa
+     - Vento -  59.65  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  48.58 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 130 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  14.78 - Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -8 - Muito Escuro !
+     - Umidade :  31.23 - Baixa
+     - Vento -  50.00  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  48.00 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 140 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  5.12 - Muito Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -18 - Muito Escuro !
+     - Umidade :  31.21 - Baixa
+     - Vento -  47.45  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  47.35 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 150 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  11.84 - Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -11 - Muito Escuro !
+     - Umidade :  39.32 - Baixa
+     - Vento -  47.45  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  49.38 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 160 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  7.64 - Muito Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -15 - Muito Escuro !
+     - Umidade :  41.34 - Normal
+     - Vento -  96.71  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  62.20 - Chuva
+     - Sensação Térmica : Agradável
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 170 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  13.19 - Escuro
+     - Nuvens :  38.38 - Cirrostratus
+     - Ceu :  0 - Muito Escuro !
+     - Umidade :  41.75 - Normal
+     - Vento -  96.75  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  54.22 - Chuvisco
+     - Sensação Térmica : Agradável
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 180 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  3.48 - Muito Escuro
+     - Nuvens :  38.38 - Cirrostratus
+     - Ceu :  -9 - Muito Escuro !
+     - Umidade :  12.82 - Muito Baixa
+     - Vento -  94.33  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  46.38 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 190 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  2.42 - Muito Escuro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  -12 - Muito Escuro !
+     - Umidade :  12.50 - Muito Baixa
+     - Vento -  70.34  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  41.62 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 200 ] 
+     - Temperatura - 21.06 ºC : Normal !
+     - Luz :  1.13 - Muito Escuro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  -13 - Muito Escuro !
+     - Umidade :  25.74 - Baixa
+     - Vento -  69.59  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  44.74 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 210 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  40.90 - Claro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  26 - Claro !
+     - Umidade :  25.85 - Baixa
+     - Vento -  68.60  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  44.52 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 220 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  73.65 - Muito Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  68 - Muito Claro !
+     - Umidade :  27.67 - Baixa
+     - Vento -  67.27  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  37.35 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 230 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  54.11 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  49 - Claro !
+     - Umidade :  27.33 - Baixa
+     - Vento -  5.53 - Sem Vento
+     - Chuva :  21.83 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 240 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  44.02 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  39 - Claro !
+     - Umidade :  25.06 - Baixa
+     - Vento -  6.19 - Sem Vento
+     - Chuva :  21.43 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 250 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  52.79 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  47 - Claro !
+     - Umidade :  3.18 - Muito Baixa
+     - Vento -  63.78  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  30.36 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 260 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  57.72 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  26 - Claro !
+     - Umidade :  4.12 - Muito Baixa
+     - Vento -  62.01  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  49.91 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 270 ] 
+     - Temperatura - 27.63 ºC : Normal !
+     - Luz :  40.91 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  9 - Muito Escuro !
+     - Umidade :  3.96 - Muito Baixa
+     - Vento -  64.00  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  50.37 - Chuvisco
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 280 ] 
+     - Temperatura - 27.63 ºC : Normal !
+     - Luz :  41.34 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  10 - Escuro !
+     - Umidade :  88.81 - Muito Alta
+     - Vento -  64.65  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  71.74 - 
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 10 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  51.59 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  39 - Claro !
+     - Umidade :  36.67 - Baixa
+     - Vento -  1.40 - Sem Vento
+     - Chuva :  28.58 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 20 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  47.95 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  35 - Claro !
+     - Umidade :  37.77 - Baixa
+     - Vento -  0.79 - Sem Vento
+     - Chuva :  28.70 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 30 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  76.79 - Muito Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  64 - Muito Claro !
+     - Umidade :  68.26 - Alta
+     - Vento -  0.16 - Sem Vento
+     - Chuva :  36.16 - Sem Chuva
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 40 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  49.67 - Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  21 - Claro !
+     - Umidade :  67.88 - Alta
+     - Vento -  65.61  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  54.52 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 50 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  65.36 - Muito Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  37 - Claro !
+     - Umidade :  16.82 - Muito Baixa
+     - Vento -  65.45  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  41.72 - Neblina
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 60 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  79.29 - Muito Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  51 - Claro !
+     - Umidade :  15.62 - Muito Baixa
+     - Vento -  66.97  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  41.80 - Neblina
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 70 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  41.12 - Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  21 - Claro !
+     - Umidade :  17.48 - Muito Baixa
+     - Vento -  50.09  : Ventania [ Nordeste -> Nordeste ] - Ciclone
+     - Chuva :  31.92 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 80 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  90.94 - Muitissimo Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  70 - Muito Claro !
+     - Umidade :  17.95 - Muito Baixa
+     - Vento -  49.71  : Ventania [ Nordeste -> Nordeste ] - Ciclone
+     - Chuva :  31.94 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 90 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  41.77 - Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  21 - Claro !
+     - Umidade :  88.41 - Muito Alta
+     - Vento -  60.37  : Forte [ Sudoeste -> Sudeste ]
+     - Chuva :  52.22 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 100 ] 
+     - Temperatura - 34.08 ºC : Muito Quente !
+     - Luz :  68.42 - Muito Claro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  46 - Claro !
+     - Umidade :  90.79 - Muito Alta
+     - Vento -  59.09  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  53.82 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 110 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  12.81 - Escuro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  -8 - Muito Escuro !
+     - Umidade :  26.71 - Baixa
+     - Vento -  58.80  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  47.73 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 120 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  3.73 - Muito Escuro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  -18 - Muito Escuro !
+     - Umidade :  29.25 - Baixa
+     - Vento -  59.65  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  48.58 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 130 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  14.78 - Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -8 - Muito Escuro !
+     - Umidade :  31.23 - Baixa
+     - Vento -  50.00  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  48.00 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 140 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  5.12 - Muito Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -18 - Muito Escuro !
+     - Umidade :  31.21 - Baixa
+     - Vento -  47.45  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  47.35 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 150 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  11.84 - Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -11 - Muito Escuro !
+     - Umidade :  39.32 - Baixa
+     - Vento -  47.45  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  49.38 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 160 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  7.64 - Muito Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -15 - Muito Escuro !
+     - Umidade :  41.34 - Normal
+     - Vento -  96.71  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  62.20 - Chuva
+     - Sensação Térmica : Agradável
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 170 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  13.19 - Escuro
+     - Nuvens :  38.38 - Cirrostratus
+     - Ceu :  0 - Muito Escuro !
+     - Umidade :  41.75 - Normal
+     - Vento -  96.75  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  54.22 - Chuvisco
+     - Sensação Térmica : Agradável
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 180 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  3.48 - Muito Escuro
+     - Nuvens :  38.38 - Cirrostratus
+     - Ceu :  -9 - Muito Escuro !
+     - Umidade :  12.82 - Muito Baixa
+     - Vento -  94.33  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  46.38 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 190 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  2.42 - Muito Escuro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  -12 - Muito Escuro !
+     - Umidade :  12.50 - Muito Baixa
+     - Vento -  70.34  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  41.62 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 200 ] 
+     - Temperatura - 21.06 ºC : Normal !
+     - Luz :  1.13 - Muito Escuro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  -13 - Muito Escuro !
+     - Umidade :  25.74 - Baixa
+     - Vento -  69.59  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  44.74 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 210 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  40.90 - Claro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  26 - Claro !
+     - Umidade :  25.85 - Baixa
+     - Vento -  68.60  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  44.52 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 220 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  73.65 - Muito Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  68 - Muito Claro !
+     - Umidade :  27.67 - Baixa
+     - Vento -  67.27  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  37.35 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 230 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  54.11 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  49 - Claro !
+     - Umidade :  27.33 - Baixa
+     - Vento -  5.53 - Sem Vento
+     - Chuva :  21.83 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 240 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  44.02 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  39 - Claro !
+     - Umidade :  25.82 - Baixa
+     - Vento -  7.12 - Sem Vento
+     - Chuva :  21.85 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 250 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  52.79 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  47 - Claro !
+     - Umidade :  3.18 - Muito Baixa
+     - Vento -  63.78  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  30.36 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 260 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  57.72 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  26 - Claro !
+     - Umidade :  4.12 - Muito Baixa
+     - Vento -  62.01  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  49.91 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 270 ] 
+     - Temperatura - 27.63 ºC : Normal !
+     - Luz :  40.91 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  9 - Muito Escuro !
+     - Umidade :  3.96 - Muito Baixa
+     - Vento -  64.00  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  50.37 - Chuvisco
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 280 ] 
+     - Temperatura - 27.63 ºC : Normal !
+     - Luz :  41.34 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  10 - Escuro !
+     - Umidade :  88.81 - Muito Alta
+     - Vento -  64.65  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  71.74 - 
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 10 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  51.59 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  39 - Claro !
+     - Umidade :  36.67 - Baixa
+     - Vento -  1.40 - Sem Vento
+     - Chuva :  28.58 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 20 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  47.95 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  35 - Claro !
+     - Umidade :  37.77 - Baixa
+     - Vento -  0.79 - Sem Vento
+     - Chuva :  28.70 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 30 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  76.79 - Muito Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  64 - Muito Claro !
+     - Umidade :  68.26 - Alta
+     - Vento -  0.16 - Sem Vento
+     - Chuva :  36.16 - Sem Chuva
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 10 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  51.59 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  39 - Claro !
+     - Umidade :  36.67 - Baixa
+     - Vento -  1.40 - Sem Vento
+     - Chuva :  28.58 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 20 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  47.95 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  35 - Claro !
+     - Umidade :  37.77 - Baixa
+     - Vento -  0.79 - Sem Vento
+     - Chuva :  28.70 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 10 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  51.59 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  39 - Claro !
+     - Umidade :  36.67 - Baixa
+     - Vento -  1.40 - Sem Vento
+     - Chuva :  28.58 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 20 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  47.95 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  35 - Claro !
+     - Umidade :  37.77 - Baixa
+     - Vento -  0.79 - Sem Vento
+     - Chuva :  28.70 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 30 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  76.79 - Muito Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  64 - Muito Claro !
+     - Umidade :  68.26 - Alta
+     - Vento -  0.16 - Sem Vento
+     - Chuva :  36.16 - Sem Chuva
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 40 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  49.67 - Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  21 - Claro !
+     - Umidade :  67.88 - Alta
+     - Vento -  65.61  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  54.52 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 50 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  65.36 - Muito Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  37 - Claro !
+     - Umidade :  16.82 - Muito Baixa
+     - Vento -  65.45  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  41.72 - Neblina
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 60 ] 
+     - Temperatura - 34.38 ºC : Muito Quente !
+     - Luz :  79.29 - Muito Claro
+     - Nuvens :  84.60 - Stratocumulus
+     - Ceu :  51 - Claro !
+     - Umidade :  15.62 - Muito Baixa
+     - Vento -  66.97  : Forte [ Oeste -> Oeste ] - Tornado
+     - Chuva :  41.80 - Neblina
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 70 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  41.12 - Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  21 - Claro !
+     - Umidade :  17.48 - Muito Baixa
+     - Vento -  50.09  : Ventania [ Nordeste -> Nordeste ] - Ciclone
+     - Chuva :  31.92 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 80 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  90.94 - Muitissimo Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  70 - Muito Claro !
+     - Umidade :  17.95 - Muito Baixa
+     - Vento -  49.71  : Ventania [ Nordeste -> Nordeste ] - Ciclone
+     - Chuva :  31.94 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 90 ] 
+     - Temperatura - 36.95 ºC : Muito Quente !
+     - Luz :  41.77 - Claro
+     - Nuvens :  60.10 - Stratus
+     - Ceu :  21 - Claro !
+     - Umidade :  88.41 - Muito Alta
+     - Vento -  60.37  : Forte [ Sudoeste -> Sudeste ]
+     - Chuva :  52.22 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 100 ] 
+     - Temperatura - 34.08 ºC : Muito Quente !
+     - Luz :  68.42 - Muito Claro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  46 - Claro !
+     - Umidade :  90.79 - Muito Alta
+     - Vento -  59.09  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  53.82 - Chuvisco
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 110 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  12.81 - Escuro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  -8 - Muito Escuro !
+     - Umidade :  26.71 - Baixa
+     - Vento -  58.80  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  47.73 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 120 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  3.73 - Muito Escuro
+     - Nuvens :  65.41 - Stratus
+     - Ceu :  -18 - Muito Escuro !
+     - Umidade :  29.25 - Baixa
+     - Vento -  59.65  : Ventania [ Sudoeste -> Sudeste ]
+     - Chuva :  48.58 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 130 ] 
+     - Temperatura - 24.54 ºC : Normal !
+     - Luz :  14.78 - Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -8 - Muito Escuro !
+     - Umidade :  31.23 - Baixa
+     - Vento -  50.00  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  48.00 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 140 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  5.12 - Muito Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -18 - Muito Escuro !
+     - Umidade :  31.21 - Baixa
+     - Vento -  47.45  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  47.35 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 150 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  11.84 - Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -11 - Muito Escuro !
+     - Umidade :  39.32 - Baixa
+     - Vento -  47.45  : Ventania [ Sudoeste -> Oeste ]
+     - Chuva :  49.38 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 160 ] 
+     - Temperatura - 21.56 ºC : Normal !
+     - Luz :  7.64 - Muito Escuro
+     - Nuvens :  70.75 - Stratocumulus
+     - Ceu :  -15 - Muito Escuro !
+     - Umidade :  41.34 - Normal
+     - Vento -  96.71  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  62.20 - Chuva
+     - Sensação Térmica : Agradável
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 170 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  13.19 - Escuro
+     - Nuvens :  38.38 - Cirrostratus
+     - Ceu :  0 - Muito Escuro !
+     - Umidade :  41.75 - Normal
+     - Vento -  96.75  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  54.22 - Chuvisco
+     - Sensação Térmica : Agradável
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 180 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  3.48 - Muito Escuro
+     - Nuvens :  38.38 - Cirrostratus
+     - Ceu :  -9 - Muito Escuro !
+     - Umidade :  12.82 - Muito Baixa
+     - Vento -  94.33  : Fortissimo [ Norte -> Noroeste ]
+     - Chuva :  46.38 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 190 ] 
+     - Temperatura - 21.37 ºC : Normal !
+     - Luz :  2.42 - Muito Escuro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  -12 - Muito Escuro !
+     - Umidade :  12.50 - Muito Baixa
+     - Vento -  70.34  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  41.62 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Noite CICLO : 200 ] 
+     - Temperatura - 21.06 ºC : Normal !
+     - Luz :  1.13 - Muito Escuro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  -13 - Muito Escuro !
+     - Umidade :  25.74 - Baixa
+     - Vento -  69.59  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  44.74 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 210 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  40.90 - Claro
+     - Nuvens :  43.63 - Altocumulus
+     - Ceu :  26 - Claro !
+     - Umidade :  25.85 - Baixa
+     - Vento -  68.60  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  44.52 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 220 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  73.65 - Muito Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  68 - Muito Claro !
+     - Umidade :  27.67 - Baixa
+     - Vento -  67.27  : Forte [ Sudoeste -> Sudoeste ] - Tornado
+     - Chuva :  37.35 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 230 ] 
+     - Temperatura - 25.97 ºC : Normal !
+     - Luz :  54.11 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  49 - Claro !
+     - Umidade :  27.33 - Baixa
+     - Vento -  5.53 - Sem Vento
+     - Chuva :  21.83 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 240 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  44.02 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  39 - Claro !
+     - Umidade :  25.98 - Baixa
+     - Vento -  6.19 - Sem Vento
+     - Chuva :  21.66 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 250 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  52.79 - Claro
+     - Nuvens :  14.46 - Cirrus
+     - Ceu :  47 - Claro !
+     - Umidade :  3.18 - Muito Baixa
+     - Vento -  63.78  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  30.36 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 260 ] 
+     - Temperatura - 25.76 ºC : Normal !
+     - Luz :  57.72 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  26 - Claro !
+     - Umidade :  4.12 - Muito Baixa
+     - Vento -  62.01  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  49.91 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 270 ] 
+     - Temperatura - 27.63 ºC : Normal !
+     - Luz :  40.91 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  9 - Muito Escuro !
+     - Umidade :  3.96 - Muito Baixa
+     - Vento -  64.00  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  50.37 - Chuvisco
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 280 ] 
+     - Temperatura - 27.63 ºC : Normal !
+     - Luz :  41.34 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  10 - Escuro !
+     - Umidade :  88.81 - Muito Alta
+     - Vento -  64.65  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  71.74 - 
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 290 ] 
+     - Temperatura - 27.63 ºC : Normal !
+     - Luz :  58.98 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  27 - Claro !
+     - Umidade :  88.29 - Muito Alta
+     - Vento -  66.42  : Forte [ Sudeste -> Noroeste ]
+     - Chuva :  72.05 - 
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Dia CICLO : 300 ] 
+     - Temperatura - 31.31 ºC : Quente !
+     - Luz :  56.11 - Claro
+     - Nuvens :  93.50 - Stratocumulus
+     - Ceu :  24 - Claro !
+     - Umidade :  87.83 - Muito Alta
+     - Vento -  83.91  : Fortissimo [ Norte -> Sudeste ]
+     - Chuva :  66.31 - Chuva
+     - Sensação Térmica : Quente e Umido
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 310 ] 
+     - Temperatura - 21.23 ºC : Normal !
+     - Luz :  1.23 - Muito Escuro
+     - Nuvens :  26.51 - Cirrocumulus
+     - Ceu :  -7 - Muito Escuro !
+     - Umidade :  88.49 - Muito Alta
+     - Vento -  86.05  : Fortissimo [ Norte -> Sudeste ]
+     - Chuva :  60.26 - Chuva
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 320 ] 
+     - Temperatura - 21.23 ºC : Normal !
+     - Luz :  1.29 - Muito Escuro
+     - Nuvens :  26.51 - Cirrocumulus
+     - Ceu :  -7 - Muito Escuro !
+     - Umidade :  1.43 - Muito Baixa
+     - Vento -  87.66  : Fortissimo [ Norte -> Sudeste ]
+     - Chuva :  38.90 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 330 ] 
+     - Temperatura - 21.23 ºC : Normal !
+     - Luz :  13.48 - Escuro
+     - Nuvens :  26.51 - Cirrocumulus
+     - Ceu :  4 - Muito Escuro !
+     - Umidade :  4.35 - Muito Baixa
+     - Vento -  86.56  : Fortissimo [ Norte -> Sudeste ]
+     - Chuva :  39.35 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 340 ] 
+     - Temperatura - 23.98 ºC : Normal !
+     - Luz :  2.48 - Muito Escuro
+     - Nuvens :  26.51 - Cirrocumulus
+     - Ceu :  -6 - Muito Escuro !
+     - Umidade :  5.82 - Muito Baixa
+     - Vento -  60.57  : Forte [ Norte -> Leste ]
+     - Chuva :  33.23 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 350 ] 
+     - Temperatura - 23.98 ºC : Normal !
+     - Luz :  8.09 - Muito Escuro
+     - Nuvens :  98.25 - Stratocumulus
+     - Ceu :  -24 - Muito Escuro !
+     - Umidade :  3.98 - Muito Baixa
+     - Vento -  61.09  : Forte [ Norte -> Leste ]
+     - Chuva :  50.83 - Chuvisco
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 360 ] 
+     - Temperatura - 23.98 ºC : Normal !
+     - Luz :  15.87 - Escuro
+     - Nuvens :  98.25 - Stratocumulus
+     - Ceu :  -16 - Muito Escuro !
+     - Umidade :  3.10 - Muito Baixa
+     - Vento -  83.80  : Fortissimo [ Sudoeste -> Norte ]
+     - Chuva :  56.29 - Chuvisco
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 370 ] 
+     - Temperatura - 23.14 ºC : Normal !
+     - Luz :  3.15 - Muito Escuro
+     - Nuvens :  98.25 - Stratocumulus
+     - Ceu :  -29 - Muito Escuro !
+     - Umidade :  78.32 - Alta
+     - Vento -  81.06  : Fortissimo [ Sudoeste -> Norte ]
+     - Chuva :  74.41 - 
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 380 ] 
+     - Temperatura - 23.14 ºC : Normal !
+     - Luz :  3.86 - Muito Escuro
+     - Nuvens :  27.79 - Cirrocumulus
+     - Ceu :  -5 - Muito Escuro !
+     - Umidade :  78.49 - Alta
+     - Vento -  82.06  : Fortissimo [ Sudoeste -> Norte ]
+     - Chuva :  57.08 - Chuvisco
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 390 ] 
+     - Temperatura - 23.14 ºC : Normal !
+     - Luz :  9.55 - Muito Escuro
+     - Nuvens :  27.79 - Cirrocumulus
+     - Ceu :  0 - Muito Escuro !
+     - Umidade :  73.88 - Alta
+     - Vento -  7.31 - Sem Vento
+     - Chuva :  37.25 - Sem Chuva
+     - Sensação Térmica : Umidade Alta
+------------------------------------------------------------------------------------
+Dia  : 2 - [ FASE : Noite CICLO : 400 ] 
+     - Temperatura - 26.37 ºC : Normal !
+     - Luz :  13.33 - Escuro
+     - Nuvens :  27.79 - Cirrocumulus
+     - Ceu :  4 - Muito Escuro !
+     - Umidade :  39.85 - Baixa
+     - Vento -  6.29 - Sem Vento
+     - Chuva :  28.48 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 3 - [ FASE : Dia CICLO : 410 ] 
+     - Temperatura - 28.40 ºC : Quente !
+     - Luz :  62.82 - Muito Claro
+     - Nuvens :  27.79 - Cirrocumulus
+     - Ceu :  53 - Claro !
+     - Umidade :  42.25 - Normal
+     - Vento -  6.77 - Sem Vento
+     - Chuva :  29.20 - Sem Chuva
+     - Sensação Térmica : Quente
+------------------------------------------------------------------------------------
+Dia  : 3 - [ FASE : Dia CICLO : 420 ] 
+     - Temperatura - 28.40 ºC : Quente !
+     - Luz :  96.26 - Muitissimo Claro
+     - Nuvens :  47.39 - Altocumulus
+     - Ceu :  80 - Muito Muito Claro !
+     - Umidade :  39.89 - Baixa
+     - Vento -  92.08  : Fortissimo [ Noroeste -> Noroeste ] - Furacão
+     - Chuva :  54.84 - Chuvisco
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 3 - [ FASE : Dia CICLO : 430 ] 
+     - Temperatura - 28.40 ºC : Quente !
+     - Luz :  60.13 - Muito Claro
+     - Nuvens :  47.39 - Altocumulus
+     - Ceu :  44 - Claro !
+     - Umidade :  1.34 - Muito Baixa
+     - Vento -  93.12  : Fortissimo [ Noroeste -> Noroeste ] - Furacão
+     - Chuva :  45.46 - Neblina
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 3 - [ FASE : Dia CICLO : 440 ] 
+     - Temperatura - 25.80 ºC : Normal !
+     - Luz :  46.48 - Claro
+     - Nuvens :  47.39 - Altocumulus
+     - Ceu :  30 - Claro !
+     - Umidade :  1.29 - Muito Baixa
+     - Vento -  95.91  : Fortissimo [ Noroeste -> Noroeste ] - Furacão
+     - Chuva :  46.15 - Neblina
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 3 - [ FASE : Dia CICLO : 450 ] 
+     - Temperatura - 25.80 ºC : Normal !
+     - Luz :  66.00 - Muito Claro
+     - Nuvens :  19.15 - Cirrus
+     - Ceu :  59 - Claro !
+     - Umidade :  -0.47 - 
+     - Vento -  93.63  : Fortissimo [ Noroeste -> Noroeste ] - Furacão
+     - Chuva :  38.08 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 3 - [ FASE : Dia CICLO : 460 ] 
+     - Temperatura - 25.80 ºC : Normal !
+     - Luz :  42.93 - Claro
+     - Nuvens :  19.15 - Cirrus
+     - Ceu :  36 - Claro !
+     - Umidade :  -4.25 - 
+     - Vento -  46.52  : Ventania [ Oeste -> Oeste ] - Ciclone
+     - Chuva :  25.35 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 3 - [ FASE : Dia CICLO : 470 ] 
+     - Temperatura - 24.05 ºC : Normal !
+     - Luz :  65.07 - Muito Claro
+     - Nuvens :  19.15 - Cirrus
+     - Ceu :  58 - Claro !
+     - Umidade :  25.72 - Baixa
+     - Vento -  45.19  : Ventania [ Oeste -> Oeste ] - Ciclone
+     - Chuva :  32.52 - Sem Chuva
+     - Sensação Térmica : Umidade Baixa
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 10 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  51.59 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  39 - Claro !
+     - Umidade :  36.67 - Baixa
+     - Vento -  1.40 - Sem Vento
+     - Chuva :  28.58 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 20 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  47.95 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  35 - Claro !
+     - Umidade :  37.77 - Baixa
+     - Vento -  0.79 - Sem Vento
+     - Chuva :  28.70 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 10 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  51.59 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  39 - Claro !
+     - Umidade :  36.67 - Baixa
+     - Vento -  1.40 - Sem Vento
+     - Chuva :  28.58 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 20 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  47.95 - Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  35 - Claro !
+     - Umidade :  37.77 - Baixa
+     - Vento -  0.79 - Sem Vento
+     - Chuva :  28.70 - Sem Chuva
+     - Sensação Térmica : Quente e Seco
+------------------------------------------------------------------------------------
+Dia  : 1 - [ FASE : Dia CICLO : 30 ] 
+     - Temperatura - 29.72 ºC : Quente !
+     - Luz :  76.79 - Muito Claro
+     - Nuvens :  36.24 - Cirrostratus
+     - Ceu :  64 - Muito Claro !
+     - Umidade :  68.26 - Alta
+     - Vento -  0.16 - Sem Vento
+     - Chuva :  36.16 - Sem Chuva
+     - Sensação Térmica : Quente e Umido

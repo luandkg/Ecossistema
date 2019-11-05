@@ -13,6 +13,7 @@ type Consumidor struct {
 	_adultociclo        int
 	_reproduzirciclo    int
 	_reproduzircontador int
+	_vCadeiaAlimentar	int
 
 	_temAlvo            bool
 	_alvoX              int
@@ -23,7 +24,7 @@ type Consumidor struct {
 	_ecossistemaC *Ecossistema
 }
 
-func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Consumidor {
+func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema, _vCadeiaAlimentar int) *Consumidor {
 
 	p := Consumidor{_adultociclo: adulto}
 
@@ -33,6 +34,7 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 	p._status = "vivo"
 	p._fase = "nascido"
 	p._adultociclo = adulto
+	p._vCadeiaAlimentar = _vCadeiaAlimentar
 
 	p._reproduzirciclo = reproducao
 	p._reproduzircontador = 0
@@ -106,7 +108,7 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 		c._reproduzircontador = 0
 		fmt.Println("       --- Consumidor : ", c.Nome(), " Reproduzindo !!!")
 
-		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC)
+		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC, c._vCadeiaAlimentar)
 		var x = utils.Aleatorionumero(50)
 		var y = utils.Aleatorionumero(50)
 
@@ -138,18 +140,55 @@ func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
 			var chaoBusca = -tetoBusca
 
 			// TODO: Refatorar com posicoes absolutas no tabuleiro
-			for _, produtor := range c._ecossistemaC.produtores {
+			
+			if (c._vCadeiaAlimentar == 1){
+				for _, produtor := range c._ecossistemaC.produtores {
 
-				for i := tetoBusca; i > chaoBusca; i-- {
+					for i := tetoBusca; i > chaoBusca; i-- {
 
-					for j := tetoBusca; j > chaoBusca; j-- {
+						for j := tetoBusca; j > chaoBusca; j-- {
 
-						if produtor._posx == c._posx+i && produtor._posy == c._posy+j {
-							alvo = true
-							alvoX = c._posx + i
-							alvoY = c._posy + j
+							if produtor._posx == c._posx+i && produtor._posy == c._posy+j {
+								alvo = true
+								alvoX = c._posx + i
+								alvoY = c._posy + j
+								break
+							}
+						}
+
+						if alvo {
 							break
 						}
+
+					}
+
+					if alvo {
+						break
+					}
+
+				}
+			}else{
+				for _, consumidor := range c._ecossistemaC.consumidores {
+
+					for i := tetoBusca; i > chaoBusca; i-- {
+
+						for j := tetoBusca; j > chaoBusca; j-- {
+
+							if consumidor._posx == c._posx+i && consumidor._posy == c._posy+j {
+								fmt.Println("------------------------------------------------------------------")
+								fmt.Println("onca tem alvo")
+								fmt.Println("------------------------------------------------------------------")
+								alvo = true
+								alvoX = c._posx + i
+								alvoY = c._posy + j
+								break
+							}
+						}
+
+						if alvo {
+							break
+						}
+
 					}
 
 					if alvo {
@@ -158,12 +197,7 @@ func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
 
 				}
 
-				if alvo {
-					break
-				}
-
 			}
-
 			c._temAlvo = alvo
 			c._alvoX = alvoX
 			c._alvoY = alvoY
@@ -245,13 +279,25 @@ func (c *Consumidor) CacarAlvo(tb *tabuleiro.Tabuleiro) {
 func (c *Consumidor) matarAlvo() {
 
 	// TODO: Refatorar com posicoes absolutas no tabuleiro
-	for _, produtor := range c._ecossistemaC.produtores {
+	//TODO alterado para consumidor
+	if (c._vCadeiaAlimentar == 1){
+		for _, produtor := range c._ecossistemaC.produtores {
 
-		if produtor._posx == c._alvoX && produtor._posy == c._alvoY {
-			produtor.morrer()
-			break
+			if produtor._posx == c._alvoX && produtor._posy == c._alvoY {
+				produtor.morrer()
+				break
+			}
+
 		}
+	}else{
+		for _, consumidor := range c._ecossistemaC.consumidores {
 
+			if consumidor._posx == c._alvoX && consumidor._posy == c._alvoY {
+				consumidor.morrer()
+				break
+			}
+
+		}
 	}
 
 }
@@ -271,4 +317,12 @@ func (c *Consumidor) toString() string {
 	var str = c.Nome() + " [" + c.Fase() + " " + strconv.Itoa(c.Ciclos()) + "]" + " POS[" + strconv.Itoa(c.x()) + " " + strconv.Itoa(c.y()) + "]"
 
 	return str
+}
+
+
+//TODO inserido na parte de consumidor seucnario
+func (p *Consumidor) morrer() {
+
+	p._status = "morto"
+	fmt.Println("       --- Consumidor : ", p.Nome(), " Morreu !!!")
 }

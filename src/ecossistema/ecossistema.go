@@ -280,7 +280,7 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 }
 
-func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string, adulto int, reproducao int, vida int, cor uint32) {
+func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string, adulto int, reproducao int, vida int, cor uint32, vCadeiaAlimentar int) {
 
 	switch tipo {
 
@@ -291,7 +291,7 @@ func (e *Ecossistema) GerarOrganismos (tipo string, quantidade int, nome string,
 
 	case "consumidor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e))
+			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e, vCadeiaAlimentar))
 		}
 
 	}

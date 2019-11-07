@@ -155,4 +155,5 @@ func (a *Ambiente) log() {
 		//utils.Log("logs/temperatura.txt", fmt.Sprintf("%.2f", a.TemperaturaCorrente))
 
 	}
+
 }

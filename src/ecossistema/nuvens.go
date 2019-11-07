@@ -1,46 +1,59 @@
 package ecossistema
 
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+)
 
-type nuvens struct {
+type Nuvens struct {
 	ambienteC *Ambiente
 
-	nuvem         float32
-	nuvemcontador int
-	nuvemlimite   int
+	nuvem            float32
+	nuvemcontador    int
+	nuvemlimite      int
+	nuvemfinalizador int
 }
 
-func nuvensNovo(a *Ambiente) *nuvens {
-	ret := nuvens{}
+func NuvensNovo(a *Ambiente) *Nuvens {
+	ret := Nuvens{}
 	ret.ambienteC = a
 
 	ret.nuvem = 0
 	ret.nuvemcontador = 21
 	ret.nuvemlimite = 20
+	ret.nuvemfinalizador = ret.nuvemlimite
 
 	return &ret
 }
 
-func (a *nuvens) nublar() {
-
+func (a *Nuvens) Nublar() {
 
 	a.nuvemcontador++
 
-	if a.nuvemcontador >= a.nuvemlimite {
+	if a.nuvemcontador >= a.nuvemfinalizador {
 
 		a.nuvem = float32(rand.Intn(99)) + rand.Float32()
 
 		a.nuvemcontador = 0
+		a.nuvemfinalizador = a.nuvemlimite + rand.Intn(30)
 
+		//utils.Log("logs/ambientelimitador.txt", "Nuvem - "+strconv.Itoa(a.nuvemfinalizador) + "   " + a.NuvemNomeCorrente())
 
 	}
 }
 
-func (a *nuvens) nuvemNomeCorrente() string {
-	return a.nuvemNome(a.nuvem)
+func (a *Nuvens) NuvemNomeCorrente() string {
+	return a.NuvemNome(a.nuvem)
 }
 
-func (a *nuvens) nuvemNome(_nuvem float32) string {
+func (a *Nuvens) NuvemCorrente() string {
+	return a.NuvemNome(a.nuvem)
+}
+func (a *Nuvens) NuvemCorrenteValor() float32 {
+	return a.nuvem
+}
+
+func (a *Nuvens) NuvemNome(_nuvem float32) string {
 	var ret string = ""
 
 	if _nuvem >= 0 && _nuvem < 10 {
@@ -74,6 +87,12 @@ func (a *nuvens) nuvemNome(_nuvem float32) string {
 	if _nuvem >= 70 {
 		ret = "Stratocumulus"
 	}
+
+	return ret
+}
+
+func (a *Nuvens) NuvemInfo() string {
+	var ret string = fmt.Sprintf("Nuvens :  %.2f - %s", a.NuvemCorrenteValor(), a.NuvemNomeCorrente())
 
 	return ret
 }

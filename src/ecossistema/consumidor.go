@@ -58,9 +58,6 @@ func (c *Consumidor) vivendo(tb *tabuleiro.Tabuleiro) {
 
 	if c._status == "vivo" {
 
-		c._ecossistemaC.produzirOxigenio(-0.00075)
-		c._ecossistemaC.produzirCarbono(+0.0005)
-
 		if c._idade == c._adultociclo || c._idade == c._vida {
 
 			c.mudarFase()

@@ -1,13 +1,16 @@
 package ecossistema
 
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+)
 
-type temperatura struct {
+type Temperatura struct {
 	ambienteC *Ambiente
 
 	tempbase float32
 
-	temperaturaCorrente float32
+	Corrente float32
 
 	temp1 float32
 	temp2 float32
@@ -21,12 +24,12 @@ type temperatura struct {
 	tempmax float32
 }
 
-func temperaturaNovo(a *Ambiente) *temperatura {
-	ret := temperatura{}
+func TemperaturaNovo(a *Ambiente) *Temperatura {
+	ret := Temperatura{}
 	ret.ambienteC = a
 
 	ret.tempbase = 25
-	ret.temperaturaCorrente = 0
+	ret.Corrente = 0
 
 	ret.tempdiamin = 0
 	ret.tempdiamax = 0
@@ -37,18 +40,27 @@ func temperaturaNovo(a *Ambiente) *temperatura {
 	return &ret
 }
 
-func (a *temperatura) temperaturaMedia() float32 {
+func (a *Temperatura) Esquentar() {
+	a.TemperaturaDia()
+	a.TemperaturaNoite()
+}
+
+func (a *Temperatura) TemperaturaCorrente() float32 {
+	return a.Corrente
+}
+
+func (a *Temperatura) TemperaturaMedia() float32 {
 	return (a.temp1 + a.temp2 + a.temp3 + a.temp4) / 4
 }
 
-func (a *temperatura) temperaturaDia() {
+func (a *Temperatura) TemperaturaDia() {
 
-	if a.ambienteC.fase == "Dia" && a.ambienteC.fasecontador == 0 {
+	if a.ambienteC.Fase() == "Dia" && a.ambienteC.FaseContador() == 0 {
 		a.temp1 = 0
 		a.temp2 = 0
 		a.temp3 = 0
 		a.temp4 = 0
-		a.temperaturaCorrente = 0
+		a.Corrente = 0
 
 		a.tempdiamin = 0
 		a.tempdiamax = 0
@@ -61,11 +73,11 @@ func (a *temperatura) temperaturaDia() {
 
 		a.tempdiamax = a.temp1
 		a.tempdiamin = a.temp1
-		a.temperaturaCorrente = a.temp1
+		a.Corrente = a.temp1
 
 	}
 
-	if a.ambienteC.fase == "Dia" && a.ambienteC.fasecontador == 30 {
+	if a.ambienteC.Fase() == "Dia" && a.ambienteC.FaseContador() == 30 {
 
 		if rand.Intn(100) < 50 {
 			a.temp2 = a.temp1 + float32(rand.Intn(5)) + rand.Float32()
@@ -79,10 +91,10 @@ func (a *temperatura) temperaturaDia() {
 		if a.temp2 < a.tempdiamin {
 			a.tempdiamin = a.temp2
 		}
-		a.temperaturaCorrente = a.temp2
+		a.Corrente = a.temp2
 	}
 
-	if a.ambienteC.fase == "Dia" && a.ambienteC.fasecontador == 60 {
+	if a.ambienteC.Fase() == "Dia" && a.ambienteC.FaseContador() == 60 {
 
 		if rand.Intn(100) < 50 {
 			a.temp3 = a.temp2 + float32(rand.Intn(5)) + rand.Float32()
@@ -97,10 +109,10 @@ func (a *temperatura) temperaturaDia() {
 			a.tempdiamin = a.temp3
 		}
 
-		a.temperaturaCorrente = a.temp3
+		a.Corrente = a.temp3
 	}
 
-	if a.ambienteC.fase == "Dia" && a.ambienteC.fasecontador == 90 {
+	if a.ambienteC.Fase() == "Dia" && a.ambienteC.FaseContador() == 90 {
 
 		if rand.Intn(100) < 50 {
 			a.temp4 = a.temp3 + float32(rand.Intn(5)) + rand.Float32()
@@ -114,19 +126,19 @@ func (a *temperatura) temperaturaDia() {
 		if a.temp4 < a.tempdiamin {
 			a.tempdiamin = a.temp4
 		}
-		a.temperaturaCorrente = a.temp4
+		a.Corrente = a.temp4
 	}
 
 }
 
-func (a *temperatura) temperaturaNoite() {
+func (a *Temperatura) TemperaturaNoite() {
 
-	if a.ambienteC.fase == "Noite" && a.ambienteC.fasecontador == 0 {
+	if a.ambienteC.Fase() == "Noite" && a.ambienteC.FaseContador() == 0 {
 		a.temp1 = 0
 		a.temp2 = 0
 		a.temp3 = 0
 		a.temp4 = 0
-		a.temperaturaCorrente = 0
+		a.Corrente = 0
 
 		var reduz int = rand.Intn(5)
 
@@ -138,10 +150,10 @@ func (a *temperatura) temperaturaNoite() {
 
 		a.tempdiamax = a.temp1
 		a.tempdiamin = a.temp1
-		a.temperaturaCorrente = a.temp1
+		a.Corrente = a.temp1
 	}
 
-	if a.ambienteC.fase == "Noite" && a.ambienteC.fasecontador == 30 {
+	if a.ambienteC.Fase() == "Noite" && a.ambienteC.FaseContador() == 30 {
 
 		if rand.Intn(100) < 50 {
 			a.temp2 = a.temp1 + float32(rand.Intn(5)) + rand.Float32()
@@ -155,10 +167,10 @@ func (a *temperatura) temperaturaNoite() {
 		if a.temp2 < a.tempdiamin {
 			a.tempdiamin = a.temp2
 		}
-		a.temperaturaCorrente = a.temp2
+		a.Corrente = a.temp2
 	}
 
-	if a.ambienteC.fase == "Noite" && a.ambienteC.fasecontador == 60 {
+	if a.ambienteC.Fase() == "Noite" && a.ambienteC.FaseContador() == 60 {
 
 		if rand.Intn(100) < 50 {
 			a.temp3 = a.temp2 + float32(rand.Intn(5)) + rand.Float32()
@@ -172,10 +184,10 @@ func (a *temperatura) temperaturaNoite() {
 		if a.temp3 < a.tempdiamin {
 			a.tempdiamin = a.temp3
 		}
-		a.temperaturaCorrente = a.temp3
+		a.Corrente = a.temp3
 	}
 
-	if a.ambienteC.fase == "Noite" && a.ambienteC.fasecontador == 90 {
+	if a.ambienteC.Fase() == "Noite" && a.ambienteC.FaseContador() == 90 {
 
 		if rand.Intn(100) < 50 {
 			a.temp4 = a.temp3 + float32(rand.Intn(5)) + rand.Float32()
@@ -189,7 +201,37 @@ func (a *temperatura) temperaturaNoite() {
 		if a.temp4 < a.tempdiamin {
 			a.tempdiamin = a.temp4
 		}
-		a.temperaturaCorrente = a.temp4
+		a.Corrente = a.temp4
 	}
 
+}
+
+func (a *Temperatura) TemperaturaModo(_temp float32) string {
+	var ret string = ""
+
+	if _temp < 10 {
+		ret = "Muito Frio !"
+	}
+
+	if _temp >= 10 && _temp < 20 {
+		ret = "Frio !"
+	}
+
+	if _temp >= 20 && _temp < 28 {
+		ret = "Normal !"
+	}
+
+	if _temp >= 28 && _temp < 32 {
+		ret = "Quente !"
+	}
+
+	if _temp >= 32 {
+		ret = "Muito Quente !"
+	}
+
+	return ret
+}
+
+func (a *Temperatura) TemperaturaInfo() string {
+	return "Temperatura - " + fmt.Sprintf("%.2f ºC", a.TemperaturaCorrente()) + " : " + a.TemperaturaModo(a.TemperaturaCorrente())
 }

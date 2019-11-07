@@ -8,9 +8,9 @@ import (
 )
 
 const (
-	nomeProjeto = "Ecossistema"
-	janelaLargura  = 500
-	janelaAltura = 650
+	nomeProjeto   = "Ecossistema"
+	janelaLargura = 820
+	janelaAltura  = 800
 )
 
 func Configuracao() (successful bool) {

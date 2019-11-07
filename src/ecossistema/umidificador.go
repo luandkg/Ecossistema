@@ -1,33 +1,43 @@
 package ecossistema
 
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+)
 
-type umidificador struct {
+type Umidificador struct {
 	ambienteC *Ambiente
 
-	umidade         float32
-	umidadecontador int
-	umidadelimite   int
-
-
+	umidade            float32
+	umidadecontador    int
+	umidadelimite      int
+	umidadefinalizador int
 }
 
-func umidificadorNovo(a *Ambiente) *umidificador {
-	ret := umidificador{}
+func UmidificadorNovo(a *Ambiente) *Umidificador {
+	ret := Umidificador{}
 	ret.ambienteC = a
 
 	ret.umidade = 0
-	ret.umidadecontador = 16
+	ret.umidadecontador = 80
 	ret.umidadelimite = 15
-
+	ret.umidadefinalizador = ret.umidadelimite
 	return &ret
 }
 
-func (a *umidificador) umidadeNomeCorrente() string {
-	return a.umidadeNome(a.umidade)
+func (a *Umidificador) UmidadeCorrenteValor() float32 {
+	return a.umidade
 }
 
-func (a *umidificador) umidadeNome(_umidade float32) string {
+func (a *Umidificador) umidadeNomeCorrente() string {
+	return a.UmidadeNome(a.umidade)
+}
+
+func (a *Umidificador) UmidadeCorrente() string {
+	return a.UmidadeNome(a.umidade)
+}
+
+func (a *Umidificador) UmidadeNome(_umidade float32) string {
 	var ret string = ""
 
 	if _umidade >= 0 && _umidade < 20 {
@@ -53,13 +63,15 @@ func (a *umidificador) umidadeNome(_umidade float32) string {
 	return ret
 }
 
-func (a *umidificador) umidificar() {
+func (a *Umidificador) Umidificar() {
 
-	if a.umidadecontador >= a.umidadelimite {
+	if a.umidadecontador >= a.umidadefinalizador {
 		a.umidadecontador = 0
 		a.umidade = float32(rand.Intn(int(99))) + rand.Float32()
 
+		a.umidadefinalizador = a.umidadelimite + rand.Intn(30)
 
+		//utils.Log("logs/ambientelimitador.txt", "Umidade - "+strconv.Itoa(a.umidadefinalizador) + "   " + a.umidadeNomeCorrente())
 
 	} else {
 
@@ -73,4 +85,10 @@ func (a *umidificador) umidificar() {
 
 		a.umidadecontador++
 	}
+}
+
+func (a *Umidificador) UmidadeInfo() string {
+	var ret string = fmt.Sprintf("Umidade :  %.2f - %s", a.UmidadeCorrenteValor(), a.UmidadeCorrente())
+
+	return ret
 }

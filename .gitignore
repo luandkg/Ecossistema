@@ -7,4 +7,8 @@ Ecossistema.exe
 main.exe
 
 # Arquivos de logs
+logs/
 logs.txt
+ambiente.txt
+ambientelimitador.txt
+chuva.txt

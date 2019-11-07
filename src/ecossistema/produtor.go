@@ -9,10 +9,13 @@ import (
 type Produtor struct {
 	organismo
 
-	_nomecompleto       string
 	_adultociclo        int
 	_reproduzirciclo    int
 	_reproduzircontador int
+	_reproduzirGestacao int
+
+	_reproduzirEstaEmGestacao   bool
+	_reproduzirGestacaoContador int
 
 	_vida int
 
@@ -21,7 +24,7 @@ type Produtor struct {
 }
 
 // ProdutorNovo : Criar instancia de Produtor
-func ProdutorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Produtor {
+func ProdutorNovo(nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Produtor {
 
 	p := Produtor{_adultociclo: adulto}
 
@@ -35,12 +38,16 @@ func ProdutorNovo(nome string, adulto int, reproducao int, vida int, cor uint32,
 
 	p._reproduzirciclo = reproducao
 	p._reproduzircontador = 0
+	p._reproduzirGestacao = gestacao
+	p._reproduzirEstaEmGestacao = false
+	p._reproduzirGestacaoContador = 0
 
 	p._vida = vida
 	p._posx = 0
 	p._posy = 0
 
-	p.energizar(float32(adulto)*12)
+	//	p.energizar(float32(adulto) * 12)
+	p._energia = 0
 
 	p._cor = cor
 	p._ecossistemaC = ecossistemaC
@@ -54,12 +61,25 @@ func (p *Produtor) vivendo() {
 
 	if p._status == "vivo" {
 
-		p.energizar(-p._ecossistemaC.ambienteC.luz/150)
+		if p._reproduzirEstaEmGestacao == true {
 
-		p._ecossistemaC.produzirOxigenio(0.0005)
-		p._ecossistemaC.produzirCarbono(-0.00075)
+		} else {
 
-		p.energizar(p._ecossistemaC.ambienteC.luz/100)
+		}
+
+		if p._ecossistemaC.AmbienteC.fase == "Dia" {
+
+			p._ecossistemaC.ProduzirOxigenio(+5)
+			p._ecossistemaC.ProduzirCarbono(-5)
+
+			var te float32 = ((p._ecossistemaC.AmbienteC.luz / 100) / 100)
+			p.energizar(te)
+
+		} else {
+			p._ecossistemaC.ProduzirOxigenio(-5)
+			p._ecossistemaC.ProduzirCarbono(+5)
+
+		}
 
 		if p._fase == "nascido" {
 			p.jovem()
@@ -67,9 +87,7 @@ func (p *Produtor) vivendo() {
 
 		// Se o organismo for adulto inicia o ciclo de reproducao
 		if p._fase == "adulto" {
-
 			p.reproduzir()
-
 		}
 
 		if p._idade >= p._vida {
@@ -85,43 +103,78 @@ func (p *Produtor) jovem() {
 	if p._idade >= p._adultociclo {
 		p._fase = "adulto"
 
-		fmt.Println("       --- Produtor : ", p.Nome(), " Evoluiu : Adulto !!!")
+		fmt.Println("       --- Produtor : ", p.NomeCompleto(), " Evoluiu : Adulto !!!")
 
 	}
 }
 
-
 func (p *Produtor) morrer() {
 
 	p._status = "morto"
-	fmt.Println("       --- Produtor : ", p.Nome(), " Morreu !!!")
+	fmt.Println("       --- Produtor : ", p.NomeCompleto(), " Morreu !!!")
 
 }
+func (p *Produtor) reproduzirLapsoTemporal() {
 
-func (p *Produtor) reproduzir() {
+	//fmt.Println("       --- Produtor : ", p.Nome(), " ReproduzirContador : ",p._reproduzircontador)
 
 	p._reproduzircontador += 1
 
 	if p._reproduzircontador >= p._reproduzirciclo {
 		p._reproduzircontador = 0
-		fmt.Println("       --- Produtor : ", p.Nome(), " Reproduzindo !!!")
+		p._reproduzirEstaEmGestacao = true
+		p._reproduzirGestacaoContador = 0
 
-		var pg = ProdutorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._vida, p._cor, p._ecossistemaC)
+		fmt.Println("       --- Produtor : ", p.NomeCompleto(), " Em Gestação !!!")
+
+	}
+
+}
+
+func (p *Produtor) reproduzirEmGestacao() {
+
+	p._reproduzirGestacaoContador++
+
+	//fmt.Println("       --- Produtor : ", p.Nome(), " GestacaoContador : ",p._reproduzirGestacaoContador)
+
+	if p._reproduzirGestacaoContador >= p._reproduzirGestacao {
+		p._reproduzirEstaEmGestacao = false
+		p._reproduzircontador = 0
+
+		fmt.Println("       --- Produtor : ", p.NomeCompleto(), " Reproduzindo !!!")
+
+		var pg = ProdutorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._reproduzirGestacao, p._vida, p._cor, p._ecossistemaC)
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 
 		pg.mudarposicao(x, y)
 
 		p._ecossistemaC.AdicionarProdutor(pg)
+
+	}
+
+}
+
+func (p *Produtor) reproduzir() {
+
+	if p._reproduzirEstaEmGestacao == false {
+
+		p.reproduzirLapsoTemporal()
+
+	} else {
+
+		p.reproduzirEmGestacao()
+
 	}
 
 }
 
 func (p *Produtor) toString() string {
 
-	s1:=fmt.Sprintf("%f", p._energia)
+	s1 := " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]"
+	s2 := " POS [" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "]"
+	s3 := " - Status : " + p._status
+	s4 := "   -> { ENERGIA : " + fmt.Sprintf("%f", p._energia) + "}"
 
-	var str = p.Nome() + " [" + p.Fase() + " " + strconv.Itoa(p.Ciclos()) + "]" + " POS[" + strconv.Itoa(p.x()) + " " + strconv.Itoa(p.y()) + "] - Status : " + p._status + "   -> { ENERGIA : " + s1  + "}"
-
-	return str
+	return p.Nome() + s1 + s2 + s3 + s4 //+ strconv.FormatUint(p._cor, 10)
 }

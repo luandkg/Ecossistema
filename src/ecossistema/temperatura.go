@@ -235,3 +235,15 @@ func (a *Temperatura) TemperaturaModo(_temp float32) string {
 func (a *Temperatura) TemperaturaInfo() string {
 	return "Temperatura - " + fmt.Sprintf("%.2f ºC", a.TemperaturaCorrente()) + " : " + a.TemperaturaModo(a.TemperaturaCorrente())
 }
+
+func(a*Temperatura) Kelvin(valor float32) float32{
+	return valor+273.15
+}
+
+func(a*Temperatura) Fahrenheit(valor float32) float32{
+	return ((valor*9)/5)+32
+}
+
+func(a*Temperatura) Rankine(valor float32) float32{
+	return (((valor*9)/5)+32) + 459.67
+}

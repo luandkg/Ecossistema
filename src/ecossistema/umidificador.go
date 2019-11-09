@@ -37,10 +37,44 @@ func (a *Umidificador) UmidadeCorrente() string {
 	return a.UmidadeNome(a.umidade)
 }
 
+func (a *Umidificador) ArSecoStatus() string {
+	return a.ArSeco(a.umidade)
+}
+
+func (a *Umidificador) ArSeco(_umidade float32) string {
+
+	var ret string = ""
+
+	if _umidade < 12 {
+		ret = "Emergência"
+	}
+
+	if _umidade >= 12 && _umidade <= 20 {
+		ret = "Altera"
+	}
+
+	if _umidade >= 21 && _umidade <= 30 {
+		ret = "Atenção"
+	}
+
+	if _umidade >= 31 && _umidade <= 40 {
+		ret = "Observável"
+	}
+
+	if _umidade >= 41 {
+		ret = "Não"
+	}
+
+	return ret
+
+}
+
+
+
 func (a *Umidificador) UmidadeNome(_umidade float32) string {
 	var ret string = ""
 
-	if _umidade >= 0 && _umidade < 20 {
+	if  _umidade < 20 {
 		ret = "Muito Baixa"
 	}
 

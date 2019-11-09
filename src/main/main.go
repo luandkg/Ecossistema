@@ -39,6 +39,18 @@ func main() {
 	utils.Log("logs/logs.txt", "")
 	utils.Log("logs/logs.txt", " ------------------ SIMULACAO ------------------ ")
 
+
+	dir, err := os.Getwd()
+
+	if err != nil {
+		fmt.Printf("Diretorio nao encontrado: %s\n", err)
+	}
+
+	var fontecaminho string = dir + "/assets/fonts/OpenSans-Regular.ttf"
+
+	EscritorC := EscritorNovo(fontecaminho, 14, renderer)
+
+
 	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
 	ecossistemaC := ecossistema.EcossistemaNovo(ambienteC)
@@ -59,24 +71,19 @@ func main() {
 		ManipularEventos()
 
 		fmt.Println("---------------- Ciclo :  ", ambienteC.Ciclo(), " --------------------------------")
-		time.Sleep(time.Second / 15)
+		time.Sleep(time.Second / 5)
 		fmt.Println("")
 
 		tb.Atualizar(surface)
 
-		//if ambienteC.FaseContador() == 0 {
 
-		//tb.Mostrar()
+		ecossistemaC.RemoverOrganimosMortos(tb)
 
-			ecossistemaC.RemoverOrganimosMortos(tb)
-
-			ecossistemaC.LogEcossistema()
-
-		//}
+		ecossistemaC.LogEcossistema()
 
 		ecossistemaC.ExecutarCiclo(surface, tb)
 
-		AtualizarTela(ambienteC, ecossistemaC)
+		AtualizarTela(ambienteC, EscritorC)
 
 		ambienteC.AmbienteFase()
 

@@ -3,8 +3,7 @@
 ## Projeto Ecossistema - Linguagens de Programação - 2019 / 02
 
 
-![Ecossistema - Simulação de Competição de Recursos](https://github.com/luandkg/Ecossistema/tree/OrganismosXML/assets/prints/EcossistemaP3.png)
-
+![Ecossistema - Simulação de Competição de Recursos](https://github.com/luandkg/Ecossistema/blob/master/assets/prints/EcossistemaP3.png)
 
 ## Requisitos
 

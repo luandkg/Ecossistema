@@ -57,8 +57,6 @@ func(e*Escritor) EscreveCor(posx int32,posy int32,t string,cor sdl.Color) {
 	}
 
 
-	solidSurface.SaveBMP("surface.bmp")
-
 
 	var textoRenderizado = textobloco{int32(textoLargura), int32(textoAltura), novoTextoTextura}
 

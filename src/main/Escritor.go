@@ -64,6 +64,7 @@ func(e*Escritor) EscreveCor(posx int32,posy int32,t string,cor sdl.Color) {
 	e.renderizador.Copy(textoRenderizado.textura, nil, &sdl.Rect{posx, posy, textoRenderizado.largura, textoRenderizado.altura})
 
 
+
 	solidSurface.Free()
 
 }

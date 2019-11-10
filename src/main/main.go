@@ -1,12 +1,13 @@
 package main
 
+import "C"
 import (
+	"ecossistema"
 	"fmt"
 	"os"
-	"time"
-
-	"ecossistema"
+	"strconv"
 	"tabuleiro"
+	"time"
 	"utils"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -87,6 +88,9 @@ func main() {
 
 		ambienteC.AmbienteFase()
 
+		surface.SaveBMP("assets/prints/current.png")
+		surface.SaveBMP("assets/prints/ciclo/" +  strconv.Itoa(ambienteC.Ciclo() )+ ".png")
+
 	}
 
 	Encerrar()
@@ -94,3 +98,4 @@ func main() {
 	fmt.Println("Fim da Simulação !!!")
 
 }
+

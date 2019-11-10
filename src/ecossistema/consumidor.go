@@ -174,7 +174,7 @@ func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
 
 						for j := tetoBusca; j > chaoBusca; j-- {
 
-							if consumidor._posx == c._posx+i && consumidor._posy == c._posy+j {
+							if consumidor._posx == c._posx+i && consumidor._posy == c._posy+j && consumidor._vCadeiaAlimentar == 1{
 								fmt.Println("------------------------------------------------------------------")
 								fmt.Println("onca tem alvo")
 								fmt.Println("------------------------------------------------------------------")

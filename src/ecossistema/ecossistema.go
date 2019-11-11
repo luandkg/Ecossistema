@@ -377,7 +377,6 @@ func (e *Ecossistema) CarregarOrganismos(caminho string) {
 		}
 		if organismoC.Base.Tipo == "Consumidor" {
 			var cor uint32 = organismoC.Base.Cor
-			fmt.Println(organismoC.Alimentacao.Name[1])
 			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Name)
 		}
 	}

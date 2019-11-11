@@ -14,6 +14,7 @@ type Consumidor struct {
 	_reproduzirciclo    int
 	_reproduzircontador int
 
+	_Alimentacao		[]string
 	_temAlvo            bool
 	_alvoX              int
 	_alvoY              int
@@ -23,7 +24,7 @@ type Consumidor struct {
 	_ecossistemaC *Ecossistema
 }
 
-func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Consumidor {
+func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema, alimentacaoName []string) *Consumidor {
 
 	p := Consumidor{_adultociclo: adulto}
 
@@ -36,6 +37,8 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 
 	p._reproduzirciclo = reproducao
 	p._reproduzircontador = 0
+
+	p._Alimentacao = alimentacaoName
 
 	p._temAlvo = false
 	p._alvoX = 0
@@ -103,7 +106,7 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 		c._reproduzircontador = 0
 		fmt.Println("       --- Consumidor : ", c.Nome(), " Reproduzindo !!!")
 
-		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC)
+		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC, c._Alimentacao)
 		var x = utils.Aleatorionumero(50)
 		var y = utils.Aleatorionumero(50)
 

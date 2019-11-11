@@ -336,7 +336,7 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 }
 
-func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32) {
+func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, alimentacaoName []string) {
 
 	switch tipo {
 
@@ -347,7 +347,7 @@ func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, 
 
 	case "consumidor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e))
+			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e, alimentacaoName))
 		}
 
 	}
@@ -368,15 +368,17 @@ func (e *Ecossistema) CarregarOrganismos(caminho string) {
 
 		var organismoC *bioxml.Organismo = bioxml.CarregarOrganismo(caminho + OrganismoNome + ".organismo")
 
+		
 		if organismoC.Base.Tipo == "Produtor" {
 			var cor uint32 = organismoC.Base.Cor
 
-			e.GerarOrganismos("produtor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor)
+
+			e.GerarOrganismos("produtor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Name)
 		}
 		if organismoC.Base.Tipo == "Consumidor" {
 			var cor uint32 = organismoC.Base.Cor
-
-			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor)
+			fmt.Println(organismoC.Alimentacao.Name[1])
+			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Name)
 		}
 	}
 

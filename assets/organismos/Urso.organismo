@@ -1,4 +1,8 @@
 <Organismo>
   <Base Tipo="Consumidor" Adulto="300" Vida="1300" Cor="13379328"></Base>
   <Reproducao Frequencia="500" Gestacao="200"></Reproducao>
+  <Alimentacao>
+    <Name>Galinha</Name>
+    <Name>Mel</Name>
+  </Alimentacao>
 </Organismo>

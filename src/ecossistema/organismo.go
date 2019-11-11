@@ -20,6 +20,8 @@ type organismo struct {
 	_posx            int
 	_posy            int
 
+	_Alimentacao []string
+
 	rect             sdl.Rect
 
 	_energia       float32

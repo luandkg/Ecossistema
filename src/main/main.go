@@ -5,7 +5,6 @@ import (
 	"ecossistema"
 	"fmt"
 	"os"
-	"strconv"
 	"tabuleiro"
 	"time"
 	"utils"
@@ -47,19 +46,19 @@ func main() {
 		fmt.Printf("Diretorio nao encontrado: %s\n", err)
 	}
 
-	var fontecaminho string = dir + "/assets/fonts/OpenSans-Regular.ttf"
+	var LOCAL_FONTE string = dir + "/assets/fonts/OpenSans-Regular.ttf"
+	var LOCAL_ORGANISMOS string="assets/organismos/"
+var LOCAL_PRINTS string="assets/prints/"
 
-	EscritorC := EscritorNovo(fontecaminho, 14, renderer)
+	EscritorC := EscritorNovo(LOCAL_FONTE, 14, renderer)
 
 
 	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
 	ecossistemaC := ecossistema.EcossistemaNovo(ambienteC)
 
-	// Carregar Organismos
-	var caminho string = "assets/organismos/"
 
-	ecossistemaC.CarregarOrganismos(caminho)
+	ecossistemaC.CarregarOrganismos(LOCAL_ORGANISMOS)
 
 	ecossistemaC.MapearOrganismos(tb)
 
@@ -88,8 +87,7 @@ func main() {
 
 		ambienteC.AmbienteFase()
 
-		surface.SaveBMP("assets/prints/current.png")
-		surface.SaveBMP("assets/prints/ciclo/" +  strconv.Itoa(ambienteC.Ciclo() )+ ".png")
+		SalvarTela(ambienteC,surface,LOCAL_PRINTS)
 
 	}
 

@@ -1,5 +1,5 @@
 <Organismo>
-  <Base Tipo="Consumidor" Adulto="300" Vida="1300" Cor="13379328"></Base>
+  <Base Tipo="Consumidor" Adulto="300" Vida="1300" Cor="3093151"></Base>
   <Reproducao Frequencia="500" Gestacao="200"></Reproducao>
   <Alimentacao>
     <Name>Capim</Name>

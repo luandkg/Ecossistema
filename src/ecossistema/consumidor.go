@@ -150,6 +150,7 @@ func (c *Consumidor) VerificarAlvo(tb *tabuleiro.Tabuleiro) {
 			var chaoBusca = -tetoBusca
 
 			// TODO: Refatorar com posicoes absolutas no tabuleiro
+			// TODO Refatorar e retirar for duplicado
 			if (c._nivelconsumidor == 1){
 
 				for _, produtor := range c._ecossistemaC.produtores {

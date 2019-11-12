@@ -134,7 +134,7 @@ func verificaAlimento(nome string, alimentacao []string) bool{
     return false
 }
 
-func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
+func (c *Consumidor) VerificarAlvo(tb *tabuleiro.Tabuleiro) {
 
 	if !c._temAlvo {
 

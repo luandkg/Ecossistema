@@ -1,8 +1,9 @@
 <Organismo>
-  <Base Tipo="Consumidor" nivel="1" Adulto="300" Vida="1300" Cor="3093151"></Base>
+  <Base Tipo="Consumidor" nivel="1" Adulto="300" Vida="1300" Cor="16777215"></Base>
   <Reproducao Frequencia="500" Gestacao="200"></Reproducao>
   <Alimentacao>
     <Nome>Capim</Nome>
     <Nome>CapimVerde</Nome>
   </Alimentacao>
 </Organismo>
+<!---- Branco--->

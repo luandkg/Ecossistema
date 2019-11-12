@@ -9,6 +9,7 @@ type Organismo struct {
 
 type Base struct {
 	Tipo   string `xml:"Tipo,attr"`
+	Nivel int `xml:"Nivel,attr"`
 	Adulto int    `xml:"Adulto,attr"`
 	Vida   int    `xml:"Vida,attr"`
 	Cor    uint32 `xml:"Cor,attr"`
@@ -25,5 +26,5 @@ type Taxas struct {
 }
 
 type Alimentacao struct{
-	Name []string `xml:"Name"`
+	Nome []string `xml:"Nome"`
 }

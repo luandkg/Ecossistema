@@ -1,7 +1,7 @@
 <Organismo>
-  <Base Tipo="Consumidor" Adulto="400" Vida="1400" Cor="16776960"></Base>
+  <Base Tipo="Consumidor" Nivel="2" Adulto="400" Vida="1400" Cor="16776960"></Base>
   <Reproducao Frequencia="600" Gestacao="500"></Reproducao>
   <Alimentacao>
-    <Name>Veado</Name>
+    <Nome>Veado</Nome>
   </Alimentacao>
 </Organismo>

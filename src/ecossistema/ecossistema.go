@@ -336,7 +336,7 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 }
 
-func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, alimentacaoName []string) {
+func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, alimentacaoNome []string, nivelconsumidor int) {
 
 	switch tipo {
 
@@ -347,7 +347,7 @@ func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, 
 
 	case "consumidor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e, alimentacaoName))
+			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e, alimentacaoNome, nivelconsumidor))
 		}
 
 	}
@@ -373,11 +373,11 @@ func (e *Ecossistema) CarregarOrganismos(caminho string) {
 			var cor uint32 = organismoC.Base.Cor
 
 
-			e.GerarOrganismos("produtor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Name)
+			e.GerarOrganismos("produtor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Nome, organismoC.Base.Nivel)
 		}
 		if organismoC.Base.Tipo == "Consumidor" {
 			var cor uint32 = organismoC.Base.Cor
-			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Name)
+			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Nome, organismoC.Base.Nivel)
 		}
 	}
 

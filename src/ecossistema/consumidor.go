@@ -13,8 +13,10 @@ type Consumidor struct {
 	_adultociclo        int
 	_reproduzirciclo    int
 	_reproduzircontador int
+	
+	_nivelconsumidor	int
+	_alimentacao		[]string
 
-	_Alimentacao		[]string
 	_temAlvo            bool
 	_alvoX              int
 	_alvoY              int
@@ -24,7 +26,7 @@ type Consumidor struct {
 	_ecossistemaC *Ecossistema
 }
 
-func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema, alimentacaoName []string) *Consumidor {
+func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint32, ecossistemaC *Ecossistema, alimentacaoNome []string, nivelconsumidor int) *Consumidor {
 
 	p := Consumidor{_adultociclo: adulto}
 
@@ -38,7 +40,8 @@ func ConsumidorNovo(nome string, adulto int, reproducao int, vida int, cor uint3
 	p._reproduzirciclo = reproducao
 	p._reproduzircontador = 0
 
-	p._Alimentacao = alimentacaoName
+	p._nivelconsumidor = nivelconsumidor
+	p._alimentacao = alimentacaoNome
 
 	p._temAlvo = false
 	p._alvoX = 0
@@ -106,7 +109,7 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 		c._reproduzircontador = 0
 		fmt.Println("       --- Consumidor : ", c.Nome(), " Reproduzindo !!!")
 
-		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC, c._Alimentacao)
+		var pg = ConsumidorNovo(c._nome, c._adultociclo, c._reproduzirciclo, c._vida, c._cor, c._ecossistemaC, c._alimentacao, c._nivelconsumidor)
 		var x = utils.Aleatorionumero(50)
 		var y = utils.Aleatorionumero(50)
 
@@ -138,6 +141,8 @@ func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
 			var chaoBusca = -tetoBusca
 
 			// TODO: Refatorar com posicoes absolutas no tabuleiro
+			//possiveisAlvos :=
+
 			for _, produtor := range c._ecossistemaC.produtores {
 
 				for i := tetoBusca; i > chaoBusca; i-- {

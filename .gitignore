@@ -6,11 +6,11 @@ src/github.com/
 pkg/
 Ecossistema.exe
 main.exe
-main
+main/main
 
 # Arquivos de logs
+assets/prints/
 logs/
 logs.txt
 ambiente.txt
-ambientelimitador.txt
 chuva.txt

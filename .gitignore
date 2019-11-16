@@ -9,8 +9,5 @@ main.exe
 main/main
 
 # Arquivos de logs
-assets/prints/
-logs/
+assets/prints/ciclo
 logs.txt
-ambiente.txt
-chuva.txt

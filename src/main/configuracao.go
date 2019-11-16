@@ -9,7 +9,7 @@ import (
 
 const (
 	nomeProjeto   = "Ecossistema"
-	janelaLargura = 820
+	janelaLargura = 920
 	janelaAltura  = 800
 )
 

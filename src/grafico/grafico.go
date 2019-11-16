@@ -4,7 +4,7 @@ import "github.com/veandco/go-sdl2/sdl"
 
 func GraficoSequenciador(surface sdl.Surface, alturageral int32, cor uint32, dados Sequenciador) {
 
-	var GX int32 = 510
+	var GX int32 = 600
 	var GY int32 = alturageral
 	var GLargura int32 = 300
 	var GAltura int32 = 100
@@ -42,5 +42,30 @@ func GraficoSequenciador(surface sdl.Surface, alturageral int32, cor uint32, dad
 
 		ni++
 	}
+
+}
+
+
+func RegiaoRetangular(surface sdl.Surface,localx int32, localy int32,tamanhox int32,tamanhoy int32, cor uint32) {
+
+	var GX int32 = localx
+	var GY int32 = localy
+	var GLargura int32 = tamanhox
+	var GAltura int32 = tamanhoy
+	var Barra int32 = 2
+
+	var L1 = sdl.Rect{GX, GY, GLargura, Barra}
+	surface.FillRect(&L1, 0xFFFF00)
+
+	var L2 = sdl.Rect{GX, GY + GAltura, GLargura, Barra}
+	surface.FillRect(&L2, 0xFFFF00)
+
+	var L3 = sdl.Rect{GX, GY, Barra, GAltura}
+	surface.FillRect(&L3, 0xFFFF00)
+
+	var L4 = sdl.Rect{GX + GLargura, GY, Barra, GAltura + Barra}
+	surface.FillRect(&L4, 0xFFFF00)
+
+
 
 }

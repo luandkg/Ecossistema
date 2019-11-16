@@ -1,12 +1,12 @@
 package main
 
+import "C"
 import (
+	"ecossistema"
 	"fmt"
 	"os"
-	"time"
-
-	"ecossistema"
 	"tabuleiro"
+	"time"
 	"utils"
 
 	"github.com/veandco/go-sdl2/sdl"
@@ -39,14 +39,26 @@ func main() {
 	utils.Log("logs/logs.txt", "")
 	utils.Log("logs/logs.txt", " ------------------ SIMULACAO ------------------ ")
 
+
+	dir, err := os.Getwd()
+
+	if err != nil {
+		fmt.Printf("Diretorio nao encontrado: %s\n", err)
+	}
+
+	var LOCAL_FONTE string = dir + "/assets/fonts/OpenSans-Regular.ttf"
+	var LOCAL_ORGANISMOS string="assets/organismos/"
+var LOCAL_PRINTS string="assets/prints/"
+
+	EscritorC := EscritorNovo(LOCAL_FONTE, 14, renderer)
+
+
 	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
 	ecossistemaC := ecossistema.EcossistemaNovo(ambienteC)
 
-	// Carregar Organismos
-	var caminho string = "assets/organismos/"
 
-	ecossistemaC.CarregarOrganismos(caminho)
+	ecossistemaC.CarregarOrganismos(LOCAL_ORGANISMOS)
 
 	ecossistemaC.MapearOrganismos(tb)
 
@@ -59,26 +71,23 @@ func main() {
 		ManipularEventos()
 
 		fmt.Println("---------------- Ciclo :  ", ambienteC.Ciclo(), " --------------------------------")
-		time.Sleep(time.Second / 15)
+		time.Sleep(time.Second / 5)
 		fmt.Println("")
 
 		tb.Atualizar(surface)
 
-		//if ambienteC.FaseContador() == 0 {
 
-		//tb.Mostrar()
+		ecossistemaC.RemoverOrganimosMortos(tb)
 
-			ecossistemaC.RemoverOrganimosMortos(tb)
-
-			ecossistemaC.LogEcossistema()
-
-		//}
+		ecossistemaC.LogEcossistema()
 
 		ecossistemaC.ExecutarCiclo(surface, tb)
 
-		AtualizarTela(ambienteC, ecossistemaC)
+		AtualizarTela(ambienteC, EscritorC)
 
 		ambienteC.AmbienteFase()
+
+		SalvarTela(ambienteC,surface,LOCAL_PRINTS)
 
 	}
 
@@ -87,3 +96,4 @@ func main() {
 	fmt.Println("Fim da Simulação !!!")
 
 }
+

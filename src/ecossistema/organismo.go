@@ -21,6 +21,8 @@ type organismo struct {
 	_posy int
 
 	rect sdl.Rect
+	_Alimentacao []string
+
 
 	_energia        float32
 	_direcao        string

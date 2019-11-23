@@ -8,25 +8,47 @@ import (
 	"strconv"
 )
 
-func AtualizarTela(a *ecossistema.Ambiente, e *Escritor) {
+func AtualizarTela(a *ecossistema.Ambiente, EscritorC *Escritor) {
 
 	AtualizarTelaBarraDia(*a, surface)
 
 	//RenderizarTextos(e)
 
-	TextosInfo(a, surface, e)
+	TextosInfo(a, surface, EscritorC)
 
-	grafico.GraficoSequenciador(*surface, 50, 0x782206, a.SeqTemperatura)
 
-	grafico.GraficoSequenciador(*surface, 155, 0x1F4500, a.SeqVento)
+	var alturador int32 = 10
 
-	grafico.GraficoSequenciador(*surface, 260, 0x7F4500, a.SeqUmidade)
 
-	grafico.GraficoSequenciador(*surface, 365, 0x5F4500, a.SeqNuvem)
+	EscritorC.EscreveBranco(700, alturador,"Temperatura")
+	alturador+=20
+	grafico.GraficoSequenciador(*surface, alturador, 0x782206, a.SeqTemperatura)
 
-	grafico.GraficoSequenciador(*surface, 470, 0x2F4700, a.SeqLuz)
+	alturador+=110
+	EscritorC.EscreveBranco(700, alturador,"Vento")
+	alturador+=20
+	grafico.GraficoSequenciador(*surface, alturador, 0x1F4500, a.SeqVento)
 
-	grafico.GraficoSequenciador(*surface, 575, 0x3F5F50, a.SeqChuva)
+
+	alturador+=110
+	EscritorC.EscreveBranco(700, alturador,"Umidade")
+	alturador+=20
+	grafico.GraficoSequenciador(*surface, alturador, 0x7F4500, a.SeqUmidade)
+
+	alturador+=110
+	EscritorC.EscreveBranco(700, alturador,"Nuvem")
+	alturador+=20
+	grafico.GraficoSequenciador(*surface, alturador, 0x5F4500, a.SeqNuvem)
+
+	alturador+=110
+	EscritorC.EscreveBranco(700, alturador,"Luminosidade")
+	alturador+=20
+	grafico.GraficoSequenciador(*surface, alturador, 0x2F4700, a.SeqLuz)
+
+	alturador+=110
+	EscritorC.EscreveBranco(700, alturador,"Chuva")
+	alturador+=20
+	grafico.GraficoSequenciador(*surface, alturador, 0x3F5F50, a.SeqChuva)
 
 	renderer.Present()
 
@@ -38,37 +60,41 @@ func TextosInfo(e *ecossistema.Ambiente, s *sdl.Surface, EscritorC *Escritor) {
 
 	EscritorC.EscreveBranco(250, 530, "Informações")
 
-	var alturador int32 = 550
+	var CA int32 = 10
+	var CB int32 = 200
+	var CC int32 = 400
+
+	var alturador int32 = 585
 
 	EscritorC.EscreveBranco(10, alturador, fmt.Sprintf("Nuvens: %s", e.NuvemCorrente()))
 	EscritorC.EscreveBranco(430, alturador, fmt.Sprintf("%d", e.Dia()))
 
 	alturador += 25
-	EscritorC.EscreveBranco(10, alturador, fmt.Sprintf("Temp: %.2f ºC", e.TemperaturaCorrente()))
-	EscritorC.EscreveBranco(200, alturador, fmt.Sprintf("Umidade: %s", e.UmidadeCorrente()))
-	EscritorC.EscreveBranco(400, alturador, fmt.Sprintf("Chuva : %s", e.ChuvaCorrente()))
+	EscritorC.EscreveBranco(CA, alturador, fmt.Sprintf("Temp: %.2f ºC", e.TemperaturaCorrente()))
+	EscritorC.EscreveBranco(CB, alturador, fmt.Sprintf("Umidade: %s", e.UmidadeCorrente()))
+	EscritorC.EscreveBranco(CC, alturador, fmt.Sprintf("Chuva : %s", e.ChuvaCorrente()))
 
 	alturador += 25
-	EscritorC.EscreveBranco(10, alturador, fmt.Sprintf("Vento: %s", e.VentoCorrente()))
-	EscritorC.EscreveBranco(200, alturador, fmt.Sprintf("Luz : %s", e.LuzCorrente()))
-	EscritorC.EscreveBranco(400, alturador, fmt.Sprintf("Nuvens: %s", e.NuvemCorrente()))
+	EscritorC.EscreveBranco(CA, alturador, fmt.Sprintf("Vento: %s", e.VentoCorrente()))
+	EscritorC.EscreveBranco(CB, alturador, fmt.Sprintf("Luz : %s", e.LuzCorrente()))
+	EscritorC.EscreveBranco(CC, alturador, fmt.Sprintf("Nuvens: %s", e.NuvemCorrente()))
 
 	alturador += 25
-	EscritorC.EscreveBranco(10, alturador, fmt.Sprintf("Vento Origem: %s", e.VentoOrigem()))
-	EscritorC.EscreveBranco(200, alturador, fmt.Sprintf("Vento Destino: %s", e.VentoDestino()))
-	EscritorC.EscreveBranco(400, alturador, fmt.Sprintf("Vento Modo: %s", e.VentoModo()))
-
-	alturador += 25
-
-	EscritorC.EscreveBranco(10, alturador, fmt.Sprintf("Chuva Tipo: %s", e.ChuvaTipo()))
-	EscritorC.EscreveBranco(200, alturador, fmt.Sprintf("Chuva Modo: %s", e.ChuvaModo()))
-	EscritorC.EscreveBranco(400, alturador, "Chuva Int.: "+e.ChuvaIntensidadeStatus())
+	EscritorC.EscreveBranco(CA, alturador, fmt.Sprintf("Vento Origem: %s", e.VentoOrigem()))
+	EscritorC.EscreveBranco(CB, alturador, fmt.Sprintf("Vento Destino: %s", e.VentoDestino()))
+	EscritorC.EscreveBranco(CC, alturador, fmt.Sprintf("Vento Modo: %s", e.VentoModo()))
 
 	alturador += 25
 
-	EscritorC.EscreveBranco(10, alturador, "Vento Vel.: "+e.VentoVelocidadeCorrenteInfo())
-	EscritorC.EscreveBranco(200, alturador, "Chuva Int.: "+e.ChuvaIntensidadeInfo())
-	EscritorC.EscreveBranco(400, alturador, fmt.Sprintf("Ar Seco: %s", e.ArSecoStatus()))
+	EscritorC.EscreveBranco(CA, alturador, fmt.Sprintf("Chuva Tipo: %s", e.ChuvaTipo()))
+	EscritorC.EscreveBranco(CB, alturador, fmt.Sprintf("Chuva Modo: %s", e.ChuvaModo()))
+	EscritorC.EscreveBranco(CC, alturador, "Chuva Int.: "+e.ChuvaIntensidadeStatus())
+
+	alturador += 25
+
+	EscritorC.EscreveBranco(CA, alturador, "Vento Vel.: "+e.VentoVelocidadeCorrenteInfo())
+	EscritorC.EscreveBranco(CB, alturador, "Chuva Int.: "+e.ChuvaIntensidadeInfo())
+	EscritorC.EscreveBranco(CC, alturador, fmt.Sprintf("Ar Seco: %s", e.ArSecoStatus()))
 
 	alturador += 35
 

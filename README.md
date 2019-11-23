@@ -14,7 +14,7 @@
     - TERMINAL : apt install libsdl2{,-image,-mixer,-ttf,-gfx}-dev
     - TERMINAL: go get -v github.com/veandco/go-sdl2/{sdl,img,mix,ttf}
  
-##Packages
+## Packages
 
     - BioXML
     - Ecossistema
@@ -25,7 +25,7 @@
 ## Conceito Geral
 
 Simulação de um ecossistema terrestre mostrando a interação de produtores e consumidores, entre si e com fatores abióticos, como chuva, vento, umidade e etc.
-A simulação também implementa funções de ciclo de vida, como nascimento,movimentação, alimentação, reprodução e morte.
+A simulação também implementa funções de ciclo de vida, como nascimento, movimentação, alimentação, reprodução e morte.
 
 ## Funções Implementadas
 

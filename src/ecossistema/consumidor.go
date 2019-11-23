@@ -14,9 +14,9 @@ type Consumidor struct {
 	_reproduzirciclo    int
 	_reproduzircontador int
 
-	_temAlvo            bool
-	_alvoX              int
-	_alvoY              int
+	_temAlvo bool
+	_alvoX   int
+	_alvoY   int
 
 	_vida int
 
@@ -119,7 +119,7 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 }
 
-func (c *Consumidor) VerificarAlvo (tb *tabuleiro.Tabuleiro) {
+func (c *Consumidor) VerificarAlvo(tb *tabuleiro.Tabuleiro) {
 
 	if !c._temAlvo {
 

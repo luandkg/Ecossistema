@@ -39,7 +39,6 @@ func main() {
 	utils.Log("logs/logs.txt", "")
 	utils.Log("logs/logs.txt", " ------------------ SIMULACAO ------------------ ")
 
-
 	dir, err := os.Getwd()
 
 	if err != nil {
@@ -47,16 +46,14 @@ func main() {
 	}
 
 	var LOCAL_FONTE string = dir + "/assets/fonts/OpenSans-Regular.ttf"
-	var LOCAL_ORGANISMOS string="assets/organismos/"
-var LOCAL_PRINTS string="assets/prints/"
+	var LOCAL_ORGANISMOS string = "assets/organismos/"
+	var LOCAL_PRINTS string = "assets/prints/"
 
 	EscritorC := EscritorNovo(LOCAL_FONTE, 14, renderer)
-
 
 	tb := tabuleiro.TabuleiroNovo("MATRIZ")
 	ambienteC := ecossistema.AmbienteNovo()
 	ecossistemaC := ecossistema.EcossistemaNovo(ambienteC)
-
 
 	ecossistemaC.CarregarOrganismos(LOCAL_ORGANISMOS)
 
@@ -76,7 +73,6 @@ var LOCAL_PRINTS string="assets/prints/"
 
 		tb.Atualizar(surface)
 
-
 		ecossistemaC.RemoverOrganimosMortos(tb)
 
 		ecossistemaC.LogEcossistema()
@@ -87,7 +83,7 @@ var LOCAL_PRINTS string="assets/prints/"
 
 		ambienteC.AmbienteFase()
 
-		SalvarTela(ambienteC,surface,LOCAL_PRINTS)
+		SalvarTela(ambienteC, surface, LOCAL_PRINTS)
 
 	}
 
@@ -96,4 +92,3 @@ var LOCAL_PRINTS string="assets/prints/"
 	fmt.Println("Fim da Simulação !!!")
 
 }
-

@@ -66,8 +66,6 @@ func (a *Ventos) VentoModo() string {
 
 	if a.ventoorigem == a.ventodestino {
 
-
-
 		if a.vento >= 10 && a.vento < 20 {
 			ventomodo = "Ciclone"
 		}
@@ -236,14 +234,12 @@ func (a *Ventos) VentoVelocidadeCorrenteInfo() string {
 	return fmt.Sprintf("%.2f Km/h", a.VentoVelocidadeCorrente())
 }
 
-
 func (a *Ventos) VentoVelocidadeCorrente() float32 {
 	return a.VentoVelocidade(a.vento)
 }
 
 func (a *Ventos) VentoVelocidade(_vento float32) float32 {
 	var ret float32 = 0
-
 
 	if _vento < 10 {
 		ret = 0
@@ -254,53 +250,52 @@ func (a *Ventos) VentoVelocidade(_vento float32) float32 {
 	}
 
 	if _vento >= 15 && _vento < 20 {
-		ret =float32( 1+ utils.Aleatorionumero(4)) + rand.Float32()
+		ret = float32(1+utils.Aleatorionumero(4)) + rand.Float32()
 	}
 
 	if _vento >= 20 && _vento < 25 {
-		ret =float32( 5+ utils.Aleatorionumero(6)) + rand.Float32()
+		ret = float32(5+utils.Aleatorionumero(6)) + rand.Float32()
 	}
 
 	if _vento >= 25 && _vento < 30 {
-		ret =float32( 11+ utils.Aleatorionumero(8)) + rand.Float32()
+		ret = float32(11+utils.Aleatorionumero(8)) + rand.Float32()
 	}
 
 	if _vento >= 30 && _vento < 35 {
-		ret =float32( 19+ utils.Aleatorionumero(2)) + rand.Float32()
+		ret = float32(19+utils.Aleatorionumero(2)) + rand.Float32()
 	}
 
 	if _vento >= 35 && _vento < 40 {
-		ret =float32( 28+ utils.Aleatorionumero(4)) + rand.Float32()
+		ret = float32(28+utils.Aleatorionumero(4)) + rand.Float32()
 	}
 
 	if _vento >= 40 && _vento < 45 {
-		ret =float32( 38+ utils.Aleatorionumero(6)) + rand.Float32()
+		ret = float32(38+utils.Aleatorionumero(6)) + rand.Float32()
 	}
 
 	if _vento >= 45 && _vento < 50 {
-		ret =float32( 49+ utils.Aleatorionumero(8)) + rand.Float32()
+		ret = float32(49+utils.Aleatorionumero(8)) + rand.Float32()
 	}
 
 	if _vento >= 50 && _vento < 60 {
-		ret =float32( 61+ utils.Aleatorionumero(2)) + rand.Float32()
+		ret = float32(61+utils.Aleatorionumero(2)) + rand.Float32()
 	}
 
 	if _vento >= 60 && _vento < 70 {
-		ret =float32( 74+ utils.Aleatorionumero(4)) + rand.Float32()
+		ret = float32(74+utils.Aleatorionumero(4)) + rand.Float32()
 	}
 
 	if _vento >= 70 && _vento < 80 {
-		ret =float32( 88+ utils.Aleatorionumero(6)) + rand.Float32()
+		ret = float32(88+utils.Aleatorionumero(6)) + rand.Float32()
 	}
 
 	if _vento >= 80 && _vento < 90 {
-		ret =float32( 102+ utils.Aleatorionumero(8)) + rand.Float32()
+		ret = float32(102+utils.Aleatorionumero(8)) + rand.Float32()
 	}
 
 	if _vento >= 90 {
-		ret =float32( 117+ utils.Aleatorionumero(10)) + rand.Float32()
+		ret = float32(117+utils.Aleatorionumero(10)) + rand.Float32()
 	}
 
 	return ret
 }
-

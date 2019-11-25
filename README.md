@@ -32,6 +32,8 @@ A simulação também implementa funções de ciclo de vida, como nascimento, mo
      - Carregamento automático de espécies
      - Geração randômica de organismos a partir das espécies
      - Mapeamento do espaço em Tabuleiro [50 x 50]
+     - Paralelismo para processamento das listas de produtores e consumidores
+     - Paralelismo para processamento do ciclo de vários organismos
      - Interface Gráfica SDL
      - Interação de FATORES ABIÓTICOS
             - Tempo [ Ciclo - Dia e Noite ]

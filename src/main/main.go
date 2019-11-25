@@ -7,6 +7,7 @@ import (
 	"os"
 	"tabuleiro"
 	"time"
+
 	"utils"
 
 	"github.com/veandco/go-sdl2/sdl"

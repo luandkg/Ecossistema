@@ -23,7 +23,6 @@ type organismo struct {
 	rect sdl.Rect
 	_Alimentacao []string
 
-
 	_energia        float32
 	_direcao        string
 	_dirquantidade  int

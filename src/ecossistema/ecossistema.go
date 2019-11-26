@@ -2,7 +2,9 @@ package ecossistema
 
 import (
 	"fmt"
+	"runtime"
 	"strconv"
+	"sync"
 	"tabuleiro"
 
 	"bioxml"
@@ -177,62 +179,133 @@ func (e *Ecossistema) RemoverOrganimosMortos(tb *tabuleiro.Tabuleiro) {
 
 func (e *Ecossistema) ExecutarCiclo(surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
 
-	e.executarCicloProdutores(surface)
+	doneProdutores := make(chan bool)
 
-	e.executarCicloConsumidores(surface, tb)
+	doneConsumidores := make(chan bool)
+
+	go e.executarCicloProdutores(surface, doneProdutores)
+
+	go e.executarCicloConsumidores(surface, tb, doneConsumidores)
+
+	<-doneProdutores
+
+	<-doneConsumidores
+
+	close(doneProdutores)
+
+	close(doneConsumidores)
 
 }
 
-func (e *Ecossistema) executarCicloProdutores(surface *sdl.Surface) {
+func (e *Ecossistema) executarCicloProdutores(surface *sdl.Surface, done chan bool) {
 
 	fmt.Println("PRODUTORES")
 
+	var wg sync.WaitGroup
+
+	max := 10
+
+	sem := make(chan bool, max)
+
 	for p := range e.produtores {
+
+		wg.Add(1)
+
+		sem <- true
 
 		produtorc := e.produtores[p]
 
-		if produtorc.Status() == "vivo" {
+		go func() {
 
-			//	fmt.Println("      - ", produtorc.toString())
-			produtorc.vivendo()
-			produtorc.atualizar(surface)
+			if produtorc.Status() == "vivo" {
 
-		}
-
-	}
-
-}
-
-func (e *Ecossistema) executarCicloConsumidores(surface *sdl.Surface, tb *tabuleiro.Tabuleiro) {
-
-	fmt.Println("CONSUMIDORES")
-
-	for p := range e.consumidores {
-
-		consumidorc := e.consumidores[p]
-
-		if consumidorc.Status() == "vivo" {
-
-			//fmt.Println("      - ", consumidorc.toString())
-			consumidorc.vivendo(tb)
-
-			if consumidorc.TemAlvo() {
-
-				consumidorc.CacarAlvo(tb)
-
-			} else {
-
-				consumidorc.Movimento(tb)
+				//	fmt.Println("      - ", produtorc.toString())
+				produtorc.vivendo()
+				produtorc.atualizar(surface)
 
 			}
 
-			consumidorc.VerificarAlvo(tb)
+			wg.Done()
 
-			consumidorc.atualizar(surface)
+			<-sem
 
-		}
+		}()
 
 	}
+
+	fmt.Println("goroutiness ----------------------- : ", runtime.NumGoroutine())
+
+
+	for i := 0; i < cap(sem); i++ {
+		sem <- true
+	}
+
+	close(sem)
+
+	wg.Wait()
+
+	done <- true
+
+}
+
+func (e *Ecossistema) executarCicloConsumidores(surface *sdl.Surface, tb *tabuleiro.Tabuleiro, done chan bool) {
+
+	fmt.Println("CONSUMIDORES")
+
+	var wg sync.WaitGroup
+
+	max := 10
+
+	sem := make(chan bool, max)
+
+	for p := range e.consumidores {
+
+		wg.Add(1)
+
+		sem <- true
+
+		consumidorc := e.consumidores[p]
+
+		go func() {
+
+			if consumidorc.Status() == "vivo" {
+
+				//fmt.Println("      - ", consumidorc.toString())
+				consumidorc.vivendo(tb)
+
+				if consumidorc.TemAlvo() {
+
+					consumidorc.CacarAlvo(tb)
+
+				} else {
+
+					consumidorc.Movimento(tb)
+
+				}
+
+				consumidorc.VerificarAlvo(tb)
+
+				consumidorc.atualizar(surface)
+
+			}
+
+			wg.Done()
+
+			<-sem
+
+		}()
+
+	}
+
+	for i := 0; i < cap(sem); i++ {
+		sem <- true
+	}
+
+	close(sem)
+
+	wg.Wait()
+
+	done <- true
 
 }
 

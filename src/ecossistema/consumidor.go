@@ -125,7 +125,6 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 }
 
-
 func verificaAlimento(nome string, alimentacao []string) bool{
 	for _, a := range alimentacao {
         if a == nome {

@@ -456,10 +456,10 @@ func (e *Ecossistema) CarregarOrganismos(caminho string) {
 
 }
 
-func (e *Ecossistema) Produtores_Contagem() int   { return e.produtores_contagem }
-func (e *Ecossistema) Produtores_Mortos() int   { return  e.produtores_mortos }
-func (e *Ecossistema) Produtores_Vivos() int   { return e.produtores_contagem - e.produtores_mortos }
+func (e *Ecossistema) Produtores_Contagem() int { return e.produtores_contagem }
+func (e *Ecossistema) Produtores_Mortos() int   { return e.produtores_mortos }
+func (e *Ecossistema) Produtores_Vivos() int    { return e.produtores_contagem - e.produtores_mortos }
 
-func (e *Ecossistema) Consumidores_Contagem() int { return e.consumidores_contagem  }
-func (e *Ecossistema) Consumidores_Mortos() int { return  e.consumidores_mortos }
-func (e *Ecossistema) Consumidores_Vivos() int { return e.consumidores_contagem - e.consumidores_mortos }
+func (e *Ecossistema) Consumidores_Contagem() int { return e.consumidores_contagem }
+func (e *Ecossistema) Consumidores_Mortos() int   { return e.consumidores_mortos }
+func (e *Ecossistema) Consumidores_Vivos() int    { return e.consumidores_contagem - e.consumidores_mortos }

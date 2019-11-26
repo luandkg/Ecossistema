@@ -17,9 +17,9 @@ type Consumidor struct {
 	_nivelconsumidor	int
 	_alimentacao		[]string
 
-	_temAlvo            bool
-	_alvoX              int
-	_alvoY              int
+	_temAlvo bool
+	_alvoX   int
+	_alvoY   int
 
 	_vida int
 

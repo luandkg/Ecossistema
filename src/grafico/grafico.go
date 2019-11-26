@@ -45,8 +45,7 @@ func GraficoSequenciador(surface sdl.Surface, alturageral int32, cor uint32, dad
 
 }
 
-
-func RegiaoRetangular(surface sdl.Surface,localx int32, localy int32,tamanhox int32,tamanhoy int32, cor uint32) {
+func RegiaoRetangular(surface sdl.Surface, localx int32, localy int32, tamanhox int32, tamanhoy int32, cor uint32) {
 
 	var GX int32 = localx
 	var GY int32 = localy
@@ -65,7 +64,5 @@ func RegiaoRetangular(surface sdl.Surface,localx int32, localy int32,tamanhox in
 
 	var L4 = sdl.Rect{GX + GLargura, GY, Barra, GAltura + Barra}
 	surface.FillRect(&L4, 0xFFFF00)
-
-
 
 }

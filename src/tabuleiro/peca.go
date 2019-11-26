@@ -36,5 +36,5 @@ func (p *peca) LiberarPosicao() {
 }
 
 func (p *peca) Valor() int { return p._valor }
-func (p *peca) X() int { return p._x }
-func (p *peca) Y() int { return p._y }
+func (p *peca) X() int     { return p._x }
+func (p *peca) Y() int     { return p._y }

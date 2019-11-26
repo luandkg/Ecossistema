@@ -17,20 +17,19 @@ type organismo struct {
 	_status string
 	_fase   string
 
-	_posx            int
-	_posy            int
+	_posx int
+	_posy int
 
+	rect sdl.Rect
 	_Alimentacao []string
 
-	rect             sdl.Rect
+	_energia        float32
+	_direcao        string
+	_dirquantidade  int
+	_dircontador    int
+	_pararMovimento int
 
-	_energia       float32
-	_direcao       string
-	_dirquantidade int
-	_dircontador   int
-	_pararMovimento  int
-
-	_cor             uint32
+	_cor uint32
 }
 
 func OrganismoNovo(nome string) *organismo {
@@ -182,7 +181,6 @@ func (p *organismo) Movimento(tb *tabuleiro.Tabuleiro) {
 			p._pararMovimento = 5
 
 		}
-
 
 	} else {
 

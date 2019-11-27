@@ -66,7 +66,7 @@ func TextosInfo(e *ecossistema.Ambiente, s *sdl.Surface, EscritorC *Escritor) {
 
 	var alturador int32 = 585
 
-	EscritorC.EscreveBranco(10, alturador, fmt.Sprintf("Dia: %d", e.Dia()))
+	EscritorC.EscreveBranco(10, alturador, fmt.Sprintf("Dia :"))
 	EscritorC.EscreveBranco(430, alturador, fmt.Sprintf("%d", e.Dia()))
 
 	alturador += 25

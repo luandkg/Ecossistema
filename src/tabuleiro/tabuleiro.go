@@ -19,7 +19,7 @@ func TabuleiroNovo(nome string) *Tabuleiro {
 
 	for i := 0; i < tamanhoTabuleiro; i++ {
 
-		for j := 0; j < tamanhoTabuleiro; j ++ {
+		for j := 0; j < tamanhoTabuleiro; j++ {
 
 			var ni int32 = (int32(i) * 10)
 			var nj int32 = int32(j) * 10

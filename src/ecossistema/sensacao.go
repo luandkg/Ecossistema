@@ -10,7 +10,6 @@ func SensacaoNovo(a *Ambiente) *Sensacao {
 	return &ret
 }
 
-
 func (a *Sensacao) SensacaoInfo() string {
 	return "Sensação Térmica : " + a.Sensacao()
 }
@@ -56,4 +55,3 @@ func (a *Sensacao) Sensacao() string {
 
 	return ret
 }
-

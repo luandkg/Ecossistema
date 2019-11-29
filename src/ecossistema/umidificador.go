@@ -69,12 +69,10 @@ func (a *Umidificador) ArSeco(_umidade float32) string {
 
 }
 
-
-
 func (a *Umidificador) UmidadeNome(_umidade float32) string {
 	var ret string = ""
 
-	if  _umidade < 20 {
+	if _umidade < 20 {
 		ret = "Muito Baixa"
 	}
 

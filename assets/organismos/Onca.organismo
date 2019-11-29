@@ -1,6 +1,7 @@
 <Organismo>
   <Base Tipo="Consumidor" Nivel="2" Adulto="400" Vida="1400" Cor="16776960"></Base>
   <Reproducao Frequencia="600" Gestacao="500"></Reproducao>
+  <Sobrevivencia Comportamento="Noturno" TemperaturaMin="11" TemperaturaMax="40" VentoMax="120" MorrePorChuvaEspecial="Neve" ></Sobrevivencia>
   <Alimentacao>
     <Nome>Veado</Nome>
   </Alimentacao>

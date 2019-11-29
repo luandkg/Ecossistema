@@ -1,14 +1,14 @@
 package ecossistema
 
 import (
+	"bioxml"
 	"fmt"
+	"github.com/veandco/go-sdl2/sdl"
+	"math/rand"
 	"runtime"
 	"strconv"
 	"sync"
 	"tabuleiro"
-
-	"bioxml"
-	"github.com/veandco/go-sdl2/sdl"
 	"utils"
 )
 
@@ -219,9 +219,12 @@ func (e *Ecossistema) executarCicloProdutores(surface *sdl.Surface, done chan bo
 
 			if produtorc.Status() == "vivo" {
 
+				e.FatoresAbioticosDeReproducaoProdutores(produtorc)
+				e.FatoresDeSobrevivenciaProdutores(produtorc)
+				produtorc.atualizar(surface)
+
 				//	fmt.Println("      - ", produtorc.toString())
 				produtorc.vivendo()
-				produtorc.atualizar(surface)
 
 			}
 
@@ -273,20 +276,10 @@ func (e *Ecossistema) executarCicloConsumidores(surface *sdl.Surface, tb *tabule
 				//fmt.Println("      - ", consumidorc.toString())
 				consumidorc.vivendo(tb)
 
-				if consumidorc.TemAlvo() {
-
-					consumidorc.CacarAlvo(tb)
-
-				} else {
-
-					consumidorc.Movimento(tb)
-
-				}
-
-				consumidorc.VerificarAlvo(tb)
+				e.FatoresAbioticosDeLuz(tb, consumidorc)
+				e.FatoresDeSobrevivenciaConsumidores(consumidorc)
 
 				consumidorc.atualizar(surface)
-
 			}
 
 			wg.Done()
@@ -307,6 +300,107 @@ func (e *Ecossistema) executarCicloConsumidores(surface *sdl.Surface, tb *tabule
 
 	done <- true
 
+}
+
+
+func (e *Ecossistema) FatoresAbioticosDeLuz (tb *tabuleiro.Tabuleiro, consumidorc *Consumidor) {
+
+	//e.AmbienteC.LuzCorrenteValor() > 20
+
+	if consumidorc._comportamento == "Noturno" {
+
+		if e.AmbienteC.LuzCorrenteValor() < 20 { //Verifica a claridade do dia ; SE < 20 = Escuro;
+
+			if consumidorc.TemAlvo() {
+				consumidorc.CacarAlvo(tb)
+
+			} else {
+				consumidorc.Movimento(tb)
+
+			}
+			consumidorc.VerificarAlvo(tb)
+		}
+
+	}
+
+	if consumidorc._comportamento == "Diurno" {
+
+		if e.AmbienteC.LuzCorrenteValor() > 20 { //Verifica a claridade do dia ; SE < 20 = Escuro;
+
+			if consumidorc.TemAlvo() {
+			consumidorc.CacarAlvo(tb)
+
+			} else {
+			consumidorc.Movimento(tb)
+
+			}
+			consumidorc.VerificarAlvo(tb)
+		}
+	}
+
+}
+
+func (e *Ecossistema) FatoresDeSobrevivenciaConsumidores ( consumidorc *Consumidor) {
+
+	if e.AmbienteC.TemperaturaCorrente() < consumidorc._temperaturaMin || e.AmbienteC.TemperaturaCorrente() > consumidorc._temperaturaMax {
+
+		if randomBool() == true {
+			fmt.Println("===========>>>CONSUMIDOR MORREU POR FATORES DE TEMPERATURA: "+fmt.Sprintf("%f", e.AmbienteC.TemperaturaCorrente()))
+			consumidorc.morrer()
+		}
+
+	} else {
+
+		if e.AmbienteC.VentoCorrenteValor() > consumidorc._ventoMax || e.AmbienteC.ChuvaModo() == consumidorc._morrePorChuvaEspecial {
+
+			if randomBool() == true {
+				fmt.Println("=========>>> CONSUMIDOR MORREU POR FATORES DE VENTO OU CHUVA ESPECIAL: "+fmt.Sprintf("%f", e.AmbienteC.VentoCorrenteValor()))
+				consumidorc.morrer()
+			}
+
+		}
+
+	}
+
+}
+
+func (e *Ecossistema) FatoresDeSobrevivenciaProdutores (produtorc *Produtor) {
+
+	if e.AmbienteC.TemperaturaMedia() < produtorc._temperaturaMin || e.AmbienteC.TemperaturaMedia() > produtorc._temperaturaMax {
+
+		if randomBool() {
+			fmt.Println("============================ PRODUTOR MORREU POR FATORES DE TEMPERATURA: "+fmt.Sprintf("%f", e.AmbienteC.TemperaturaMedia()))
+			produtorc.morrer()
+
+		}
+
+	} else {
+
+		if e.AmbienteC.UmidadeCorrenteValor() < produtorc._umidadeMin || e.AmbienteC.UmidadeCorrenteValor() > produtorc._umidadeMax {
+
+			if randomBool() {
+				fmt.Println("============================PRODUTOR MORREU POR FATORES DE {UMIDADE} : "+fmt.Sprintf("%f", e.AmbienteC.UmidadeCorrenteValor()))
+				produtorc.morrer()
+			}
+
+		}
+
+	}
+
+}
+
+func (e *Ecossistema) FatoresAbioticosDeReproducaoProdutores (produtorc *Produtor) {
+
+	if e.AmbienteC.LuzCorrenteValor() > produtorc._minLuzIdeal &&  e.AmbienteC.LuzCorrenteValor() < produtorc._maxLuzIdeal {
+		produtorc.reproduzir()
+		produtorc.reproduzir()
+		fmt.Println("===> PRODUTOR :" + produtorc.toString() + "reproduziu por condições abioticas favoráveis")
+
+	}
+}
+
+func randomBool() bool{
+	return rand.Int() % 2 == 0
 }
 
 func (e *Ecossistema) LogEcossistema() {
@@ -409,18 +503,18 @@ func (e *Ecossistema) TotalConsumidoresFase() (int, int) {
 
 }
 
-func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, alimentacaoNome []string, nivelconsumidor int) {
+func (e *Ecossistema) GerarOrganismos(tipo string, quantidade int, nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, alimentacaoNome []string, nivelconsumidor int, comportamento string, temperaturaMin float32, temperaturaMax float32, umidadeMin float32, umidadeMax float32, ventoMax float32, morrePorChuvaEspecial string, minLuzIdeal float32, maxLuzIdeal float32) {
 
 	switch tipo {
 
 	case "produtor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarProdutor(ProdutorNovo(nome, adulto, reproducao, gestacao, vida, cor, e))
+			e.AdicionarProdutor(ProdutorNovo(nome, adulto, reproducao, gestacao, vida, cor, temperaturaMin, temperaturaMax, umidadeMin, umidadeMax, morrePorChuvaEspecial, minLuzIdeal, maxLuzIdeal, e))
 		}
 
 	case "consumidor":
 		for i := 0; i < quantidade; i++ {
-			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e, alimentacaoNome, nivelconsumidor))
+			e.AdicionarConsumidor(ConsumidorNovo(nome, adulto, reproducao, vida, cor, e, alimentacaoNome, nivelconsumidor, comportamento, temperaturaMin, temperaturaMax, ventoMax, morrePorChuvaEspecial))
 		}
 
 	}
@@ -446,11 +540,18 @@ func (e *Ecossistema) CarregarOrganismos(caminho string) {
 			var cor uint32 = organismoC.Base.Cor
 
 
-			e.GerarOrganismos("produtor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Nome, organismoC.Base.Nivel)
+			e.GerarOrganismos("produtor", 30, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia,
+				organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Nome, organismoC.Base.Nivel,
+				organismoC.Sobrevivencia.Comportamento, organismoC.Sobrevivencia.TemperaturaMin, organismoC.Sobrevivencia.TemperaturaMax,
+				organismoC.Sobrevivencia.UmidadeMin, organismoC.Sobrevivencia.UmidadeMax, organismoC.Sobrevivencia.VentoMax,
+				organismoC.Sobrevivencia.MorrePorChuvaEspecial, organismoC.Sobrevivencia.MinLuzIdeal, organismoC.Sobrevivencia.MaxLuzIdeal)
 		}
 		if organismoC.Base.Tipo == "Consumidor" {
 			var cor uint32 = organismoC.Base.Cor
-			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia, organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Nome, organismoC.Base.Nivel)
+			e.GerarOrganismos("consumidor", 10, OrganismoNome, organismoC.Base.Adulto, organismoC.Reproducao.Frequencia,
+				organismoC.Reproducao.Gestacao, organismoC.Base.Vida, cor, organismoC.Alimentacao.Nome, organismoC.Base.Nivel,
+				organismoC.Sobrevivencia.Comportamento, organismoC.Sobrevivencia.TemperaturaMin, organismoC.Sobrevivencia.TemperaturaMax,
+				organismoC.Sobrevivencia.UmidadeMin, organismoC.Sobrevivencia.UmidadeMax, organismoC.Sobrevivencia.VentoMax, organismoC.Sobrevivencia.MorrePorChuvaEspecial, organismoC.Sobrevivencia.MinLuzIdeal, organismoC.Sobrevivencia.MaxLuzIdeal)
 		}
 	}
 

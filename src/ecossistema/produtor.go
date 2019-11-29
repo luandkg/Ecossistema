@@ -21,10 +21,20 @@ type Produtor struct {
 
 	_produtores   (map[string]*Produtor)
 	_ecossistemaC *Ecossistema
+
+	/*Variáveis para definição de Sobrevivência do Organismo*/
+	_temperaturaMin float32
+	_temperaturaMax float32
+	_umidadeMin float32
+	_umidadeMax float32
+	_minLuzIdeal float32
+	_maxLuzIdeal float32
+	_morrePorChuvaEspecial string
+
 }
 
 // ProdutorNovo : Criar instancia de Produtor
-func ProdutorNovo(nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, ecossistemaC *Ecossistema) *Produtor {
+func ProdutorNovo(nome string, adulto int, reproducao int, gestacao int, vida int, cor uint32, temperaturaMin float32, temperaturaMax float32, UmidadeMin float32, UmidadeMax float32, morrePorChuvaEspecial string, minLuzIdeal float32, maxLuzIdeal float32, ecossistemaC *Ecossistema) *Produtor {
 
 	p := Produtor{_adultociclo: adulto}
 
@@ -50,6 +60,16 @@ func ProdutorNovo(nome string, adulto int, reproducao int, gestacao int, vida in
 	p._energia = 0
 
 	p._cor = cor
+
+	/*Variáveis para definição de Sobrevivência do Organismo*/
+	p._umidadeMin = UmidadeMin
+	p._umidadeMax = UmidadeMax
+	p._temperaturaMin = temperaturaMin
+	p._temperaturaMax = temperaturaMax
+	p._minLuzIdeal = minLuzIdeal
+	p._maxLuzIdeal = maxLuzIdeal
+	p._morrePorChuvaEspecial = morrePorChuvaEspecial
+
 	p._ecossistemaC = ecossistemaC
 
 	return &p
@@ -143,7 +163,7 @@ func (p *Produtor) reproduzirEmGestacao() {
 
 		fmt.Println("       --- Produtor : ", p.NomeCompleto(), " Reproduzindo !!!")
 
-		var pg = ProdutorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._reproduzirGestacao, p._vida, p._cor, p._ecossistemaC)
+		var pg = ProdutorNovo(p._nome, p._adultociclo, p._reproduzirciclo, p._reproduzirGestacao, p._vida, p._cor, p._temperaturaMin, p._temperaturaMax, p._umidadeMin, p._umidadeMax, p._morrePorChuvaEspecial, p._minLuzIdeal, p._maxLuzIdeal, p._ecossistemaC)
 		var x int = utils.Aleatorionumero(50)
 		var y int = utils.Aleatorionumero(50)
 

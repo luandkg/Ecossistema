@@ -59,6 +59,7 @@ func AmbienteNovo() *Ambiente {
 
 	p.ciclo = 0
 	p.logciclo = 0
+
 	return &p
 }
 

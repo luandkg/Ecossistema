@@ -1,5 +1,6 @@
 <Organismo>
   <Base Tipo="Produtor" Adulto="130" Vida="2000" Cor="1618688"></Base>
   <Reproducao Frequencia="200" Gestacao="80"></Reproducao>
+  <Sobrevivencia TemperaturaMin="6" TemperaturaMax="38" UmidadeMin="17" UmidadeMax="150" MorrePorChuvaEspecial="Neve" minLuzIdeal="40" maxLuzIdeal="60" ></Sobrevivencia>
   <Taxas GasCarbonico="1" GasOxigenio="1"></Taxas>
 </Organismo>

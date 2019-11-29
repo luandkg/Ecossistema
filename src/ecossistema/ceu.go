@@ -1,6 +1,8 @@
 package ecossistema
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Ceu struct {
 	ambienteC *Ambiente
@@ -35,6 +37,7 @@ func (a *Ceu) CeuLuminosidadeNome(_luz int) string {
 
 	if _luz >= 10 && _luz < 20 {
 		ret = "Escuro !"
+
 	}
 
 	if _luz >= 20 && _luz < 60 {

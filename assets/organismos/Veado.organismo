@@ -1,6 +1,7 @@
 <Organismo>
   <Base Tipo="Consumidor" nivel="1" Adulto="300" Vida="1300" Cor="16777215"></Base>
   <Reproducao Frequencia="500" Gestacao="200"></Reproducao>
+  <Sobrevivencia Comportamento="Diurno" TemperaturaMin="11" TemperaturaMax="40" VentoMax="115" MorrePorChuvaEspecial="Neve" ></Sobrevivencia>
   <Alimentacao>
     <Nome>Capim</Nome>
     <Nome>CapimVerde</Nome>

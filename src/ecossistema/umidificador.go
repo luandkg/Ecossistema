@@ -18,7 +18,7 @@ func UmidificadorNovo(a *Ambiente) *Umidificador {
 	ret := Umidificador{}
 	ret.ambienteC = a
 
-	ret.umidade = 0
+	ret.umidade = 50.00
 	ret.umidadecontador = 80
 	ret.umidadelimite = 15
 	ret.umidadefinalizador = ret.umidadelimite

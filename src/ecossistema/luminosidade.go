@@ -20,7 +20,7 @@ func LuminosidadeNovo(a *Ambiente) *Luminosidade {
 	ret := Luminosidade{}
 	ret.ambienteC = a
 
-	ret.luz = 0
+	ret.luz = 20
 
 	ret.luzdiamax = 100
 	ret.luznoitemax = 18

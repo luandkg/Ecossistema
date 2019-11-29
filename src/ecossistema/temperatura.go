@@ -29,13 +29,13 @@ func TemperaturaNovo(a *Ambiente) *Temperatura {
 	ret.ambienteC = a
 
 	ret.tempbase = 25
-	ret.Corrente = 0
+	ret.Corrente = 15.00
 
 	ret.tempdiamin = 0
-	ret.tempdiamax = 0
+	ret.tempdiamax = 47
 
 	ret.tempmin = 0
-	ret.tempmax = 0
+	ret.tempmax = 46
 
 	return &ret
 }
@@ -60,10 +60,10 @@ func (a *Temperatura) TemperaturaDia() {
 		a.temp2 = 0
 		a.temp3 = 0
 		a.temp4 = 0
-		a.Corrente = 0
+		a.Corrente = 15.00
 
 		a.tempdiamin = 0
-		a.tempdiamax = 0
+		a.tempdiamax = 46
 
 		if rand.Intn(100) < 50 {
 			a.temp1 = a.tempbase + float32(rand.Intn(5)) + rand.Float32()
@@ -138,7 +138,7 @@ func (a *Temperatura) TemperaturaNoite() {
 		a.temp2 = 0
 		a.temp3 = 0
 		a.temp4 = 0
-		a.Corrente = 0
+		a.Corrente = 15
 
 		var reduz int = rand.Intn(5)
 

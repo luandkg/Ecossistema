@@ -2,13 +2,12 @@ package main
 
 import "C"
 import (
-	"ecossistema"
+	"ecossistema/src/ecossistema"
+	"ecossistema/src/tabuleiro"
+	"ecossistema/src/utils"
 	"fmt"
 	"os"
-	"tabuleiro"
 	"time"
-
-	"utils"
 
 	"github.com/veandco/go-sdl2/sdl"
 	"github.com/veandco/go-sdl2/ttf"

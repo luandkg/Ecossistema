@@ -3,7 +3,7 @@ package ecossistema
 import (
 	"fmt"
 	"strconv"
-	"utils"
+	"ecossistema/src/utils"
 )
 
 type Produtor struct {

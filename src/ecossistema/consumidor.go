@@ -3,9 +3,9 @@ package ecossistema
 import (
 	"fmt"
 	"strconv"
-	"tabuleiro"
+	"ecossistema/src/tabuleiro"
 
-	"utils"
+	"ecossistema/src/utils"
 )
 
 type Consumidor struct {
@@ -13,9 +13,9 @@ type Consumidor struct {
 	_adultociclo        int
 	_reproduzirciclo    int
 	_reproduzircontador int
-	
-	_nivelconsumidor	int
-	_alimentacao		[]string
+
+	_nivelconsumidor int
+	_alimentacao     []string
 
 	_temAlvo bool
 	_alvoX   int
@@ -24,10 +24,10 @@ type Consumidor struct {
 	_vida int
 
 	/*Variáveis para definição de Sobrevivência do Organismo*/
-	_comportamento string
-	_temperaturaMin float32
-	_temperaturaMax float32
-	_ventoMax float32
+	_comportamento         string
+	_temperaturaMin        float32
+	_temperaturaMax        float32
+	_ventoMax              float32
 	_morrePorChuvaEspecial string
 
 	_ecossistemaC *Ecossistema
@@ -139,13 +139,13 @@ func (c *Consumidor) reproduzir(tb *tabuleiro.Tabuleiro) {
 
 }
 
-func verificaAlimento(nome string, alimentacao []string) bool{
+func verificaAlimento(nome string, alimentacao []string) bool {
 	for _, a := range alimentacao {
-        if a == nome {
-            return true
-        }
-    }
-    return false
+		if a == nome {
+			return true
+		}
+	}
+	return false
 }
 
 func (c *Consumidor) VerificarAlvo(tb *tabuleiro.Tabuleiro) {
@@ -165,7 +165,7 @@ func (c *Consumidor) VerificarAlvo(tb *tabuleiro.Tabuleiro) {
 
 			// TODO: Refatorar com posicoes absolutas no tabuleiro
 			// TODO Refatorar e retirar for duplicado
-			if (c._nivelconsumidor == 1){
+			if c._nivelconsumidor == 1 {
 
 				for _, produtor := range c._ecossistemaC.produtores {
 
@@ -173,7 +173,7 @@ func (c *Consumidor) VerificarAlvo(tb *tabuleiro.Tabuleiro) {
 
 						for j := tetoBusca; j > chaoBusca; j-- {
 
-							if produtor._posx == c._posx+i && produtor._posy == c._posy+j && verificaAlimento(produtor.organismo._nome, c._alimentacao){
+							if produtor._posx == c._posx+i && produtor._posy == c._posy+j && verificaAlimento(produtor.organismo._nome, c._alimentacao) {
 								alvo = true
 								alvoX = c._posx + i
 								alvoY = c._posy + j
@@ -192,14 +192,14 @@ func (c *Consumidor) VerificarAlvo(tb *tabuleiro.Tabuleiro) {
 					}
 
 				}
-			}else{
+			} else {
 				for _, consumidor := range c._ecossistemaC.consumidores {
 
 					for i := tetoBusca; i > chaoBusca; i-- {
 
 						for j := tetoBusca; j > chaoBusca; j-- {
 
-							if consumidor._posx == c._posx+i && consumidor._posy == c._posy+j && verificaAlimento(consumidor.organismo._nome, c._alimentacao){
+							if consumidor._posx == c._posx+i && consumidor._posy == c._posy+j && verificaAlimento(consumidor.organismo._nome, c._alimentacao) {
 								alvo = true
 								alvoX = c._posx + i
 								alvoY = c._posy + j
@@ -302,7 +302,7 @@ func (c *Consumidor) CacarAlvo(tb *tabuleiro.Tabuleiro) {
 func (c *Consumidor) matarAlvo() {
 
 	// TODO: Refatorar com posicoes absolutas no tabuleiro
-	if (c._nivelconsumidor == 1){
+	if c._nivelconsumidor == 1 {
 		for _, produtor := range c._ecossistemaC.produtores {
 
 			if produtor._posx == c._alvoX && produtor._posy == c._alvoY {
@@ -311,7 +311,7 @@ func (c *Consumidor) matarAlvo() {
 			}
 
 		}
-	}else{
+	} else {
 		for _, consumidor := range c._ecossistemaC.consumidores {
 
 			if consumidor._posx == c._alvoX && consumidor._posy == c._alvoY {
@@ -341,7 +341,7 @@ func (c *Consumidor) toString() string {
 	return str
 }
 
-//TODO inserido na parte de consumidor seucnario
+// TODO inserido na parte de consumidor seucnario
 func (p *Consumidor) morrer() {
 
 	p._status = "morto"

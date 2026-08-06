@@ -1,15 +1,15 @@
 package ecossistema
 
 import (
-	"bioxml"
+	"ecossistema/src/bioxml"
 	"fmt"
 	"github.com/veandco/go-sdl2/sdl"
 	"math/rand"
 	"runtime"
 	"strconv"
 	"sync"
-	"tabuleiro"
-	"utils"
+	"ecossistema/src/tabuleiro"
+	"ecossistema/src/utils"
 )
 
 type Ecossistema struct {

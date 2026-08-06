@@ -3,7 +3,7 @@ package ecossistema
 import (
 	"fmt"
 	"math/rand"
-	"utils"
+	"ecossistema/src/utils"
 )
 
 type Ventos struct {

@@ -2,10 +2,10 @@ package ecossistema
 
 import (
 	"fmt"
-	"grafico"
+	"ecossistema/src/grafico"
 	"strconv"
 
-	"utils"
+	"ecossistema/src/utils"
 )
 
 type Ambiente struct {

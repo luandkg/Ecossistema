@@ -3,7 +3,7 @@ package ecossistema
 import (
 	"fmt"
 	"math/rand"
-	"tabuleiro"
+	"ecossistema/src/tabuleiro"
 	"time"
 
 	"github.com/veandco/go-sdl2/sdl"

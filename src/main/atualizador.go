@@ -1,11 +1,12 @@
 package main
 
 import (
-	"ecossistema"
+	"ecossistema/src/ecossistema"
 	"fmt"
-	"github.com/veandco/go-sdl2/sdl"
-	"grafico"
+	"ecossistema/src/grafico"
 	"strconv"
+
+	"github.com/veandco/go-sdl2/sdl"
 )
 
 func AtualizarTela(a *ecossistema.Ambiente, EscritorC *Escritor) {
@@ -16,38 +17,35 @@ func AtualizarTela(a *ecossistema.Ambiente, EscritorC *Escritor) {
 
 	TextosInfo(a, surface, EscritorC)
 
-
 	var alturador int32 = 10
 
-
-	EscritorC.EscreveBranco(700, alturador,"Temperatura")
-	alturador+=20
+	EscritorC.EscreveBranco(700, alturador, "Temperatura")
+	alturador += 20
 	grafico.GraficoSequenciador(*surface, alturador, 0x782206, a.SeqTemperatura)
 
-	alturador+=110
-	EscritorC.EscreveBranco(700, alturador,"Vento")
-	alturador+=20
+	alturador += 110
+	EscritorC.EscreveBranco(700, alturador, "Vento")
+	alturador += 20
 	grafico.GraficoSequenciador(*surface, alturador, 0x1F4500, a.SeqVento)
 
-
-	alturador+=110
-	EscritorC.EscreveBranco(700, alturador,"Umidade")
-	alturador+=20
+	alturador += 110
+	EscritorC.EscreveBranco(700, alturador, "Umidade")
+	alturador += 20
 	grafico.GraficoSequenciador(*surface, alturador, 0x7F4500, a.SeqUmidade)
 
-	alturador+=110
-	EscritorC.EscreveBranco(700, alturador,"Nuvem")
-	alturador+=20
+	alturador += 110
+	EscritorC.EscreveBranco(700, alturador, "Nuvem")
+	alturador += 20
 	grafico.GraficoSequenciador(*surface, alturador, 0x5F4500, a.SeqNuvem)
 
-	alturador+=110
-	EscritorC.EscreveBranco(700, alturador,"Luminosidade")
-	alturador+=20
+	alturador += 110
+	EscritorC.EscreveBranco(700, alturador, "Luminosidade")
+	alturador += 20
 	grafico.GraficoSequenciador(*surface, alturador, 0x2F4700, a.SeqLuz)
 
-	alturador+=110
-	EscritorC.EscreveBranco(700, alturador,"Chuva")
-	alturador+=20
+	alturador += 110
+	EscritorC.EscreveBranco(700, alturador, "Chuva")
+	alturador += 20
 	grafico.GraficoSequenciador(*surface, alturador, 0x3F5F50, a.SeqChuva)
 
 	renderer.Present()
@@ -102,7 +100,7 @@ func TextosInfo(e *ecossistema.Ambiente, s *sdl.Surface, EscritorC *Escritor) {
 
 }
 
-func AtualizarTelaBarraDia(a ecossistema.Ambiente, s *sdl.Surface, ) {
+func AtualizarTelaBarraDia(a ecossistema.Ambiente, s *sdl.Surface) {
 
 	var TamanhoBarra int32 = 490
 
